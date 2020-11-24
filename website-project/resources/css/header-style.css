@@ -1,0 +1,7 @@
+.header nav li:hover {
+  font-weight: bold;
+}
+
+#account-btn i:hover {
+  color: #ffa538 !important;
+}
