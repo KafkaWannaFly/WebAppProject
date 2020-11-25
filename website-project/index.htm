@@ -34,7 +34,6 @@
 
   <!-- Secsion Header -->
   <div class="header">
-
     <!-- Script for tooltip -->
     <script>
       $(document).ready(function(){
@@ -44,7 +43,7 @@
 
     <!-- Secsion Header Top Infor Contact-->
     <!-- Show only for large screen -->
-    <div class="header-infor-top d-none d-sm-none d-md-none d-lg-block text-white py-2">
+    <div class="header-infor-top d-none d-sm-none d-md-none d-lg-block text-white py-1">
       <div class="container">
         <div class="row">
           
@@ -92,78 +91,74 @@
         </div>
       </div>
     </div>
+  </div>
 
+  <!-- Secsion Header Nav Contact-->
+  <nav class="navbar navbar-expand-sm navbar-light w-75 mx-auto py-0 sticky-top">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">
+      <img src="resources/img/fit-logo.png" alt="" style="width: 60px;">
+    </a>
 
-    <!-- Secsion Header Nav Contact-->
-    <nav class="navbar navbar-expand-sm navbar-light w-75 mx-auto py-0 sticky-top">
-      <!-- Brand -->
-      <a class="navbar-brand" href="#">
-        <img src="resources/img/fit-logo.png" alt="" style="width: 60px;">
-      </a>
-
-      <!-- Navbar links -->
-      <ul class="navbar-nav mt-lg-0 mx-5">
-        <li class="nav-item ml-auto">
-          <a class="nav-link" href="#" id="nav-sales">
-            SALES
-            
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">ÁO
-          </a>
-          <div class="dropdown-menu p-3 shadow text-center" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="#">ÁO KHOÁC</a>
-            <a class="dropdown-item" href="#">ÁO THUN NGẮN TAY</a>
-            <a class="dropdown-item" href="#">ÁO THUN DÀI TAY</a>
-            <a class="dropdown-item" href="#">ÁO TANKTOP</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">QUẦN</a>
-          <div class="dropdown-menu p-3 shadow text-center" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="#">QUẦN SHORT</a>
-            <a class="dropdown-item" href="#">QUẦN DÀI</a>
-            <a class="dropdown-item" href="#">QUẦN LÓT</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">PHỤ KIỆN</a>
-          <div class="dropdown-menu p-3 shadow text-center" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="#">TẤT VỚ</a>
-            <a class="dropdown-item" href="#">GIÀY</a>
-            <a class="dropdown-item" href="#">NÓN</a>
-            <a class="dropdown-item" href="#">BÓP VÍ</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">GIỚI THIỆU</a>
-        </li>
-      </ul>
-
-      <form class="form-inline  my-lg-0 h-100 mx-5" id="frm-search" style="margin-right: 200px;">
-        <div class="input-group input-group-sm">
-            <input name="query" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search..." id="searchword">
-            <div class="input-group-append">
-                <button type="submit" class="input-group-text btn" id="btn-search">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
+    <!-- Navbar links -->
+    <ul class="navbar-nav mt-lg-0 mx-5">
+      <li class="nav-item ml-auto">
+        <a class="nav-link" href="#" id="nav-sales">SALES</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">ÁO
+        </a>
+        <div class="dropdown-menu p-3 shadow text-center" aria-labelledby="dropdownId">
+          <a class="dropdown-item" href="#">ÁO KHOÁC</a>
+          <a class="dropdown-item" href="#">ÁO THUN NGẮN TAY</a>
+          <a class="dropdown-item" href="#">ÁO THUN DÀI TAY</a>
+          <a class="dropdown-item" href="#">ÁO TANKTOP</a>
         </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">QUẦN</a>
+        <div class="dropdown-menu p-3 shadow text-center" aria-labelledby="dropdownId">
+          <a class="dropdown-item" href="#">QUẦN SHORT</a>
+          <a class="dropdown-item" href="#">QUẦN DÀI</a>
+          <a class="dropdown-item" href="#">QUẦN LÓT</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">PHỤ KIỆN</a>
+        <div class="dropdown-menu p-3 shadow text-center" aria-labelledby="dropdownId">
+          <a class="dropdown-item" href="#">TẤT VỚ</a>
+          <a class="dropdown-item" href="#">GIÀY</a>
+          <a class="dropdown-item" href="#">NÓN</a>
+          <a class="dropdown-item" href="#">BÓP VÍ</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">GIỚI THIỆU</a>
+      </li>
+    </ul>
+
+    <form class="form-inline  my-lg-0 h-100 mx-5" id="frm-search" style="margin-right: 200px;">
+      <div class="input-group input-group-sm">
+          <input name="query" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search..." id="searchword">
+          <div class="input-group-append">
+              <button type="submit" class="input-group-text btn" id="btn-search">
+                  <i class="fa fa-search"></i>
+              </button>
+          </div>
+      </div>
     </form>
 
-      <a name="" id="account-btn" class="btn bg-transparent mx-5" href="#" role="button">
-        <i class="fas fa-user text-dark"></i>
-      </a>
+    <a name="" id="account-btn" class="btn bg-transparent mx-5" href="#" role="button">
+      <i class="fas fa-user text-dark"></i>
+    </a>
 
-      <a name="" id="cart-btn" class="btn bg-dark rounded-lg" href="#" role="button">
-        <i class="fas fa-shopping-cart text-white"></i>
-      </a>
-    </nav>
-  </div>
+    <a name="" id="cart-btn" class="btn bg-dark rounded-lg" href="#" role="button">
+      <i class="fas fa-shopping-cart text-white"></i>
+    </a>
+  </nav>
 
   <div class="body" style="height: 1000px;">
     <p>
@@ -214,16 +209,9 @@
           </div>
         </div>
       </div>
-  
-  
     </div>
-  
-  
-    
-  
+
   </div>
-    
-  
 
 </body>
 </html>
