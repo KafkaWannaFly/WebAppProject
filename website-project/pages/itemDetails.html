@@ -21,11 +21,12 @@
 </head>
 
 <body>
-    <div class="container">
-        <p class="navigatePath">
+    <div class="wrapper">
+        <p class="navigatePath mx-2">
             <a href="#">Home Page</a> >
             <a href="#">Main Category</a> >
-            <a href="#">Sub-Category</a>
+            <a href="#">Sub-Category</a> >
+            <a href="#">Item name</a>
         </p>
 
         <div class="row mt-4 mx-2">
@@ -38,18 +39,15 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active imageDiv">
-                            <img class="d-block h-100"
-                                src="https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660__340.jpg"
+                            <img class=" w-100" src="https://images4.alphacoders.com/994/thumb-350-994514.jpg"
                                 alt="First slide">
                         </div>
                         <div class="carousel-item imageDiv">
-                            <img class="d-block h-100"
-                                src="https://cdn.pixabay.com/photo/2016/03/27/19/57/cold-1284028__340.jpg"
+                            <img class=" w-100" src="https://images7.alphacoders.com/945/thumb-350-945610.png"
                                 alt="Second slide">
                         </div>
                         <div class="carousel-item imageDiv">
-                            <img class="d-block h-100"
-                                src="https://cdn.pixabay.com/photo/2015/03/26/09/41/tie-690084__340.jpg"
+                            <img class=" w-100" src="https://images6.alphacoders.com/670/thumb-350-670517.png"
                                 alt="Third slide">
                         </div>
                     </div>
@@ -64,33 +62,61 @@
                 </div>
             </div>
             <div class="col container-fluid">
-                <div class="">
+                <div class="mb-3">
                     <h2 class="itemName">Saber’s Excalibur that Won 2 Holly Grail Wars</h2>
                 </div>
 
-                <div class="d-flex justify-content-between align-items-center mt-5">
-                    <div class="itemPricesTag">
+                <div class="d-flex justify-content-between align-items-center my-3">
+                    <div class="itemPricesTag d-flex flex-column">
                         <p class="newPriceTag">999,999,999 VND</p>
-                        <p class="oldPriceTag">1,000,000,000 VND</p>
+                        <p class="ml-auto oldPriceTag">1,000,000,000 VND</p>
                     </div>
 
                     <div class="itemAmount d-flex justify-content-center align-self-start">
                         <div class="decreaseOne">-</div>
-                        <div class="currentAmount">1</div>
+                        <div>
+                            <input class="currentAmount" type="text" value="1"></input>
+                        </div>
                         <div class="increaseOne">+</div>
                     </div>
                 </div>
+
+                <div class="my-2">
+                    <p class="tittleText">Options:</p>
+                    <div class="d-flex justify-content-between">
+                        <div class="option w-100 "> A </div>
+                        <div class="option w-100 "> B </div>
+                        <div class="option w-100 "> C </div>
+                    </div>
+                </div>
+
+                <div class="my-3">
+                    <p class="tittleText">Description:</p>
+                    <p class="descriptionText">Excalibur (/ɛkˈskælɪbər/) is the legendary sword of King Arthur,
+                        sometimes also attributed with magical powers or
+                        associated with the rightful sovereignty of Britain. Excalibur and the Sword in the Stone (the
+                        proof of Arthur's
+                        lineage) are sometimes said to be the same weapon, but in most versions they are considered
+                        separate. Excalibur was
+                        associated with the Arthurian legend very early on. In Welsh, it is called Caledfwlch; in
+                        Cornish, Calesvol (in Modern
+                        Cornish: Kalesvolgh); in Breton, Kaledvoulc'h; and in Latin, Caliburnus.</p>
+                </div>
+
+                <div class="my-4">
+                    <button type="button" name="" id="" class="btn btn-lg btn-block addToCartButton">
+                        ADD TO CART</button>
+                </div>
             </div>
+
         </div>
 
-    </div>
 
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../resources/vendors/js/jquery-3.3.1.min.js"></script>
-    <script src="../resources/vendors/js/popper.min.js"></script>
-    <script src="../resources/vendors/js/bootstrap.min.js"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="../resources/vendors/js/jquery-3.3.1.min.js"></script>
+        <script src="../resources/vendors/js/popper.min.js"></script>
+        <script src="../resources/vendors/js/bootstrap.min.js"></script>
 </body>
 
 </html>
