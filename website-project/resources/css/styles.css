@@ -1,0 +1,104 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* CSS for header */
+
+.header-infor-top {
+  background-color: rgba(20, 75, 110, 1);
+}
+
+.header-address-contact {
+  color: white;
+}
+
+.header .header-infor-top .header-address-contact i,
+.header .header-infor-top .header-address-contact a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.header .header-infor-top .header-address-contact i {
+  margin: 0 5px 0px 30px;
+}
+
+.header .header-infor-top .header-icon-contact i {
+  margin: 0 5px 0px 5px;
+}
+
+.header nav a {
+  padding: 0;
+  margin: 0;
+}
+
+#nav-sales:link,
+#nav-sales:visited {
+  color: #f88a03 !important;
+  font-weight: bold;
+}
+
+#nav-sales:hover {
+  color: #fc4e19 !important;
+}
+
+#account-btn,
+#search-btn {
+  padding: 0;
+}
+
+#cart-btn {
+  height: 100%;
+  padding: 8px 9px 6px 6px;
+}
+
+#account-btn i,
+#search-btn i,
+#cart-btn i {
+  font-size: 20px;
+}
+
+#cart-btn:hover {
+  background-color: red !important;
+}
+
+#account-btn i:hover,
+#search-btn i:hover {
+  color: #ffa538 !important;
+}
+
+nav ul li a {
+  color: rgb(0, 0, 0) !important;
+}
+
+nav ul li.nav-item a:hover {
+  color: #f88a03 !important;
+}
+
+nav ul li.nav-item a.dropdown-item:hover {
+  color: #f79a2a !important;
+}
+
+.navbar-nav > li {
+  margin: 0 10px;
+}
+
+/* Footer */
+.footer .footer-menu li a:link,
+.footer .footer-menu li a:visited {
+  color: black;
+}
+
+.footer .footer-menu li a {
+  text-decoration: none;
+}
+
+.footer .footer-menu li a:hover {
+  color: #ffa538 !important;
+}

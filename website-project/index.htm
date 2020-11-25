@@ -14,12 +14,14 @@
   <script src="https://kit.fontawesome.com/8d195968ab.js"></script>
 
   <!-- Style CSS -->
+  <link rel="stylesheet" href="resources/css/styles.css">
   <link rel="stylesheet" href="resources/css/header-style.css">
   <link rel="stylesheet" href="resources/css/body-style.css">
   <link rel="stylesheet" href="resources/css/footer-style.css">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="resources/vendors/css/bootstrap.min.css">
+
 </head>
 
 <body>
@@ -33,166 +35,195 @@
   <!-- Secsion Header -->
   <div class="header">
 
+    <!-- Script for tooltip -->
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+
     <!-- Secsion Header Top Infor Contact-->
-    <div class="header-infor-top d-sm-none d-md-none d-lg-block text-white"
-      style="background-color: rgba(20, 75, 110, 1);">
+    <!-- Show only for large screen -->
+    <div class="header-infor-top d-none d-sm-none d-md-none d-lg-block text-white py-2">
       <div class="container">
         <div class="row">
-          <div class="container-fluid itemDetailPicture">
-            <!-- Top Left -->
-            <div class="">
-              <div class="header-address-contact">
-                <p>
-                  <a class="text-white mx-4" href="mailto:example@gmail.com" style="text-decoration: none;"><i
-                      class="fa fa-envelope-o mx-1"></i>example@email.com</a>
-                  <span><i class="fa fa-map-marker mx-2"></i>227 Ng Van Cu, Ward 4, District 5, HCM</span>
-                  <a class="text-white mx-4" href="tel:+ (1800) 456 7890" style="text-decoration: none;"><i
-                      class="fa fa-phone mx-1"></i>+ (84) 123 4567</a>
-                </p>
-              </div>
+          
+          <!-- Top Left -->
+          <div class="col-8">
+            <div class="header-address-contact">
+              <p class="my-0">
+                <a href="mailto:fit_hcmus@gmail.com">
+                  <i class="fa fa-envelope-o ml-0"></i>
+                fit_hcmus@email.com
+                </a>
+                <span><i class="fa fa-map-marker"></i>227 Ng Van Cu, Ward 4, District 5, HCM</span>
+                <a href="tel:+ (1800) 456 7890">
+                  <i class="fa fa-phone"></i>
+                  + (84) 123 4567
+                </a>
+              </p>
             </div>
           </div>
 
 
           <!-- Top Right-->
-          <div class="col-xs-12 col-md-4 col-sm-4">
+          <div class="col-4">
             <div class="header-icon-contact">
-              <ul class="social-icons text-right list-unstyled my-0">
-                <li class="d-inline mx-2"><a class="facebook social-icon" href="https://www.facebook.com/"
-                    title="Facebook" target="_blank"><i class="fa fa-facebook  text-white my-0"></i></a></li>
-                <li class="d-inline mx-2"><a class="twitter social-icon" href="https://twitter.com/" title="Twitter"
-                    target="_blank"><i class="fa fa-twitter  text-white my-0"></i></a></li>
-                <li class="d-inline mx-2"><a class="instagram social-icon" href="https://instagram.com/"
-                    title="Instagram" target="_blank"><i class="fa fa-instagram  text-white my-0"
-                      aria-hidden="true"></i></a></li>
+              <ul class="social-icons text-right list-unstyled d-flex justify-content-end my-0">
+                <li class="mx-2">
+                  <a href="https://www.facebook.com/" data-toggle="tooltip" title="Facebook" target="_blank">
+                    <i class="fa fa-facebook  text-white my-0"></i>
+                  </a>
+                </li>
+                <li class="mx-2">
+                  <a href="https://twitter.com/" data-toggle="tooltip" title="Twitter" target="_blank">
+                    <i class="fa fa-twitter  text-white my-0"></i>
+                  </a>
+                </li>
+                <li class="mx-2">
+                  <a href="https://instagram.com/" data-toggle="tooltip" title="Instagram" target="_blank">
+                    <i class="fa fa-instagram  text-white my-0"></i>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
+
         </div>
       </div>
     </div>
 
+
     <!-- Secsion Header Nav Contact-->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light py-0 sticky-top">
-      <a class="navbar-brand font-weight-bold" href="#" style="padding-left: 150px;;">
-        <img src="resources/img/logo.png" alt="" width="50px">
-        LOGO</a>
-      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav mt-2 mt-lg-0 ml-5" style="font-size: large;">
-          <li class="nav-item active mx-2">
-            <a class="nav-link text-warning font-weight-bold" href="#">SALES <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown mx-2 active">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">CATEGORY 1</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">CATEGORY 1.1</a>
-              <a class="dropdown-item" href="#">CATEGORY 1.2</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown mx-2 active">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">CATEGORY 2</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">CATEGORY 2.1</a>
-              <a class="dropdown-item" href="#">CATEGORY 2.2</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown mx-2 active">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">CATEGORY 3</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">CATEGORY 3.1</a>
-              <a class="dropdown-item" href="#">CATEGORY 3.2</a>
-            </div>
-          </li>
-          <li class="nav-item active mx-2">
-            <a class="nav-link" href="#">ABOUT <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
+    <nav class="navbar navbar-expand-sm navbar-light w-75 mx-auto py-0 sticky-top">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">
+        <img src="resources/img/fit-logo.png" alt="" style="width: 60px;">
+      </a>
 
-        <form class="form-inline my-2 my-lg-0 h-100 mx-5" id="frm-search" style="margin-right: 200px;">
-          <div class="input-group input-group-sm">
-            <input name="query" type="text" class="form-control" aria-label="Small"
-              aria-describedby="inputGroup-sizing-sm" placeholder="Search..." id="searchword">
-            <div class="input-group-append">
-              <button type="submit" class="input-group-text btn" id="btn-search">
-                <i class="fa fa-search"></i>
-              </button>
-            </div>
+      <!-- Navbar links -->
+      <ul class="navbar-nav mt-lg-0 mx-5">
+        <li class="nav-item ml-auto">
+          <a class="nav-link" href="#" id="nav-sales">
+            SALES
+            
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">ÁO
+          </a>
+          <div class="dropdown-menu p-3 shadow text-center" aria-labelledby="dropdownId">
+            <a class="dropdown-item" href="#">ÁO KHOÁC</a>
+            <a class="dropdown-item" href="#">ÁO THUN NGẮN TAY</a>
+            <a class="dropdown-item" href="#">ÁO THUN DÀI TAY</a>
+            <a class="dropdown-item" href="#">ÁO TANKTOP</a>
           </div>
-        </form>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">QUẦN</a>
+          <div class="dropdown-menu p-3 shadow text-center" aria-labelledby="dropdownId">
+            <a class="dropdown-item" href="#">QUẦN SHORT</a>
+            <a class="dropdown-item" href="#">QUẦN DÀI</a>
+            <a class="dropdown-item" href="#">QUẦN LÓT</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">PHỤ KIỆN</a>
+          <div class="dropdown-menu p-3 shadow text-center" aria-labelledby="dropdownId">
+            <a class="dropdown-item" href="#">TẤT VỚ</a>
+            <a class="dropdown-item" href="#">GIÀY</a>
+            <a class="dropdown-item" href="#">NÓN</a>
+            <a class="dropdown-item" href="#">BÓP VÍ</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">GIỚI THIỆU</a>
+        </li>
+      </ul>
 
-        <div style="margin-right: 50px;">
-          <a name="" id="account-btn" class="btn bg-transparent" href="#" role="button">
-            <i class="fas fa-user text-dark" style="font-size: large;"></i>
-          </a>
-
-          <a name="" id="account-btn" class="btn bg-danger" href="#" role="button">
-            <i class="fas fa-shopping-cart text-white" style="font-size: large;"></i>
-          </a>
+      <form class="form-inline  my-lg-0 h-100 mx-5" id="frm-search" style="margin-right: 200px;">
+        <div class="input-group input-group-sm">
+            <input name="query" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search..." id="searchword">
+            <div class="input-group-append">
+                <button type="submit" class="input-group-text btn" id="btn-search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
         </div>
+    </form>
 
-      </div>
+      <a name="" id="account-btn" class="btn bg-transparent mx-5" href="#" role="button">
+        <i class="fas fa-user text-dark"></i>
+      </a>
+
+      <a name="" id="cart-btn" class="btn bg-dark rounded-lg" href="#" role="button">
+        <i class="fas fa-shopping-cart text-white"></i>
+      </a>
     </nav>
   </div>
 
-</body>
-
-<div class="body" style="height: 1000px;">
-  <p></p>
-
-
-</div>
-
-<div class="footer">
-  <div class="container-fuild">
-
-    <div class="footer-menu d-sm-none d-md-none d-lg-block bg-light">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-12"></div>
-        <ul style="list-style-type:none">
-          <li class="d-inline-block"><a class="mr-4" href="#">Hướng dẫn mua hàng</a>|</li>
-          <li class="d-inline-block"><a class="mx-4" href="#">Chính sách đổi trả</a>|</li>
-          <li class="d-inline-block"><a class="mx-4" href="#">Chính sách bảo mật và điều khoản</a>|</li>
-          <li id="last" class="d-inline-block"><a class="ml-4" href="#">Tuyển dụng</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer infor">
-      <div class="row">
-        <div class="col-6">
-          <div class="m-5">
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-            <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus facilis iste
-              at aspernatur optio tenetur aut illum praesentium velit nisi eos pariatur deserunt ut ex est, odit eum
-              minima?</p>
-          </div>
-
-        </div>
-
-        <div class="col-6">
-          <div class="m-5">
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-            <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus facilis iste
-              at aspernatur optio tenetur aut illum praesentium velit nisi eos pariatur deserunt ut ex est, odit eum
-              minima?</p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-
+  <div class="body" style="height: 1000px;">
+    <p>
+    </p>
   </div>
+  
+  <div class="footer">
+
+    <!-- Meta Infor -->
+    <div class="container-fuild">
+      <div class="footer-menu d-sm-none d-md-none d-lg-block bg-light">
+        <div class="row justify-content-center align-items-center">
+          <ul style="list-style-type:none" class="py-0 my-0 py-1">
+            <li class="d-inline-block"><a class="mr-4" href="#">Hướng dẫn mua hàng</a>|</li>
+            <li class="d-inline-block"><a class="mx-4" href="#">Hướng dẫn chọn size</a>|</li>
+            <li class="d-inline-block"><a class="mx-4" href="#">Chính sách đổi trả</a>|</li>
+            <li class="d-inline-block"><a class="mx-4" href="#">Chính sách bảo mật và điều khoản</a>|</li>
+            <li id="last" class="d-inline-block"><a class="ml-4" href="#">Tuyển dụng</a></li>
+          </ul>
+        </div>
+      </div>
 
 
+      <!-- Footer infor -->
+      <div class="footer infor px-5">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-5 mr-auto ml-5 mt-4">
+              <h5>@ CÔNG TY CỔ PHẦN FASTECH ASIA</h5>
+              <p class="mt-4">
+                Mã số doanh nghiệp: 0108617038. 
+                Giấy chứng chận đăng ký doanh nghiệp do Sở Kế hoạch và Đầu tư TP Hà Nội 
+                cấp lần đầu ngày 14/08/2018.
+              </p>
+          </div>
+          
+          <div class="col-2">
+            <img src="resources/img/certificate.png" alt="">
+          </div>
 
-</div>
+          <div class="col-3  ml-auto mr-5 mt-4">
+            <p>
+              HUB Hà Nội: Số 103, Đường Vạn Phúc, Phường Vạn Phúc, Quận Hà Đông, TP. Hà Nội
+            </p>
+            <p class="mt-4">
+              HUB Tp HCM: Số F9, Đường 3A, Phường Tân Hưng, Quận 7, Tp. Hồ Chí Minh
+            </p>
+  
+          </div>
+        </div>
+      </div>
+  
+  
+    </div>
+  
+  
+    
+  
+  </div>
+    
+  
 
+</body>
 </html>
