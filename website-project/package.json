@@ -1,0 +1,17 @@
+{
+  "name": "universial-simplistic-grocery",
+  "version": "1.0.0",
+  "description": "Small web project for selling clothes",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Group 05",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.1.2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "commonjs"
+	},
+	"include": ["./**/*"],
+	"exclude": [
+		"./plugins/**/*",
+		"./typings/**/*",
+		"./built/**/*",
+		"node_modules"
+	]
+}
