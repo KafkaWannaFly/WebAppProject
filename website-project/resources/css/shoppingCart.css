@@ -1,0 +1,114 @@
+:root {
+	--darkYellow: #ffe4aa;
+	--softOrage: #e8c6b1;
+	--lightTomato: #ff8f89;
+	--sharpPink: #e894e8;
+	--deepViolet: #bd97ff;
+}
+
+@font-face {
+	font-family: "Montserrat", sans-serif;
+	src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap");
+}
+
+@font-face {
+	font-family: "Raleway", sans-serif;
+	src: url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap");
+}
+
+@font-face {
+	font-family: "Source Sans Pro", sans-serif;
+	src: url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap");
+}
+
+@font-face {
+	font-family: "Roboto", sans-serif;
+	font-family: "Roboto Slab", serif;
+	src: url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap");
+}
+
+@font-face {
+	font-family: "Source Sans Pro", sans-serif;
+	src: url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&display=swap");
+}
+
+* {
+	font-family: "Montserrat", sans-serif;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+textarea {
+	resize: none;
+}
+
+.col {
+	margin: 2px;
+	padding: 0px;
+}
+
+.formTittle {
+	font-family: "Roboto Slab", serif;
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--deepViolet);
+
+	margin: 3px 0px;
+}
+
+.chosenItemDiv {
+	height: 80vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	border-style: dashed;
+	border-width: 1px;
+
+	/* box-shadow: 2px 2px 10px grey; */
+}
+
+.itemDiv {
+	background-color: white;
+	border-style: solid;
+	border-width: 1px;
+
+	box-shadow: 2px 2px 10px grey;
+}
+
+.itemDiv img {
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.priceTag {
+	font-family: "Raleway", sans-serif;
+}
+
+.decreaseOne,
+.currentAmount,
+.increaseOne {
+	font-size: 1rem;
+	width: 2rem;
+	height: 2rem;
+	line-height: 2rem;
+}
+
+.itemName {
+	text-align: right;
+	font-size: large;
+	font-weight: bold;
+}
+
+.priceTag {
+	text-align: right;
+}
