@@ -88,8 +88,48 @@
   </div>
 
   <!-- Secsion Header Nav Contact-->
-  <div class="header-nav-bar border-bottom bg-light">
-    <div class="nav-bar-menu container">
+  <div class="header-nav-bar border-bottom d-flex align-items-center">
+
+    <!-- Script for form search-->
+    <script>
+      function showSearchForm() {
+        document.getElementById("nav-bar-menu").style.display = "none";
+        document.getElementById("form-search-nav").style.display = "block";
+      }
+    </script>
+
+    <script>
+      function closeSearchForm() {
+        document.getElementById("nav-bar-menu").style.display = "flex";
+        document.getElementById("form-search-nav").style.display = "none";
+      }
+    </script>
+    
+    <div class="search-form-active container" id="form-search-nav">
+      
+      <form method="get" action="" style="margin: 0; padding: 0;">
+        <div class="top-bar-search is-active">
+          
+          <div class="container">
+            <div class="input-group">
+              <input type="text" class="form-control border-0" placeholder="Tìm sản phẩm ..." autocomplete="off">
+              <div class="input-group-append">
+
+                <button type="submit" class="btn btn-search-active"><i class="fa fa-search"></i></button>
+                <button type="button" class="btn btn-close-search-active" onclick="closeSearchForm()"><i class="fas fa-times"></i></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    
+    </div>
+
+    
+    
+
+    <div class="nav-bar-menu container" id="nav-bar-menu">
       <div class="logo-brand">
         <img src="resources/img/fit-logo.png" alt="" style="height: 100%; width: 3.5rem;">
         <h3>USG</h3>
@@ -171,7 +211,7 @@
                     <li class="drop-link">
                       <a href="#">Nón</a>
                     </li>
-                    <div class="arrow"></div>
+                    <div class="arrow-menu"></div>
                   </ul>
                 </div>
               </li>
@@ -181,8 +221,10 @@
             </ul>
         </div>
 
+        
+
         <div class="nav-btn">
-          <button type="button" class="btn bg-transparent" id="search-btn">
+          <button type="button" class="btn bg-transparent" id="test" onclick="showSearchForm()" id="search-btn">
             <i class="fa fa-search"></i>
           </button>
 
@@ -199,10 +241,19 @@
     </div>
   </div>
 
+  
+  
+  
+  
+  
   <!-- Body -->
   <div style="height: 1000px;"">
     <p></p>
   </div>
+
+
+
+
 
   <!-- Secsion Footer -->
   <div class="footer">
@@ -210,7 +261,7 @@
     <div class="container-fuild">
 
       <!-- Meta Infor -->
-      <div class="footer-menu d-sm-none d-md-none d-lg-block bg-light">
+      <div class="footer-menu py-1">
         <div class="row justify-content-center align-items-center">
           <ul style="list-style-type:none" class="py-0 my-0 py-1">
             <li class="d-inline-block"><a class="mr-4" href="#">Hướng dẫn mua hàng</a>|</li>
@@ -226,7 +277,7 @@
       <div class="footer-infor px-5">
 
         <div class="row justify-content-center align-items-center">
-          <div class="col-5 mr-auto ml-5 mt-4">
+          <div class="col-5 mr-auto mt-4">
               <h5>@ CÔNG TY CỔ PHẦN FASTECH ASIA</h5>
               <p class="mt-4">
                 Mã số doanh nghiệp: 0108617038. 
@@ -239,7 +290,7 @@
             <img src="resources/img/certificate.png" alt="">
           </div>
 
-          <div class="col-3  ml-auto mr-5 mt-4">
+          <div class="col-3 mr-5 mt-4">
             <p>
               HUB Hà Nội: Số 103, Đường Vạn Phúc, Phường Vạn Phúc, Quận Hà Đông, TP. Hà Nội
             </p>
@@ -257,3 +308,5 @@
 
 </body>
 </html>
+
+
