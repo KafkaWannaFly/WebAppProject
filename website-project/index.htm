@@ -29,143 +29,187 @@
   <script src="resources/vendors/js/popper.min.js"></script>
   <script src="resources/vendors/js/bootstrap.min.js"></script>
 
-  <!-- Secsion Header -->
-  <div class="header">
-    <!-- Script for tooltip -->
-    <script>
-      $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script>
-
-    <!-- Secsion Header Top Infor Contact-->
-    <!-- Show only for large screen -->
-    <div class="header-infor-top d-none d-sm-none d-md-none d-lg-block text-white py-1">
-      <div class="container">
-        <div class="row">
+  <!-- Script for boostrap tooltip -->
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+   
+  <!-- Secsion Header Top Infor Contact-->
+  <!-- Show only for large screen -->
+  <div class="header-infor-top d-none d-sm-none d-md-none d-lg-block text-white py-1">
+    <div class="container">
+      <div class="row">
           
-          <!-- Top Left -->
-          <div class="col-8">
-            <div class="header-address-contact">
-              <p class="my-0">
-                <a href="mailto:fit_hcmus@gmail.com">
-                  <i class="fa fa-envelope-o ml-0"></i>
-                fit_hcmus@email.com
-                </a>
-                <span><i class="fa fa-map-marker"></i>227 Ng Van Cu, Ward 4, District 5, HCM</span>
-                <a href="tel:+ (1800) 456 7890">
-                  <i class="fa fa-phone"></i>
-                  + (84) 123 4567
-                </a>
-              </p>
-            </div>
+        <!-- Top Left -->
+        <div class="col-8">
+          <div class="header-address-contact">
+            <p class="my-0">
+              <a href="mailto:fit_hcmus@gmail.com">
+                <i class="fa fa-envelope-o ml-0"></i>
+              fit_hcmus@email.com
+              </a>
+              <span><i class="fa fa-map-marker"></i>227 Ng Van Cu, Ward 4, District 5, HCM</span>
+              <a href="tel:+ (1800) 456 7890">
+                <i class="fa fa-phone"></i>
+              + (84) 123 4567
+              </a>
+            </p>
           </div>
-
-
-          <!-- Top Right-->
-          <div class="col-4">
-            <div class="header-icon-contact">
-              <ul class="social-icons text-right list-unstyled d-flex justify-content-end my-0">
-                <li class="mx-2">
-                  <a href="https://www.facebook.com/" data-toggle="tooltip" title="Facebook" target="_blank">
-                    <i class="fa fa-facebook  text-white my-0"></i>
-                  </a>
-                </li>
-                <li class="mx-2">
-                  <a href="https://twitter.com/" data-toggle="tooltip" title="Twitter" target="_blank">
-                    <i class="fa fa-twitter  text-white my-0"></i>
-                  </a>
-                </li>
-                <li class="mx-2">
-                  <a href="https://instagram.com/" data-toggle="tooltip" title="Instagram" target="_blank">
-                    <i class="fa fa-instagram  text-white my-0"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
         </div>
+
+
+        <!-- Top Right-->
+        <div class="col-4">
+          <div class="header-icon-contact">
+            <ul class="social-icons text-right list-unstyled d-flex justify-content-end my-0">
+              <li>
+                <a href="https://www.facebook.com/" data-toggle="tooltip" title="Facebook" target="_blank">
+                  <i class="fa fa-facebook  text-white my-0"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/" data-toggle="tooltip" title="Twitter" target="_blank">
+                  <i class="fa fa-twitter  text-white my-0"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/" data-toggle="tooltip" title="Instagram" target="_blank">
+                  <i class="fa fa-instagram  text-white my-0"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 
   <!-- Secsion Header Nav Contact-->
-  <nav class="navbar navbar-expand-sm navbar-light w-75 mx-auto py-0 sticky-top">
-    <!-- Brand -->
-    <a class="navbar-brand" href="#">
-      <img src="resources/img/fit-logo.png" alt="" style="width: 60px;">
-    </a>
-
-    <!-- Navbar links -->
-    <ul class="navbar-nav mt-lg-0 mx-5">
-      <li class="nav-item ml-auto">
-        <a class="nav-link" href="#" id="nav-sales">SALES</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">ÁO
-        </a>
-        <div class="dropdown-menu p-3 shadow text-center" aria-labelledby="dropdownId">
-          <a class="dropdown-item" href="#">ÁO KHOÁC</a>
-          <a class="dropdown-item" href="#">ÁO THUN NGẮN TAY</a>
-          <a class="dropdown-item" href="#">ÁO THUN DÀI TAY</a>
-          <a class="dropdown-item" href="#">ÁO TANKTOP</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">QUẦN</a>
-        <div class="dropdown-menu p-3 shadow text-center" aria-labelledby="dropdownId">
-          <a class="dropdown-item" href="#">QUẦN SHORT</a>
-          <a class="dropdown-item" href="#">QUẦN DÀI</a>
-          <a class="dropdown-item" href="#">QUẦN LÓT</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">PHỤ KIỆN</a>
-        <div class="dropdown-menu p-3 shadow text-center" aria-labelledby="dropdownId">
-          <a class="dropdown-item" href="#">TẤT VỚ</a>
-          <a class="dropdown-item" href="#">GIÀY</a>
-          <a class="dropdown-item" href="#">NÓN</a>
-          <a class="dropdown-item" href="#">BÓP VÍ</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">GIỚI THIỆU</a>
-      </li>
-    </ul>
-
-    <form class="form-inline  my-lg-0 h-100 mx-5" id="frm-search" style="margin-right: 200px;">
-      <div class="input-group input-group-sm">
-          <input name="query" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search..." id="searchword">
-          <div class="input-group-append">
-              <button type="submit" class="input-group-text btn" id="btn-search">
-                  <i class="fa fa-search"></i>
-              </button>
-          </div>
+  <div class="header-nav-bar border-bottom bg-light">
+    <div class="nav-bar-menu container">
+      <div class="logo-brand">
+        <img src="resources/img/fit-logo.png" alt="" style="height: 100%; width: 3.5rem;">
+        <h3>USG</h3>
       </div>
-    </form>
 
-    <a name="" id="account-btn" class="btn bg-transparent mx-5" href="#" role="button">
-      <i class="fas fa-user text-dark"></i>
-    </a>
+      <div class="nav-menu">
+        <div class="nav-link-menu">
+            <ul>
+              <li class="nav-link" id="sales">
+                <a href="#">SALES</a>
+              </li>
+              <li class="nav-link">
+                <a href="#">ÁO<i class="fa fa-caret-down"></i></a>
+                <div class="dropdown">
+                  <ul class="list-unstyled">
+                    <li class="drop-link">
+                      <a href="#">Áo thun ngắn tay</a>
+                    </li>
+                    <li class="drop-link">
+                      <a href="#">Áo thun dài tay</a>
+                    </li>
+                    <li class="drop-link">
+                      <a href="#">Áo thun tank top</a>
+                    </li>
+                    <li class="drop-link">
+                      <a href="#">Áo sơ mi</a>
+                    </li>
+                    <div class="arrow"></div>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-link">
+                <a href="#">QUẦN <i class="fa fa-caret-down"></i> </a>
+                <div class="dropdown">
+                  <ul class="list-unstyled">
+                    <li class="drop-link">
+                      <a href="#">Quần short</a>
+                    </li>
+                    <li class="drop-link">
+                      <a href="#">Quần jean dài</a>
+                    </li>
+                    <li class="drop-link">
+                      <a href="#">Quần kaki dài</a>
+                    </li>
+                    <li class="drop-link">
+                      <a href="#">Quần jogger</a>
+                    </li>
+                    <div class="arrow"></div>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-link">
+                <a href="#">VỚ TẤT <i class="fa fa-caret-down"></i> </a>
+                <div class="dropdown">
+                  <ul class="list-unstyled">
+                    <li class="drop-link">
+                      <a href="#">Vớ ngắn</a>
+                    </li>
+                    <li class="drop-link">
+                      <a href="#">Vớ cổ cao</a>
+                    </li>
+                    <div class="arrow"></div>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-link">
+                <a href="#">PHỤ KIỆN <i class="fa fa-caret-down"></i> </a>
+                <div class="dropdown">
+                  <ul class="list-unstyled">
+                    <li class="drop-link">
+                      <a href="#">Thăt lưng, dây nịt</a>
+                    </li>
+                    <li class="drop-link">
+                      <a href="#">Bóp ví</a>
+                    </li>
+                    <li class="drop-link">
+                      <a href="#">Khẩu trang</a>
+                    </li>
+                    <li class="drop-link">
+                      <a href="#">Nón</a>
+                    </li>
+                    <div class="arrow"></div>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-link">
+                <a href="#">THÔNG TIN</a>
+              </li>
+            </ul>
+        </div>
 
-    <a name="" id="cart-btn" class="btn bg-dark rounded-lg" href="#" role="button">
-      <i class="fas fa-shopping-cart text-white"></i>
-    </a>
-  </nav>
+        <div class="nav-btn">
+          <button type="button" class="btn bg-transparent" id="search-btn">
+            <i class="fa fa-search"></i>
+          </button>
 
-  <div class="body" style="height: 1000px;">
-    <p>
-    </p>
+          <a name="" id="account-btn" class="btn bg-transparent mx-5" href="#" role="button">
+            <i class="fas fa-user text-dark"></i>
+          </a>
+      
+          <a name="" id="cart-btn" class="btn bg-dark rounded-0" href="#" role="button">
+            <i class="fas fa-shopping-bag text-white"></i>
+            <p>Giỏ hàng</p>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-  
-  <div class="footer">
 
-    <!-- Meta Infor -->
+  <!-- Body -->
+  <div style="height: 1000px;"">
+    <p></p>
+  </div>
+
+  <!-- Secsion Footer -->
+  <div class="footer">
+    
     <div class="container-fuild">
+
+      <!-- Meta Infor -->
       <div class="footer-menu d-sm-none d-md-none d-lg-block bg-light">
         <div class="row justify-content-center align-items-center">
           <ul style="list-style-type:none" class="py-0 my-0 py-1">
@@ -178,9 +222,9 @@
         </div>
       </div>
 
-
       <!-- Footer infor -->
-      <div class="footer infor px-5">
+      <div class="footer-infor px-5">
+
         <div class="row justify-content-center align-items-center">
           <div class="col-5 mr-auto ml-5 mt-4">
               <h5>@ CÔNG TY CỔ PHẦN FASTECH ASIA</h5>
@@ -202,10 +246,11 @@
             <p class="mt-4">
               HUB Tp HCM: Số F9, Đường 3A, Phường Tân Hưng, Quận 7, Tp. Hồ Chí Minh
             </p>
-  
           </div>
         </div>
+
       </div>
+    
     </div>
 
   </div>
