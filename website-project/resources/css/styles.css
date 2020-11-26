@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -41,7 +47,6 @@ ul {
 #nav-sales:link,
 #nav-sales:visited {
   color: #f88a03 !important;
-  font-weight: bold;
 }
 
 #nav-sales:hover {
