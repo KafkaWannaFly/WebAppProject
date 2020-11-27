@@ -73,7 +73,7 @@ ul {
 
 .nav-bar-menu {
   max-width: 65rem;
-  padding: 0 2rem;
+  padding: 0 0rem !important;
   height: 100%;
   display: flex;
   position: relative;

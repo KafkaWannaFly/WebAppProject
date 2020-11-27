@@ -1,0 +1,110 @@
+.body-content {
+  padding: 3rem 0 3rem 0 !important;
+  width: 80% !important;
+}
+
+.body-content .infor-nav-menu {
+  padding: 0;
+}
+
+.body-content .infor-form {
+  padding: 0 0 0 1.5rem;
+}
+
+.infor-nav-menu .jumbotron {
+  margin: 0;
+  padding: 0;
+}
+
+.infor-nav-menu .member {
+  margin-top: 1.5rem;
+  width: 80%;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.infor-nav-menu .member:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.infor-nav-menu .name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+ul.infor-menu {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+}
+
+.infor-menu li {
+  display: block;
+  padding: 0;
+}
+
+.infor-menu li a {
+  padding: 1rem 2rem;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.infor-menu li a:hover,
+.infor-menu li a.active {
+  background-color: rgb(216, 217, 218);
+  color: rgb(250, 100, 0);
+}
+
+.infor-menu li a i {
+  margin-right: 1rem;
+}
+
+.form-infor {
+  padding: 0 0 0 1.8rem;
+}
+
+.form-infor form label {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.form-infor form input {
+  padding: 1.5rem !important;
+}
+
+.form-infor form input[disabled] {
+  color: rgb(171, 171, 171);
+  background-color: white !important;
+}
+
+.infor-form .form-infor .form-group {
+  padding: 0;
+  margin: 1rem 0;
+}
+
+#value-height,
+#value-weight,
+#unit {
+  font-weight: bold !important;
+  color: rgb(240, 97, 2) !important;
+}
+
+a.change-pwd {
+  text-decoration: none !important;
+  color: rgb(240, 97, 2) !important;
+}
+
+.update-acc {
+  color: white;
+  background-color: rgb(240, 97, 2);
+  margin: 1rem 0;
+  font-weight: bold !important;
+  letter-spacing: 1px;
+  padding: 1rem 0.7rem !important;
+}
