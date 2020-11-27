@@ -15,7 +15,7 @@
 
   <!-- Style CSS -->
   <link rel="stylesheet" href="../resources/css/styles.css">
-  <link rel="stylesheet" href="../resources/css/orders-list.css">
+  <link rel="stylesheet" href="../resources/css/list-products.css">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../resources/vendors/css/bootstrap.min.css">
@@ -245,139 +245,99 @@
     </div>
   </div>
 
-
+  
   
   <!-- Body -->
-
-  <!-- Script for Valid Message -->
-  <script>
-    // Disable form submissions if there are invalid fields
-    (function() {
-      'use strict';
-      window.addEventListener('load', function() {
-        // Get the forms we want to add validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function(form) {
-          form.addEventListener('submit', function(event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
-  </script>
-
   <div class="body-content container">
-    <div class="row w-100 mx-0">
+    <div class="secsion-header-title">
+        <h3>DANH SÁCH TẤT CẢ SẢN PHẨM</h3>
+    </div>
 
-        <div class="col-3 infor-nav-menu">
-            <div class="jumbotron">
-                <div class="container w-100 p-0 d-flex flex-column justify-content-center align-items-center">
-                    <p class="member rounded shadow">USG Member</p>
-                    <p class="name">Dương Tấn Phát</p>
+    <div class="secsion-orderby">
+        <span>Sắp xếp theo:</span>
+        <div class="btn-group">
+            <button type="button" class="btn bg-white dropdown-toggle" data-toggle="dropdown">
+               Mới nhất
+            </button>
+            <div class="dropdown-menu shadow">
+              <a class="dropdown-item" href="#">Mới nhất</a>
+              <a class="dropdown-item" href="#">Bán chạy nhất</a>
+              <a class="dropdown-item" href="#">Giá từ thấp đến cao</a>
+              <a class="dropdown-item" href="#">Giá từ cao đến thấp</a>
+              <a class="dropdown-item" href="#">Giảm nhiều nhất</a>
+            </div>
+          </div>
+    </div>
 
-                    <ul class="infor-menu">
-                        
-                        <li>
-                            <a href="infor.htm">
-                                <i class="fas fa-user"></i>
-                                Thông tin cá nhân
-                            </a>
-                        </li>
+    <script>
+        function chooseSize(btn) {
+            btn.style.display = "none"
+        }
+    </script>
 
-                        <li>
-                            <a href="orders-list.htm"  class="active">
-                                <i class="fas fa-file-invoice"></i>
-                                Danh sách đơn hàng
-                            </a>
-                        </li>
+    <div class="container list-product">
 
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-sign-out-alt"></i>
-                                Thoát
-                            </a>
-                        </li>
-                    </ul>
+        <div class="row">
+
+            <div class="col-3 d-flex flex-column item-product">
+                <a href="#">
+                  <img src="..\resources\img\product\that-lung\fd9781aa-433c-1500-6be7-00175369709e.jpg" alt="5" width="100%;">
+                </a>
+                <div class="des-product">
+                  <a href="#" class="name">
+                    PKTT Dây Nịt A24 
+                  </a>
+                  <br>
+                  <a href="#" class="rate">(Xem đánh giá)</a>
+                  <p class="price">285.000đ</p>
+                </div>
+                <div class="buy">
+                    <a name="" id="" class="btn w-100 rounded-0" href="#" role="button">Chọn mua</a>
                 </div>
             </div>
-        </div>
 
-        <div class="col-9 infor-form">
-            <div class="form-infor container px-0">
-                <h3>DANH SÁCH TẤT CẢ ĐƠN HÀNG CỦA BẠN</h3>
-                <div class="container px-0">
-                    
-                    <table class="table table-hover order-list-table">
-                        <thead class="thead-dark">
-                          <tr class="d-flex">
-                            <th class="col-2">Mã đơn hàng</th>
-                            <th class="col-6">Sản phẩm</th>
-                            <th class="col-2">Tổng tiền</th>
-                            <th class="col-2">Trạng thái</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <tr  class="d-flex">
-                                <td class="col-2 order--id--date">
-                                    <a href="#" class="id-order">#861073681</a>
-                                    <p>10.11.2020</p>
-                                </td>
-                                <td class="col-6">
-                                    <p>
-                                        - Quần thể thao nam Ultra Short màu xanh tím than <br>
-                                        - Áo thun cổ tròn Cotton Compact Premium in Happy Man <br>
-                                        - 3 Quần lót nam Boxer Brief Modal (gỗ sồi) mềm mại màu đen <br>
-                                        - Áo thun nam Cotton Compact phiên bản Premium chống nhăn <br>
-                                        - Áo thun nam Cotton Compact phiên bản Premium chống nhăn <br>
-                                        - QUÀ TẶNG - Áo thể thao nam MaxCool màu neon
-                                    </p>
-                                </td>
-                                <td class="col-2">1.290.000đ</td>
-                                <td class="col-2">Đã giao hàng</td>
-                            </tr>
-                            <tr  class="d-flex">
-                                <td class="col-2 order--id--date">
-                                    <a href="#" class="id-order">#861073671</a>
-                                    <p>10.11.2020</p>
-                                </td>
-                                <td class="col-6">
-                                    <p>
-                                        - Quần thể thao nam Ultra Short màu xanh tím than <br>
-                                        - Áo thun cổ tròn Cotton Compact Premium in Happy Man <br>
-                                        - 3 Quần lót nam Boxer Brief Modal (gỗ sồi) mềm mại màu đen <br>
-                                        - Áo thun nam Cotton Compact phiên bản Premium chống nhăn <br>
-                                        - Áo thun nam Cotton Compact phiên bản Premium chống nhăn <br>
-                                    </p>
-                                </td>
-                                <td class="col-2">1.290.000đ</td>
-                                <td class="col-2">Đã huỷ đơn</td>
-                            </tr>
-                            <tr  class="d-flex">
-                                <td class="col-2 order--id--date">
-                                    <a href="#" class="id-order">#861020671</a>
-                                    <p>10.11.2020</p>
-                                </td>
-                                <td class="col-6">
-                                    <p>
-                                        - 3 quần lót nam Trunk Cotton Compact co giãn màu đen
-                                    </p>
-                                </td>
-                                <td class="col-2">244.000đ</td>
-                                <td class="col-2">Đã giao hàng</td>
-                            </tr>
-                        </tbody>
-                        
-                      </table>
+            <div class="col-3 d-flex flex-column item-product">
+                <a href="#">
+                  <img src="..\resources\img\product\that-lung\acda4724-735a-0f00-f5f2-00175846787e.jpg" alt="5" width="100%;">
+                </a>
+                <div class="des-product">
+                  <a href="#" class="name">
+                    PKTT Dây Nịt M1
+                  </a>
+                  <br>
+                  <a href="#" class="rate">(Xem đánh giá)</a>
+                  <p class="price">285.000đ</p>
+                </div>
+                <div class="buy">
+                    <a name="" id="" class="btn w-100 rounded-0" href="#" role="button">Chọn mua</a>
                 </div>
             </div>
+
+            <div class="col-3 d-flex flex-column item-product">
+                <a href="#">
+                  <img src="..\resources\img\product\that-lung\f1218551-7399-1200-c385-0017536914e6.jpg" alt="5" width="100%;">
+                </a>
+                <div class="des-product">
+                  <a href="#" class="name">
+                    PKTT Dây Nịt A27  
+                  </a>
+                  <br>
+                  <a href="#" class="rate">(Xem đánh giá)</a>
+                  <p class="price">350.000đ</p>
+                </div>
+                <div class="buy">
+                    <a name="" id="" class="btn w-100 rounded-0" href="#" role="button">Chọn mua</a>
+                </div>
+            </div>
+
+
         </div>
+
     </div>
   </div>
+
+
+
 
 
   <!-- Secsion Footer -->
