@@ -15,7 +15,7 @@
 
   <!-- Style CSS -->
   <link rel="stylesheet" href="../resources/css/styles.css">
-  <link rel="stylesheet" href="../resources/css/infor.css">
+  <link rel="stylesheet" href="../resources/css/orders-list.css">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../resources/vendors/css/bootstrap.min.css">
@@ -282,14 +282,14 @@
                     <ul class="infor-menu">
                         
                         <li>
-                            <a href="infor.htm" class="active">
+                            <a href="infor.htm">
                                 <i class="fas fa-user"></i>
                                 Thông tin cá nhân
                             </a>
                         </li>
 
                         <li>
-                            <a href="orders-list.htm">
+                            <a href="orders-list.htm"  class="active">
                                 <i class="fas fa-file-invoice"></i>
                                 Danh sách đơn hàng
                             </a>
@@ -308,227 +308,70 @@
 
         <div class="col-9 infor-form">
             <div class="form-infor container px-0">
-                <h3>THÔNG TIN TÀI KHOẢN</h3>
+                <h3>DANH SÁCH TẤT CẢ ĐƠN HÀNG CỦA BẠN</h3>
                 <div class="container px-0">
-                    <form action="" class="needs-validation" novalidate>
                     
-                        <div class="row form-group">
-                            <div class="col-3 p-0 d-flex align-items-center">
-                                <label for="name">Họ Tên</label>
-                            </div>
-                            <div class="col-9 p-0">
-                                <input
-                                    type="text"
-                                    class="form-control rounded-0"
-                                    id="name"
-                                    value="Dương Tấn Phát"
-                                    name="name"
-                                />
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-3 p-0 d-flex align-items-center">
-                                <label for="email">Email</label>
-                            </div>
-                            <div class="col-9 p-0">
-                                <input
-                                    type="email"
-                                    class="form-control rounded-0"
-                                    id="email"
-                                    value="beebapcay@gmail.com"
-                                    name="email"
-                                    disabled
-                                />
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-3 p-0 d-flex align-items-center">
-                                <label for="phone">Số Điện Thoại</label>
-                            </div>
-                            <div class="col-9 p-0">
-                                <input
-                                    type="phone"
-                                    class="form-control rounded-0"
-                                    id="phone"
-                                    value="0964746011"
-                                    name="phone"
-                                />
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-3 p-0 d-flex align-items-center">
-                                <label for="uname">Tên Đăng Nhập</label>
-                            </div>
-                            <div class="col-9 p-0">
-                                <input
-                                    type="text"
-                                    class="form-control rounded-0"
-                                    id="uname"
-                                    value="beebapcay"
-                                    name="uname"
-                                    disabled
-                                />
-                            </div>
-                        </div>
+                    <table class="table table-hover order-list-table">
+                        <thead class="thead-dark">
+                          <tr class="d-flex">
+                            <th class="col-2">Mã đơn hàng</th>
+                            <th class="col-6">Sản phẩm</th>
+                            <th class="col-2">Tổng tiền</th>
+                            <th class="col-2">Trạng thái</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr  class="d-flex">
+                                <td class="col-2 order--id--date">
+                                    <a href="#" class="id-order">#861073681</a>
+                                    <p>10.11.2020</p>
+                                </td>
+                                <td class="col-6">
+                                    <p>
+                                        - Quần thể thao nam Ultra Short màu xanh tím than <br>
+                                        - Áo thun cổ tròn Cotton Compact Premium in Happy Man <br>
+                                        - 3 Quần lót nam Boxer Brief Modal (gỗ sồi) mềm mại màu đen <br>
+                                        - Áo thun nam Cotton Compact phiên bản Premium chống nhăn <br>
+                                        - Áo thun nam Cotton Compact phiên bản Premium chống nhăn <br>
+                                        - QUÀ TẶNG - Áo thể thao nam MaxCool màu neon
+                                    </p>
+                                </td>
+                                <td class="col-2">1.290.000đ</td>
+                                <td class="col-2">Đã giao hàng</td>
+                            </tr>
+                            <tr  class="d-flex">
+                                <td class="col-2 order--id--date">
+                                    <a href="#" class="id-order">#861073671</a>
+                                    <p>10.11.2020</p>
+                                </td>
+                                <td class="col-6">
+                                    <p>
+                                        - Quần thể thao nam Ultra Short màu xanh tím than <br>
+                                        - Áo thun cổ tròn Cotton Compact Premium in Happy Man <br>
+                                        - 3 Quần lót nam Boxer Brief Modal (gỗ sồi) mềm mại màu đen <br>
+                                        - Áo thun nam Cotton Compact phiên bản Premium chống nhăn <br>
+                                        - Áo thun nam Cotton Compact phiên bản Premium chống nhăn <br>
+                                    </p>
+                                </td>
+                                <td class="col-2">1.290.000đ</td>
+                                <td class="col-2">Đã huỷ đơn</td>
+                            </tr>
+                            <tr  class="d-flex">
+                                <td class="col-2 order--id--date">
+                                    <a href="#" class="id-order">#861020671</a>
+                                    <p>10.11.2020</p>
+                                </td>
+                                <td class="col-6">
+                                    <p>
+                                        - 3 quần lót nam Trunk Cotton Compact co giãn màu đen
+                                    </p>
+                                </td>
+                                <td class="col-2">244.000đ</td>
+                                <td class="col-2">Đã giao hàng</td>
+                            </tr>
+                        </tbody>
                         
-                        <div class="row form-group">
-                            <div class="col-3 p-0 d-flex align-items-center">
-                                <label for="address">Địa Chỉ</label>
-                            </div>
-                            <div class="col-9 p-0">
-                                <input
-                                    type="text"
-                                    class="form-control rounded-0"
-                                    id="address"
-                                    value="423/34/20 Lạc Long Quân, phường 5, quận 11, HCM"
-                                    name="address"
-                                />
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-3 p-0 d-flex align-items-center">
-                                <label for="dob">Ngày Sinh</label>
-                            </div>
-                            <div class="col-9 p-0">
-                                <input
-                                    type="date"
-                                    class="form-control rounded-0"
-                                    id="dob"
-                                    value="2000-01-11"
-                                    name="dob"
-                                />
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-3 p-0 d-flex align-items-center">
-                                <label>Giới Tính</label>
-                            </div>
-                            <div class="col-9 p-0">
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input" id="sex-male" name="sex" value="male" checked>
-                                    <label class="custom-control-label" for="sex-male">Nam</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input" id="sex-female" name="sex" value="female">
-                                    <label class="custom-control-label" for="sex-female">Nữ</label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <script>
-                            function changeValueHeight(elementRange) {
-                                document.getElementById("value-height").innerHTML = elementRange.value;
-                            }
-                            function changeValueWeight(elementRange) {
-                                document.getElementById("value-weight").innerHTML = elementRange.value;
-                            }
-                        </script>
-
-                        <div class="row form-group">
-                            <div class="col-3 p-0 d-flex align-items-center">
-                                <label for="height">Chiều Cao</label>
-                            </div>
-                            <div class="col-8 p-0">
-                                <input type="range" class="custom-range" id="height" name="weight" min="0" max="300" value="172"
-                                onchange="changeValueHeight(this)">
-                            </div>
-                            <div class="col-1 p-0 d-flex align-items-center justify-content-end">
-                                <p class="m-0 p-0" id="value-height">172</p><span id="unit">cm</span>
-                            </div>
-                        </div>
-                        
-                        <div class="row form-group">
-                            <div class="col-3 p-0 d-flex align-items-center">
-                                <label for="weight">Cân Nặng</label>
-                            </div>
-                            <div class="col-8 p-0">
-                                <input type="range" class="custom-range" id="weight" name="weight" min="0" max="200" value="60"
-                                onchange="changeValueWeight(this)">
-                            </div>
-                            <div class="col-1 p-0 d-flex align-items-center justify-content-end">
-                                <p class="m-0 p-0" id="value-weight">60</p><span id="unit">kg</span>
-                            </div>
-                        </div>
-                    
-                    <script>
-                      function clickChangePwdHandler(checkBtn) {
-                        if (checkBtn.checked == 1) {
-                          document.getElementById("change-pwd-group").style.display = "block";
-                        }
-                        else document.getElementById("change-pwd-group").style.display = "none";
-                      }
-
-                    </script>
-
-                    <div class="form-group">
-                      <label class="change-pwd-label" for="change_pwd">Thay Đổi Mật Khẩu</label>
-                      <input type="checkbox" name="change_pwd" id="change_pwd" onclick="clickChangePwdHandler(this)">
-                    </div>
-
-                    <div class="change-pwd-group" id="change-pwd-group">
-                      <div class="row form-group">
-                        <div class="col-3 p-0 d-flex align-items-center">
-                            <label for="old-pwd">Mật Khẩu Cũ</label>
-                        </div>
-                        <div class="col-9 p-0">
-                            <input
-                                type="password"
-                                class="form-control rounded-0"
-                                value=""
-                                id="old-pwd"
-                                name="old-pwd"
-                                required
-                            />
-                            <div class="valid-feedback"></div>
-                            <div class="invalid-feedback">Vui lòng điền Mật khẩu Cũ</div>
-                        </div>
-                      </div>
-  
-                      <div class="row form-group">
-                        <div class="col-3 p-0 d-flex align-items-center">
-                            <label for="new-pwd">Mật Khẩu Mới</label>
-                        </div>
-                        <div class="col-9 p-0">
-                            <input
-                                type="password"
-                                class="form-control rounded-0"
-                                id="new-pwd"
-                                value=""
-                                name="new-pwd"
-                                required
-                            />
-                            <div class="valid-feedback"></div>
-                            <div class="invalid-feedback">Vui lòng điền Mật khẩu Mới</div>
-                        </div>
-                      </div>
-  
-                      <div class="row form-group">
-                        <div class="col-3 p-0 d-flex align-items-center">
-                            <label for="new-pwd-confirm">Nhập Lại Mật Khẩu Mới</label>
-                        </div>
-                        <div class="col-9 p-0">
-                            <input
-                                type="password"
-                                class="form-control rounded-0"
-                                id="new-pwd-confirm"
-                                value=""
-                                name="new-pwd-confirm"
-                                required
-                            />
-                            <div class="valid-feedback"></div>
-                            <div class="invalid-feedback">Vui lòng nhập lại Mật Khẩu Mới</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <button type="submit" class="btn update-acc rounded-0 d-block">CẬP NHẬT TÀI KHOẢN</button>
-                    
-                  </form>
+                      </table>
                 </div>
             </div>
         </div>

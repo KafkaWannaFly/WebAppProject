@@ -1,0 +1,89 @@
+.body-content {
+  padding: 3rem 0 3rem 0 !important;
+  width: 80% !important;
+}
+
+.body-content .infor-nav-menu {
+  padding: 0;
+}
+
+.body-content .infor-form {
+  padding: 0 0 0 1.5rem;
+}
+
+.infor-nav-menu .jumbotron {
+  margin: 0;
+  padding: 0;
+}
+
+.infor-nav-menu .member {
+  margin-top: 1.5rem;
+  width: 80%;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.infor-nav-menu .member:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.infor-nav-menu .name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+ul.infor-menu {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+}
+
+.infor-menu li {
+  display: block;
+  padding: 0;
+}
+
+.infor-menu li a {
+  padding: 1rem 2rem;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.infor-menu li a:hover,
+.infor-menu li a.active {
+  background-color: rgb(216, 217, 218);
+  color: rgb(250, 100, 0);
+}
+
+.infor-menu li a i {
+  margin-right: 1rem;
+}
+
+table.order-list-table {
+  margin-top: 2rem;
+}
+
+table.order-list-table th,
+td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table.order-list-table td.order--id--date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+table.order-list-table td.order--id--date .id-order {
+  color: rgb(250, 100, 0) !important;
+  text-decoration: none !important;
+  font-size: 1.1rem;
+}
