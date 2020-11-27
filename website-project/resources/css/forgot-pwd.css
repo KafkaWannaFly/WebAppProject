@@ -1,0 +1,41 @@
+.page-header__title.forgot-title {
+  margin: 0 0 2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.body-content {
+  padding: 3rem 0 3rem 0 !important;
+}
+
+.form-forgot label {
+  letter-spacing: 1px;
+}
+
+.form-forgot input {
+  padding: 1.5rem;
+}
+
+.body-content {
+  width: 80%;
+}
+
+.form-forgot {
+  width: 60% !important;
+}
+
+.form-login .btn-group-login {
+  margin: 1rem 0;
+}
+
+.form-forgot button {
+  color: white;
+  margin: 0.2rem 0;
+  width: 60% !important;
+  display: block !important;
+  background-color: rgb(255, 94, 0);
+}
+
+.form-forgot button:hover {
+  background-color: rgb(7, 7, 7);
+}

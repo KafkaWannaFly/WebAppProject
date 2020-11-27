@@ -95,7 +95,7 @@ ul.infor-menu {
   color: rgb(240, 97, 2) !important;
 }
 
-a.change-pwd {
+label.change-pwd-label {
   text-decoration: none !important;
   color: rgb(240, 97, 2) !important;
 }
@@ -106,5 +106,13 @@ a.change-pwd {
   margin: 1rem 0;
   font-weight: bold !important;
   letter-spacing: 1px;
-  padding: 1rem 0.7rem !important;
+  padding: 0.8rem 0.7rem !important;
+}
+
+#change-pwd-group {
+  display: none;
+}
+
+#change_pwd {
+  opacity: 0;
 }

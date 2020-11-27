@@ -21,7 +21,7 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="../resources/css/styles.css" />
-    <link rel="stylesheet" href="../resources/css/login.css" />
+    <link rel="stylesheet" href="../resources/css/forgot-pwd.css" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../resources/vendors/css/bootstrap.min.css" />
@@ -294,8 +294,8 @@
       <div class="page-header mx-auto">
         <div class="container">
           <div class="page-header__content text-center">
-            <h1 class="page-header__title login-title text-center">
-              Đăng Nhập
+            <h1 class="page-header__title forgot-title text-center">
+              CẤP LẠI MẬT KHẨU
             </h1>
           </div>
         </div>
@@ -325,7 +325,7 @@
         </script>
 
       <!-- Login Form -->
-      <div class="form-login container px-0">
+      <div class="form-forgot container px-0">
         <div class="container px-0">
           <form class="needs-validation" novalidate method="POST" action=" ">
             
@@ -344,46 +344,31 @@
             </div>
             
             <div class="form-group">
-              <label for="pwd">MẬT KHẨU:</label>
+              <label for="email">EMAIL:</label>
               <input
-                type="password"
+                type="email"
                 class="form-control"
-                id="pwd"
-                placeholder="MẬT KHẨU"
-                name="pwd"
+                id="email"
+                placeholder="EMAIL"
+                name="email"
                 required
               />
               <div class="valid-feedback"></div>
-              <div class="invalid-feedback">Vui lòng điền Mật khẩu</div>
+              <div class="invalid-feedback">Vui lòng điền Email</div>
             </div>
             
             <div class="row w-100 align-items-center mx-0">
-
-                <a href="forgot-pwd.htm" class="col-6 forget-pwd px-0">Quên mật khẩu ?</a>
-                
-                <div class="col-6 form-group form-check my-0 px-0" style="text-align: right;">
-                    <label class="form-check-label">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        name="remember"
-                      />
-                      Duy trì đăng nhập
-                    </label>
-                </div>
-
+              <div class="col-12">
+                <p class="text-center">Mật khẩu mới sẽ được gửi qua Email của bạn</p>
+              </div>
             </div>
             
-            <div class="container btn-group-login d-flex flex-column justify-content-center align-items-center">
-              <button type="submit" class="btn login rounded-0">ĐĂNG NHẬP</button>
-              <button  type="button" class="btn login-fb rounded-0">ĐĂNG NHẬP VỚI FACEBOOK</button>
-              <button  type="button" class="btn  login-gg rounded-0">ĐĂNG NHẬP VỚI GOOGLE</button>
+            <div class="container  d-flex flex-column justify-content-center align-items-center">
+              <button type="submit" class="btn send-pwd rounded-0">GỬI LẠI MẬT KHẨU</button>
             </div>
 
           </form>
 
-          <p class="text-center">Bạn chưa có Tài khoản? Vui lòng đăng ký Tài khoản mới 
-          <a href="sign-in.htm" style="text-decoration: none; color: rgb(255, 94, 0)">tại đây</a>.</p>
         </div>
       </div>
 

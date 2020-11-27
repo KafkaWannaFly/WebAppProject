@@ -244,8 +244,32 @@
     </div>
   </div>
 
+
   
   <!-- Body -->
+
+  <!-- Script for Valid Message -->
+  <script>
+    // Disable form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Get the forms we want to add validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+
   <div class="body-content container">
     <div class="row w-100 mx-0">
 
@@ -258,7 +282,7 @@
                     <ul class="infor-menu">
                         
                         <li>
-                            <a href="#" class="active">
+                            <a href="infor.htm" class="active">
                                 <i class="fas fa-user"></i>
                                 Thông tin cá nhân
                             </a>
@@ -286,7 +310,7 @@
             <div class="form-infor container px-0">
                 <h3>THÔNG TIN TÀI KHOẢN</h3>
                 <div class="container px-0">
-                    <form action="">
+                    <form action="" class="needs-validation" novalidate>
                     
                         <div class="row form-group">
                             <div class="col-3 p-0 d-flex align-items-center">
@@ -386,7 +410,7 @@
                             </div>
                             <div class="col-9 p-0">
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input" id="sex-male" name="sex" value="male">
+                                    <input type="radio" class="custom-control-input" id="sex-male" name="sex" value="male" checked>
                                     <label class="custom-control-label" for="sex-male">Nam</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
@@ -418,7 +442,7 @@
                             </div>
                         </div>
                         
-                        <div class="row form-group mb-0">
+                        <div class="row form-group">
                             <div class="col-3 p-0 d-flex align-items-center">
                                 <label for="weight">Cân Nặng</label>
                             </div>
@@ -429,17 +453,86 @@
                             <div class="col-1 p-0 d-flex align-items-center justify-content-end">
                                 <p class="m-0 p-0" id="value-weight">60</p><span id="unit">kg</span>
                             </div>
-                            </div>
                         </div>
                     
-                    <a class="change-pwd" href="#">Thay Đổi Mật Khẩu</a>
+                    <script>
+                      function clickChangePwdHandler(checkBtn) {
+                        if (checkBtn.checked == 1) {
+                          document.getElementById("change-pwd-group").style.display = "block";
+                        }
+                        else document.getElementById("change-pwd-group").style.display = "none";
+                      }
+
+                    </script>
+
+                    <div class="form-group">
+                      <label class="change-pwd-label" for="change_pwd">Thay Đổi Mật Khẩu</label>
+                      <input type="checkbox" name="change_pwd" id="change_pwd" onclick="clickChangePwdHandler(this)">
+                    </div>
+
+                    <div class="change-pwd-group" id="change-pwd-group">
+                      <div class="row form-group">
+                        <div class="col-3 p-0 d-flex align-items-center">
+                            <label for="old-pwd">Mật Khẩu Cũ</label>
+                        </div>
+                        <div class="col-9 p-0">
+                            <input
+                                type="password"
+                                class="form-control rounded-0"
+                                value=""
+                                id="old-pwd"
+                                name="old-pwd"
+                                required
+                            />
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">Vui lòng điền Mật khẩu Cũ</div>
+                        </div>
+                      </div>
+  
+                      <div class="row form-group">
+                        <div class="col-3 p-0 d-flex align-items-center">
+                            <label for="new-pwd">Mật Khẩu Mới</label>
+                        </div>
+                        <div class="col-9 p-0">
+                            <input
+                                type="password"
+                                class="form-control rounded-0"
+                                id="new-pwd"
+                                value=""
+                                name="new-pwd"
+                                required
+                            />
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">Vui lòng điền Mật khẩu Mới</div>
+                        </div>
+                      </div>
+  
+                      <div class="row form-group">
+                        <div class="col-3 p-0 d-flex align-items-center">
+                            <label for="new-pwd-confirm">Nhập Lại Mật Khẩu Mới</label>
+                        </div>
+                        <div class="col-9 p-0">
+                            <input
+                                type="password"
+                                class="form-control rounded-0"
+                                id="new-pwd-confirm"
+                                value=""
+                                name="new-pwd-confirm"
+                                required
+                            />
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">Vui lòng nhập lại Mật Khẩu Mới</div>
+                        </div>
+                      </div>
+                    </div>
+
                     <button type="submit" class="btn update-acc rounded-0 d-block">CẬP NHẬT TÀI KHOẢN</button>
+                    
                   </form>
                 </div>
-              </div>
+            </div>
         </div>
     </div>
-
   </div>
 
 
