@@ -21,7 +21,7 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="../resources/css/styles.css" />
-    <link rel="stylesheet" href="../resources/css/login.css" />
+    <link rel="stylesheet" href="../resources/css/sign-in.css" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../resources/vendors/css/bootstrap.min.css" />
@@ -294,9 +294,13 @@
       <div class="page-header mx-auto">
         <div class="container">
           <div class="page-header__content text-center">
-            <h1 class="page-header__title login-title text-center">
-              Đăng Nhập
+            <h1 class="page-header__title signin-title text-center">
+              ĐĂNG KÝ TÀI KHOẢN
             </h1>
+            <p style="font-size: 1.2rem;">
+                Chào mừng bạn đến với Store của chúng tôi<br>
+            Vui lòng đăng ký để trở thành thành viên của gia đình USG
+            </p>
           </div>
         </div>
       </div>
@@ -325,23 +329,65 @@
         </script>
 
       <!-- Login Form -->
-      <div class="form-login container px-0">
+      <div class="form-signin container px-0">
         <div class="container px-0">
           <form class="needs-validation" novalidate method="POST" action=" ">
             
             <div class="form-group">
-              <label for="uname">TÊN ĐĂNG NHẬP:</label>
-              <input
-                type="text"
-                class="form-control"
-                id="uname"
-                placeholder="TÊN ĐĂNG NHẬP"
-                name="uname"
-                required
-              />
-              <div class="valid-feedback"></div>
-              <div class="invalid-feedback">Vui lòng điền Tên đăng nhập</div>
+                <label for="uname">TÊN ĐĂNG NHẬP:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="uname"
+                  placeholder="TÊN ĐĂNG NHẬP"
+                  name="uname"
+                  required
+                />
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Vui lòng điền Tên đăng nhập</div>
             </div>
+
+            <div class="form-group">
+                <label for="name">HỌ TÊN:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="HỌ TÊN"
+                  name="name"
+                  required
+                />
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Vui lòng điền Họ tên của bạn</div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">ĐIỆN THOẠI:</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  placeholder="ĐIỆN THOẠI"
+                  name="phone"
+                  required
+                />
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Vui lòng điền Số điện thoại của bạn</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">EMAIL CỦA BẠN:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="TÀI KHOẢN EMAIL"
+                  name="email"
+                  required
+                />
+                <div class="valid-feedback">f</div>
+                <div class="invalid-feedback">Vui lòng điền Email của bạn</div>
+              </div>
             
             <div class="form-group">
               <label for="pwd">MẬT KHẨU:</label>
@@ -351,39 +397,21 @@
                 id="pwd"
                 placeholder="MẬT KHẨU"
                 name="pswd"
+                autocomplete="off"
                 required
               />
-              <div class="valid-feedback"></div>
+              <div class="valid-feedback">f</div>
               <div class="invalid-feedback">Vui lòng điền Mật khẩu</div>
             </div>
             
-            <div class="row w-100 align-items-center mx-0">
-
-                <a href="#" class="col-6 forget-pwd px-0">Quên mật khẩu ?</a>
-                
-                <div class="col-6 form-group form-check my-0 px-0" style="text-align: right;">
-                    <label class="form-check-label">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        name="remember"
-                      />
-                      Duy trì đăng nhập
-                    </label>
-                </div>
-
-            </div>
-            
-            <div class="container btn-group-login d-flex flex-column justify-content-center align-items-center">
-              <button type="submit" class="btn login rounded-0">ĐĂNG NHẬP</button>
-              <button  type="button" class="btn login-fb rounded-0">ĐĂNG NHẬP VỚI FACEBOOK</button>
-              <button  type="button" class="btn  login-gg rounded-0">ĐĂNG NHẬP VỚI GOOGLE</button>
+            <div class="container btn-group-signin d-flex flex-column justify-content-center align-items-center">
+              <button type="submit" class="btn signin rounded-0">ĐĂNG KÝ</button>
+              <p class="py-0 my-2">Hoặc</p>
+              <a name="" id="" class="btn login rounded-0" href="login.htm" role="button">ĐĂNG NHẬP</a>
             </div>
 
           </form>
 
-          <p class="text-center">Bạn chưa có Tài khoản? Vui lòng đăng ký Tài khoản mới 
-          <a href="sign-in.htm" style="text-decoration: none; color: rgb(255, 94, 0)">tại đây</a>.</p>
         </div>
       </div>
 

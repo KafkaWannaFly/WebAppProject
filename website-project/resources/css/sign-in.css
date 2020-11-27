@@ -1,0 +1,53 @@
+.page-header__title.signin-title {
+  margin: 0 0 2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.body-content {
+  padding: 3rem 0 3rem 0;
+}
+
+.form-signin label {
+  letter-spacing: 1px;
+}
+
+.form-signin input {
+  padding: 1.5rem;
+}
+
+.body-content {
+  width: 80%;
+}
+
+.form-signin {
+  width: 60% !important;
+}
+
+.form-signin .btn-group-signin {
+  margin: 2rem 0 0 0;
+}
+
+.form-signin .btn-group-signin .signin,
+.form-signin .btn-group-signin .login {
+  color: white;
+  margin: 0.2rem 0;
+  width: 60% !important;
+  display: block !important;
+}
+
+.form-signin .btn-group-signin .signin {
+  background-color: rgb(255, 94, 0);
+}
+
+.form-signin .btn-group-signin .login {
+  background-color: #3b5998;
+}
+
+.form-signin .btn-group-signin .signin:hover {
+  background-color: rgb(7, 7, 7);
+}
+
+.form-signin .btn-group-signin .login:hover {
+  background-color: rgba(234, 68, 53, 0.904);
+}
