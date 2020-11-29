@@ -32,114 +32,62 @@
 
   <!-- Script for boostrap tooltip -->
   <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
       $('[data-toggle="tooltip"]').tooltip();
     });
   </script>
-   
-  <!-- Secsion Header Top Infor Contact-->
-  <!-- Show only for large screen -->
-  <div class="header-infor-top d-none d-sm-none d-md-none d-lg-block text-white py-1" >
-    <div class="container">
-      <div class="row">
-          
-        <!-- Top Left -->
-        <div class="col-8">
-          <div class="header-address-contact">
-            <p class="my-0">
-              <a href="mailto:fit_hcmus@gmail.com">
-                <i class="fa fa-envelope-o ml-0"></i>
-              fit_hcmus@email.com
-              </a>
-              <span><i class="fa fa-map-marker"></i>227 Ng Van Cu, Ward 4, District 5, HCM</span>
-              <a href="tel:+ (1800) 456 7890">
-                <i class="fa fa-phone"></i>
-              + (84) 123 4567
-              </a>
-            </p>
-          </div>
-        </div>
 
+  <div>
+    <!-- Secsion Header Nav Contact-->
+    <div class="header-nav-bar border-bottom d-flex align-items-center ">
 
-        <!-- Top Right-->
-        <div class="col-4">
-          <div class="header-icon-contact">
-            <ul class="social-icons text-right list-unstyled d-flex justify-content-end my-0">
-              <li>
-                <a href="https://www.facebook.com/" data-toggle="tooltip" title="Facebook" target="_blank">
-                  <i class="fa fa-facebook  text-white my-0"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/" data-toggle="tooltip" title="Twitter" target="_blank">
-                  <i class="fa fa-twitter  text-white my-0"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://instagram.com/" data-toggle="tooltip" title="Instagram" target="_blank">
-                  <i class="fa fa-instagram  text-white my-0"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <!-- Script for form search-->
+      <script>
+        function showSearchForm() {
+          document.getElementById("nav-bar-menu").style.display = "none";
+          document.getElementById("form-search-nav").style.display = "block";
+        }
+      </script>
 
-      </div>
-    </div>
-  </div>
+      <script>
+        function closeSearchForm() {
+          document.getElementById("nav-bar-menu").style.display = "flex";
+          document.getElementById("form-search-nav").style.display = "none";
+        }
+      </script>
 
-  <!-- Secsion Header Nav Contact-->
-  <div class="header-nav-bar border-bottom d-flex align-items-center ">
+      <div class="search-form-active container" id="form-search-nav">
 
-    <!-- Script for form search-->
-    <script>
-      function showSearchForm() {
-        document.getElementById("nav-bar-menu").style.display = "none";
-        document.getElementById("form-search-nav").style.display = "block";
-      }
-    </script>
+        <form method="get" action="" style="margin: 0; padding: 0;">
+          <div class="top-bar-search is-active">
 
-    <script>
-      function closeSearchForm() {
-        document.getElementById("nav-bar-menu").style.display = "flex";
-        document.getElementById("form-search-nav").style.display = "none";
-      }
-    </script>
-    
-    <div class="search-form-active container" id="form-search-nav">
-      
-      <form method="get" action="" style="margin: 0; padding: 0;">
-        <div class="top-bar-search is-active">
-          
-          <div class="container">
-            <div class="input-group">
-              <input type="text" class="form-control border-0" placeholder="Tìm sản phẩm ..." autocomplete="off">
-              <div class="input-group-append">
+            <div class="container">
+              <div class="input-group">
+                <input type="text" class="form-control border-0" placeholder="Tìm sản phẩm ..." autocomplete="off">
+                <div class="input-group-append">
 
-                <button type="submit" class="btn btn-search-active"><i class="fa fa-search"></i></button>
-                <button type="button" class="btn btn-close-search-active" onclick="closeSearchForm()"><i class="fas fa-times"></i></button>
+                  <button type="submit" class="btn btn-search-active"><i class="fa fa-search"></i></button>
+                  <button type="button" class="btn btn-close-search-active" onclick="closeSearchForm()"><i
+                      class="fas fa-times"></i></button>
+                </div>
               </div>
             </div>
+
           </div>
+        </form>
 
-        </div>
-      </form>
-    
-    </div>
-
-    
-    
-
-    <div class="nav-bar-menu container" id="nav-bar-menu" >
-      <div class="logo-brand">
-        <a href="index.htm" class="h-100">
-          <img src="../resources/img/fit-logo.png" alt="" style="height: 100%; width: 3.5rem;">         
-        </a>
-        <h3>USG</h3>
       </div>
 
-      <div class="nav-menu">
-        <div class="nav-link-menu">
+      <div class="nav-bar-menu container" id="nav-bar-menu">
+        <div class="logo-brand">
+          <a href="../index.htm" class="h-100">
+            <img src="../resources/img/fit-logo.png" alt="" style="height: 100%; width: 3.5rem;">
+          </a>
+          <h3>USG</h3>
+        </div>
+
+        <div class="nav-menu">
+          <div class="nav-link-menu">
             <ul>
               <li class="nav-link" id="sales">
                 <a href="sales.htm">SALES</a>
@@ -222,141 +170,140 @@
                 <a href="#">THÔNG TIN</a>
               </li>
             </ul>
+          </div>
+
+
+
+          <div class="nav-btn">
+            <button type="button" class="btn bg-transparent" onclick="showSearchForm()" id="search-btn">
+              <i class="fa fa-search"></i>
+            </button>
+
+            <a name="" id="account-btn" class="btn bg-transparent mx-5" href="../pages/login.htm" role="button">
+              <i class="fas fa-user text-dark"></i>
+            </a>
+
+            <a name="" id="cart-btn" class="btn bg-dark rounded-0" href="./shoppingCart.html" role="button">
+              <i class="fas fa-shopping-bag text-white"></i>
+              <p>Giỏ hàng</p>
+            </a>
+          </div>
         </div>
 
-        
-
-        <div class="nav-btn">
-          <button type="button" class="btn bg-transparent" onclick="showSearchForm()" id="search-btn">
-            <i class="fa fa-search"></i>
-          </button>
-
-          <a name="" id="account-btn" class="btn bg-transparent mx-5" href="../pages/login.htm" role="button">
-            <i class="fas fa-user text-dark"></i>
-          </a>
-      
-          <a name="" id="cart-btn" class="btn bg-dark rounded-0" href="#" role="button">
-            <i class="fas fa-shopping-bag text-white"></i>
-            <p>Giỏ hàng</p>
-          </a>
-        </div>
       </div>
-
     </div>
   </div>
 
-  
-  
+
+
   <!-- Body -->
   <div class="body-content container">
     <div class="secsion-header-title">
-        <h3>DANH SÁCH TẤT CẢ SẢN PHẨM</h3>
+      <h3>DANH SÁCH TẤT CẢ SẢN PHẨM</h3>
     </div>
 
     <div class="secsion-orderby">
-        <span>Sắp xếp theo:</span>
-        <div class="btn-group">
-            <button type="button" class="btn bg-white dropdown-toggle" data-toggle="dropdown">
-               Mới nhất
-            </button>
-            <div class="dropdown-menu shadow">
-              <a class="dropdown-item" href="#">Mới nhất</a>
-              <a class="dropdown-item" href="#">Bán chạy nhất</a>
-              <a class="dropdown-item" href="#">Giá từ thấp đến cao</a>
-              <a class="dropdown-item" href="#">Giá từ cao đến thấp</a>
-              <a class="dropdown-item" href="#">Giảm nhiều nhất</a>
-            </div>
-          </div>
+      <span>Sắp xếp theo:</span>
+      <div class="btn-group">
+        <button type="button" class="btn bg-white dropdown-toggle" data-toggle="dropdown">
+          Mới nhất
+        </button>
+        <div class="dropdown-menu shadow">
+          <a class="dropdown-item" href="#">Mới nhất</a>
+          <a class="dropdown-item" href="#">Bán chạy nhất</a>
+          <a class="dropdown-item" href="#">Giá từ thấp đến cao</a>
+          <a class="dropdown-item" href="#">Giá từ cao đến thấp</a>
+          <a class="dropdown-item" href="#">Giảm nhiều nhất</a>
+        </div>
+      </div>
     </div>
 
     <script>
-        function chooseSize(btn) {
-            btn.style.display = "none"
-        }
+      function chooseSize(btn) {
+        btn.style.display = "none"
+      }
     </script>
 
     <div class="container list-product">
 
-        <div class="row">
+      <div class="row">
 
-            <div class="col-3 d-flex flex-column item-product">
-                <a href="#">
-                  <img src="..\resources\img\product\khau-trang\mask_CS_2_585x663.jpg" alt="5" width="100%;">
-                </a>
-                <div class="des-product">
-                  <a href="#" class="name">
-                    Khẩu trang thêu Care&Share màu đen 
-                  </a>
-                  <br>
-                  <a href="#" class="rate">(Xem đánh giá)</a>
-                  <p class="price">59.000đ</p>
-                </div>
-                <div class="buy">
-                    <a name="" id="" class="btn w-100 rounded-0" href="#" role="button">Chọn mua</a>
-                </div>
-            </div>
-
+        <div class="col-3 d-flex flex-column item-product">
+          <a href="#">
+            <img src="..\resources\img\product\khau-trang\mask_CS_2_585x663.jpg" alt="5" width="100%;">
+          </a>
+          <div class="des-product">
+            <a href="#" class="name">
+              Khẩu trang thêu Care&Share màu đen
+            </a>
+            <br>
+            <a href="#" class="rate">(Xem đánh giá)</a>
+            <p class="price">59.000đ</p>
+          </div>
+          <div class="buy">
+            <a name="" id="" class="btn w-100 rounded-0" href="#" role="button">Chọn mua</a>
+          </div>
         </div>
+
+      </div>
 
     </div>
   </div>
-
-
-
-
 
   <!-- Secsion Footer -->
   <div class="footer" style="overflow-x: hidden;">
-    
-    <div class="container-fuild">
+    <!-- Secsion Header Top Infor Contact-->
+    <!-- Show only for large screen -->
+    <div class="header-infor-top d-none d-sm-none d-md-none d-lg-block text-white py-1">
+      <div class="container">
+        <div class="row">
 
-      <!-- Meta Infor -->
-      <div class="footer-menu py-1">
-        <div class="row justify-content-center align-items-center">
-          <ul style="list-style-type:none" class="py-0 my-0 py-1">
-            <li class="d-inline-block"><a class="mr-4" href="#">Hướng dẫn mua hàng</a>|</li>
-            <li class="d-inline-block"><a class="mx-4" href="#">Hướng dẫn chọn size</a>|</li>
-            <li class="d-inline-block"><a class="mx-4" href="#">Chính sách đổi trả</a>|</li>
-            <li class="d-inline-block"><a class="mx-4" href="#">Chính sách bảo mật và điều khoản</a>|</li>
-            <li id="last" class="d-inline-block"><a class="ml-4" href="#">Tuyển dụng</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Footer infor -->
-      <div class="footer-infor px-5">
-
-        <div class="row justify-content-center align-items-center">
-          <div class="col-5 mr-auto mt-4">
-              <h5>@ CÔNG TY CỔ PHẦN FASTECH ASIA</h5>
-              <p class="mt-4">
-                Mã số doanh nghiệp: 0108617038. 
-                Giấy chứng chận đăng ký doanh nghiệp do Sở Kế hoạch và Đầu tư TP Hà Nội 
-                cấp lần đầu ngày 14/08/2018.
+          <!-- Top Left -->
+          <div class="col-8">
+            <div class="header-address-contact">
+              <p class="my-0">
+                <a href="mailto:fit_hcmus@gmail.com">
+                  <i class="fa fa-envelope-o ml-0"></i>
+                  fit_hcmus@email.com
+                </a>
+                <span><i class="fa fa-map-marker"></i>227 Ng Van Cu, Ward 4, District 5, HCM</span>
+                <a href="tel:+ (1800) 456 7890">
+                  <i class="fa fa-phone"></i>
+                  + (84) 123 4567
+                </a>
               </p>
-          </div>
-          
-          <div class="col-2">
-            <img src="../resources/img/certificate.png" alt="">
+            </div>
           </div>
 
-          <div class="col-3 mr-5 mt-4">
-            <p>
-              HUB Hà Nội: Số 103, Đường Vạn Phúc, Phường Vạn Phúc, Quận Hà Đông, TP. Hà Nội
-            </p>
-            <p class="mt-4">
-              HUB Tp HCM: Số F9, Đường 3A, Phường Tân Hưng, Quận 7, Tp. Hồ Chí Minh
-            </p>
+
+          <!-- Top Right-->
+          <div class="col-4">
+            <div class="header-icon-contact">
+              <ul class="social-icons text-right list-unstyled d-flex justify-content-end my-0">
+                <li>
+                  <a href="https://www.facebook.com/" data-toggle="tooltip" title="Facebook" target="_blank">
+                    <i class="fa fa-facebook  text-white my-0"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/" data-toggle="tooltip" title="Twitter" target="_blank">
+                    <i class="fa fa-twitter  text-white my-0"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://instagram.com/" data-toggle="tooltip" title="Instagram" target="_blank">
+                    <i class="fa fa-instagram  text-white my-0"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
+
         </div>
-
       </div>
-    
     </div>
-
   </div>
 
 </body>
+
 </html>
-
-
