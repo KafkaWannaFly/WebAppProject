@@ -48,7 +48,7 @@ body {
 	margin: 0px 30px;
 }
 
-.navigatePath a {
+#navigatePath a {
 	color: var(--lightTomato);
 	font-family: "Source Sans Pro", sans-serif;
 	font-size: large;
@@ -128,6 +128,7 @@ body {
 }
 
 .option {
+	text-transform: uppercase;
 	text-align: center;
 	font-size: x-large;
 	font-weight: bold;
@@ -147,7 +148,6 @@ body {
 	background-color: var(--lightTomato);
 	cursor: pointer;
 }
-
 .descriptionText {
 	height: 8rem;
 	white-space: normal;
@@ -159,7 +159,6 @@ body {
 
 	padding: 0px 0.5rem;
 }
-
 .addToCartButton {
 	font-family: "Roboto Slab", serif;
 	font-weight: bold;
