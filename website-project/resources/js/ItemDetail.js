@@ -39,17 +39,17 @@ function setupNavigatePath(item) {
         let mainCategory = document.createElement("a");
         mainCategory.innerHTML = item.category.name;
         mainCategory.href = "#";
-        let subCategory = document.createElement("a");
-        subCategory.innerHTML = item.category.detailName;
-        subCategory.href = "#";
+        // let subCategory = document.createElement("a");
+        // subCategory.innerHTML = item.category.detailName;
+        // subCategory.href = "#";
         let pageName = document.createElement("a");
         pageName.innerHTML = item.name;
         navigatePath.appendChild(home);
         navigatePath.appendChild(document.createTextNode(" > "));
         navigatePath.appendChild(mainCategory);
         navigatePath.appendChild(document.createTextNode(" > "));
-        navigatePath.appendChild(subCategory);
-        navigatePath.appendChild(document.createTextNode(" > "));
+        // navigatePath.appendChild(subCategory);
+        // navigatePath.appendChild(document.createTextNode(" > "));
         navigatePath.appendChild(pageName);
     }
     catch (error) {
@@ -94,9 +94,9 @@ function setUpDetailContent(item) {
             return x.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
         let newPriceTag = document.querySelector(".newPriceTag");
-        newPriceTag.innerHTML = numberWithCommas(item.price).toString() + " VND";
+        newPriceTag.innerHTML = numberWithCommas(item.price).toString() + "đ";
         let oldPriceTag = document.querySelector(".oldPriceTag");
-        oldPriceTag.innerHTML = numberWithCommas(item.price * 1.2) + " VND";
+        oldPriceTag.innerHTML = numberWithCommas(item.price * 1.2) + "đ";
         let optionsDiv = document.querySelector(".optionsDiv");
         for (let i = 0; i < item.options.length; i++) {
             let option = document.importNode(document.querySelector(".itemOptionModel"), true);
