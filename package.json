@@ -8,10 +8,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "build": "webpack",
-    "heroku-postbuild": "ng build --prod",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "build": "ng build"
   },
   "author": "Group 05",
   "license": "ISC",
