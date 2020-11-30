@@ -17,7 +17,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-	console.log(
-		`App is listening on ${window.location.hostname}:${window.location.port}`
-	);
+	console.log(`App is listening on https://usg-clothes.herokuapp.com:${port}`);
 });
