@@ -52,8 +52,23 @@ var PantCategory = ['Short', 'Jean', 'Kaki', 'Jogger']
 var SockCategory = ['Ankle sock', 'Crew sock']
 var AccessoryCategory = ['Belt', 'Wallet', 'Face mask', 'Hat']
 
-var ShortSleeveShirt = 'Round neck T-shirt Cotton Compact Premium printed'
-var ShortSleeveShirtTypes = ['Christmas - Moss green', 'Words in Christmas style - Velvet', 'White bear - Moss green', 'Im Single - Black', 'Happy Man - Black', '#MienTrung - Black', 'Coolmate - White' , 'Coolmate - Black']
+var ShortSleeveTShirts = []
+var LongSleeveTShirts = []
+var TankTops = []
+var Shirts = []
+
+var Shorts = []
+var Jeans = []
+var Kakis = []
+var Joggers = []
+
+var AnkleSocks = []
+var CrewSocks = []
+
+var Belts = []
+var Wallets = []
+var FaceMasks = []
+var Hats = []
 
 for (let i = 0; i < catergoryNames.length; i++) {
     if (i == 0) {
@@ -64,11 +79,65 @@ for (let i = 0; i < catergoryNames.length; i++) {
             }
             let Categorydata = JSON.stringify(Category)
             fs.appendFile('Category.json', Categorydata)
+
             if (j == 0) {
-                for (let z = 0; z < ShortSleeveShirtTypes.length; z++) {
+                for (let k = 0; k < ShortSleeveTShirts.length; k++) {
                     let Item = {
-                        
+                        id : i.toString() + ' - ' + j.toString() + ' - ' + k.toString(),
+                        name : ShortSleeveTShirts[k],
+                        price : Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                        description : 'demo description',
+                        stock : Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                        postedTime : '01/01/2020',
+                        category: Category
                     }
+                    let Itemdata = JSON.stringify(Item)
+                    fs.appendFile('Item.json', Itemdata)
+                }
+            }
+            if (j == 1) {
+                for (let k = 0; k < LongSleeveTShirts.length; k++) {
+                    let Item = {
+                        id : i.toString() + ' - ' + j.toString() + ' - ' + k.toString(),
+                        name : LongSleeveTShirts[k],
+                        price : Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                        description : 'demo description',
+                        stock : Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                        postedTime : '01/01/2020',
+                        category: Category
+                    }
+                    let Itemdata = JSON.stringify(Item)
+                    fs.appendFile('Item.json', Itemdata)
+                }
+            }
+            if (j == 2) {
+                for (let k = 0; k < TankTops.length; k++) {
+                    let Item = {
+                        id : i.toString() + ' - ' + j.toString() + ' - ' + k.toString(),
+                        name : TankTops[k],
+                        price : Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                        description : 'demo description',
+                        stock : Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                        postedTime : '01/01/2020',
+                        category: Category
+                    }
+                    let Itemdata = JSON.stringify(Item)
+                    fs.appendFile('Item.json', Itemdata)
+                }
+            }
+            if (j == 3) {
+                for (let k = 0; k < Shirts.length; k++) {
+                    let Item = {
+                        id : i.toString() + ' - ' + j.toString() + ' - ' + k.toString(),
+                        name : Shirts[k],
+                        price : Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                        description : 'demo description',
+                        stock : Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                        postedTime : '01/01/2020',
+                        category: Category
+                    }
+                    let Itemdata = JSON.stringify(Item)
+                    fs.appendFile('Item.json', Itemdata)
                 }
             }
         }
@@ -81,6 +150,67 @@ for (let i = 0; i < catergoryNames.length; i++) {
             }
             let Categorydata = JSON.stringify(Category)
             fs.appendFile('Category.json', Categorydata)
+
+            if (j == 0) {
+                for (let k = 0; k < Shorts.length; k++) {
+                    let Item = {
+                        id : i.toString() + ' - ' + j.toString() + ' - ' + k.toString(),
+                        name : Shorts[k],
+                        price : Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                        description : 'demo description',
+                        stock : Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                        postedTime : '01/01/2020',
+                        category: Category
+                    }
+                    let Itemdata = JSON.stringify(Item)
+                    fs.appendFile('Item.json', Itemdata)
+                }
+            }
+            if (j == 1) {
+                for (let k = 0; k < Jeans.length; k++) {
+                    let Item = {
+                        id : i.toString() + ' - ' + j.toString() + ' - ' + k.toString(),
+                        name : Jeans[k],
+                        price : Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                        description : 'demo description',
+                        stock : Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                        postedTime : '01/01/2020',
+                        category: Category
+                    }
+                    let Itemdata = JSON.stringify(Item)
+                    fs.appendFile('Item.json', Itemdata)
+                }
+            }
+            if (j == 2) {
+                for (let k = 0; k < Kakis.length; k++) {
+                    let Item = {
+                        id : i.toString() + ' - ' + j.toString() + ' - ' + k.toString(),
+                        name : Kakis[k],
+                        price : Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                        description : 'demo description',
+                        stock : Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                        postedTime : '01/01/2020',
+                        category: Category
+                    }
+                    let Itemdata = JSON.stringify(Item)
+                    fs.appendFile('Item.json', Itemdata)
+                }
+            }
+            if (j == 3) {
+                for (let k = 0; k < Joggers.length; k++) {
+                    let Item = {
+                        id : i.toString() + ' - ' + j.toString() + ' - ' + k.toString(),
+                        name : Joggers[k],
+                        price : Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                        description : 'demo description',
+                        stock : Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                        postedTime : '01/01/2020',
+                        category: Category
+                    }
+                    let Itemdata = JSON.stringify(Item)
+                    fs.appendFile('Item.json', Itemdata)
+                }
+            }
         }
     }
     if (i == 2) {
@@ -91,6 +221,37 @@ for (let i = 0; i < catergoryNames.length; i++) {
             }
             let Categorydata = JSON.stringify(Category)
             fs.appendFile('Category.json', Categorydata)
+
+            if (j == 0) {
+                for (let k = 0; k < AnkleSocks.length; k++) {
+                    let Item = {
+                        id : i.toString() + ' - ' + j.toString() + ' - ' + k.toString(),
+                        name : AnkleSocks[k],
+                        price : Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                        description : 'demo description',
+                        stock : Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                        postedTime : '01/01/2020',
+                        category: Category
+                    }
+                    let Itemdata = JSON.stringify(Item)
+                    fs.appendFile('Item.json', Itemdata)
+                }
+            }
+            if (j == 0) {
+                for (let k = 0; k < CrewSocks.length; k++) {
+                    let Item = {
+                        id : i.toString() + ' - ' + j.toString() + ' - ' + k.toString(),
+                        name : CrewSocks[k],
+                        price : Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                        description : 'demo description',
+                        stock : Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                        postedTime : '01/01/2020',
+                        category: Category
+                    }
+                    let Itemdata = JSON.stringify(Item)
+                    fs.appendFile('Item.json', Itemdata)
+                }
+            }
         }
     }
     if (i == 3) {
@@ -101,6 +262,67 @@ for (let i = 0; i < catergoryNames.length; i++) {
             }
             let Categorydata = JSON.stringify(Category)
             fs.appendFile('Category.json', Categorydata)
+
+            if (j == 0) {
+                for (let k = 0; k < Belts.length; k++) {
+                    let Item = {
+                        id : i.toString() + ' - ' + j.toString() + ' - ' + k.toString(),
+                        name : Belts[k],
+                        price : Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                        description : 'demo description',
+                        stock : Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                        postedTime : '01/01/2020',
+                        category: Category
+                    }
+                    let Itemdata = JSON.stringify(Item)
+                    fs.appendFile('Item.json', Itemdata)
+                }
+            }
+            if (j == 1) {
+                for (let k = 0; k < Wallets.length; k++) {
+                    let Item = {
+                        id : i.toString() + ' - ' + j.toString() + ' - ' + k.toString(),
+                        name : Wallets[k],
+                        price : Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                        description : 'demo description',
+                        stock : Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                        postedTime : '01/01/2020',
+                        category: Category
+                    }
+                    let Itemdata = JSON.stringify(Item)
+                    fs.appendFile('Item.json', Itemdata)
+                }
+            }
+            if (j == 2) {
+                for (let k = 0; k < FaceMasks.length; k++) {
+                    let Item = {
+                        id : i.toString() + ' - ' + j.toString() + ' - ' + k.toString(),
+                        name : FaceMasks[k],
+                        price : Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                        description : 'demo description',
+                        stock : Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                        postedTime : '01/01/2020',
+                        category: Category
+                    }
+                    let Itemdata = JSON.stringify(Item)
+                    fs.appendFile('Item.json', Itemdata)
+                }
+            }
+            if (j == 3) {
+                for (let k = 0; k < Hats.length; k++) {
+                    let Item = {
+                        id : i.toString() + ' - ' + j.toString() + ' - ' + k.toString(),
+                        name : Hats[k],
+                        price : Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                        description : 'demo description',
+                        stock : Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                        postedTime : '01/01/2020',
+                        category: Category
+                    }
+                    let Itemdata = JSON.stringify(Item)
+                    fs.appendFile('Item.json', Itemdata)
+                }
+            }
         }
     }
 }
