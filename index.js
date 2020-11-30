@@ -16,6 +16,14 @@ app.get("/", (req, res) => {
 	});
 });
 
+app.get("/index.htm", (req, res) => {
+	fs.readFile("index.htm", (err, data) => {
+		res.statusCode = 200;
+		res.setHeader("content-type", "text/html");
+		res.send(data);
+	});
+});
+
 app.listen(port, () => {
 	console.log(`App is listening on https://usg-clothes.herokuapp.com:${port}`);
 });
