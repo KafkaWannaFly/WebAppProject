@@ -128,3 +128,4 @@ const loadSampleData = () => {
 };
 let body = document.querySelector("body");
 body.onload = () => loadSampleData();
+// body.addEventListener("load", () => loadSampleData());
