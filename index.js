@@ -3,10 +3,24 @@ var path = require("path");
 const express = require("express");
 const fs = require("fs");
 const app = express();
+const hbs = require("express-handlebars");
 const port = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, "./pages")));
+app.use("/pages", express.static(path.join(__dirname, "./pages")));
 app.use("/resources", express.static(path.join(__dirname, "./resources")));
+
+// Set up for HandleBars
+app.engine(
+	"hbs",
+	hbs({
+		extname: "hbs",
+		defaultLayout: "default-layout",
+		layoutsDir: __dirname + "/Views/Layouts/",
+		partialsDir: __dirname + "/Views/Partials/",
+	})
+);
+
+app.set("view engine", "hbs");
 
 app.get("/", (req, res) => {
 	fs.readFile("index.htm", (err, data) => {
