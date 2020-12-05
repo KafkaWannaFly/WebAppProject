@@ -1,12 +1,11 @@
 import { Item } from "./Models/item.js";
-// let Item = require("./Models/item");
 let ITEM = new Item();
 ITEM = {
     id: "id",
     name: "Saber’s Excalibur that Won 2 Holly Grail Wars",
     category: {
-        name: "Main Category",
-        detailName: "Sub Category",
+        categoryName: "Main Category",
+        fileName: "fileName",
     },
     description: "Excalibur (/ɛkˈskælɪbər/) is the legendary sword of King Arthur,\
                         sometimes also attributed with magical powers or\
@@ -37,19 +36,14 @@ function setupNavigatePath(item) {
         home.innerHTML = "Home Page";
         home.href = "../index.htm";
         let mainCategory = document.createElement("a");
-        mainCategory.innerHTML = item.category.name;
+        mainCategory.innerHTML = item.category.categoryName;
         mainCategory.href = "#";
-        // let subCategory = document.createElement("a");
-        // subCategory.innerHTML = item.category.detailName;
-        // subCategory.href = "#";
         let pageName = document.createElement("a");
         pageName.innerHTML = item.name;
         navigatePath.appendChild(home);
         navigatePath.appendChild(document.createTextNode(" > "));
         navigatePath.appendChild(mainCategory);
         navigatePath.appendChild(document.createTextNode(" > "));
-        // navigatePath.appendChild(subCategory);
-        // navigatePath.appendChild(document.createTextNode(" > "));
         navigatePath.appendChild(pageName);
     }
     catch (error) {
@@ -75,7 +69,6 @@ function setUpCarousel(item) {
             console.log(`Item image path ${i}: ${item.imagePath[i]}`);
             img.src = item.imagePath[i];
             carouselInner.appendChild(imgDiv);
-            // Make first element active by default
             if (i == 0) {
                 imgDiv.className += " active";
                 li.className += " active";
@@ -86,13 +79,13 @@ function setUpCarousel(item) {
         console.log(error);
     }
 }
+function numberWithCommas(x) {
+    return x.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 function setUpDetailContent(item) {
     try {
         let itemName = document.querySelector(".itemName");
         itemName.innerHTML = item.name;
-        function numberWithCommas(x) {
-            return x.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        }
         let newPriceTag = document.querySelector(".newPriceTag");
         newPriceTag.innerHTML = numberWithCommas(item.price).toString() + "đ";
         let oldPriceTag = document.querySelector(".oldPriceTag");
@@ -112,11 +105,8 @@ function setUpDetailContent(item) {
 }
 function readItemDetail(item) {
     try {
-        // Set navigatePath for the page
         setupNavigatePath(item);
-        // Set images for carousel
         setUpCarousel(item);
-        //Set content
         setUpDetailContent(item);
     }
     catch (error) {
@@ -128,4 +118,3 @@ const loadSampleData = () => {
 };
 let body = document.querySelector("body");
 body.onload = () => loadSampleData();
-// body.addEventListener("load", () => loadSampleData());

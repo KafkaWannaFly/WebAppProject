@@ -1,3 +1,9 @@
+// export {};
+// const fs = require("fs");
+
+// import { existsSync } from "fs";
+// const fs = require("fs");
+
 // Navigate to ItemDetail.html when click to the link or image
 function setUpNavigationToDetailPage() {
 	let path = window.location.pathname;
@@ -8,10 +14,14 @@ function setUpNavigationToDetailPage() {
 
 	console.log(`Found ${itemProducts.length} item-product`);
 
-	let detailUrl = "./ItemDetail.html";
+	let detailUrl = "./item-detail.html";
 	if (pageName === "index") {
-		detailUrl = "./pages/ItemDetail.html";
+		detailUrl = "./pages/item-detail.html";
 	}
+
+	// if (!fs.existsSync(detailUrl)) {
+	// 	detailUrl = "./pages/item-detail.html";
+	// }
 
 	for (let i = 0; i < itemProducts.length; i++) {
 		let pictureAnchor = itemProducts[i].querySelector(

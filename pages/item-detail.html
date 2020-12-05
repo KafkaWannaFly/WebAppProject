@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Item Detail</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../resources/css/styles.css">
+    <link rel="stylesheet" href="../resources/css/item-detail.css">
+</head>
+
+<body>
+    <div class="body-content container-fluid">
+        <script>
+            document.title = document.querySelector(".item-name").innerHTML;
+            console.log(document.title);
+        </script>
+        <div class="row">
+            <!-- 100% width on mobile & 50% width on desktop -->
+            <div class="col-12 col-md-6">
+                <div id="carouselId" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselId" data-slide-to="1"></li>
+                        <li data-target="#carouselId" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="w-100" src="https://images6.alphacoders.com/670/thumb-350-670517.png">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100" src="https://images4.alphacoders.com/994/thumb-350-994514.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100" src="https://images7.alphacoders.com/945/thumb-350-945610.png">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 
+            text-break">
+                <p class="item-name">Saber’s Excalibur that Won 2 Holly Grail Wars</p>
+
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex ">
+                        <p class="price">999,999,999</p> đ
+                    </div>
+
+                    <div class="itemAmount d-flex justify-content-center align-self-start">
+                        <div class="decrease-one">-</div>
+                        <div>
+                            <input type="number" class="form-control amount" aria-describedby="helpId" value="1">
+                        </div>
+                        <div class="increase-one">+</div>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="tittle-text">Options:</p>
+                    <div class="d-flex justify-content-between">
+                        <div class="option w-100 mx-1 py-2"> A </div>
+                        <div class="option w-100 mx-1 py-2"> B </div>
+                        <div class="option w-100 mx-1 py-2"> C </div>
+                    </div>
+                </div>
+
+                <div class="mt-2">
+                    <div class="tittle-text">Description:</div>
+                    <div class="form-group mt-1">
+                        <textarea class="form-control description-text" disabled rows="5">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus deleniti maiores consequatur earum optio quibusdam quam sunt necessitatibus velit similique aliquid iure ab, asperiores voluptas excepturi tempore, ex ad, quia illo. Hic quam earum dolorem nulla harum error, soluta vel accusantium laudantium, id qui perferendis quos. Quia ab odio reprehenderit culpa tenetur? Excepturi nisi distinctio minus repellendus eligendi voluptatibus iure est, recusandae, dolorum a, et consectetur itaque corrupti expedita maxime? Nostrum placeat illo explicabo ducimus ipsam, officia nobis? Eveniet voluptatem veritatis, ad inventore aliquam harum voluptatibus corporis corrupti veniam, laboriosam quam facere incidunt, magni quaerat quae magnam blanditiis distinctio quod.
+                    </textarea>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-lg btn-block add-to-cart">
+                    ADD TO CART
+                </button>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -6,8 +6,8 @@ ITEM = {
 	id: "id",
 	name: "Saber’s Excalibur that Won 2 Holly Grail Wars",
 	category: {
-		name: "Main Category",
-		detailName: "Sub Category",
+		categoryName: "Main Category",
+		fileName: "fileName",
 	},
 	description:
 		"Excalibur (/ɛkˈskælɪbər/) is the legendary sword of King Arthur,\
@@ -43,7 +43,7 @@ function setupNavigatePath(item: Item) {
 		home.href = "../index.htm";
 
 		let mainCategory = document.createElement("a");
-		mainCategory.innerHTML = item.category.name;
+		mainCategory.innerHTML = item.category.categoryName;
 		mainCategory.href = "#";
 
 		// let subCategory = document.createElement("a");
@@ -113,14 +113,14 @@ function setUpCarousel(item: Item) {
 	}
 }
 
+function numberWithCommas(x: number) {
+	return x.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 function setUpDetailContent(item: Item) {
 	try {
 		let itemName = document.querySelector(".itemName");
 		itemName.innerHTML = item.name;
-
-		function numberWithCommas(x: number) {
-			return x.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-		}
 
 		let newPriceTag = document.querySelector(".newPriceTag");
 		newPriceTag.innerHTML = numberWithCommas(item.price).toString() + "đ";

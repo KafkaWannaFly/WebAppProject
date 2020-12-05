@@ -37,45 +37,7 @@
 	font-family: "Montserrat", sans-serif;
 }
 
-html,
-body {
-	height: 100%;
-	/* background-color: rgb(189, 189, 189); */
-}
-
-.wrapper {
-	background-color: white;
-	height: 100%;
-	margin: 0px 30px;
-}
-
-#navigatePath a {
-	color: var(--lightTomato);
-	font-family: "Source Sans Pro", sans-serif;
-	font-size: large;
-}
-
-.imageDiv {
-	background-color: black;
-
-	/* width: 100%; */
-	height: 450px;
-}
-
-@media only screen and (max-width: 576px) {
-	.imageDiv {
-		background-color: black;
-
-		/* width: 100%; */
-		height: 250px;
-	}
-}
-
-.imageDiv > img {
-	object-fit: cover;
-	overflow: hidden;
-}
-
+/* Make carousel indicator rounded */
 .carousel-indicators li {
 	width: 10px;
 	height: 10px;
@@ -83,32 +45,24 @@ body {
 }
 
 .carousel-indicators .active {
-	background-color: var(--lightTomato);
+	background-color: var(--deepViolet);
 }
 
-.itemName {
-	font-family: "Montserrat", sans-serif;
-	margin: auto;
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
 
-.itemPricesTag {
-	line-height: 0.5rem;
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
 }
 
-.newPriceTag {
-	font-family: "Raleway", sans-serif;
-	font-weight: bold;
-	font-size: 1.5rem;
-}
-
-.oldPriceTag {
-	font-family: "Raleway", sans-serif;
-	text-decoration: line-through;
-}
-
-.decreaseOne,
-.currentAmount,
-.increaseOne {
+.decrease-one,
+.amount,
+.increase-one {
 	display: inline-block;
 	width: 2.5rem;
 	height: 2.5rem;
@@ -125,14 +79,24 @@ body {
 	border-width: 1px;
 }
 
-.decreaseOne:hover,
-.increaseOne:hover {
+.decrease-one:hover,
+.increase-one:hover {
 	background-color: var(--lightTomato);
 	cursor: pointer;
 }
 
-.tittleText {
+.price {
+	font-family: "Raleway", sans-serif;
 	font-size: 1.5rem;
+}
+
+.item-name {
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-size: x-large;
+}
+
+.tittle-text {
 	text-decoration: underline;
 }
 
@@ -143,8 +107,6 @@ body {
 	font-weight: bold;
 	color: var(--lightTomato);
 
-	padding: 15px 0;
-	margin: 0px 3px;
 	/* height: 3rem; */
 
 	border-style: solid;
@@ -158,18 +120,17 @@ body {
 	cursor: pointer;
 }
 
-.descriptionText {
-	height: 8rem;
+.description-text {
+	/* height: 8rem; */
 	white-space: normal;
 	overflow-x: hidden;
 
-	border-style: solid;
-	border-color: var(--lightTomato);
-	border-width: 2px;
-
-	padding: 0px 0.5rem;
+	/* border-style: solid; */
+	/* border-color: var(--lightTomato); */
+	/* border-width: 2px; */
 }
-.addToCartButton {
+
+.add-to-cart {
 	font-family: "Roboto Slab", serif;
 	font-weight: bold;
 	color: white;

@@ -1,4 +1,3 @@
-class Item {
+export class Item {
     constructor() { }
 }
-export { Item };

@@ -1,8 +1,6 @@
-// Get items in database
 function getItems(amount) {
     return null;
 }
-// Get item by ID
 function getItem(id) {
     return null;
 }

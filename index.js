@@ -6,8 +6,9 @@ const app = express();
 const hbs = require("express-handlebars");
 const port = process.env.PORT || 3000;
 
+// app.use("/", express.static(path.join(__dirname, "../Views")));
 app.use("/pages", express.static(path.join(__dirname, "./pages")));
-app.use("/resources", express.static(path.join(__dirname, "./resources")));
+app.use("/resources", express.static(path.join(__dirname, "/resources")));
 
 // Set up for HandleBars
 app.engine(
@@ -21,6 +22,34 @@ app.engine(
 );
 
 app.set("view engine", "hbs");
+
+let item = {
+	id: "id",
+	name: "Saber’s Excalibur that Won 2 Holly Grail Wars",
+	category: {
+		categoryName: "Main Category",
+		fileName: "fileName",
+	},
+	description:
+		"Excalibur (/ɛkˈskælɪbər/) is the legendary sword of King Arthur,\
+                        sometimes also attributed with magical powers or\
+                        associated with the rightful sovereignty of Britain. Excalibur and the Sword in the Stone (the\
+                        proof of Arthur's \
+                        lineage) are sometimes said to be the same weapon, but in most versions they are considered \
+                        separate. Excalibur was \
+                        associated with the Arthurian legend very early on. In Welsh, it is called Caledfwlch; in \
+                        Cornish, Calesvol (in Modern \
+                        Cornish: Kalesvolgh); in Breton, Kaledvoulc'h; and in Latin, Caliburnus.",
+	imagePath: [
+		"https://images4.alphacoders.com/994/thumb-350-994514.jpg",
+		"https://images7.alphacoders.com/945/thumb-350-945610.png",
+		"https://images6.alphacoders.com/670/thumb-350-670517.png",
+	],
+	options: ["Short", "Medium", "Long"],
+	postedTime: new Date(2020, 20, 11),
+	price: 999999999,
+	stock: 20,
+};
 
 app.get("/", (req, res) => {
 	fs.readFile("index.htm", (err, data) => {
@@ -36,6 +65,14 @@ app.get("/index.htm", (req, res) => {
 		res.setHeader("content-type", "text/html");
 		res.send(data);
 	});
+});
+
+app.get("/item-detail.html", (req, res) => {
+	res.render("item-detail", { layout: "item-detail-layout", Item: item });
+});
+
+app.get("/pages/item-detail.html", (req, res) => {
+	res.render("item-detail", { layout: "item-detail-layout", Item: item });
 });
 
 app.get("/pages/:pageName", (req, res) => {

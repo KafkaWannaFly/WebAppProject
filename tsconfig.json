@@ -1,7 +1,11 @@
 {
 	"compileOnSave": true,
 	"compilerOptions": {
-		"target": "esnext"
+		"target": "esnext",
+		"removeComments": true,
+		"module": "esnext"
+		// "allowSyntheticDefaultImports": true
+		// "esModuleInterop": true
 	},
 	"include": ["./**/*"],
 	"exclude": [

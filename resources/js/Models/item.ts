@@ -1,6 +1,6 @@
 import { Category } from "./category";
 
-class Item {
+export class Item {
 	id: string;
 	name: string;
 	price: number;
@@ -15,4 +15,5 @@ class Item {
 	constructor() {}
 }
 
-export { Item };
+// export { Item };
+// module.exports = { Item };
