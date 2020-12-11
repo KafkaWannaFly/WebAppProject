@@ -51,12 +51,28 @@ let item = {
   stock: 20,
 };
 
+// app.get("/", (req, res) => {
+//   res.render("index", { layout: "index-layout" });
+// });
+
+// app.get("/index.htm", (req, res) => {
+//   res.render("index", { layout: "index-layout" });
+// });
+
 app.get("/", (req, res) => {
-  res.render("index", { layout: "index-layout" });
+  fs.readFile("index.htm", (err, data) => {
+    res.statusCode = 200;
+    res.setHeader("content-type", "text/html");
+    res.send(data);
+  });
 });
 
 app.get("/index.htm", (req, res) => {
-  res.render("index", { layout: "index-layout" });
+  fs.readFile("index.htm", (err, data) => {
+    res.statusCode = 200;
+    res.setHeader("content-type", "text/html");
+    res.send(data);
+  });
 });
 
 app.get("/login.htm", (req, res) => {
