@@ -23,6 +23,8 @@ app.engine(
 
 app.set("view engine", "hbs");
 
+app.set("views", path.join(__dirname + "/views"));
+
 let item = {
 	id: "id",
 	name: "Saber’s Excalibur that Won 2 Holly Grail Wars",
