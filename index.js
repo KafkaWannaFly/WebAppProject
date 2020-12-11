@@ -21,7 +21,7 @@ app.engine(
 	})
 );
 
-app.set("views", "./views");
+app.set("views", "/views");
 app.set("view engine", "hbs");
 
 let item = {
