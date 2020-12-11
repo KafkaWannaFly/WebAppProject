@@ -1,7 +1,3 @@
-.body-content {
-  padding: 3rem 0 3rem 0 !important;
-}
-
 .img-banner {
   width: 100%;
 }
@@ -34,23 +30,32 @@
   font-weight: bold;
   font-size: 1.3rem;
   letter-spacing: 1px;
+  color: #283657;
 }
 
 .secsion-first--shortcut a:hover .content-shortcut {
   opacity: 1;
 }
 
-.secsion-top-product .des-product .price {
-  padding: 0.5rem 0;
-  font-weight: bold;
+.secsion-top-product .item-product {
+  display: flex;
+  flex-direction: column;
 }
 
-.secsion-top-product .des-product .name {
+.secsion-top-product .item-product .price {
+  margin-top: auto;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  justify-self: end;
+}
+
+.secsion-top-product .item-product .name {
   color: black !important;
   text-decoration: none !important;
   font-weight: bold;
 }
-.secsion-top-product .des-product .name:hover {
+
+.secsion-top-product .item-product .name:hover {
   color: rgb(250, 118, 69) !important;
 }
 

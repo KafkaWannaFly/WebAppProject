@@ -1,8 +1,3 @@
-.body-content {
-  padding: 3rem 0 3rem 0 !important;
-  width: 80% !important;
-}
-
 .body-content .infor-nav-menu {
   padding: 0;
 }
@@ -57,7 +52,7 @@ ul.infor-menu {
 .infor-menu li a:hover,
 .infor-menu li a.active {
   background-color: rgb(216, 217, 218);
-  color: rgb(250, 100, 0);
+  color: #f26101;
 }
 
 .infor-menu li a i {
@@ -72,6 +67,16 @@ ul.infor-menu {
   margin: 0;
   padding: 0;
   font-size: 1.2rem;
+}
+
+@media (max-width: 920px) {
+  .body-content .infor-form {
+    padding: 1.5rem 0 0 0;
+  }
+
+  .form-infor form label {
+    font-size: 1rem;
+  }
 }
 
 .form-infor form input {
@@ -92,17 +97,17 @@ ul.infor-menu {
 #value-weight,
 #unit {
   font-weight: bold !important;
-  color: rgb(240, 97, 2) !important;
+  color: #f26101 !important;
 }
 
 label.change-pwd-label {
   text-decoration: none !important;
-  color: rgb(240, 97, 2) !important;
+  color: #f26101 !important;
 }
 
 .update-acc {
   color: white;
-  background-color: rgb(240, 97, 2);
+  background-color: #f26101;
   margin: 1rem 0;
   font-weight: bold !important;
   letter-spacing: 1px;

@@ -1,13 +1,8 @@
-.body-content {
-  padding: 3rem 0 3rem 0 !important;
-  width: 80% !important;
-}
-
 .body-content .infor-nav-menu {
   padding: 0;
 }
 
-.body-content .infor-form {
+.body-content .order-list {
   padding: 0 0 0 1.5rem;
 }
 
@@ -26,7 +21,7 @@
 }
 
 .infor-nav-menu .member:hover {
-  color: orange;
+  color: #f26101;
   cursor: pointer;
 }
 
@@ -57,7 +52,7 @@ ul.infor-menu {
 .infor-menu li a:hover,
 .infor-menu li a.active {
   background-color: rgb(216, 217, 218);
-  color: rgb(250, 100, 0);
+  color: #f26101;
 }
 
 .infor-menu li a i {
@@ -83,7 +78,17 @@ table.order-list-table td.order--id--date {
 }
 
 table.order-list-table td.order--id--date .id-order {
-  color: rgb(250, 100, 0) !important;
+  color: #f26101 !important;
   text-decoration: none !important;
   font-size: 1.1rem;
+}
+
+@media (max-width: 920px) {
+  .body-content .order-list {
+    padding: 1.5rem 0 0 0;
+  }
+
+  .list-order .order-list-table td {
+    padding-left: 0 !important;
+  }
 }

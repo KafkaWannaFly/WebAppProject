@@ -1,235 +1,231 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
   <title>USG</title>
-  <link rel="shortcut icon" href="../resources/img/web.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="../resources/img/web.ico" type="image/x-icon">
 
   <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="Universal Simplistic Grocery" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Universal Simplistic Grocery">
 
   <!-- Icons-->
   <script src="https://kit.fontawesome.com/8d195968ab.js"></script>
 
   <!-- Style CSS -->
-  <link rel="stylesheet" href="../resources/css/styles.css" />
-  <link rel="stylesheet" href="../resources/css/login.css" />
+  <link rel="stylesheet" href="../resources/css/styles.css">
+  <link rel="stylesheet" href="../resources/css/login.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="../resources/vendors/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../resources/vendors/css/bootstrap.min.css">
+
 </head>
 
 <body>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="../resources/vendors/js/jquery-3.3.1.min.js"></script>
-  <script src="../resources/vendors/js/popper.min.js"></script>
-  <script src="../resources/vendors/js/bootstrap.min.js"></script>
 
-  <!-- Script for boostrap tooltip -->
-  <script>
-    $(document).ready(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-    });
-  </script>
+  <!-- Secsion Header Nav Contact -->
+  <div class="header-nav-bar border-bottom d-flex align-items-center">
 
-  <div>
-    <!-- Secsion Header Nav Contact-->
-    <div class="header-nav-bar border-bottom d-flex align-items-center ">
+    <div class="search-form-active container" id="form-search-nav">
+      <form method="get" action="" style="margin: 0; padding: 0;">
+        
+        <div class="top-bar-search is-active">
+          <div class="container">
+            <div class="input-group">
+              <input type="text" class="form-control border-0" placeholder="Tìm sản phẩm ..." autocomplete="off">
+              <div class="input-group-append">
 
-      <!-- Script for form search-->
-      <script>
-        function showSearchForm() {
-          document.getElementById("nav-bar-menu").style.display = "none";
-          document.getElementById("form-search-nav").style.display = "block";
-        }
-      </script>
+                <button type="submit" class="btn btn-search-active">
+                    <i class="fa fa-search"></i>
+                </button>
+                <button type="button" class="btn btn-close-search-active" onclick="closeSearchForm()">
+                    <i class="fas fa-times"></i>
+                </button>
 
-      <script>
-        function closeSearchForm() {
-          document.getElementById("nav-bar-menu").style.display = "flex";
-          document.getElementById("form-search-nav").style.display = "none";
-        }
-      </script>
-
-      <div class="search-form-active container" id="form-search-nav">
-
-        <form method="get" action="" style="margin: 0; padding: 0;">
-          <div class="top-bar-search is-active">
-
-            <div class="container">
-              <div class="input-group">
-                <input type="text" class="form-control border-0" placeholder="Tìm sản phẩm ..." autocomplete="off">
-                <div class="input-group-append">
-
-                  <button type="submit" class="btn btn-search-active"><i class="fa fa-search"></i></button>
-                  <button type="button" class="btn btn-close-search-active" onclick="closeSearchForm()"><i
-                      class="fas fa-times"></i></button>
-                </div>
               </div>
             </div>
-
           </div>
-        </form>
 
+        </div>
+      </form>
+    </div>
+
+    <div class="nav-bar-menu container" id="nav-bar-menu">
+      <div class="logo-brand">
+        <a href="#" class="h-100 d-flex align-items-center">
+          <img src="../resources/img/fit-logo.png" alt="" style="height: 2.5; width: 2.5rem;">
+        </a>
+        <h3>USG</h3>
       </div>
 
-      <div class="nav-bar-menu container" id="nav-bar-menu">
-        <div class="logo-brand">
-          <a href="../index.htm" class="h-100">
-            <img src="../resources/img/fit-logo.png" alt="" style="height: 100%; width: 3.5rem;">
+      <div class="nav-menu">
+
+        <input type="checkbox" name="" id="checkHamburger">
+
+        <div class="nav-link-menu">
+          <ul>
+            <li class="nav-link" id="sales" style="--i: 0.6s">
+              <a href="#">SALES</a>
+            </li>
+            <li class="nav-link" style="--i: 0.85s">
+              <a href="#">
+                ÁO
+                <svg width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </a>
+              <div class="dropdown">
+                <ul class="list-unstyled">
+                  <li class="drop-link">
+                    <a href="#">Áo thun ngắn tay</a>
+                  </li>
+                  <li class="drop-link">
+                    <a href="#">Áo thun dài tay</a>
+                  </li>
+                  <li class="drop-link">
+                    <a href="#">Áo thun tank top</a>
+                  </li>
+                  <li class="drop-link">
+                    <a href="#">Áo sơ mi</a>
+                  </li>
+                  <div class="arrow-menu"></div>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link" style="--i: 1.1s">
+              <a href="#">
+                QUẦN
+                <svg width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </a>
+              <div class="dropdown">
+                <ul class="list-unstyled">
+                  <li class="drop-link">
+                    <a href="#">Quần short</a>
+                  </li>
+                  <li class="drop-link">
+                    <a href="#">Quần jean dài</a>
+                  </li>
+                  <li class="drop-link">
+                    <a href="#">Quần kaki dài</a>
+                  </li>
+                  <li class="drop-link">
+                    <a href="#">Quần jogger</a>
+                  </li>
+                  <div class="arrow-menu"></div>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link" style="--i: 1.3s">
+              <a href="#">
+                VỚ TẤT
+                <svg width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </a>
+              <div class="dropdown">
+                <ul class="list-unstyled">
+                  <li class="drop-link">
+                    <a href="#">Vớ ngắn</a>
+                  </li>
+                  <li class="drop-link">
+                    <a href="#">Vớ cổ cao</a>
+                  </li>
+                  <div class="arrow-menu"></div>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link" style="--i: 1.45s">
+              <a href="#">
+                PHỤ KIỆN
+                <svg width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </a>
+              <div class="dropdown">
+                <ul class="list-unstyled">
+                  <li class="drop-link">
+                    <a href="#">Thăt lưng, dây nịt</a>
+                  </li>
+                  <li class="drop-link">
+                    <a href="#">Bóp ví</a>
+                  </li>
+                  <li class="drop-link">
+                    <a href="#">Khẩu trang</a>
+                  </li>
+                  <li class="drop-link">
+                    <a href="#">Nón</a>
+                  </li>
+                  <div class="arrow-menu"></div>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link" style="--i: 1.45s">
+              <a href="#">THÔNG TIN</a>
+            </li>
+          </ul>
+        </div>
+
+        
+
+        <div class="nav-btn">
+          <button type="button" class="btn bg-transparent" onclick="showSearchForm()" id="search-btn">
+            <svg width="1.3rem" height="1.3rem" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+              <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+            </svg>
+          </button>
+
+          <a name="" id="account-btn" class="btn bg-transparent mx-5" href="#" role="button">
+            <!-- <i class="fas fa-user text-dark"></i> -->
+            <svg width="1.8rem" height="1.8rem" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+            </svg>
           </a>
-          <h3>USG</h3>
-        </div>
 
-        <div class="nav-menu">
-          <div class="nav-link-menu">
-            <ul>
-              <li class="nav-link" id="sales">
-                <a href="sales.htm">SALES</a>
-              </li>
-              <li class="nav-link">
-                <a href="#">ÁO<i class="fa fa-caret-down"></i></a>
-                <div class="dropdown">
-                  <ul class="list-unstyled">
-                    <li class="drop-link">
-                      <a href="ao-thun-ngan-tay.htm">Áo thun ngắn tay</a>
-                    </li>
-                    <li class="drop-link">
-                      <a href="ao-thun-dai-tay.htm">Áo thun dài tay</a>
-                    </li>
-                    <li class="drop-link">
-                      <a href="ao-tank-top.htm">Áo thun tank top</a>
-                    </li>
-                    <li class="drop-link">
-                      <a href="ao-somi.htm">Áo sơ mi</a>
-                    </li>
-                    <div class="arrow-menu"></div>
-                  </ul>
+          <a name="" id="cart-btn" class="btn rounded-0" href="#" role="button">
+            <!-- <i class="fas fa-shopping-bag text-white"></i> -->
+            <svg width="1.8rem" height="1.5rem" viewBox="0 0 16 16" class="bi bi-bag" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M8 1a2.5 2.5 0 0 0-2.5 2.5V4h5v-.5A2.5 2.5 0 0 0 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5H2z"/>
+            </svg>
+            <p>Giỏ hàng</p>
+          </a>
+
+          <div class="hamburger-menu-container">
+            <div class="hamburger-menu">
+                <div>
                 </div>
-              </li>
-              <li class="nav-link">
-                <a href="#">QUẦN <i class="fa fa-caret-down"></i> </a>
-                <div class="dropdown">
-                  <ul class="list-unstyled">
-                    <li class="drop-link">
-                      <a href="quan-short.htm">Quần short</a>
-                    </li>
-                    <li class="drop-link">
-                      <a href="quan-jean.htm">Quần jean dài</a>
-                    </li>
-                    <li class="drop-link">
-                      <a href="quan-kaki.htm">Quần kaki dài</a>
-                    </li>
-                    <li class="drop-link">
-                      <a href="quan-jogger.htm">Quần jogger</a>
-                    </li>
-                    <div class="arrow-menu"></div>
-                  </ul>
-                </div>
-              </li>
-              <li class="nav-link">
-                <a href="#">VỚ TẤT <i class="fa fa-caret-down"></i> </a>
-                <div class="dropdown">
-                  <ul class="list-unstyled">
-                    <li class="drop-link">
-                      <a href="vo-ngan.htm">Vớ ngắn</a>
-                    </li>
-                    <li class="drop-link">
-                      <a href="vo-dai.htm">Vớ cổ cao</a>
-                    </li>
-                    <div class="arrow-menu"></div>
-                  </ul>
-                </div>
-              </li>
-              <li class="nav-link">
-                <a href="#">PHỤ KIỆN <i class="fa fa-caret-down"></i> </a>
-                <div class="dropdown">
-                  <ul class="list-unstyled">
-                    <li class="drop-link">
-                      <a href="that-lung.htm">Thăt lưng, dây nịt</a>
-                    </li>
-                    <li class="drop-link">
-                      <a href="bop.htm">Bóp ví</a>
-                    </li>
-                    <li class="drop-link">
-                      <a href="khau-trang.htm">Khẩu trang</a>
-                    </li>
-                    <li class="drop-link">
-                      <a href="non.htm">Nón</a>
-                    </li>
-                    <div class="arrow-menu"></div>
-                  </ul>
-                </div>
-              </li>
-              <li class="nav-link">
-                <a href="#">THÔNG TIN</a>
-              </li>
-            </ul>
+            </div>
           </div>
 
 
-
-          <div class="nav-btn">
-            <button type="button" class="btn bg-transparent" onclick="showSearchForm()" id="search-btn">
-              <i class="fa fa-search"></i>
-            </button>
-
-            <a name="" id="account-btn" class="btn bg-transparent mx-5" href="../pages/login.htm" role="button">
-              <i class="fas fa-user text-dark"></i>
-            </a>
-
-            <a name="" id="cart-btn" class="btn bg-dark rounded-0" href="./shoppingCart.html" role="button">
-              <i class="fas fa-shopping-bag text-white"></i>
-              <p>Giỏ hàng</p>
-            </a>
-          </div>
         </div>
-
       </div>
     </div>
   </div>
+
+
 
   <!-- Body -->
   <div class="body-content container">
 
     <!-- Header Body -->
+    
     <div class="page-header mx-auto">
       <div class="container">
         <div class="page-header__content text-center">
-          <h1 class="page-header__title login-title text-center">
+          <h1 class="page-header__title login-title text-center" style="color: #283657;">
             Đăng Nhập
           </h1>
         </div>
       </div>
     </div>
-
-
-    <!-- Script for Valid Message -->
-    <script>
-      // Disable form submissions if there are invalid fields
-      (function () {
-        'use strict';
-        window.addEventListener('load', function () {
-          // Get the forms we want to add validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function (form) {
-            form.addEventListener('submit', function (event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
-    </script>
+    
 
     <!-- Login Form -->
+
     <div class="form-login container px-0">
       <div class="container px-0">
         <form class="needs-validation" novalidate method="POST" action=" ">
@@ -250,9 +246,9 @@
 
           <div class="row w-100 align-items-center mx-0">
 
-            <a href="forgot-pwd.htm" class="col-6 forget-pwd px-0">Quên mật khẩu ?</a>
+            <a href="#" class="col-12 col-lg-6 forget-pwd px-0 forgot-pwd">Quên mật khẩu ?</a>
 
-            <div class="col-6 form-group form-check my-0 px-0" style="text-align: right;">
+            <div class="col-12 col-lg-6 form-group form-check my-0 px-0 maintain-login">
               <label class="form-check-label">
                 <input class="form-check-input" type="checkbox" name="remember" />
                 Duy trì đăng nhập
@@ -270,68 +266,107 @@
         </form>
 
         <p class="text-center">Bạn chưa có Tài khoản? Vui lòng đăng ký Tài khoản mới
-          <a href="sign-in.htm" style="text-decoration: none; color: rgb(255, 94, 0)">tại đây</a>.</p>
+          <a href="#" style="text-decoration: none; color: rgb(255, 94, 0)">tại đây</a>.</p>
       </div>
     </div>
+
 
   </div>
 
   <!-- Secsion Footer -->
   <div class="footer" style="overflow-x: hidden;">
+    
     <div class="container-fuild">
-      <!-- Meta Infor -->
-      <div class="footer-menu py-1">
+
+      <div class="footer-contact container">
+        <div class="row d-flex justify-content-center align-items-center p-0 m-0">
+          <div class="col-sm-12 col-lg-6 phone">
+            <p>GỌI MUA HÀNG, HỖ TRỢ (7:30 - 21:30)</p>
+            <p>
+              <i class="fas fa-phone-alt"></i>
+              <span>1900.XXX.XXX</span> 
+            </p>
+          </div>
+
+          <div class="col-sm-12 col-lg-6 text-sm-center text-lg-right social">
+            <p>LIKE USG VÀ NHẬN KHUYẾN MÃI HẤP DẪN MỖI NGÀY</p>
+            <div class="icon--contact">
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook-square" style="color: 0776E8;"></i></a>
+              <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Meta Infor For Large Screen-->
+      <div class="footer-menu large py-1">
         <div class="row justify-content-center align-items-center">
-          <ul style="list-style-type: none" class="py-0 my-0 py-1">
-            <li class="d-inline-block">
-              <a class="mr-4" href="#">Hướng dẫn mua hàng</a>|
-            </li>
-            <li class="d-inline-block">
-              <a class="mx-4" href="#">Hướng dẫn chọn size</a>|
-            </li>
-            <li class="d-inline-block">
-              <a class="mx-4" href="#">Chính sách đổi trả</a>|
-            </li>
-            <li class="d-inline-block">
-              <a class="mx-4" href="#">Chính sách bảo mật và điều khoản</a>|
-            </li>
-            <li id="last" class="d-inline-block">
-              <a class="ml-4" href="#">Tuyển dụng</a>
-            </li>
+          <ul style="list-style-type:none" class="py-0 my-0 py-1">
+            <li><a href="#">Hướng dẫn mua hàng</a>|</li>
+            <li><a href="#">Hướng dẫn chọn size</a>|</li>
+            <li><a href="#">Chính sách đổi trả</a>|</li>
+            <li><a href="#">Chính sách bảo mật và điều khoản</a>|</li>
+            <li id="last"><a href="#">Tuyển dụng</a></li>
           </ul>
         </div>
       </div>
 
+      
       <!-- Footer infor -->
-      <div class="footer-infor px-5">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-5 mr-auto mt-4">
-            <h5>@ CÔNG TY CỔ PHẦN FASTECH ASIA</h5>
-            <p class="mt-4">
-              Mã số doanh nghiệp: 0108617038. Giấy chứng chận đăng ký doanh
-              nghiệp do Sở Kế hoạch và Đầu tư TP Hà Nội cấp lần đầu ngày
-              14/08/2018.
-            </p>
-          </div>
+      <div class="footer-infor container">
 
-          <div class="col-2">
-            <img src="../resources/img/certificate.png" alt="" />
-          </div>
-
-          <div class="col-3 mr-5 mt-4">
+        <div class="row d-flex justify-content-center align-items-center p-0 m-0">
+          
+          <div class="col-sm-12 col-lg-6 footer--infor--title">
+            <h6>UNIVERSAL SIMPLISTIC GROCERY</h6>
             <p>
-              HUB Hà Nội: Số 103, Đường Vạn Phúc, Phường Vạn Phúc, Quận Hà
-              Đông, TP. Hà Nội
-            </p>
-            <p class="mt-4">
-              HUB Tp HCM: Số F9, Đường 3A, Phường Tân Hưng, Quận 7, Tp. Hồ Chí
-              Minh
+              Mã số doanh nghiệp: 0123 456 789. <br>
+              Giấy chứng chận đăng ký doanh nghiệp do Cục XXX cấp vào ngày DD / MM / YYYY.
             </p>
           </div>
+
+          <div class="d-none d-sm-none d-lg-block col-lg-2 footer--certi--lg">
+            <img src="../resources/img/certificate.png" alt="" width="100%" height="auto">
+          </div>
+
+          <div class="col-sm-12 col-lg-4  footer--infor--address">
+            <p>
+              Chi nhánh Linh Trung: <br> Quận Thủ Đức, TP Hồ Chí Minh <br>
+              Điện thoại: (84.8) 38 962.823 - 38 967.366 <br>
+            </p>
+            <p>
+              Chi nhánh Tp HCM: <br> 227, Nguyễn Văn Cừ, Quận 5, TP Hồ Chí Minh <br>
+              Điện thoại: (84.8) 38 353.193
+            </p>
+          </div>
+          
+          <div class="d-sm-flex col-sm-3 d-lg-none footer--certi--sm justify-content-center">
+            <img src="../resources/img/certificate.png" alt="" width="40%" height="auto">
+          </div>
+
         </div>
+
+        
+
       </div>
+
     </div>
+
   </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="../resources/vendors/js/jquery-3.3.1.min.js"></script>
+  <script src="../resources/vendors/js/popper.min.js"></script>
+  <script src="../resources/vendors/js/bootstrap.min.js"></script>
+
+  <!-- Script for Page -->
+  <script src="../resources/js/script_ulti.js"></script>
+
 </body>
 
 </html>

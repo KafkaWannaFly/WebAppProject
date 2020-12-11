@@ -24,226 +24,189 @@
 
 <body>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="resources/vendors/js/jquery-3.3.1.min.js"></script>
-  <script src="resources/vendors/js/popper.min.js"></script>
-  <script src="resources/vendors/js/bootstrap.min.js"></script>
-
-  <!-- Script for boostrap tooltip -->
-  <script>
-    $(document).ready(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-    });
-  </script>
-
-  <!-- Secsion Header Top Infor Contact-->
-  <!-- Show only for large screen -->
-  <div class="header-infor-top d-none d-sm-none d-md-none d-lg-block text-white py-1">
-    <div class="container">
-      <div class="row">
-
-        <!-- Top Left -->
-        <div class="col-8">
-          <div class="header-address-contact">
-            <p class="my-0">
-              <a href="mailto:fit_hcmus@gmail.com">
-                <i class="fa fa-envelope-o ml-0"></i>
-                fit_hcmus@email.com
-              </a>
-              <span><i class="fa fa-map-marker"></i>227 Ng Van Cu, Ward 4, District 5, HCM</span>
-              <a href="tel:+ (1800) 456 7890">
-                <i class="fa fa-phone"></i>
-                + (84) 123 4567
-              </a>
-            </p>
-          </div>
-        </div>
-
-
-        <!-- Top Right-->
-        <div class="col-4">
-          <div class="header-icon-contact">
-            <ul class="social-icons text-right list-unstyled d-flex justify-content-end my-0">
-              <li>
-                <a href="https://www.facebook.com/" data-toggle="tooltip" title="Facebook" target="_blank">
-                  <i class="fa fa-facebook  text-white my-0"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/" data-toggle="tooltip" title="Twitter" target="_blank">
-                  <i class="fa fa-twitter  text-white my-0"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://instagram.com/" data-toggle="tooltip" title="Instagram" target="_blank">
-                  <i class="fa fa-instagram  text-white my-0"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Secsion Header Nav Contact-->
-  <div class="header-nav-bar border-bottom d-flex align-items-center ">
-
-    <!-- Script for form search-->
-    <script>
-      function showSearchForm() {
-        document.getElementById("nav-bar-menu").style.display = "none";
-        document.getElementById("form-search-nav").style.display = "block";
-      }
-    </script>
-
-    <script>
-      function closeSearchForm() {
-        document.getElementById("nav-bar-menu").style.display = "flex";
-        document.getElementById("form-search-nav").style.display = "none";
-      }
-    </script>
+  <!-- Secsion Header Nav Contact -->
+  <div class="header-nav-bar border-bottom d-flex align-items-center">
 
     <div class="search-form-active container" id="form-search-nav">
-
       <form method="get" action="" style="margin: 0; padding: 0;">
+        
         <div class="top-bar-search is-active">
-
           <div class="container">
             <div class="input-group">
               <input type="text" class="form-control border-0" placeholder="Tìm sản phẩm ..." autocomplete="off">
               <div class="input-group-append">
 
-                <button type="submit" class="btn btn-search-active"><i class="fa fa-search"></i></button>
-                <button type="button" class="btn btn-close-search-active" onclick="closeSearchForm()"><i
-                    class="fas fa-times"></i></button>
+                <button type="submit" class="btn btn-search-active">
+                    <i class="fa fa-search"></i>
+                </button>
+                <button type="button" class="btn btn-close-search-active" onclick="closeSearchForm()">
+                    <i class="fas fa-times"></i>
+                </button>
+
               </div>
             </div>
           </div>
 
         </div>
       </form>
-
     </div>
 
-
-
-
-    <div class="nav-bar-menu container" id="nav-bar-menu" style="background-color: #659dbd;">
+    <div class="nav-bar-menu container" id="nav-bar-menu">
       <div class="logo-brand">
-        <a href="index.htm" class="h-100">
-          <img src="resources/img/fit-logo.png" alt="" style="height: 100%; width: 3.5rem;">
+        <a href="index.htm" class="h-100 d-flex align-items-center">
+          <img src="resources/img/fit-logo.png" alt="" style="height: 2.5; width: 2.5rem;">
         </a>
         <h3>USG</h3>
       </div>
 
       <div class="nav-menu">
+
+        <input type="checkbox" name="" id="checkHamburger">
+
         <div class="nav-link-menu">
           <ul>
-            <li class="nav-link" id="sales">
+            <li class="nav-link" id="sales" style="--i: 0.5s">
               <a href="pages/sales.htm">SALES</a>
             </li>
-            <li class="nav-link">
-              <a href="#">ÁO<i class="fa fa-caret-down"></i></a>
+            <li class="nav-link" style="--i: 0.6s">
+              <a href="#">
+                ÁO
+                <svg width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </a>
               <div class="dropdown">
                 <ul class="list-unstyled">
                   <li class="drop-link">
-                    <a href="pages/ao-thun-ngan-tay.htm">Áo thun ngắn tay</a>
+                    <a href="#">Áo thun ngắn tay</a>
                   </li>
                   <li class="drop-link">
-                    <a href="pages/ao-thun-dai-tay.htm">Áo thun dài tay</a>
+                    <a href="#">Áo thun dài tay</a>
                   </li>
                   <li class="drop-link">
-                    <a href="pages/ao-tank-top.htm">Áo thun tank top</a>
+                    <a href="#">Áo thun tank top</a>
                   </li>
                   <li class="drop-link">
-                    <a href="pages/ao-somi.htm">Áo sơ mi</a>
+                    <a href="#">Áo sơ mi</a>
                   </li>
                   <div class="arrow-menu"></div>
                 </ul>
               </div>
             </li>
-            <li class="nav-link">
-              <a href="#">QUẦN<i class="fa fa-caret-down"></i> </a>
+            <li class="nav-link" style="--i: 0.7s">
+              <a href="#">
+                QUẦN
+                <svg width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </a>
               <div class="dropdown">
                 <ul class="list-unstyled">
                   <li class="drop-link">
-                    <a href="pages/quan-short.htm">Quần short</a>
+                    <a href="#">Quần short</a>
                   </li>
                   <li class="drop-link">
-                    <a href="pages/quan-jean.htm">Quần jean dài</a>
+                    <a href="#">Quần jean dài</a>
                   </li>
                   <li class="drop-link">
-                    <a href="pages/quan-kaki.htm">Quần kaki dài</a>
+                    <a href="#">Quần kaki dài</a>
                   </li>
                   <li class="drop-link">
-                    <a href="pages/quan-jogger.htm">Quần jogger</a>
+                    <a href="#">Quần jogger</a>
                   </li>
                   <div class="arrow-menu"></div>
                 </ul>
               </div>
             </li>
-            <li class="nav-link">
-              <a href="#">VỚ TẤT<i class="fa fa-caret-down"></i> </a>
+            <li class="nav-link" style="--i: 0.8s">
+              <a href="#">
+                VỚ TẤT
+                <svg width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </a>
               <div class="dropdown">
                 <ul class="list-unstyled">
                   <li class="drop-link">
-                    <a href="pages/vo-ngan.htm">Vớ ngắn</a>
+                    <a href="#">Vớ ngắn</a>
                   </li>
                   <li class="drop-link">
-                    <a href="pages/vo-dai.htm">Vớ cổ cao</a>
+                    <a href="#">Vớ cổ cao</a>
                   </li>
                   <div class="arrow-menu"></div>
                 </ul>
               </div>
             </li>
-            <li class="nav-link">
-              <a href="#">PHỤ KIỆN <i class="fa fa-caret-down"></i> </a>
+            <li class="nav-link" style="--i: 0.9s">
+              <a href="#">
+                PHỤ KIỆN
+                <svg width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </a>
               <div class="dropdown">
                 <ul class="list-unstyled">
                   <li class="drop-link">
-                    <a href="pages/that-lung.htm">Thăt lưng, dây nịt</a>
+                    <a href="#">Thăt lưng, dây nịt</a>
                   </li>
                   <li class="drop-link">
-                    <a href="pages/bop.htm">Bóp ví</a>
+                    <a href="#">Bóp ví</a>
                   </li>
                   <li class="drop-link">
-                    <a href="pages/khau-trang.htm">Khẩu trang</a>
+                    <a href="#">Khẩu trang</a>
                   </li>
                   <li class="drop-link">
-                    <a href="pages/non.htm">Nón</a>
+                    <a href="#">Nón</a>
                   </li>
                   <div class="arrow-menu"></div>
                 </ul>
               </div>
             </li>
-            <li class="nav-link">
+            <li class="nav-link" style="--i: 1s">
               <a href="#">THÔNG TIN</a>
             </li>
           </ul>
         </div>
 
-
+        
 
         <div class="nav-btn">
           <button type="button" class="btn bg-transparent" onclick="showSearchForm()" id="search-btn">
-            <i class="fa fa-search"></i>
+            <svg width="1.3rem" height="1.3rem" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+              <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+            </svg>
           </button>
 
-          <a name="" id="account-btn" class="btn bg-transparent mx-5" href="pages/login.htm" role="button">
-            <i class="fas fa-user text-dark"></i>
+          <a name="" id="account-btn" class="btn bg-transparent mx-5" href="#" role="button">
+            <!-- <i class="fas fa-user text-dark"></i> -->
+            <svg width="1.8rem" height="1.8rem" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+            </svg>
           </a>
 
-          <a name="" id="cart-btn" class="btn bg-dark rounded-0" href="./pages/shoppingCart.html" role="button">
-            <i class="fas fa-shopping-bag text-white"></i>
+          <a name="" id="cart-btn" class="btn rounded-0" href="#" role="button">
+            <!-- <i class="fas fa-shopping-bag text-white"></i> -->
+            <svg width="1.8rem" height="1.5rem" viewBox="0 0 16 16" class="bi bi-bag" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M8 1a2.5 2.5 0 0 0-2.5 2.5V4h5v-.5A2.5 2.5 0 0 0 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5H2z"/>
+            </svg>
             <p>Giỏ hàng</p>
           </a>
+
+          <div class="hamburger-menu-container">
+            <div class="hamburger-menu">
+                <div>
+                </div>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </div>
   </div>
+
+
 
   <!-- Body -->
   <a href="#">
@@ -252,10 +215,11 @@
 
   <div class="body-content container">
 
+    <!-- Shortcut Secsion -->
     <div class="secsion-first--shortcut container">
       <div class="row">
 
-        <div class="col-3 p-0 pr-2">
+        <div class="col-6 col-lg-3 p-0 pr-2">
           <div class="img-shortcut">
             <a href="#">
               <img class="rounded" src="resources/img/product/best-sale.png" alt="" width="100%">
@@ -268,7 +232,7 @@
           <p class="des-shortcut">Thịnh Hành</p>
         </div>
 
-        <div class="col-3 px-1">
+        <div class="col-6 col-lg-3 p-0 pl-2 px-lg-1">
           <div class="img-shortcut">
             <a href="#">
               <img class="rounded" src="resources/img/product/new-brand.png" alt="" width="100%">
@@ -281,7 +245,7 @@
           <p class="des-shortcut">Hàng Mới Về</p>
         </div>
 
-        <div class="col-3 px-1">
+        <div class="col-6 col-lg-3 p-0 pr-2 px-lg-1">
           <div class="img-shortcut">
             <a href="#">
               <img class="rounded" src="resources/img/product/sale.png" alt="" width="100%">
@@ -295,7 +259,7 @@
           <p class="des-shortcut">Giảm Giá Sốc</p>
         </div>
 
-        <div class="col-3 p-0 pl-2">
+        <div class="col-6 col-lg-3 p-0 pl-2">
           <div class="img-shortcut">
             <a href="#">
               <img class="rounded" src="resources/img/product/box.png" alt="" width="100%">
@@ -314,7 +278,7 @@
     <hr>
 
     <div class="secsion-top-product">
-      <h3 class="text-center  py-4">SẢN PHẨM NỔI BẬT</h3>
+      <h3 class="text-center  py-4" style="color: #283657; font-weight: bold;">SẢN PHẨM NỔI BẬT</h3>
 
       <div id="carouselId" class="carousel slide" data-ride="carousel">
 
@@ -322,53 +286,49 @@
           <div class="carousel-item active">
             <div class="row">
 
-              <div class="col-3 d-flex flex-column item-product">
+              <div class="col-6 col-lg-3 item-product">
                 <a href="#">
                   <img class="mb-2" src="resources\img\product\2L6A5871_375x425.jpg" alt="1" width="100%;">
                 </a>
-                <div class="des-product">
-                  <a href="#" class="name">
-                    Quần Short Kaki nam Vintage màu xám be
-                  </a>
-                  <p class="price">249.000đ</p>
-                </div>
+                  
+                <a href="#" class="name">
+                  Quần Short Kdaki nam Vintage màu xám be
+                </a>
+                <p class="price">249.000đ</p>
               </div>
 
-              <div class="col-3 d-flex flex-column item-product">
+              <div class="col-6 col-lg-3 item-product">
                 <a href="#">
                   <img class="mb-2" src="resources\img\product\careshare_ao_polo_375x425.jpg" alt="2" width="100%;">
                 </a>
-                <div class="des-product">
-                  <a href="#" class="name">
-                    Áo Polo Coolmate thêu Care&Share màu đen
-                  </a>
-                  <p class="price">299.000đ</p>
-                </div>
+
+                <a href="#" class="name">
+                  Áo Polo Coolmate thêu Care&Share màu đen
+                </a>
+                <p class="price">299.000đ</p>
+
               </div>
 
-              <div class="col-3 d-flex flex-column item-product">
+              <div class="col-6 col-lg-3 item-product">
                 <a href="#">
                   <img class="mb-2" src="resources\img\product\careshare_trang_2_375x425.jpg" alt="3" width="100%;">
                 </a>
-                <div class="des-product">
-                  <a href="#" class="name">
-                    Áo thun nam Cotton Compact phiên bản Premium in Care&Share giữa áo màu trắng
-                  </a>
-                  <p class="price">259.000đ</p>
-                </div>
+
+                <a href="#" class="name">
+                  Áo thun nam Cotton Compact phiên bản Premium in Care&Share giữa áo màu trắng
+                </a>
+                <p class="price">259.000đ</p>
               </div>
 
-              <div class="col-3 d-flex flex-column item-product">
+              <div class="col-6 col-lg-3 item-product">
                 <a href="#">
                   <img class="mb-2" src="resources\img\product\careshare_ao_trang_1_10_375x425.jpg" alt="4"
                     width="100%;">
                 </a>
-                <div class="des-product">
-                  <a href="#" class="name">
-                    Áo thun nam Cotton Compact phiên bản Premium in Care&Share màu trắng
-                  </a>
-                  <p class="price">259.000đ</p>
-                </div>
+                <a href="#" class="name">
+                  Áo thun nam Cotton Compact phiên bản Premium in Care&Share màu trắng
+                </a>
+                <p class="price">259.000đ</p>
               </div>
 
 
@@ -377,52 +337,52 @@
           <div class="carousel-item">
             <div class="row">
 
-              <div class="col-3 d-flex flex-column item-product">
+              <div class="col-6 col-lg-3 item-product">
                 <a href="#">
                   <img class="mb-2" src="resources\img\product\IMG_3178_375x425.jpg" alt="5" width="100%;">
                 </a>
-                <div class="des-product">
-                  <a href="#" class="name">
-                    Áo thun nam Cotton Compact phiên bản Premium in Care&Share giữa áo màu đen
-                  </a>
-                  <p class="price">259.000đ</p>
-                </div>
+
+                <a href="#" class="name">
+                  Áo thun nam Cotton Compact phiên bản Premium in Care&Share giữa áo màu đen
+                </a>
+                <p class="price">259.000đ</p>
+
               </div>
 
-              <div class="col-3 d-flex flex-column item-product">
+              <div class="col-6 col-lg-3 item-product">
                 <a href="#">
                   <img class="mb-2" src="resources\img\product\careshare_ao_xanh_lam_375x425.jpg" alt="6" width="100%;">
                 </a>
-                <div class="des-product">
-                  <a href="#" class="name">
-                    Áo thun nam Cotton Compact phiên bản Premium in Care&Share màu xanh lam
-                  </a>
-                  <p class="price">259.000đ</p>
-                </div>
+
+                <a href="#" class="name">
+                  Áo thun nam Cotton Compact phiên bản Premium in Care&Share màu xanh lam
+                </a>
+                <p class="price">259.000đ</p>
+
               </div>
 
-              <div class="col-3 d-flex flex-column item-product">
+              <div class="col-6 col-lg-3 item-product">
                 <a href="#">
                   <img class="mb-2" src="resources\img\product\careshare_ao_1_375x425.jpg" alt="7" width="100%;">
                 </a>
-                <div class="des-product">
-                  <a href="#" class="name">
-                    Áo thun nam Cotton Compact phiên bản Premium in Care&Share màu đen
-                  </a>
-                  <p class="price">259.000đ</p>
-                </div>
+
+                <a href="#" class="name">
+                  Áo thun nam Cotton Compact phiên bản Premium in Care&Share màu đen
+                </a>
+                <p class="price">259.000đ</p>
+
               </div>
 
-              <div class="col-3 d-flex flex-column item-product">
+              <div class="col-6 col-lg-3 item-product">
                 <a href="#">
                   <img class="mb-2" src="resources\img\product\combo_375x425.jpg" alt="8" width="100%;">
                 </a>
-                <div class="des-product">
-                  <a href="#" class="name">
-                    Combo 2 quần lót nam Trunk kẻ Bluemoon Stripe Xám - Xanh
-                  </a>
-                  <p class="price">258.000đ</p>
-                </div>
+
+                <a href="#" class="name">
+                  Combo 2 quần lót nam Trunk kẻ Bluemoon Stripe Xám - Xanh
+                </a>
+                <p class="price">258.000đ</p>
+
               </div>
 
 
@@ -431,52 +391,52 @@
           <div class="carousel-item">
             <div class="row">
 
-              <div class="col-3 d-flex flex-column item-product">
+              <div class="col-6 col-lg-3 item-product">
                 <a href="#">
                   <img class="mb-2" src="resources\img\product\max_ultra_aqua_375x425.jpg" alt="9" width="100%;">
                 </a>
-                <div class="des-product">
-                  <a href="#" class="name">
-                    Quần thể thao nam Max Ultra Short màu xanh Aqua (có thêm túi khoá sau)
-                  </a>
-                  <p class="price">239.000đ</p>
-                </div>
+
+                <a href="#" class="name">
+                  Quần thể thao nam Max Ultra Short màu xanh Aqua (có thêm túi khoá sau)
+                </a>
+                <p class="price">239.000đ</p>
+
               </div>
 
-              <div class="col-3 d-flex flex-column item-product">
+              <div class="col-6 col-lg-3 item-product">
                 <a href="#">
                   <img class="mb-2" src="resources\img\product\maxcool_den__375x425.jpg" alt="10" width="100%;">
                 </a>
-                <div class="des-product">
-                  <a href="#" class="name">
-                    Áo thể thao nam MaxCool màu đen
-                  </a>
-                  <p class="price">219.000đ</p>
-                </div>
+
+                <a href="#" class="name">
+                  Áo thể thao nam MaxCool màu đen
+                </a>
+                <p class="price">219.000đ</p>
+
               </div>
 
-              <div class="col-3 d-flex flex-column item-product">
+              <div class="col-6 col-lg-3 item-product">
                 <a href="#">
                   <img class="mb-2" src="resources\img\product\2L6A9776_copy_375x425.jpg" alt="11" width="100%;">
                 </a>
-                <div class="des-product">
-                  <a href="#" class="name">
-                    Quần thể thao nam Max Ultra Short màu xanh tím than (có thêm túi khoá sau)
-                  </a>
-                  <p class="price">239.000đ</p>
-                </div>
+
+                <a href="#" class="name">
+                  Quần thể thao nam Max Ultra Short màu xanh tím than (có thêm túi khoá sau)
+                </a>
+                <p class="price">239.000đ</p>
+
               </div>
 
-              <div class="col-3 d-flex flex-column item-product">
+              <div class="col-6 col-lg-3 item-product">
                 <a href="#">
                   <img class="mb-2" src="resources\img\product\2L6A9750_copy_375x425.jpg" alt="4" width="100%;">
                 </a>
-                <div class="des-product">
-                  <a href="#" class="name">
-                    Quần thể thao nam Max Ultra Short màu đen (có thêm túi khoá sau)
-                  </a>
-                  <p class="price">239.000đ</p>
-                </div>
+
+                <a href="#" class="name">
+                  Quần thể thao nam Max Ultra Short màu đen (có thêm túi khoá sau)
+                </a>
+                <p class="price">239.000đ</p>
+ 
               </div>
 
 
@@ -494,52 +454,87 @@
       </div>
     </div>
 
-  </div>
+  </div> 
+
 
   <!-- Secsion Footer -->
   <div class="footer" style="overflow-x: hidden;">
-
+    
+    <hr class="separate-infor--small-screen">
     <div class="container-fuild">
 
-      <!-- Meta Infor -->
-      <div class="footer-menu py-1">
+      
+      <div class="footer-contact container">
+        <div class="row d-flex justify-content-center align-items-center p-0 m-0">
+          <div class="col-sm-12 col-lg-6 phone">
+            <p>GỌI MUA HÀNG, HỖ TRỢ (7:30 - 21:30)</p>
+            <p>
+              <i class="fas fa-phone-alt"></i>
+              <span>1900.XXX.XXX</span> 
+            </p>
+          </div>
+
+          <div class="col-sm-12 col-lg-6 text-sm-center text-lg-right social">
+            <p>LIKE USG VÀ NHẬN KHUYẾN MÃI HẤP DẪN MỖI NGÀY</p>
+            <div class="icon--contact">
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+              <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Meta Infor For Large Screen-->
+      <div class="footer-menu large py-1">
         <div class="row justify-content-center align-items-center">
           <ul style="list-style-type:none" class="py-0 my-0 py-1">
-            <li class="d-inline-block"><a class="mr-4" href="#">Hướng dẫn mua hàng</a>|</li>
-            <li class="d-inline-block"><a class="mx-4" href="#">Hướng dẫn chọn size</a>|</li>
-            <li class="d-inline-block"><a class="mx-4" href="#">Chính sách đổi trả</a>|</li>
-            <li class="d-inline-block"><a class="mx-4" href="#">Chính sách bảo mật và điều khoản</a>|</li>
-            <li id="last" class="d-inline-block"><a class="ml-4" href="#">Tuyển dụng</a></li>
+            <li><a href="#">Hướng dẫn mua hàng</a>|</li>
+            <li><a href="#">Hướng dẫn chọn size</a>|</li>
+            <li><a href="#">Chính sách đổi trả</a>|</li>
+            <li><a href="#">Chính sách bảo mật và điều khoản</a>|</li>
+            <li id="last"><a href="#">Tuyển dụng</a></li>
           </ul>
         </div>
       </div>
 
+      
       <!-- Footer infor -->
-      <div class="footer-infor px-5">
+      <div class="footer-infor container">
 
-        <div class="row justify-content-center align-items-center">
-          <div class="col-5 mr-auto mt-4">
-            <h5>@ CÔNG TY CỔ PHẦN FASTECH ASIA</h5>
-            <p class="mt-4">
-              Mã số doanh nghiệp: 0108617038.
-              Giấy chứng chận đăng ký doanh nghiệp do Sở Kế hoạch và Đầu tư TP Hà Nội
-              cấp lần đầu ngày 14/08/2018.
-            </p>
-          </div>
-
-          <div class="col-2">
-            <img src="resources/img/certificate.png" alt="">
-          </div>
-
-          <div class="col-3 mr-5 mt-4">
+        <div class="row d-flex justify-content-center align-items-center p-0 m-0">
+          
+          <div class="col-sm-12 col-lg-6 footer--infor--title">
+            <h6>UNIVERSAL SIMPLISTIC GROCERY</h6>
             <p>
-              HUB Hà Nội: Số 103, Đường Vạn Phúc, Phường Vạn Phúc, Quận Hà Đông, TP. Hà Nội
-            </p>
-            <p class="mt-4">
-              HUB Tp HCM: Số F9, Đường 3A, Phường Tân Hưng, Quận 7, Tp. Hồ Chí Minh
+              Mã số doanh nghiệp: 0123 456 789. <br>
+              Giấy chứng chận đăng ký doanh nghiệp do Cục XXX cấp vào ngày DD / MM / YYYY.
             </p>
           </div>
+
+          <div class="d-none d-sm-none d-lg-block col-lg-2 footer--certi--lg">
+            <img src="resources/img/certificate.png" alt="" width="100%" height="auto">
+          </div>
+
+          <div class="col-sm-12 col-lg-4  footer--infor--address">
+            <p>
+              Chi nhánh Linh Trung: <br> Quận Thủ Đức, TP Hồ Chí Minh <br>
+              Điện thoại: (84.8) 38 962.823 - 38 967.366 <br>
+            </p>
+            <p>
+              Chi nhánh Tp HCM: <br> 227, Nguyễn Văn Cừ, Quận 5, TP Hồ Chí Minh <br>
+              Điện thoại: (84.8) 38 353.193
+            </p>
+          </div>
+          
+          <div class="d-sm-flex col-sm-3 d-lg-none footer--certi--sm justify-content-center">
+            <img src="resources/img/certificate.png" alt="" width="40%" height="auto">
+          </div>
+
         </div>
+
+        
 
       </div>
 
@@ -548,8 +543,13 @@
   </div>
 
 
-  <!-- Navigate to ItemDetail.html when click -->
-  <script type="module" src="./resources/js/Navigator.js" crossorigin="anonymous"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="resources/vendors/js/jquery-3.3.1.min.js"></script>
+  <script src="resources/vendors/js/popper.min.js"></script>
+  <script src="resources/vendors/js/bootstrap.min.js"></script>
+
+  <script src="resources/js/script_ulti.js"></script>
 
 </body>
 

@@ -15,7 +15,7 @@
 
   <!-- Style CSS -->
   <link rel="stylesheet" href="../resources/css/styles.css">
-  <link rel="stylesheet" href="../resources/css/forgot-pwd.css">
+  <link rel="stylesheet" href="../resources/css/sign-up.css">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../resources/vendors/css/bootstrap.min.css">
@@ -215,15 +215,19 @@
     <div class="page-header mx-auto">
       <div class="container">
         <div class="page-header__content text-center">
-          <h1 class="page-header__title forgot-title text-center" style="color: #283657;">
-            CẤP LẠI MẬT KHẨU
+          <h1 class="page-header__title signup-title text-center" style="color: #283657;">
+            ĐĂNG KÝ TÀI KHOẢN
           </h1>
+          <p style="font-size: 1.2rem;">
+            Chào mừng bạn đến với Store của chúng tôi<br>
+            Vui lòng đăng ký để trở thành thành viên của gia đình USG
+          </p>
         </div>
       </div>
     </div>
 
     <!-- Login Form -->
-    <div class="form-forgot container px-0">
+    <div class="form-signup container px-0">
       <div class="container px-0">
         <form class="needs-validation" novalidate method="POST" action=" ">
 
@@ -235,20 +239,38 @@
           </div>
 
           <div class="form-group">
-            <label for="email">EMAIL:</label>
-            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" required />
+            <label for="name">HỌ TÊN:</label>
+            <input type="text" class="form-control" id="name" placeholder="HỌ TÊN" name="name" required />
             <div class="valid-feedback"></div>
-            <div class="invalid-feedback">Vui lòng điền Email</div>
+            <div class="invalid-feedback">Vui lòng điền Họ tên của bạn</div>
           </div>
 
-          <div class="row w-100 align-items-center mx-0">
-            <div class="col-12">
-              <p class="text-center">Mật khẩu mới sẽ được gửi qua Email của bạn</p>
-            </div>
+          <div class="form-group">
+            <label for="phone">ĐIỆN THOẠI:</label>
+            <input type="tel" class="form-control" id="phone" placeholder="ĐIỆN THOẠI" name="phone" required />
+            <div class="valid-feedback"></div>
+            <div class="invalid-feedback">Vui lòng điền Số điện thoại của bạn</div>
           </div>
 
-          <div class="container  d-flex flex-column justify-content-center align-items-center">
-            <button type="submit" class="btn send-pwd rounded-0">GỬI LẠI MẬT KHẨU</button>
+          <div class="form-group">
+            <label for="email">EMAIL CỦA BẠN:</label>
+            <input type="email" class="form-control" id="email" placeholder="TÀI KHOẢN EMAIL" name="email" required />
+            <div class="valid-feedback">f</div>
+            <div class="invalid-feedback">Vui lòng điền Email của bạn</div>
+          </div>
+
+          <div class="form-group">
+            <label for="pwd">MẬT KHẨU:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="MẬT KHẨU" name="pswd" autocomplete="off"
+              required />
+            <div class="valid-feedback">f</div>
+            <div class="invalid-feedback">Vui lòng điền Mật khẩu</div>
+          </div>
+
+          <div class="container btn-group-signup d-flex flex-column justify-content-center align-items-center">
+            <button type="submit" class="btn signup rounded-0">ĐĂNG KÝ</button>
+            <p class="py-0 my-2">Hoặc</p>
+            <a name="" id="" class="btn login rounded-0" href="login.htm" role="button">ĐĂNG NHẬP</a>
           </div>
 
         </form>
@@ -257,6 +279,7 @@
     </div>
 
   </div>
+
 
   <!-- Secsion Footer -->
   <div class="footer" style="overflow-x: hidden;">

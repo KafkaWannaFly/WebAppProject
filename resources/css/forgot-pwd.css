@@ -4,20 +4,12 @@
   letter-spacing: 1px;
 }
 
-.body-content {
-  padding: 3rem 0 3rem 0 !important;
-}
-
 .form-forgot label {
   letter-spacing: 1px;
 }
 
 .form-forgot input {
   padding: 1.5rem;
-}
-
-.body-content {
-  width: 80%;
 }
 
 .form-forgot {
@@ -29,13 +21,28 @@
 }
 
 .form-forgot button {
-  color: white;
+  color: white !important;
   margin: 0.2rem 0;
   width: 60% !important;
   display: block !important;
-  background-color: rgb(255, 94, 0);
+  background-color: #f26101;
 }
 
 .form-forgot button:hover {
   background-color: rgb(7, 7, 7);
+  color: white !important;
+}
+
+@media (max-width: 920px) {
+  .form-forgot {
+    width: 100% !important;
+  }
+
+  .form-forgot button {
+    width: 100% !important;
+  }
+
+  .page-header__title.forgot-title {
+    font-size: 2rem;
+  }
 }

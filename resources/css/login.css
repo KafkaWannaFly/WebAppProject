@@ -4,10 +4,6 @@
   letter-spacing: 1px;
 }
 
-.body-content {
-  padding: 3rem 0 3rem 0 !important;
-}
-
 .form-login label {
   letter-spacing: 1px;
 }
@@ -16,20 +12,16 @@
   padding: 1.5rem;
 }
 
-.body-content {
-  width: 80%;
-}
-
 .form-login {
   width: 60% !important;
 }
 
 .form-login .forget-pwd {
   text-decoration: none;
-  color: rgb(250, 112, 0) !important;
+  color: #f26101 !important;
 }
 .form-login .forget-pwd:hover {
-  font-style: italic;
+  color: #ea4335 !important;
 }
 
 .form-login .btn-group-login {
@@ -44,7 +36,7 @@
 }
 
 .form-login .btn-group-login .login {
-  background-color: rgb(255, 94, 0);
+  background-color: #f26101;
 }
 
 .form-login .btn-group-login .login:hover {
@@ -57,4 +49,27 @@
 
 .form-login .btn-group-login .login-gg {
   background-color: #ea4335;
+}
+
+.form-login .maintain-login {
+  text-align: right;
+}
+
+@media (max-width: 920px) {
+  .form-login {
+    width: 100% !important;
+  }
+
+  .form-login .btn-group-login button {
+    width: 100% !important;
+  }
+
+  .form-login .maintain-login,
+  .form-login .forgot-pwd {
+    text-align: center;
+  }
+
+  .page-header__title.login-title {
+    font-size: 2rem;
+  }
 }
