@@ -21,7 +21,7 @@ app.engine(
 	})
 );
 
-app.set("views", "/views");
+app.set("views", __dirname + "/views");
 app.set("view engine", "hbs");
 
 let item = {
@@ -110,24 +110,26 @@ app.get("/pages/item-detail.html", (req, res) => {
 	res.render("item-detail", { layout: "item-detail-layout", Item: item });
 });
 
-// app.get("/pages/:pageName", (req, res) => {
-//   // console.log(`Page name: ${req.params["pageName"]}`);
-//   let htmlPath = "./pages/" + req.params["pageName"];
+app.get("/pages/shopping-cart.html", (req, res) => {});
 
-//   if (!fs.existsSync(htmlPath)) {
-//     // console.log(`${req.params["pageName"]} not exist`);
-//   }
+app.get("/pages/:pageName", (req, res) => {
+	// console.log(`Page name: ${req.params["pageName"]}`);
+	let htmlPath = "./pages/" + req.params["pageName"];
 
-//   try {
-//     fs.readFile(htmlPath, (err, data) => {
-//       res.statusCode = 200;
-//       res.setHeader("content-type", "text/html");
-//       res.send(data);
-//     });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// });
+	if (!fs.existsSync(htmlPath)) {
+		// console.log(`${req.params["pageName"]} not exist`);
+	}
+
+	try {
+		fs.readFile(htmlPath, (err, data) => {
+			res.statusCode = 200;
+			res.setHeader("content-type", "text/html");
+			res.send(data);
+		});
+	} catch (error) {
+		console.log(error);
+	}
+});
 
 app.listen(port, () => {
 	console.log(`App is listening on https://usg-clothes.herokuapp.com:${port}`);

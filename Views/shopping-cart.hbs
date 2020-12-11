@@ -1,0 +1,38 @@
+{{!-- billItems: BillItem[] --}}
+
+<div class="chosen-item-div">
+	{{#each billItems}}
+	{{#with item}}
+	<div class="item-div row p-2 m-2">
+		<div class="col-md-6 col-sm-12">
+			{{#each imagePath}}
+                {{#unless @index}}
+                <img class="w-100" src="{{this}}" />
+                {{/unless}}
+			{{/each}}
+		</div>
+
+		<div class="col-md-6 col-sm-12">
+			<div class="w-100">
+				<div class="item-name text-md-right text-center">{{name}}</div>
+			</div>
+
+			<div class="d-flex flex-md-column justify-content-between">
+				<div class="d-flex justify-content-end">
+					<div class="price">{{price}}</div>
+					đ
+				</div>
+    {{/with}}
+				<div class="d-flex justify-content-end mt-1">
+					<div class="decrease-one">-</div>
+					<div>
+						<input class="amount" type="text" value="{{amount}}" />
+					</div>
+					<div class="increase-one">+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{{/each}}
+</div>

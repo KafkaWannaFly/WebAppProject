@@ -1,4 +1,4 @@
-import { Item } from "./Models/item.js";
+import { Item } from "./Models/item";
 let ITEM = new Item();
 ITEM = {
     id: "id",

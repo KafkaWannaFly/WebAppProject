@@ -3,7 +3,7 @@
 	"compilerOptions": {
 		"target": "esnext",
 		"removeComments": true,
-		"module": "esnext"
+		"module": "es2020"
 		// "allowSyntheticDefaultImports": true
 		// "esModuleInterop": true
 	},

@@ -8,12 +8,14 @@ function setUpNavigationToDetailPage() {
     if (pageName === "index") {
         detailUrl = "./pages/item-detail.html";
     }
+    console.log(detailUrl);
     for (let i = 0; i < itemProducts.length; i++) {
         let pictureAnchor = itemProducts[i].querySelector(".item-product > a");
         pictureAnchor.href = detailUrl;
-        let textAnchor = itemProducts[i].querySelector(".des-product > .name");
+        let textAnchor = itemProducts[i].querySelector(".name");
         textAnchor.href = detailUrl;
     }
 }
 let body = document.querySelector("body");
 body.onload = () => setUpNavigationToDetailPage();
+export {};

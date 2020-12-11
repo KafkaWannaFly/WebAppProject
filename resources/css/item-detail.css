@@ -103,7 +103,7 @@ input[type="number"] {
 .option {
 	text-transform: uppercase;
 	text-align: center;
-	font-size: medium;
+	font-size: 1rem;
 	font-weight: bold;
 	color: var(--lightTomato);
 
@@ -111,7 +111,8 @@ input[type="number"] {
 
 	border-style: solid;
 	border-color: var(--lightTomato);
-	border-width: 3px;
+	border-width: 2px;
+	border-radius: 5px;
 }
 
 .option:hover {

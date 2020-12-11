@@ -5,6 +5,9 @@
 // const fs = require("fs");
 
 // Navigate to ItemDetail.html when click to the link or image
+
+import { Item } from "./Models/item";
+
 function setUpNavigationToDetailPage() {
 	let path = window.location.pathname;
 	let pageName = path.split("/").pop().split(".")[0];
@@ -22,6 +25,7 @@ function setUpNavigationToDetailPage() {
 	// if (!fs.existsSync(detailUrl)) {
 	// 	detailUrl = "./pages/item-detail.html";
 	// }
+	console.log(detailUrl);
 
 	for (let i = 0; i < itemProducts.length; i++) {
 		let pictureAnchor = itemProducts[i].querySelector(
@@ -30,7 +34,7 @@ function setUpNavigationToDetailPage() {
 		pictureAnchor.href = detailUrl;
 
 		let textAnchor = itemProducts[i].querySelector(
-			".des-product > .name"
+			".name"
 		) as HTMLAnchorElement;
 		textAnchor.href = detailUrl;
 	}

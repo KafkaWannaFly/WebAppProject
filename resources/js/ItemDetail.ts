@@ -1,4 +1,4 @@
-import { Item } from "./Models/item.js";
+import { Item } from "./Models/item";
 
 // let Item = require("./Models/item");
 let ITEM = new Item();
