@@ -44,17 +44,17 @@
 }
 
 .list-product .item-product {
-  padding-left: 0.25rem !important;
-  padding-right: 0.25rem !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
 }
 
 .list-product .item-product:nth-child(4n + 1) {
   padding-left: 0 !important;
-  padding-right: 0.5rem !important;
+  padding-right: 1rem !important;
 }
 
 .list-product .item-product:nth-child(4n) {
-  padding-left: 0.5rem !important;
+  padding-left: 1rem !important;
   padding-right: 0 !important;
 }
 
@@ -64,11 +64,11 @@
   }
   .list-product .item-product:nth-child(2n + 1) {
     padding-left: 0 !important;
-    padding-right: 0.5rem !important;
+    padding-right: 0.8rem !important;
   }
 
   .list-product .item-product:nth-child(2n) {
-    padding-left: 0.5rem !important;
+    padding-left: 0.8rem !important;
     padding-right: 0 !important;
   }
 }

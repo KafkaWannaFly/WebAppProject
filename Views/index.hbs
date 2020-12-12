@@ -1,6 +1,6 @@
 <!-- Body -->
 <a href="#">
-    <img class="img-banner" src="resources/img/bannerBF.jpg" alt="banner">
+    <img class="img-banner" src="resources/img/banner/bannerBF.jpg" alt="banner">
 </a>
 
 <div class="body-content container">
@@ -11,10 +11,10 @@
 
             <div class="col-6 col-lg-3 p-0 pr-2">
                 <div class="img-shortcut">
-                    <a href="#">
-                        <img class="rounded" src="resources/img/product/best-sale.png" alt="" width="100%">
+                    <a href="/best-seller">
+                        <img class="rounded" src="resources/img/product/shortcut/best-seller.png" alt="" width="100%">
                         <div class="content-shortcut rounded">
-                            <h1>90%</h1>
+                            <h1>BEST SELLER</h1>
                             <h4>Khách hàng tin dùng</h4>
                         </div>
                     </a>
@@ -24,11 +24,11 @@
 
             <div class="col-6 col-lg-3 p-0 pl-2 px-lg-1">
                 <div class="img-shortcut">
-                    <a href="#">
-                        <img class="rounded" src="resources/img/product/new-brand.png" alt="" width="100%">
+                    <a href="/new-arrival">
+                        <img class="rounded" src="resources/img/product/shortcut/new-brand.png" alt="" width="100%">
                         <div class="content-shortcut rounded">
                             <h4>New Arrival</h4>
-                            <h2>BST Giáng Sinh</h2>
+                            <h2>BST MỚI NHẤT</h2>
                         </div>
                     </a>
                 </div>
@@ -37,11 +37,11 @@
 
             <div class="col-6 col-lg-3 p-0 pr-2 px-lg-1">
                 <div class="img-shortcut">
-                    <a href="#">
-                        <img class="rounded" src="resources/img/product/sale.png" alt="" width="100%">
+                    <a href="big-sale">
+                        <img class="rounded" src="resources/img/product/shortcut/sale.png" alt="" width="100%">
                         <div class="content-shortcut rounded">
-                            <h4>Ưu đãi lên đến</h4>
-                            <h1>50%</h1>
+                            <h4>Ưu đãi lên đến hơn</h4>
+                            <h1>30%</h1>
 
                         </div>
                     </a>
@@ -51,16 +51,16 @@
 
             <div class="col-6 col-lg-3 p-0 pl-2">
                 <div class="img-shortcut">
-                    <a href="#">
-                        <img class="rounded" src="resources/img/product/box.png" alt="" width="100%">
+                    <a href="combo-box">
+                        <img class="rounded" src="resources/img/product/shortcut/box.png" alt="" width="100%">
                         <div class="content-shortcut rounded">
-                            <h4>Combo được</h4>
-                            <h1>60%</h1>
+                            <h4>Combo Box</h4>
+                            <h1>Tiết kiệm</h1>
                             <h5>Khách hàng tin dùng</h5>
                         </div>
                     </a>
                 </div>
-                <p class="des-shortcut">Combo Ưu Đãi</p>
+                <p class="des-shortcut">Combo Box</p>
             </div>
 
         </div>
@@ -76,169 +76,54 @@
                 <div class="carousel-item active">
                     <div class="row">
 
+                        {{#each data[0]}}
                         <div class="col-6 col-lg-3 item-product">
                             <a href="#">
-                                <img class="mb-2" src="resources\img\product\2L6A5871_375x425.jpg" alt="1"
-                                    width="100%;">
+                                <img class="mb-2" src="{{this.imageThumbnail}}" alt="1" width="100%;">
                             </a>
 
                             <a href="#" class="name">
-                                Quần Short Kaki nam Vintage màu xám be
+                                {{this.name}}
                             </a>
-                            <p class="price">249.000đ</p>
+                            <p class="price">{{this.price}}đ</p>
                         </div>
-
-                        <div class="col-6 col-lg-3 item-product">
-                            <a href="#">
-                                <img class="mb-2" src="resources\img\product\careshare_ao_polo_375x425.jpg" alt="2"
-                                    width="100%;">
-                            </a>
-
-                            <a href="#" class="name">
-                                Áo Polo Coolmate thêu Care&Share màu đen
-                            </a>
-                            <p class="price">299.000đ</p>
-
-                        </div>
-
-                        <div class="col-6 col-lg-3 item-product">
-                            <a href="#">
-                                <img class="mb-2" src="resources\img\product\careshare_trang_2_375x425.jpg" alt="3"
-                                    width="100%;">
-                            </a>
-
-                            <a href="#" class="name">
-                                Áo thun nam Cotton Compact phiên bản Premium in Care&Share giữa áo màu trắng
-                            </a>
-                            <p class="price">259.000đ</p>
-                        </div>
-
-                        <div class="col-6 col-lg-3 item-product">
-                            <a href="#">
-                                <img class="mb-2" src="resources\img\product\careshare_ao_trang_1_10_375x425.jpg"
-                                    alt="4" width="100%;">
-                            </a>
-                            <a href="#" class="name">
-                                Áo thun nam Cotton Compact phiên bản Premium in Care&Share màu trắng
-                            </a>
-                            <p class="price">259.000đ</p>
-                        </div>
-
+                        {{/each}}
 
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="row">
 
+                        {{#each data[1]}}
                         <div class="col-6 col-lg-3 item-product">
                             <a href="#">
-                                <img class="mb-2" src="resources\img\product\IMG_3178_375x425.jpg" alt="5"
-                                    width="100%;">
+                                <img class="mb-2" src="{{this.imageThumbnail}}" alt="1" width="100%;">
                             </a>
 
                             <a href="#" class="name">
-                                Áo thun nam Cotton Compact phiên bản Premium in Care&Share giữa áo màu đen
+                                {{this.name}}
                             </a>
-                            <p class="price">259.000đ</p>
-
+                            <p class="price">{{this.price}}đ</p>
                         </div>
-
-                        <div class="col-6 col-lg-3 item-product">
-                            <a href="#">
-                                <img class="mb-2" src="resources\img\product\careshare_ao_xanh_lam_375x425.jpg" alt="6"
-                                    width="100%;">
-                            </a>
-
-                            <a href="#" class="name">
-                                Áo thun nam Cotton Compact phiên bản Premium in Care&Share màu xanh lam
-                            </a>
-                            <p class="price">259.000đ</p>
-
-                        </div>
-
-                        <div class="col-6 col-lg-3 item-product">
-                            <a href="#">
-                                <img class="mb-2" src="resources\img\product\careshare_ao_1_375x425.jpg" alt="7"
-                                    width="100%;">
-                            </a>
-
-                            <a href="#" class="name">
-                                Áo thun nam Cotton Compact phiên bản Premium in Care&Share màu đen
-                            </a>
-                            <p class="price">259.000đ</p>
-
-                        </div>
-
-                        <div class="col-6 col-lg-3 item-product">
-                            <a href="#">
-                                <img class="mb-2" src="resources\img\product\combo_375x425.jpg" alt="8" width="100%;">
-                            </a>
-
-                            <a href="#" class="name">
-                                Combo 2 quần lót nam Trunk kẻ Bluemoon Stripe Xám - Xanh
-                            </a>
-                            <p class="price">258.000đ</p>
-
-                        </div>
-
+                        {{/each}}
 
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="row">
 
+                        {{#each data[2]}}
                         <div class="col-6 col-lg-3 item-product">
                             <a href="#">
-                                <img class="mb-2" src="resources\img\product\max_ultra_aqua_375x425.jpg" alt="9"
-                                    width="100%;">
+                                <img class="mb-2" src="{{this.imageThumbnail}}" alt="1" width="100%;">
                             </a>
 
                             <a href="#" class="name">
-                                Quần thể thao nam Max Ultra Short màu xanh Aqua (có thêm túi khoá sau)
+                                {{this.name}}
                             </a>
-                            <p class="price">239.000đ</p>
-
+                            <p class="price">{{this.price}}đ</p>
                         </div>
-
-                        <div class="col-6 col-lg-3 item-product">
-                            <a href="#">
-                                <img class="mb-2" src="resources\img\product\maxcool_den__375x425.jpg" alt="10"
-                                    width="100%;">
-                            </a>
-
-                            <a href="#" class="name">
-                                Áo thể thao nam MaxCool màu đen
-                            </a>
-                            <p class="price">219.000đ</p>
-
-                        </div>
-
-                        <div class="col-6 col-lg-3 item-product">
-                            <a href="#">
-                                <img class="mb-2" src="resources\img\product\2L6A9776_copy_375x425.jpg" alt="11"
-                                    width="100%;">
-                            </a>
-
-                            <a href="#" class="name">
-                                Quần thể thao nam Max Ultra Short màu xanh tím than (có thêm túi khoá sau)
-                            </a>
-                            <p class="price">239.000đ</p>
-
-                        </div>
-
-                        <div class="col-6 col-lg-3 item-product">
-                            <a href="#">
-                                <img class="mb-2" src="resources\img\product\2L6A9750_copy_375x425.jpg" alt="4"
-                                    width="100%;">
-                            </a>
-
-                            <a href="#" class="name">
-                                Quần thể thao nam Max Ultra Short màu đen (có thêm túi khoá sau)
-                            </a>
-                            <p class="price">239.000đ</p>
-
-                        </div>
-
+                        {{/each}}
 
                     </div>
                 </div>
