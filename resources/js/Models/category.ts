@@ -1,6 +1,6 @@
 class Category {
 	categoryName: string;
-	fileName: string;
+	detailName?: string;
 }
 
 export { Category };

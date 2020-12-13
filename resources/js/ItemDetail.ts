@@ -7,7 +7,7 @@ ITEM = {
 	name: "Saber’s Excalibur that Won 2 Holly Grail Wars",
 	category: {
 		categoryName: "Main Category",
-		fileName: "fileName",
+		// fileName: "fileName",
 	},
 	description:
 		"Excalibur (/ɛkˈskælɪbər/) is the legendary sword of King Arthur,\
