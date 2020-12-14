@@ -25,44 +25,61 @@ app.set("views", __dirname + "/views");
 app.set("view engine", "hbs");
 
 //Load Data Here
-//Xử lý đồng bộ ở đây
-const data = require("./resources/data");
+var products = [];
+
+fs.readFile("./resources/data/products.json", "utf8", (err, jsonString) => {
+  if (err) {
+    console.log("File read failed:", err);
+    return;
+  }
+  try {
+    products = JSON.parse(jsonString);
+  } catch (err) {
+    console.log("Error parsing JSON string:", err);
+  }
+});
 
 app.get("/", (req, res) => {
-  let indexController = require("./controller/indexController");
-  indexController.getTopProduct(data).then((data) => {
+  let indexController = require("./controllers/indexController");
+  indexController.getTopProduct(products).then((data) => {
     res.locals.data = data;
     res.render("index", { layout: "index-layout" });
   });
 });
 
 app.get("/index.htm", (req, res) => {
-  res.render("index", { layout: "index-layout" });
+  let indexController = require("./controllers/indexController");
+  indexController.getTopProduct(products).then((data) => {
+    res.locals.data = data;
+    res.render("index", { layout: "index-layout" });
+  });
 });
 
-app.get("/login.htm", (req, res) => {
+app.get("/login", (req, res) => {
   res.render("login", { layout: "login-layout" });
 });
 
-app.get("/sign-up.htm", (req, res) => {
+app.get("/sign-up", (req, res) => {
   res.render("sign-up", { layout: "sign-up-layout" });
 });
 
-app.get("/forgot-pwd.htm", (req, res) => {
+app.get("/forgot-pwd", (req, res) => {
   res.render("forgot-pwd", { layout: "forgot-pwd-layout" });
 });
 
-app.get("/infor.htm", (req, res) => {
+app.get("/infor", (req, res) => {
   res.render("infor", { layout: "infor-layout" });
 });
 
-app.get("/order-list.htm", (req, res) => {
+app.get("/order-list", (req, res) => {
   res.render("order-list", { layout: "order-list-layout" });
 });
 
-app.get("/list-product-template.htm", (req, res) => {
-  res.render("list-product-template", {
-    layout: "list-product-template-layout",
+app.get("/list-product", (req, res) => {
+  let category = req.query["category"];
+  res.locals.data = products[category];
+  res.render("list-product", {
+    layout: "list-product-layout",
   });
 });
 

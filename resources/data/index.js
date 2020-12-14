@@ -1,5 +1,5 @@
 const fs = require("fs");
-fs.readFile("./resources/data/product.json", "utf8", (err, jsonString) => {
+fs.readFile("./resources/data/products.json", "utf8", (err, jsonString) => {
   if (err) {
     console.log("File read failed:", err);
     return;

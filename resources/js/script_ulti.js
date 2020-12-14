@@ -56,10 +56,3 @@ function clickChangePwdHandler(checkBtn) {
     document.getElementById("change-pwd-group").style.display = "block";
   } else document.getElementById("change-pwd-group").style.display = "none";
 }
-
-//This script for add href product-template for header
-(function createHrefProductTemplate() {
-  var navMenuElement = document.querySelectorAll(".nav-link-menu ul li a");
-  for (let i = 0; i < navMenuElement.length; i++)
-    navMenuElement[i].href = "/list-product-template.htm";
-})();

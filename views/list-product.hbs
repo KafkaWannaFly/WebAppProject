@@ -26,19 +26,20 @@
 
             {{#each data}}
             <div class="col-6 col-lg-3 item-product">
-                <a href="/collection?item={{this.id}}">
+                <a href="/list-product/item?item={{this.id}}">
                     <img src="{{this.imageThumbnail}}" alt="5" width="100%;">
                 </a>
                 <div class="des-product">
-                    <a href="/collection?item={{this.id}}" class="name">
+                    <a href="/list-product/item?item={{this.id}}" class="name">
                         {{this.name}}
                     </a>
                     <br>
-                    <a href="/rate?item={{this.id}}" class="rate">(Xem đánh giá)</a>
-                    <p class="price">{{this.price}}</p>
+                    <a href="/list-product/item/rate?item={{this.id}}" class="rate">(Xem đánh giá)</a>
+                    <p class="price">{{this.price}}đ</p>
                 </div>
                 <div class="buy">
-                    <a name="" id="" class="btn" href="/collection?item={{this.id}}" role="button">Chọn mua</a>
+                    <a name="" id="" class="btn" href="/list-product/item/buy?item={{this.id}}" role="button">Chọn
+                        mua</a>
                 </div>
             </div>
             {{/each}}
