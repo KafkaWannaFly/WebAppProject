@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function getItems(amount) {
     return null;
 }
@@ -13,4 +15,3 @@ function createAccount(user) {
 function forgetPassword(username, email) {
     return;
 }
-export {};

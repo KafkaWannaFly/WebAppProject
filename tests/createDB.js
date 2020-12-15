@@ -1,6 +1,7 @@
 var usernames = ["abc", "def", "ghi", "jkl", "mno"];
 var names = ["John", "James", "Jack", "Rose", "Mia"];
 let fs = require("fs");
+let loremIpsum = require('lorem-ipsum');
 for (let i = 0; i < usernames.length; i++) {
     let User = {
         username: usernames[i],
@@ -51,20 +52,20 @@ var ShirtCategory = [
 var PantCategory = ["Short", "Jean", "Kaki", "Jogger"];
 var SockCategory = ["Ankle sock", "Crew sock"];
 var AccessoryCategory = ["Belt", "Wallet", "Face mask", "Hat"];
-var ShortSleeveTShirts = [];
-var LongSleeveTShirts = [];
-var TankTops = [];
-var Shirts = [];
-var Shorts = [];
-var Jeans = [];
-var Kakis = [];
-var Joggers = [];
-var AnkleSocks = [];
-var CrewSocks = [];
-var Belts = [];
-var Wallets = [];
-var FaceMasks = [];
-var Hats = [];
+var ShortSleeveTShirts = 10;
+var LongSleeveTShirts = 10;
+var TankTops = 10;
+var Shirts = 10;
+var Shorts = 10;
+var Jeans = 10;
+var Kakis = 10;
+var Joggers = 10;
+var AnkleSocks = 10;
+var CrewSocks = 10;
+var Belts = 10;
+var Wallets = 10;
+var FaceMasks = 10;
+var Hats = 10;
 for (let i = 0; i < catergoryNames.length; i++) {
     if (i == 0) {
         for (let j = 0; j < ShirtCategory.length; j++) {
@@ -75,12 +76,24 @@ for (let i = 0; i < catergoryNames.length; i++) {
             let Categorydata = JSON.stringify(Category);
             fs.appendFile("Category.json", Categorydata);
             if (j == 0) {
-                for (let k = 0; k < ShortSleeveTShirts.length; k++) {
+                for (let k = 0; k < ShortSleeveTShirts; k++) {
                     let Item = {
                         id: i.toString() + " - " + j.toString() + " - " + k.toString(),
-                        name: ShortSleeveTShirts[k],
+                        name: loremIpsum({
+                            count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                            units: 'words',
+                            format: 'plain'
+                        }),
                         price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
-                        description: "demo description",
+                        description: loremIpsum({
+                            count: 1,
+                            units: 'paragraphs',
+                            sentenceLowerBound: 5,
+                            sentenceUpperBound: 10,
+                            paragraphLowerBound: 1,
+                            paragraphUpperBound: 3,
+                            format: 'plain'
+                        }),
                         stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
                         postedTime: "01/01/2020",
                         category: Category,
@@ -90,12 +103,24 @@ for (let i = 0; i < catergoryNames.length; i++) {
                 }
             }
             if (j == 1) {
-                for (let k = 0; k < LongSleeveTShirts.length; k++) {
+                for (let k = 0; k < LongSleeveTShirts; k++) {
                     let Item = {
                         id: i.toString() + " - " + j.toString() + " - " + k.toString(),
-                        name: LongSleeveTShirts[k],
+                        name: loremIpsum({
+                            count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                            units: 'words',
+                            format: 'plain'
+                        }),
                         price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
-                        description: "demo description",
+                        description: loremIpsum({
+                            count: 1,
+                            units: 'paragraphs',
+                            sentenceLowerBound: 5,
+                            sentenceUpperBound: 10,
+                            paragraphLowerBound: 1,
+                            paragraphUpperBound: 3,
+                            format: 'plain'
+                        }),
                         stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
                         postedTime: "01/01/2020",
                         category: Category,
@@ -105,12 +130,24 @@ for (let i = 0; i < catergoryNames.length; i++) {
                 }
             }
             if (j == 2) {
-                for (let k = 0; k < TankTops.length; k++) {
+                for (let k = 0; k < TankTops; k++) {
                     let Item = {
                         id: i.toString() + " - " + j.toString() + " - " + k.toString(),
-                        name: TankTops[k],
+                        name: loremIpsum({
+                            count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                            units: 'words',
+                            format: 'plain'
+                        }),
                         price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
-                        description: "demo description",
+                        description: loremIpsum({
+                            count: 1,
+                            units: 'paragraphs',
+                            sentenceLowerBound: 5,
+                            sentenceUpperBound: 10,
+                            paragraphLowerBound: 1,
+                            paragraphUpperBound: 3,
+                            format: 'plain'
+                        }),
                         stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
                         postedTime: "01/01/2020",
                         category: Category,
@@ -120,12 +157,24 @@ for (let i = 0; i < catergoryNames.length; i++) {
                 }
             }
             if (j == 3) {
-                for (let k = 0; k < Shirts.length; k++) {
+                for (let k = 0; k < Shirts; k++) {
                     let Item = {
                         id: i.toString() + " - " + j.toString() + " - " + k.toString(),
-                        name: Shirts[k],
+                        name: loremIpsum({
+                            count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                            units: 'words',
+                            format: 'plain'
+                        }),
                         price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
-                        description: "demo description",
+                        description: loremIpsum({
+                            count: 1,
+                            units: 'paragraphs',
+                            sentenceLowerBound: 5,
+                            sentenceUpperBound: 10,
+                            paragraphLowerBound: 1,
+                            paragraphUpperBound: 3,
+                            format: 'plain'
+                        }),
                         stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
                         postedTime: "01/01/2020",
                         category: Category,
@@ -145,12 +194,24 @@ for (let i = 0; i < catergoryNames.length; i++) {
             let Categorydata = JSON.stringify(Category);
             fs.appendFile("Category.json", Categorydata);
             if (j == 0) {
-                for (let k = 0; k < Shorts.length; k++) {
+                for (let k = 0; k < Shorts; k++) {
                     let Item = {
                         id: i.toString() + " - " + j.toString() + " - " + k.toString(),
-                        name: Shorts[k],
+                        name: loremIpsum({
+                            count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                            units: 'words',
+                            format: 'plain'
+                        }),
                         price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
-                        description: "demo description",
+                        description: loremIpsum({
+                            count: 1,
+                            units: 'paragraphs',
+                            sentenceLowerBound: 5,
+                            sentenceUpperBound: 10,
+                            paragraphLowerBound: 1,
+                            paragraphUpperBound: 3,
+                            format: 'plain'
+                        }),
                         stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
                         postedTime: "01/01/2020",
                         category: Category,
@@ -160,12 +221,24 @@ for (let i = 0; i < catergoryNames.length; i++) {
                 }
             }
             if (j == 1) {
-                for (let k = 0; k < Jeans.length; k++) {
+                for (let k = 0; k < Jeans; k++) {
                     let Item = {
                         id: i.toString() + " - " + j.toString() + " - " + k.toString(),
-                        name: Jeans[k],
+                        name: loremIpsum({
+                            count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                            units: 'words',
+                            format: 'plain'
+                        }),
                         price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
-                        description: "demo description",
+                        description: loremIpsum({
+                            count: 1,
+                            units: 'paragraphs',
+                            sentenceLowerBound: 5,
+                            sentenceUpperBound: 10,
+                            paragraphLowerBound: 1,
+                            paragraphUpperBound: 3,
+                            format: 'plain'
+                        }),
                         stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
                         postedTime: "01/01/2020",
                         category: Category,
@@ -175,12 +248,24 @@ for (let i = 0; i < catergoryNames.length; i++) {
                 }
             }
             if (j == 2) {
-                for (let k = 0; k < Kakis.length; k++) {
+                for (let k = 0; k < Kakis; k++) {
                     let Item = {
                         id: i.toString() + " - " + j.toString() + " - " + k.toString(),
-                        name: Kakis[k],
+                        name: loremIpsum({
+                            count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                            units: 'words',
+                            format: 'plain'
+                        }),
                         price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
-                        description: "demo description",
+                        description: loremIpsum({
+                            count: 1,
+                            units: 'paragraphs',
+                            sentenceLowerBound: 5,
+                            sentenceUpperBound: 10,
+                            paragraphLowerBound: 1,
+                            paragraphUpperBound: 3,
+                            format: 'plain'
+                        }),
                         stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
                         postedTime: "01/01/2020",
                         category: Category,
@@ -190,12 +275,24 @@ for (let i = 0; i < catergoryNames.length; i++) {
                 }
             }
             if (j == 3) {
-                for (let k = 0; k < Joggers.length; k++) {
+                for (let k = 0; k < Joggers; k++) {
                     let Item = {
                         id: i.toString() + " - " + j.toString() + " - " + k.toString(),
-                        name: Joggers[k],
+                        name: loremIpsum({
+                            count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                            units: 'words',
+                            format: 'plain'
+                        }),
                         price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
-                        description: "demo description",
+                        description: loremIpsum({
+                            count: 1,
+                            units: 'paragraphs',
+                            sentenceLowerBound: 5,
+                            sentenceUpperBound: 10,
+                            paragraphLowerBound: 1,
+                            paragraphUpperBound: 3,
+                            format: 'plain'
+                        }),
                         stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
                         postedTime: "01/01/2020",
                         category: Category,
@@ -215,12 +312,24 @@ for (let i = 0; i < catergoryNames.length; i++) {
             let Categorydata = JSON.stringify(Category);
             fs.appendFile("Category.json", Categorydata);
             if (j == 0) {
-                for (let k = 0; k < AnkleSocks.length; k++) {
+                for (let k = 0; k < AnkleSocks; k++) {
                     let Item = {
                         id: i.toString() + " - " + j.toString() + " - " + k.toString(),
-                        name: AnkleSocks[k],
+                        name: loremIpsum({
+                            count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                            units: 'words',
+                            format: 'plain'
+                        }),
                         price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
-                        description: "demo description",
+                        description: loremIpsum({
+                            count: 1,
+                            units: 'paragraphs',
+                            sentenceLowerBound: 5,
+                            sentenceUpperBound: 10,
+                            paragraphLowerBound: 1,
+                            paragraphUpperBound: 3,
+                            format: 'plain'
+                        }),
                         stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
                         postedTime: "01/01/2020",
                         category: Category,
@@ -230,12 +339,24 @@ for (let i = 0; i < catergoryNames.length; i++) {
                 }
             }
             if (j == 0) {
-                for (let k = 0; k < CrewSocks.length; k++) {
+                for (let k = 0; k < CrewSocks; k++) {
                     let Item = {
                         id: i.toString() + " - " + j.toString() + " - " + k.toString(),
-                        name: CrewSocks[k],
+                        name: loremIpsum({
+                            count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                            units: 'words',
+                            format: 'plain'
+                        }),
                         price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
-                        description: "demo description",
+                        description: loremIpsum({
+                            count: 1,
+                            units: 'paragraphs',
+                            sentenceLowerBound: 5,
+                            sentenceUpperBound: 10,
+                            paragraphLowerBound: 1,
+                            paragraphUpperBound: 3,
+                            format: 'plain'
+                        }),
                         stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
                         postedTime: "01/01/2020",
                         category: Category,
@@ -255,12 +376,24 @@ for (let i = 0; i < catergoryNames.length; i++) {
             let Categorydata = JSON.stringify(Category);
             fs.appendFile("Category.json", Categorydata);
             if (j == 0) {
-                for (let k = 0; k < Belts.length; k++) {
+                for (let k = 0; k < Belts; k++) {
                     let Item = {
                         id: i.toString() + " - " + j.toString() + " - " + k.toString(),
-                        name: Belts[k],
+                        name: loremIpsum({
+                            count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                            units: 'words',
+                            format: 'plain'
+                        }),
                         price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
-                        description: "demo description",
+                        description: loremIpsum({
+                            count: 1,
+                            units: 'paragraphs',
+                            sentenceLowerBound: 5,
+                            sentenceUpperBound: 10,
+                            paragraphLowerBound: 1,
+                            paragraphUpperBound: 3,
+                            format: 'plain'
+                        }),
                         stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
                         postedTime: "01/01/2020",
                         category: Category,
@@ -270,12 +403,24 @@ for (let i = 0; i < catergoryNames.length; i++) {
                 }
             }
             if (j == 1) {
-                for (let k = 0; k < Wallets.length; k++) {
+                for (let k = 0; k < Wallets; k++) {
                     let Item = {
                         id: i.toString() + " - " + j.toString() + " - " + k.toString(),
-                        name: Wallets[k],
+                        name: loremIpsum({
+                            count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                            units: 'words',
+                            format: 'plain'
+                        }),
                         price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
-                        description: "demo description",
+                        description: loremIpsum({
+                            count: 1,
+                            units: 'paragraphs',
+                            sentenceLowerBound: 5,
+                            sentenceUpperBound: 10,
+                            paragraphLowerBound: 1,
+                            paragraphUpperBound: 3,
+                            format: 'plain'
+                        }),
                         stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
                         postedTime: "01/01/2020",
                         category: Category,
@@ -285,12 +430,24 @@ for (let i = 0; i < catergoryNames.length; i++) {
                 }
             }
             if (j == 2) {
-                for (let k = 0; k < FaceMasks.length; k++) {
+                for (let k = 0; k < FaceMasks; k++) {
                     let Item = {
                         id: i.toString() + " - " + j.toString() + " - " + k.toString(),
-                        name: FaceMasks[k],
+                        name: loremIpsum({
+                            count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                            units: 'words',
+                            format: 'plain'
+                        }),
                         price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
-                        description: "demo description",
+                        description: loremIpsum({
+                            count: 1,
+                            units: 'paragraphs',
+                            sentenceLowerBound: 5,
+                            sentenceUpperBound: 10,
+                            paragraphLowerBound: 1,
+                            paragraphUpperBound: 3,
+                            format: 'plain'
+                        }),
                         stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
                         postedTime: "01/01/2020",
                         category: Category,
@@ -300,12 +457,24 @@ for (let i = 0; i < catergoryNames.length; i++) {
                 }
             }
             if (j == 3) {
-                for (let k = 0; k < Hats.length; k++) {
+                for (let k = 0; k < Hats; k++) {
                     let Item = {
                         id: i.toString() + " - " + j.toString() + " - " + k.toString(),
-                        name: Hats[k],
+                        name: loremIpsum({
+                            count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                            units: 'words',
+                            format: 'plain'
+                        }),
                         price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
-                        description: "demo description",
+                        description: loremIpsum({
+                            count: 1,
+                            units: 'paragraphs',
+                            sentenceLowerBound: 5,
+                            sentenceUpperBound: 10,
+                            paragraphLowerBound: 1,
+                            paragraphUpperBound: 3,
+                            format: 'plain'
+                        }),
                         stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
                         postedTime: "01/01/2020",
                         category: Category,

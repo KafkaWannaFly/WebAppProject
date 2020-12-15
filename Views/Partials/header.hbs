@@ -1,197 +1,279 @@
 <!-- Secsion Header Nav Contact -->
 <div class="header-nav-bar border-bottom d-flex align-items-center">
+	<div class="search-form-active container" id="form-search-nav">
+		<form method="get" action="" style="margin: 0; padding: 0">
+			<div class="top-bar-search is-active">
+				<div class="container">
+					<div class="input-group">
+						<input
+							type="text"
+							class="form-control border-0"
+							placeholder="Tìm sản phẩm ..."
+							autocomplete="off"
+						/>
+						<div class="input-group-append">
+							<button type="submit" class="btn btn-search-active">
+								<i class="fa fa-search"></i>
+							</button>
+							<button
+								type="button"
+								class="btn btn-close-search-active"
+								onclick="closeSearchForm()"
+							>
+								<i class="fas fa-times"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
 
-    <div class="search-form-active container" id="form-search-nav">
-        <form method="get" action="" style="margin: 0; padding: 0;">
+	<div class="nav-bar-menu container" id="nav-bar-menu">
+		<div class="logo-brand">
+			<a href="/index.htm" class="h-100 d-flex align-items-center">
+				<img
+					src="resources/img/logo/fit-logo.png"
+					alt=""
+					style="height: 2.5; width: 2.5rem"
+				/>
+			</a>
+			<h3>USG</h3>
+		</div>
 
-            <div class="top-bar-search is-active">
-                <div class="container">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-0" placeholder="Tìm sản phẩm ..."
-                            autocomplete="off">
-                        <div class="input-group-append">
+		<div class="nav-menu">
+			<input type="checkbox" name="" id="checkHamburger" />
 
-                            <button type="submit" class="btn btn-search-active">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            <button type="button" class="btn btn-close-search-active" onclick="closeSearchForm()">
-                                <i class="fas fa-times"></i>
-                            </button>
+			<div class="nav-link-menu">
+				<ul>
+					<li class="nav-link" id="sales" style="--i: 0.5s">
+						<a href="/list-product/sales">SALES</a>
+					</li>
+					<li class="nav-link" style="--i: 0.6s">
+						<a href="#">
+							ÁO
+							<svg
+								width="0.8em"
+								height="0.8em"
+								viewBox="0 0 16 16"
+								class="bi bi-chevron-down"
+								fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+								/>
+							</svg>
+						</a>
+						<div class="dropdown">
+							<ul class="list-unstyled">
+								<li class="drop-link">
+									<a href="/list-product?category=ao-thun-ngan-tay"
+										>Áo thun ngắn tay</a
+									>
+								</li>
+								<li class="drop-link">
+									<a href="/list-product?category=ao-thun-dai-tay"
+										>Áo thun dài tay</a
+									>
+								</li>
+								<li class="drop-link">
+									<a href="/list-product?category=ao-thun-tank-top"
+										>Áo thun tank top</a
+									>
+								</li>
+								<li class="drop-link">
+									<a href="/list-product?category=ao-somi">Áo sơ mi</a>
+								</li>
+								<div class="arrow-menu"></div>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-link" style="--i: 0.7s">
+						<a href="#">
+							QUẦN
+							<svg
+								width="0.8em"
+								height="0.8em"
+								viewBox="0 0 16 16"
+								class="bi bi-chevron-down"
+								fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+								/>
+							</svg>
+						</a>
+						<div class="dropdown">
+							<ul class="list-unstyled">
+								<li class="drop-link">
+									<a href="/list-product?category=quan-short">Quần short</a>
+								</li>
+								<li class="drop-link">
+									<a href="/list-product?category=quan-jean-dai"
+										>Quần jean dài</a
+									>
+								</li>
+								<li class="drop-link">
+									<a href="/list-product?category=quan-kaki-dai"
+										>Quần kaki dài</a
+									>
+								</li>
+								<li class="drop-link">
+									<a href="/list-product?category=quan-jogger">Quần jogger</a>
+								</li>
+								<div class="arrow-menu"></div>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-link" style="--i: 0.8s">
+						<a href="#">
+							VỚ TẤT
+							<svg
+								width="0.8em"
+								height="0.8em"
+								viewBox="0 0 16 16"
+								class="bi bi-chevron-down"
+								fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+								/>
+							</svg>
+						</a>
+						<div class="dropdown">
+							<ul class="list-unstyled">
+								<li class="drop-link">
+									<a href="/list-product?category=vo-ngan">Vớ ngắn</a>
+								</li>
+								<li class="drop-link">
+									<a href="/list-product?category=vo-dai">Vớ cổ cao</a>
+								</li>
+								<div class="arrow-menu"></div>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-link" style="--i: 0.9s">
+						<a href="#">
+							PHỤ KIỆN
+							<svg
+								width="0.8em"
+								height="0.8em"
+								viewBox="0 0 16 16"
+								class="bi bi-chevron-down"
+								fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+								/>
+							</svg>
+						</a>
+						<div class="dropdown">
+							<ul class="list-unstyled">
+								<li class="drop-link">
+									<a href="/list-product?category=that-lung"
+										>Thăt lưng, dây nịt</a
+									>
+								</li>
+								<li class="drop-link">
+									<a href="/list-product?category=bop">Bóp ví</a>
+								</li>
+								<li class="drop-link">
+									<a href="/list-product?category=khau-trang">Khẩu trang</a>
+								</li>
+								<li class="drop-link">
+									<a href="/list-product?category=non">Nón</a>
+								</li>
+								<div class="arrow-menu"></div>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-link" style="--i: 1s">
+						<a href="/thong-tin">THÔNG TIN</a>
+					</li>
+				</ul>
+			</div>
 
-                        </div>
-                    </div>
-                </div>
+			<div class="nav-btn">
+				<button
+					type="button"
+					class="btn bg-transparent"
+					onclick="showSearchForm()"
+					id="search-btn"
+				>
+					<svg
+						width="1.3rem"
+						height="1.3rem"
+						viewBox="0 0 16 16"
+						class="bi bi-search"
+						fill="currentColor"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"
+						/>
+						<path
+							fill-rule="evenodd"
+							d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+						/>
+					</svg>
+				</button>
 
-            </div>
-        </form>
-    </div>
+				<a
+					name=""
+					id="account-btn"
+					class="btn bg-transparent mx-5"
+					href="/login"
+					role="button"
+				>
+					<!-- <i class="fas fa-user text-dark"></i> -->
+					<svg
+						width="1.8rem"
+						height="1.8rem"
+						viewBox="0 0 16 16"
+						class="bi bi-person"
+						fill="currentColor"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+						/>
+					</svg>
+				</a>
 
-    <div class="nav-bar-menu container" id="nav-bar-menu">
-        <div class="logo-brand">
-            <a href="/index" class="h-100 d-flex align-items-center">
-                <img src="resources/img/logo/fit-logo.png" alt="" style="height: 2.5; width: 2.5rem;">
-            </a>
-            <h3>USG</h3>
-        </div>
+				<a name="" id="cart-btn" class="btn rounded-0" href="#" role="button">
+					<!-- <i class="fas fa-shopping-bag text-white"></i> -->
+					<svg
+						width="1.8rem"
+						height="1.5rem"
+						viewBox="0 0 16 16"
+						class="bi bi-bag"
+						fill="currentColor"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M8 1a2.5 2.5 0 0 0-2.5 2.5V4h5v-.5A2.5 2.5 0 0 0 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5H2z"
+						/>
+					</svg>
+					<p>Giỏ hàng</p>
+				</a>
 
-        <div class="nav-menu">
-
-            <input type="checkbox" name="" id="checkHamburger">
-
-            <div class="nav-link-menu">
-                <ul>
-                    <li class="nav-link" id="sales" style="--i: 0.5s">
-                        <a href="/list-product/sales">SALES</a>
-                    </li>
-                    <li class="nav-link" style="--i: 0.6s">
-                        <a href="#">
-                            ÁO
-                            <svg width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-chevron-down"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                            </svg>
-                        </a>
-                        <div class="dropdown">
-                            <ul class="list-unstyled">
-                                <li class="drop-link">
-                                    <a href="/list-product?category=ao-thun-ngan-tay">Áo thun ngắn tay</a>
-                                </li>
-                                <li class="drop-link">
-                                    <a href="/list-product?category=ao-thun-dai-tay">Áo thun dài tay</a>
-                                </li>
-                                <li class="drop-link">
-                                    <a href="/list-product?category=ao-thun-tank-top">Áo thun tank top</a>
-                                </li>
-                                <li class="drop-link">
-                                    <a href="/list-product?category=ao-somi">Áo sơ mi</a>
-                                </li>
-                                <div class="arrow-menu"></div>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-link" style="--i: 0.7s">
-                        <a href="#">
-                            QUẦN
-                            <svg width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-chevron-down"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                            </svg>
-                        </a>
-                        <div class="dropdown">
-                            <ul class="list-unstyled">
-                                <li class="drop-link">
-                                    <a href="/list-product?category=quan-short">Quần short</a>
-                                </li>
-                                <li class="drop-link">
-                                    <a href="/list-product?category=quan-jean-dai">Quần jean dài</a>
-                                </li>
-                                <li class="drop-link">
-                                    <a href="/list-product?category=quan-kaki-dai">Quần kaki dài</a>
-                                </li>
-                                <li class="drop-link">
-                                    <a href="/list-product?category=quan-jogger">Quần jogger</a>
-                                </li>
-                                <div class="arrow-menu"></div>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-link" style="--i: 0.8s">
-                        <a href="#">
-                            VỚ TẤT
-                            <svg width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-chevron-down"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                            </svg>
-                        </a>
-                        <div class="dropdown">
-                            <ul class="list-unstyled">
-                                <li class="drop-link">
-                                    <a href="/list-product?category=vo-ngan">Vớ ngắn</a>
-                                </li>
-                                <li class="drop-link">
-                                    <a href="/list-product?category=vo-dai">Vớ cổ cao</a>
-                                </li>
-                                <div class="arrow-menu"></div>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-link" style="--i: 0.9s">
-                        <a href="#">
-                            PHỤ KIỆN
-                            <svg width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-chevron-down"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                            </svg>
-                        </a>
-                        <div class="dropdown">
-                            <ul class="list-unstyled">
-                                <li class="drop-link">
-                                    <a href="/list-product?category=that-lung">Thăt lưng, dây nịt</a>
-                                </li>
-                                <li class="drop-link">
-                                    <a href="/list-product?category=bop">Bóp ví</a>
-                                </li>
-                                <li class="drop-link">
-                                    <a href="/list-product?category=khau-trang">Khẩu trang</a>
-                                </li>
-                                <li class="drop-link">
-                                    <a href="/list-product?category=non">Nón</a>
-                                </li>
-                                <div class="arrow-menu"></div>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-link" style="--i: 1s">
-                        <a href="/thong-tin">THÔNG TIN</a>
-                    </li>
-                </ul>
-            </div>
-
-
-
-            <div class="nav-btn">
-                <button type="button" class="btn bg-transparent" onclick="showSearchForm()" id="search-btn">
-                    <svg width="1.3rem" height="1.3rem" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
-                        <path fill-rule="evenodd"
-                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
-                    </svg>
-                </button>
-
-                <a name="" id="account-btn" class="btn bg-transparent mx-5" href="/login" role="button">
-                    <!-- <i class="fas fa-user text-dark"></i> -->
-                    <svg width="1.8rem" height="1.8rem" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-                    </svg>
-                </a>
-
-                <a name="" id="cart-btn" class="btn rounded-0" href="#" role="button">
-                    <!-- <i class="fas fa-shopping-bag text-white"></i> -->
-                    <svg width="1.8rem" height="1.5rem" viewBox="0 0 16 16" class="bi bi-bag" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M8 1a2.5 2.5 0 0 0-2.5 2.5V4h5v-.5A2.5 2.5 0 0 0 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5H2z" />
-                    </svg>
-                    <p>Giỏ hàng</p>
-                </a>
-
-                <div class="hamburger-menu-container">
-                    <div class="hamburger-menu">
-                        <div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
+				<div class="hamburger-menu-container">
+					<div class="hamburger-menu">
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

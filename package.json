@@ -8,18 +8,18 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nodemon index",
     "tsc": "tsc"
   },
   "author": "Group 05",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^14.14.10",
+    "@types/express": "^4.17.9",
+    "@types/node": "^14.14.13",
     "ts-node": "^9.0.0",
     "typescript": "^4.1.2"
   },
   "dependencies": {
-    "@types/express": "^4.17.9",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0"
   },

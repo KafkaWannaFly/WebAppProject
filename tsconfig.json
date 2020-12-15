@@ -3,9 +3,10 @@
 	"compilerOptions": {
 		"target": "esnext",
 		"removeComments": true,
-		"module": "es2020"
-		// "allowSyntheticDefaultImports": true
-		// "esModuleInterop": true
+		"module": "commonjs",
+		"allowSyntheticDefaultImports": true,
+		"moduleResolution": "node",
+		"esModuleInterop": true
 	},
 	"include": ["./**/*"],
 	"exclude": [

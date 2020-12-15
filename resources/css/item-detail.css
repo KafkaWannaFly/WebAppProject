@@ -1,10 +1,11 @@
 :root {
 	--darkYellow: #ffe4aa;
-	--softOrage: #e8c6b1;
+	--softOrage: #f26101;
 	--lightTomato: #ff8f89;
 	--sharpPink: #e894e8;
 	--deepViolet: #bd97ff;
 	--skyBlue: #659dbd;
+	--darkBlue: #283657;
 }
 
 @font-face {
@@ -60,6 +61,15 @@ input[type="number"] {
 	-moz-appearance: textfield;
 }
 
+.unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 .decrease-one,
 .amount,
 .increase-one {
@@ -75,13 +85,17 @@ input[type="number"] {
 	font-size: 1.5rem;
 
 	border-style: solid;
-	border-color: var(--lightTomato);
+	border-color: var(--softOrage);
 	border-width: 1px;
+}
+
+.amount {
+	width: 3.7rem;
 }
 
 .decrease-one:hover,
 .increase-one:hover {
-	background-color: var(--lightTomato);
+	background-color: var(--softOrage);
 	cursor: pointer;
 }
 
@@ -91,12 +105,14 @@ input[type="number"] {
 }
 
 .item-name {
+	color: var(--darkBlue);
 	font-family: "Montserrat", sans-serif;
 	font-weight: bold;
 	font-size: x-large;
 }
 
 .tittle-text {
+	font-weight: 500;
 	text-decoration: underline;
 }
 
@@ -105,19 +121,19 @@ input[type="number"] {
 	text-align: center;
 	font-size: 1rem;
 	font-weight: bold;
-	color: var(--lightTomato);
+	color: var(--softOrage);
 
 	/* height: 3rem; */
 
 	border-style: solid;
-	border-color: var(--lightTomato);
+	border-color: var(--softOrage);
 	border-width: 2px;
 	border-radius: 5px;
 }
 
 .option:hover {
 	color: white;
-	background-color: var(--lightTomato);
+	background-color: var(--softOrage);
 	cursor: pointer;
 }
 

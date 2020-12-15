@@ -1,98 +1,135 @@
 {{#with Item}}
-<div class="body-content container-fluid" id="{{id}}">
-		<div class="row">
-			<!-- 100% width on mobile & 50% width on desktop -->
-			<div class="col-12 col-md-6">
-				<div id="carouselId" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators">
-						{{#each imagePath}}
-							{{!-- First item will be active --}}
-							{{#unless @index}}
-								<li data-target="#carouselId" data-slide-to="{{@index}}" class="active"></li>
-							{{else}}
-								<li data-target="#carouselId" data-slide-to="{{@index}}"></li>
-							{{/unless}}
-						{{/each}}
-						{{!-- <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-						<li data-target="#carouselId" data-slide-to="1"></li>
-						<li data-target="#carouselId" data-slide-to="2"></li> --}}
-					</ol>
-					<div class="carousel-inner" role="listbox">
-						{{#each imagePath}}
-							{{#unless @index}}
-								<div class="carousel-item active">
-									<img class="w-100" src="{{this}}">
-								</div>
-							{{else}}
-							<div class="carousel-item">
-								<img class="w-100" src="{{this}}">
-							</div>
-							{{/unless}}
-						{{/each}}
-						{{!-- <div class="carousel-item active">
-							<img class="w-100" src="https://images6.alphacoders.com/670/thumb-350-670517.png">
-						</div>
-						<div class="carousel-item">
-							<img class="w-100" src="https://images4.alphacoders.com/994/thumb-350-994514.jpg">
-						</div>
-						<div class="carousel-item">
-							<img class="w-100" src="https://images7.alphacoders.com/945/thumb-350-945610.png">
-						</div> --}}
+<div class="body-content container-fluid" id="{{ id }}">
+	<div class="row">
+		<!-- 100% width on mobile & 50% width on desktop -->
+		<div class="col-12 col-md-6">
+			<div id="carouselId" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					{{#each imagePaths}}
+					{{!-- First item will be active --}}
+					{{#unless @index}}
+					<li
+						data-target="#carouselId"
+						data-slide-to="{{@index}}"
+						class="active"
+					></li>
+					{{else}}
+					<li data-target="#carouselId" data-slide-to="{{@index}}"></li>
+					{{/unless}}
+					{{/each}}
+					{{!--
+					<li data-target="#carouselId" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselId" data-slide-to="1"></li>
+					<li data-target="#carouselId" data-slide-to="2"></li>
+					--}}
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					{{#each imagePaths}}
+					{{#unless @index}}
+					<div class="carousel-item active">
+						<img class="w-100" src="{{ this }}" />
 					</div>
-					<a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
+					{{else}}
+					<div class="carousel-item">
+						<img class="w-100" src="{{ this }}" />
+					</div>
+					{{/unless}}
+					{{/each}}
+					{{!--
+					<div class="carousel-item active">
+						<img
+							class="w-100"
+							src="https://images6.alphacoders.com/670/thumb-350-670517.png"
+						/>
+					</div>
+					<div class="carousel-item">
+						<img
+							class="w-100"
+							src="https://images4.alphacoders.com/994/thumb-350-994514.jpg"
+						/>
+					</div>
+					<div class="carousel-item">
+						<img
+							class="w-100"
+							src="https://images7.alphacoders.com/945/thumb-350-945610.png"
+						/>
+					</div>
+					--}}
 				</div>
-			</div>
-
-			<div class="col-12 col-md-6 
-			text-break">
-				{{!-- Saber’s Excalibur that Won 2 Holly Grail Wars --}}
-				<p class="item-name">{{name}}</p>
-
-				<div class="d-flex justify-content-between">
-					<div class="d-flex ">
-						<p class="price">{{price}}</p> đ
-					</div>
-
-					<div class="itemAmount d-flex justify-content-center align-self-start">
-						<div class="decrease-one">-</div>
-						<div>
-							<input type="number" class="form-control amount" aria-describedby="helpId" value="1">
-						</div>
-						<div class="increase-one">+</div>
-					</div>
-				</div>
-
-				<div>
-					<p class="tittle-text">Options:</p>
-					
-					<div class="d-flex justify-content-between">
-						{{#each options}}
-							<div class="option w-100 mx-1 py-2"> {{this}} </div>
-						{{/each}}
-					</div>
-					
-				</div>
-
-				<div class="mt-2">
-					<div class="tittle-text">Description:</div>
-					<div class="form-group mt-1">
-						<textarea class="form-control description-text" disabled rows="5">
-						{{description}}
-					</textarea>
-					</div>
-				</div>
-
-				<button type="button" class="btn btn-lg btn-block add-to-cart">
-					ADD TO CART
-				</button>
+				<a
+					class="carousel-control-prev"
+					href="#carouselId"
+					role="button"
+					data-slide="prev"
+				>
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a
+					class="carousel-control-next"
+					href="#carouselId"
+					role="button"
+					data-slide="next"
+				>
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
 			</div>
 		</div>
+
+		<div class="col-12 col-md-6 text-break">
+			{{!-- Saber’s Excalibur that Won 2 Holly Grail Wars --}}
+			<p class="item-name">{{ name }}</p>
+
+			<div class="d-flex justify-content-between">
+				<div class="d-flex">
+					<p class="price">{{ price }}</p>
+					đ
+				</div>
+
+				<div class="itemAmount d-flex justify-content-center align-self-start">
+					<div class="decrease-one unselectable">-</div>
+					<div>
+						<input
+							type="number"
+							class="form-control amount"
+							aria-describedby="helpId"
+							value="1"
+						/>
+					</div>
+					<div class="increase-one unselectable">+</div>
+				</div>
+			</div>
+
+			<div>
+				<p class="tittle-text">Options:</p>
+
+				<div class="d-flex justify-content-between">
+					{{#each options}}
+					<div
+						class="option w-100 mx-1 py-2 unselectable"
+						onclick="toggleSelectedOption(this)"
+					>
+						{{ this }}
+					</div>
+					{{/each}}
+				</div>
+			</div>
+
+			<div class="mt-2">
+				<div class="tittle-text">Description:</div>
+				<div class="form-group mt-1">
+					<textarea class="form-control description-text" disabled rows="5">
+						{{ description }}
+					</textarea
+					>
+				</div>
+			</div>
+
+			<button type="button" class="btn btn-lg btn-block add-to-cart">
+				ADD TO CART
+			</button>
+		</div>
+	</div>
 </div>
 {{/with}}

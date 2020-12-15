@@ -31,12 +31,12 @@ function setUpNavigationToDetailPage() {
 		let pictureAnchor = itemProducts[i].querySelector(
 			".item-product > a"
 		) as HTMLAnchorElement;
-		pictureAnchor.href = detailUrl;
+		// pictureAnchor.href = detailUrl;
 
 		let textAnchor = itemProducts[i].querySelector(
 			".name"
 		) as HTMLAnchorElement;
-		textAnchor.href = detailUrl;
+		// textAnchor.href = detailUrl;
 	}
 
 	// This patr should be on loop above but index.htm not format like so :<
