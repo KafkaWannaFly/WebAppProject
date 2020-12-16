@@ -26,6 +26,9 @@ app.engine(
 app.set("./views", __dirname + "/views");
 app.set("view engine", "hbs");
 
+console.log(`dirname: ${__dirname}`);
+console.log(`view dir: ${__dirname + "/views"}`);
+
 //Load Data Here
 var products = [];
 
