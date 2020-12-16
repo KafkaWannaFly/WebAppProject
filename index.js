@@ -7,8 +7,8 @@ const hbs = require("express-handlebars");
 const port = process.env.PORT || 3000;
 
 // app.use("/", express.static(path.join(__dirname, "../Views")));
-app.use("/pages", express.static(path.join(__dirname, "./pages")));
-app.use("/resources", express.static(path.join(__dirname, "/resources")));
+app.use("/pages", express.static("./pages"));
+app.use("/resources", express.static("./resources"));
 
 // Set up for HandleBars
 app.engine(
@@ -16,8 +16,8 @@ app.engine(
 	hbs({
 		extname: "hbs",
 		defaultLayout: "default-layout",
-		layoutsDir: __dirname + "/views/layouts/",
-		partialsDir: __dirname + "/views/partials/",
+		layoutsDir: "/views/layouts/",
+		partialsDir: "/views/partials/",
 	})
 );
 
