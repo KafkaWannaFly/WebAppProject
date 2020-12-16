@@ -9,7 +9,6 @@ const port = process.env.PORT || 3000;
 // app.use("/", express.static(path.join(__dirname, "../Views")));
 app.use("/pages", express.static(path.join(__dirname, "./pages")));
 app.use("/resources", express.static(path.join(__dirname, "/resources")));
-app.use("/views", express.static(path.join(__dirname, "/views")));
 
 // Set up for HandleBars
 app.engine(
@@ -22,6 +21,7 @@ app.engine(
 	})
 );
 
+app.use(express.static(path.join(__dirname, "/views")));
 // app.set("views", path.join(__dirname, "/views"));
 // app.set("views", __dirname + "/views");
 app.set("view engine", "hbs");
