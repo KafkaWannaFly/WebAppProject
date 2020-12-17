@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 		item.imagePaths[i] = "../" + item.imagePaths[i];
 	}
 
-	res.render("item-detail", { layout: "item-detail-layout", Item: item });
+	res.render("product-item", { layout: "product-item-layout", Item: item });
 });
 
 module.exports = router;

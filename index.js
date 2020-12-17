@@ -5,8 +5,10 @@ const fs = require("fs");
 const app = express();
 const hbs = require("express-handlebars");
 const port = process.env.PORT || 3000;
+const morgan = require("morgan");
 
 // app.use("/", express.static(path.join(__dirname, "../Views")));
+app.use(morgan("dev"));
 app.use("/pages", express.static("./pages"));
 app.use("/resources", express.static("./resources"));
 
@@ -58,7 +60,7 @@ app.get("/index.htm", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-	res.render("login", { layout: "login-layout" });
+	res.render("login-view", { layout: "login-layout" });
 });
 
 app.get("/sign-up", (req, res) => {

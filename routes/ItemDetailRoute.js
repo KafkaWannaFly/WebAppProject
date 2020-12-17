@@ -31,6 +31,6 @@ router.get("/", (req, res) => {
     for (let i = 0; i < item.imagePaths.length; i++) {
         item.imagePaths[i] = "../" + item.imagePaths[i];
     }
-    res.render("item-detail", { layout: "item-detail-layout", Item: item });
+    res.render("product-item", { layout: "product-item-layout", Item: item });
 });
 module.exports = router;
