@@ -28,6 +28,6 @@ const ShoppingCartController = __importStar(require("../controllers/ShoppingCart
 router.get("/", (req, res) => {
     let bill = ShoppingCartController.getBill("0");
     console.log(bill);
-    res.render("shopping-cart", { layout: "shopping-cart-layout", bill: bill });
+    res.render("shop-cart", { layout: "shop-cart-layout", bill: bill });
 });
 module.exports = router;
