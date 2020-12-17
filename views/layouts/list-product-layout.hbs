@@ -1,23 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+	<head>
+		<title>USG</title>
 
-<head>
-    <title>USG</title>
+		{{>head-part}}
 
-    {{> head}}
+		<link rel="stylesheet" href="./resources/css/list-product.css" />
+	</head>
 
-    <link rel="stylesheet" href="./resources/css/list-product.css">
-</head>
+	<body>
+		{{>header-part}}
 
-<body>
+		{{{body}}}
 
-    {{> header}}
+		{{>footer-part}}
 
-    {{{body}}}
-
-    {{>footer}}
-
-    {{>bootstrap-script}}
-</body>
-
+		{{>bootstrap-part}}
+	</body>
 </html>
