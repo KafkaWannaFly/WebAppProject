@@ -60,7 +60,7 @@ app.get("/index.htm", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-	res.render("login-view", { layout: "login-layout" });
+	res.render("login-view", { layout: "login-view-layout" });
 });
 
 app.get("/sign-up", (req, res) => {
@@ -72,7 +72,7 @@ app.get("/forgot-pwd", (req, res) => {
 });
 
 app.get("/infor", (req, res) => {
-	res.render("infor", { layout: "infor-layout" });
+	res.render("information", { layout: "information-layout" });
 });
 
 app.get("/order-list", (req, res) => {
