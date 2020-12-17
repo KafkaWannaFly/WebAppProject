@@ -7,48 +7,47 @@ const client = new MongoClient(url);
 
 const dbName = "UGS";
 
-async function delete_UGS() {
+async function delete_Database() {
     try {
         await client.connect();
         const db = client.db(dbName);
         db.dropDatabase();
     }
     finally {
-		await client.close()
+		await client.close();
 	}
 }
 
-async function delete_Categories() {
+async function delete_Collections(Colname: string) {
     try {
         await client.connect();
         const db = client.db(dbName);
-        db.collection("Categories").drop();
+        db.collection(Colname).drop();
     }
     finally {
-		await client.close()
+		await client.close();
 	}
 }
 
-async function delete_Users() {
+async function delete_Documents(obj) {
     try {
         await client.connect();
         const db = client.db(dbName);
-        db.collection("Users").drop();
+
+        const Users_col = db.collection("Users");
+		const Items_col = db.collection("Items"); 
+        const Categories_col = db.collection("Categories");
+        
+        let objdata = JSON.stringify(obj);
+        let obj_JSON = JSON.parse(objdata);
+        
+        db.Users_col.remove(obj_JSON);
+        db.Items_col.remove(obj_JSON);
+        db.Categories_col.remove(obj_JSON);
     }
     finally {
-		await client.close()
+		await client.close();
 	}
 }
 
-async function delete_Items() {
-    try {
-        await client.connect();
-        const db = client.db(dbName);
-        db.collection("Items").drop();
-    }
-    finally {
-		await client.close()
-	}
-}
-
-delete_UGS();
+delete_Database();
