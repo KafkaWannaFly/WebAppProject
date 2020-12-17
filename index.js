@@ -7,8 +7,8 @@ const hbs = require("express-handlebars");
 const port = process.env.PORT || 3000;
 
 // app.use("/", express.static(path.join(__dirname, "../Views")));
-app.use("./pages", express.static("./pages"));
-app.use("./resources", express.static("./resources"));
+app.use("/pages", express.static("./pages"));
+app.use("/resources", express.static("./resources"));
 
 // Set up for HandleBars
 app.engine(
