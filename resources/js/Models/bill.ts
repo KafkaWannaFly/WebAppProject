@@ -9,9 +9,9 @@ interface BillItem {
 class Bill {
 	id: string;
 	billItems: BillItem[];
-	totalPrice: number;
+	totalPrice?: number;
 	purchasedDate: Date;
-	customer: User;
+	customer?: User;
 	shippingAddress: string;
 }
 

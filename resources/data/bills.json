@@ -1,0 +1,96 @@
+[
+    {
+        "id": "0",
+        "totalPrice": 999999999,
+        "shippingAddress": "To the Moon",
+        "purchasedDate": "2020-12-12",
+        "billItems": [
+            {
+                "amount": 1,
+                "item": {
+                    "id": "Acrq4g0N7ZYCeEFO1FvD",
+                    "name": "Áo thun nam Cotton Compact phiên bản Premium in Care&Share màu trắng",
+                    "oldPrice": 259000,
+                    "price": 221000,
+                    "imageThumbnail": "resources/img/product/ao-thun-ngan-tay/careshare_ao_trang_1_10_550x623.jpg",
+                    "imagePaths": [
+                        "resources/img/product/ao-thun-ngan-tay/careshare_ao_trang_1_10_550x623.jpg",
+                        "resources/img/product/ao-thun-ngan-tay/2L6A3118_81_550x623.jpg",
+                        "resources/img/product/ao-thun-ngan-tay/2L6A3120_44_550x623.jpg"
+                    ],
+                    "options": [
+                        "S",
+                        "M",
+                        "L",
+                        "XL"
+                    ],
+                    "description": "Hiểu một cách đơn giản, Care & Share: For A Better Childhood là một chương trình được xây dựng và duy trì bởi USG nhằm góp sức mình giúp đỡ những trẻ em kém may mắn, giúp các em đến trường và có cuộc sống tốt hơn. Coolmate cam kết sẽ dành 10% doanh thu từ tất cả những sản phẩm trong danh mục Care & Share để đóng góp vào quỹ dành cho trẻ em có hoàn cảnh khó khăn. Coolmate mong muốn là một cầu nối để viết tiếp những ước mơ con trẻ còn dang dở, hướng tới một tương lai tốt đẹp hơn. ",
+                    "stock": 300,
+                    "sales": 200,
+                    "postedTime": "2020-06-04 21:17:04",
+                    "lastUpdateTime": "2020-06-04 21:17:04",
+                    "category": "ao-thun-ngan-tay"
+                }
+            },
+            {
+                "amount": 2,
+                "item": {
+                    "id": "Wx8QEYGoJor09IVCR4iy",
+                    "name": "Áo thun nam dài tay Prime Henley 3 nút Cotton Compact phiên bản Premium",
+                    "oldPrice": 279000,
+                    "price": 229000,
+                    "imageThumbnail": "resources/img/product/ao-thun-dai-tay/den_5_43.jpg",
+                    "imagePaths": [
+                        "resources/img/product/ao-thun-dai-tay/den_5_43.jpg",
+                        "resources/img/product/ao-thun-dai-tay/den_2_550x623.jpg",
+                        "resources/img/product/ao-thun-dai-tay/den_3_550x623.jpg",
+                        "resources/img/product/ao-thun-dai-tay/den_74_550x623.jpg",
+                        "resources/img/product/ao-thun-dai-tay/den_4_550x623.jpg",
+                        "resources/img/product/ao-thun-dai-tay/den_1_550x623.jpg"
+                    ],
+                    "options": [
+                        "S",
+                        "M",
+                        "L",
+                        "XL",
+                        "2XL"
+                    ],
+                    "description": "Vẫn là chất liệu Cotton Compact thân thuộc với làn da nhưng với thiết kế tay áo dài là một lựa chọn thông minh cho thời tiết se lạnh. Thời tiết lạnh khô sẽ làm làn da của bạn cảm thấy khô rát khó chịu thì áo dài tay vẫn giữ tính mềm mại thông thoáng giúp da bạn không bị trầy xước, bong da như khi ma sát quá nhiều vào chất liệu có bề mặt thô ráp, sần sùi. <br>Đặc biệt chiếc áo dài tay Prime Henley chính là sự kết hợp tuyệt vời giữa thiết kế áo polo cùng với áo dài tay cổ tròn để chiếc áo của bạn đầy đủ sự thanh lịch từ chiếc cổ áo 3 nút mà vẫn thoải mái, nam tính với kiểu cổ trong cùng phần tay dài suông. Đây là một chiếc áo luôn tôn lên vẻ đẹp nam tính của các chàng.<br>Điểm nhấn với phần cổ áo chữ Y khi hững hờ 1 2 cúc áo tạo nên nét nam tính khỏe khoắn riêng biệt của người đàn ông, không quá trang trọng như áo Polo nhưng lịch sự hơn áo dài tay cổ tròn, áo dài tay Prime Henley trung hòa được tính lịch sự và thoải mái mà người đàn ông nào cũng cần trong tủ đồ. <br>Cùng chất vải mềm mịn ấm áp vừa đủ, áo dài tay Prime Henley có thể mặc hằng ngày, đi làm, đi công việc, đi dạo phố, đi cà phê...hoặc mặc ở nhà trong những ngày trở trời gió lạnh cũng vô cùng lý tưởng. Với chất vải mỏng mềm thoáng như vậy, áo Prime Henley còn có thể kết hợp cùng lúc 2 áo để tạo nên phong cách riêng, Henley cực phù hợp khi mix cùng items layers (mix nhiều lớp áo) từ sơ mi đến coat đều bắt mắt là trong những ngày mưa gió, rét lạnh.",
+                    "stock": 300,
+                    "sales": 250,
+                    "postedTime": "2020-10-26 02:57:59",
+                    "lastUpdateTime": "2020-10-26 02:57:59",
+                    "category": "ao-thun-dai-tay"
+                }
+            },
+            {
+                "amount": 1,
+                "item": {
+                    "id": "rhNW3bhLP0brppTunTHq",
+                    "name": "Sơ Mi Đơn Giản A04",
+                    "oldPrice": 185000,
+                    "price": 185000,
+                    "imageThumbnail": "resources/img/product/ao-somi/625ea5a4-32a9-1900-9e98-00173fc22099.jpg",
+                    "imagePaths": [
+                        "resources/img/product/ao-somi/625ea5a4-32a9-1900-9e98-00173fc22099.jpg",
+                        "resources/img/product/ao-somi/67d1597a-9a7e-6b00-7f3c-0016f065683f.jpg",
+                        "resources/img/product/ao-aomi/f2ddc4f1-0d14-6500-e2f1-0016f0656800.jpg",
+                        "resources/img/product/ao-somi/c94485e7-0728-6900-50e0-0016f065682a.jpg"
+                    ],
+                    "options": [
+                        "S",
+                        "M",
+                        "L",
+                        "XL"
+                    ],
+                    "description": "Chất liệu: Vải Ford<br>Thành phần: 60% cotton 40% poly<br>- Mềm mại, mát mẻ<br>- Thoải mái và bền",
+                    "stock": 100,
+                    "sales": 80,
+                    "postedTime": "2020-07-03 15:49:14",
+                    "lastUpdateTime": "2020-07-03 15:49:14",
+                    "category": "ao-aomi"
+                }
+            }
+        ]
+    }
+]

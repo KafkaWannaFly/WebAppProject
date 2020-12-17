@@ -1,6 +1,6 @@
-import itemRouter from "express";
+import express from "express";
 import fs from "fs";
-const router = itemRouter.Router();
+const router = express.Router();
 
 import * as ItemController from "../controllers/ItemController";
 
@@ -17,3 +17,4 @@ router.get("/", (req, res) => {
 });
 
 module.exports = router;
+// export default router;

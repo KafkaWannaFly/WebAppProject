@@ -90,7 +90,10 @@ app.get("/list-product", (req, res) => {
 const itemRouter = require("./routes/ItemDetailRoute");
 app.use("/list-product/item", itemRouter);
 
-app.get("/pages/shopping-cart.html", (req, res) => {});
+const shoppingCartRouter = require("./routes/ShoppingCartRoute");
+app.use("/shopping-cart", shoppingCartRouter);
+
+// app.get("/pages/shopping-cart.html", (req, res) => {});
 
 // app.get("/pages/:pageName", (req, res) => {
 // 	// console.log(`Page name: ${req.params["pageName"]}`);

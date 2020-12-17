@@ -8,8 +8,8 @@
   {{>head-part }}
 
   <!-- Style CSS -->
-  <link rel="stylesheet" href="../resources/css/styles.css">
   <link rel="stylesheet" href="../resources/css/item-detail.css">
+  <link rel="stylesheet" href="../resources/css/shopping-cart.css">
 
 </head>
 
@@ -78,15 +78,9 @@
                     <div class="form-tittle">
                         YOUR CART
                     </div>
+
                     {{{body}}}
 
-                    <div class="d-flex justify-content-between mt-2">
-                      <div class="form-tittle">TOTAL:</div>
-                      <div class="d-flex">
-                        <div class="total-price">2,999,999,999</div>
-                        đ
-                      </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -94,6 +88,8 @@
     {{>footer-part}}
 
     {{>bootstrap-part}}
-
+    <script src="../resources/js/ShoppingCart.js"
+			type="module"
+			crossorigin="anonymous"></script>
 </body>
 </html>

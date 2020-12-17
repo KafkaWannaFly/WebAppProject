@@ -1,12 +1,14 @@
 {
 	"compileOnSave": true,
 	"compilerOptions": {
-		"target": "esnext",
+		"target": "es6",
 		"removeComments": true,
-		"module": "commonjs",
+		"module": "CommonJS",
 		"allowSyntheticDefaultImports": true,
 		"moduleResolution": "node",
 		"esModuleInterop": true
+		// "allowJs": true
+		// "lib": ["dom"]
 	},
 	"include": ["./**/*"],
 	"exclude": [

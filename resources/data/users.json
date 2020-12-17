@@ -1,0 +1,28 @@
+[
+    {
+        "username": "wander",
+        "password": "123",
+        "email": "wander@usg.com",
+        "name": "Wander Lust",
+        "DoB": "2000-1-1",
+        "gender": false,
+        "address": "227 NVC HCMC",
+        "phone": "177013",
+        "height": 1.65,
+        "weight": 50,
+        "userType": 1
+    },
+    {
+        "username": "lori",
+        "password": "123",
+        "email": "lori@usg.com",
+        "name": "Lori Lint",
+        "DoB": "2000-1-1",
+        "gender": false,
+        "address": "227 NVC HCMC",
+        "phone": "177013",
+        "height": 1.65,
+        "weight": 50,
+        "userType": 0
+    }
+]
