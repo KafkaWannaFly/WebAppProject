@@ -16,6 +16,7 @@ function setIncrementButton(amount, increaseBtn, decreaseBtn) {
 		amount.value = value.toString();
 	};
 }
+// This function is called from HTML
 function toggleSelectedOption(optionDiv) {
 	let options = document.querySelectorAll(".option");
 	options.forEach((e) => {
@@ -39,4 +40,4 @@ body.onload = () => {
 	);
 };
 
-export { setCommaForPrice, setIncrementButton };
+export { setCommaForPrice, setIncrementButton, toggleSelectedOption };

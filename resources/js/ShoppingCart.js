@@ -1,4 +1,8 @@
-import { setCommaForPrice, setIncrementButton } from "./ItemDetail.js";
+import {
+	setCommaForPrice,
+	setIncrementButton,
+	toggleSelectedOption,
+} from "./ItemDetail.js";
 
 // function numberWithCommas(x) {
 // 	return x.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -31,8 +35,27 @@ function changeAmountOnCart(itemDiv) {
 	}
 }
 
+function toggleSelectedPayment(optionDiv) {
+	let options = document.querySelectorAll(".option");
+	options.forEach((e) => {
+		let div = e;
+		if (div === optionDiv) {
+			div.style.color = "white";
+			div.style.backgroundColor = "#f26101";
+		} else {
+			div.style.color = "#f26101";
+			div.style.backgroundColor = "white";
+		}
+	});
+}
+
 let cartBody = document.querySelector("body");
 cartBody.onload = () => {
 	changeAmountOnCart([...document.querySelectorAll(".item-div")]);
 	setCommaForPrice(document.querySelector(".total-price"));
+
+	let options = document.querySelectorAll(".option");
+	for (let i = 0; i < options.length; i++) {
+		options[i].onclick = () => toggleSelectedPayment(options[i]);
+	}
 };
