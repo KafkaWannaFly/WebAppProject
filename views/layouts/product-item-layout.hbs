@@ -3,23 +3,26 @@
 	<head>
 		<title>USG</title>
 
-		{{> head}}
+		{{>head-part}}
 
 		<link rel="stylesheet" href="../resources/css/item-detail.css" />
 	</head>
 
 	<body>
-		{{>header}}
+		{{>header-part}}
 
 		{{{body}}}
 
-		{{>footer}}
+		{{>footer-part}}
 
-		{{> bootstrap-script}}
+		{{>bootstrap-part}}
 
 		<script>
 			document.title = document.querySelector(".item-name").innerHTML;
 		</script>
-		<script src="../resources/js/ItemDetail.js"></script>
+		<script
+			src="../resources/js/ItemDetail.js"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>

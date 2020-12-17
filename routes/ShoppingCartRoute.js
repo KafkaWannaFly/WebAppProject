@@ -24,13 +24,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
-const ItemController = __importStar(require("../controllers/ItemController"));
+const ShoppingCartController = __importStar(require("../controllers/ShoppingCartController"));
 router.get("/", (req, res) => {
-    let id = req.query["id"].toString();
-    let item = ItemController.getItem(id);
-    for (let i = 0; i < item.imagePaths.length; i++) {
-        item.imagePaths[i] = "../" + item.imagePaths[i];
-    }
-    res.render("product-item", { layout: "product-item-layout", Item: item });
+    let bill = ShoppingCartController.getBill("0");
+    console.log(bill);
+    res.render("shop-cart", { layout: "shop-cart-layout", bill: bill });
 });
 module.exports = router;

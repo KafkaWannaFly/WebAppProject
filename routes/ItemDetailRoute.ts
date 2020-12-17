@@ -1,6 +1,6 @@
-import itemRouter from "express";
+import express from "express";
 import fs from "fs";
-const router = itemRouter.Router();
+const router = express.Router();
 
 import * as ItemController from "../controllers/ItemController";
 
@@ -13,7 +13,8 @@ router.get("/", (req, res) => {
 		item.imagePaths[i] = "../" + item.imagePaths[i];
 	}
 
-	res.render("item-detail", { layout: "item-detail-layout", Item: item });
+	res.render("product-item", { layout: "product-item-layout", Item: item });
 });
 
 module.exports = router;
+// export default router;

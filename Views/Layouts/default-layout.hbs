@@ -1,29 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+	<head>
+		<title>USG</title>
 
-<head>
-  <title>USG</title>
+		{{>head-part }}
 
-  {{> head}}
+		<link rel="stylesheet" href="./resources/css/index.css" />
+	</head>
 
-  <!-- StyleSheet Specific CSS Here -->
+	<body>
+		{{> header-part}}
 
-</head>
+		{{{body}}}
 
-<body>
+		{{>footer-part}}
 
-  <!-- Place Header -->
-  {{> header}}
-
-  <!-- Place Body Content -->
-  {{{body}}}
-
-  <!-- Place Footer -->
-  {{>footer}}
-
-  <!-- Place Boostrap & Script JS -->
-  {{>bootstrap-script}}
-
-</body>
-
+		{{>bootstrap-script}}
+	</body>
 </html>

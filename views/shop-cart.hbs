@@ -1,0 +1,42 @@
+{{#with bill}}
+<div class="chosen-item-div">
+	{{#each billItems}}
+	{{#with item}}
+	<div class="item-div row p-3 m-2" id="{{ id }}">
+		<div class="col-md-6 col-sm-12">
+			<img class="w-100" src="{{ imageThumbnail }}" />
+		</div>
+
+		<div class="col-md-6 col-sm-12">
+			<div class="w-100">
+				<div class="item-name text-md-right text-center">{{ name }}</div>
+			</div>
+
+			<div class="d-flex flex-md-column justify-content-between">
+				<div class="d-flex justify-content-end">
+					<div class="price">{{ price }}</div>
+					đ
+				</div>
+				{{/with}}
+				<div class="d-flex justify-content-end mt-1">
+					<div class="decrease-one unselectable">-</div>
+					<div>
+						<input class="amount" type="text" value="{{ amount }}" />
+					</div>
+					<div class="increase-one unselectable">+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{{/each}}
+</div>
+
+<div class="d-flex justify-content-between mt-2">
+	<div class="form-tittle">TOTAL:</div>
+	<div class="d-flex">
+		<div class="total-price">{{ totalPrice }}</div>
+		đ
+	</div>
+</div>
+{{/with}}

@@ -5,8 +5,10 @@ const fs = require("fs");
 const app = express();
 const hbs = require("express-handlebars");
 const port = process.env.PORT || 3000;
+const morgan = require("morgan");
 
 // app.use("/", express.static(path.join(__dirname, "../Views")));
+app.use(morgan("dev"));
 app.use("/pages", express.static("./pages"));
 app.use("/resources", express.static("./resources"));
 
@@ -16,14 +18,11 @@ app.engine(
 	hbs({
 		extname: "hbs",
 		defaultLayout: "default-layout",
-		layoutsDir: "/views/layouts/",
-		partialsDir: "/views/partials/",
+		layoutsDir: "./views/layouts/",
+		partialsDir: "./views/partials/",
 	})
 );
 
-// app.use(express.static(path.join(__dirname, "/views")));
-// app.set("views", path.join(__dirname, "/views"));
-// app.set("./views", __dirname + "/views");
 app.set("view engine", "hbs");
 
 console.log(`dirname: ${__dirname}`);
@@ -48,7 +47,7 @@ app.get("/", (req, res) => {
 	let indexController = require("./controllers/indexController");
 	indexController.getTopProduct(products).then((data) => {
 		res.locals.data = data;
-		res.render("index", { layout: "index-layout" });
+		res.render("home", { layout: "home-layout" });
 	});
 });
 
@@ -56,12 +55,12 @@ app.get("/index.htm", (req, res) => {
 	let indexController = require("./controllers/indexController");
 	indexController.getTopProduct(products).then((data) => {
 		res.locals.data = data;
-		res.render("index", { layout: "index-layout" });
+		res.render("home", { layout: "home-layout" });
 	});
 });
 
 app.get("/login", (req, res) => {
-	res.render("login", { layout: "login-layout" });
+	res.render("login-view", { layout: "login-view-layout" });
 });
 
 app.get("/sign-up", (req, res) => {
@@ -73,7 +72,7 @@ app.get("/forgot-pwd", (req, res) => {
 });
 
 app.get("/infor", (req, res) => {
-	res.render("infor", { layout: "infor-layout" });
+	res.render("information", { layout: "information-layout" });
 });
 
 app.get("/order-list", (req, res) => {
@@ -91,7 +90,10 @@ app.get("/list-product", (req, res) => {
 const itemRouter = require("./routes/ItemDetailRoute");
 app.use("/list-product/item", itemRouter);
 
-app.get("/pages/shopping-cart.html", (req, res) => {});
+const shoppingCartRouter = require("./routes/ShoppingCartRoute");
+app.use("/shopping-cart", shoppingCartRouter);
+
+// app.get("/pages/shopping-cart.html", (req, res) => {});
 
 // app.get("/pages/:pageName", (req, res) => {
 // 	// console.log(`Page name: ${req.params["pageName"]}`);
