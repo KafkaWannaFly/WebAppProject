@@ -16,8 +16,8 @@ app.engine(
 	hbs({
 		extname: "hbs",
 		defaultLayout: "default-layout",
-		layoutsDir: path.join(__dirname, "/views/layouts/"),
-		partialsDir: path.join(__dirname, "/views/partials/"),
+		layoutsDir: "./views/layouts/",
+		partialsDir: "./views/partials/",
 	})
 );
 
