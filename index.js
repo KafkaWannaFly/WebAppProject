@@ -45,7 +45,7 @@ app.get("/", (req, res) => {
 	let indexController = require("./controllers/indexController");
 	indexController.getTopProduct(products).then((data) => {
 		res.locals.data = data;
-		res.render("home");
+		res.render("home", { layout: "home-layout" });
 	});
 });
 
@@ -53,7 +53,7 @@ app.get("/index.htm", (req, res) => {
 	let indexController = require("./controllers/indexController");
 	indexController.getTopProduct(products).then((data) => {
 		res.locals.data = data;
-		res.render("home");
+		res.render("home", { layout: "home-layout" });
 	});
 });
 
