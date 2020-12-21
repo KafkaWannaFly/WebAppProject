@@ -1,9 +1,4 @@
-import {
-	setCommaForPrice,
-	setIncrementButton,
-	toggleSelectedOption,
-} from "./ItemDetail.js";
-
+import { setCommaForPrice, setIncrementButton } from "./ItemDetail.js";
 // function numberWithCommas(x) {
 // 	return x.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 // }
@@ -22,40 +17,36 @@ import {
 // 		amount.value = value.toString();
 // 	};
 // }
-
 function changeAmountOnCart(itemDiv) {
-	for (let i = 0; i < itemDiv.length; i++) {
-		setIncrementButton(
-			itemDiv[i].querySelector(".amount"),
-			itemDiv[i].querySelector(".increase-one"),
-			itemDiv[i].querySelector(".decrease-one")
-		);
-
-		setCommaForPrice(itemDiv[i].querySelector(".price"));
-	}
+    for (let i = 0; i < itemDiv.length; i++) {
+        setIncrementButton(itemDiv[i].querySelector(".amount"), itemDiv[i].querySelector(".increase-one"), itemDiv[i].querySelector(".decrease-one"));
+        setCommaForPrice(itemDiv[i].querySelector(".price"));
+    }
 }
-
 function toggleSelectedPayment(optionDiv) {
-	let options = document.querySelectorAll(".option");
-	options.forEach((e) => {
-		let div = e;
-		if (div === optionDiv) {
-			div.style.color = "white";
-			div.style.backgroundColor = "#f26101";
-		} else {
-			div.style.color = "#f26101";
-			div.style.backgroundColor = "white";
-		}
-	});
+    let options = document.querySelectorAll(".option");
+    options.forEach((e) => {
+        let div = e;
+        if (div === optionDiv) {
+            div.style.color = "white";
+            div.style.backgroundColor = "#f26101";
+        }
+        else {
+            div.style.color = "#f26101";
+            div.style.backgroundColor = "white";
+        }
+    });
 }
-
 let cartBody = document.querySelector("body");
 cartBody.onload = () => {
-	changeAmountOnCart([...document.querySelectorAll(".item-div")]);
-	setCommaForPrice(document.querySelector(".total-price"));
-
-	let options = document.querySelectorAll(".option");
-	for (let i = 0; i < options.length; i++) {
-		options[i].onclick = () => toggleSelectedPayment(options[i]);
-	}
+    changeAmountOnCart([...document.querySelectorAll(".item-div")]);
+    setCommaForPrice(document.querySelector(".total-price"));
+    let options = document.querySelectorAll(".option");
+    options.forEach((e) => {
+        let op = e;
+        op.onclick = () => {
+            toggleSelectedPayment(op);
+        };
+    });
 };
+export { toggleSelectedPayment };

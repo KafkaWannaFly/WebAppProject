@@ -3,18 +3,18 @@ import { Category } from "./category";
 export class Item {
 	id: string;
 	name: string;
-	oldPrice: number;
+	oldPrice?: number;
 	price: number;
 	imageThumbnail: string;
 	imagePaths: string[];
 	options: string[];
 	description: string;
-	stock: number;
-	sales: number;
-	postedTime: Date;
-	lastUpdateTime: Date;
-	
-	category: Category;
+	stock?: number;
+	sales?: number;
+	postedTime?: Date;
+	lastUpdateTime?: Date;
+
+	category?: Category;
 
 	constructor() {}
 }

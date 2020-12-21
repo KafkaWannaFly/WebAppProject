@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getItem = void 0;
 const fs_1 = __importDefault(require("fs"));
-let products = JSON.parse(fs_1.default.readFileSync("./resources/data/products.json", {
+let products = JSON.parse(fs_1.default.readFileSync("./data/products.json", {
     encoding: "utf8",
 }));
 function getItem(id) {

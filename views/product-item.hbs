@@ -1,5 +1,5 @@
 {{#with Item}}
-<div class="body-content container-fluid" id="{{ id }}">
+<div class="body-content container-fluid item-container" id="{{ id }}">
 	<div class="row">
 		<!-- 100% width on mobile & 50% width on desktop -->
 		<div class="col-12 col-md-6">
@@ -27,34 +27,14 @@
 					{{#each imagePaths}}
 					{{#unless @index}}
 					<div class="carousel-item active">
-						<img class="w-100" src="{{ this }}" />
+						<img class="w-100 item-image" src="{{ this }}" />
 					</div>
 					{{else}}
 					<div class="carousel-item">
-						<img class="w-100" src="{{ this }}" />
+						<img class="w-100 item-image" src="{{ this }}" />
 					</div>
 					{{/unless}}
 					{{/each}}
-					{{!--
-					<div class="carousel-item active">
-						<img
-							class="w-100"
-							src="https://images6.alphacoders.com/670/thumb-350-670517.png"
-						/>
-					</div>
-					<div class="carousel-item">
-						<img
-							class="w-100"
-							src="https://images4.alphacoders.com/994/thumb-350-994514.jpg"
-						/>
-					</div>
-					<div class="carousel-item">
-						<img
-							class="w-100"
-							src="https://images7.alphacoders.com/945/thumb-350-945610.png"
-						/>
-					</div>
-					--}}
 				</div>
 				<a
 					class="carousel-control-prev"
@@ -106,10 +86,7 @@
 
 				<div class="d-flex justify-content-between">
 					{{#each options}}
-					<div
-						class="option w-100 mx-1 py-2 unselectable"
-						onclick="toggleSelectedOption(this)"
-					>
+					<div class="option w-100 mx-1 py-2 unselectable">
 						{{ this }}
 					</div>
 					{{/each}}
@@ -119,14 +96,57 @@
 			<div class="mt-2">
 				<div class="tittle-text">Description:</div>
 				<div class="form-group mt-1">
-					<textarea class="form-control description-text" disabled rows="5">
+					<textarea class="form-control description-text" disabled rows="10">
 						{{ description }}
 					</textarea
 					>
 				</div>
 			</div>
 
-			<button type="button" class="btn btn-lg btn-block add-to-cart">
+			<!-- Modal -->
+			<div
+				class="modal fade"
+				id="modelId"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="modelTitleId"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Put into your cart</h5>
+							<button
+								type="button"
+								class="close"
+								data-dismiss="modal"
+								aria-label="Close"
+							>
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							{{ name }}
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-primary"
+								data-dismiss="modal"
+							>
+								OK
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button
+				type="button"
+				class="btn btn-lg btn-block add-to-cart"
+				data-toggle="modal"
+				data-target="#modelId"
+			>
 				ADD TO CART
 			</button>
 		</div>

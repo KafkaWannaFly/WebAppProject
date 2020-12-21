@@ -8,12 +8,14 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "nodemon index"
+    "test": "nodemon index",
+    "tsc": "tsc -p tsconfig.dom.json;  tsc -p tsconfig.nodejs.json"
   },
   "author": "Group 05",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.9",
+    "@types/jquery": "^3.5.5",
     "@types/node": "^14.14.13",
     "ts-node": "^9.0.0",
     "typescript": "^4.1.2"
@@ -22,6 +24,9 @@
     "bcrypt": "^5.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
+    "jquery": "^3.5.1",
+    "lorem-ipsum": "^2.0.3",
+    "mongodb": "^3.6.3",
     "morgan": "^1.10.0",
     "passport": "^0.4.1"
   },

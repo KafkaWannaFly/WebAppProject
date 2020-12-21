@@ -2,7 +2,7 @@ import { Item } from "../resources/js/Models/item";
 import fs from "fs";
 
 let products = JSON.parse(
-	fs.readFileSync("./resources/data/products.json", {
+	fs.readFileSync("./data/products.json", {
 		encoding: "utf8",
 	})
 );

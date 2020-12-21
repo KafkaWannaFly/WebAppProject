@@ -31,7 +31,7 @@ console.log(`view dir: ${__dirname + "/views"}`);
 //Load Data Here
 var products = [];
 
-fs.readFile("./resources/data/products.json", "utf8", (err, jsonString) => {
+fs.readFile("./data/products.json", "utf8", (err, jsonString) => {
 	if (err) {
 		console.log("File read failed:", err);
 		return;
@@ -93,27 +93,6 @@ app.use("/list-product/item", itemRouter);
 const shoppingCartRouter = require("./routes/ShoppingCartRoute");
 app.use("/shopping-cart", shoppingCartRouter);
 
-// app.get("/pages/shopping-cart.html", (req, res) => {});
-
-// app.get("/pages/:pageName", (req, res) => {
-// 	// console.log(`Page name: ${req.params["pageName"]}`);
-// 	let htmlPath = "./pages/" + req.params["pageName"];
-
-// 	if (!fs.existsSync(htmlPath)) {
-// 		// console.log(`${req.params["pageName"]} not exist`);
-// 	}
-
-// 	try {
-// 		fs.readFile(htmlPath, (err, data) => {
-// 			res.statusCode = 200;
-// 			res.setHeader("content-type", "text/html");
-// 			res.send(data);
-// 		});
-// 	} catch (error) {
-// 		console.log(error);
-// 	}
-// });
-
 app.listen(port, () => {
-	console.log(`App is listening on https://usg-clothes.herokuapp.com:${port}`);
+	console.log(`App is listening on https://ugs-clothes.herokuapp.com:${port}`);
 });

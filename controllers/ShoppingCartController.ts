@@ -2,7 +2,7 @@ import fs from "fs";
 import { Bill } from "../resources/js/Models/bill";
 
 let bills = JSON.parse(
-	fs.readFileSync("./resources/data/bills.json", {
+	fs.readFileSync("./data/bills.json", {
 		encoding: "utf-8",
 	})
 ) as Bill[];

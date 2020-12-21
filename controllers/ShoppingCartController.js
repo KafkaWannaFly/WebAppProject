@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getBill = void 0;
 const fs_1 = __importDefault(require("fs"));
-let bills = JSON.parse(fs_1.default.readFileSync("./resources/data/bills.json", {
+let bills = JSON.parse(fs_1.default.readFileSync("./data/bills.json", {
     encoding: "utf-8",
 }));
 function getBill(id) {

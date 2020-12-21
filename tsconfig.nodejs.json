@@ -1,0 +1,11 @@
+{
+	"extends": "./tsconfig.json",
+	"exclude": ["./resources/js/*.ts"],
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "CommonJS",
+		"allowSyntheticDefaultImports": true,
+		"moduleResolution": "node",
+		"esModuleInterop": true
+	}
+}

@@ -7,12 +7,12 @@ interface BillItem {
 }
 
 class Bill {
-	id: string;
+	id: string = Date.now().toString(36) + Math.random().toString(36).substr(2);
 	billItems: BillItem[];
 	totalPrice?: number;
-	purchasedDate: Date;
+	purchasedDate: Date = new Date();
 	customer?: User;
-	shippingAddress: string;
+	shippingAddress: string = "";
 }
 
-export { Bill };
+export { Bill, BillItem };
