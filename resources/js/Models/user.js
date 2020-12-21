@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.User = void 0;
 var UserType;
 (function (UserType) {
     UserType[UserType["normal"] = 0] = "normal";
@@ -8,4 +5,4 @@ var UserType;
 })(UserType || (UserType = {}));
 class User {
 }
-exports.User = User;
+export { User };
