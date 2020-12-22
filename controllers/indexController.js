@@ -1,6 +1,14 @@
+const fs = require("fs");
+
+let products = JSON.parse(
+  fs.readFileSync("./data/products.json", {
+    encoding: "utf8",
+  })
+);
+
 var controller = {};
 
-controller.getTopProduct = (products) => {
+controller.getTopProduct = () => {
   var productsArray = [];
 
   for (category in products)
@@ -20,8 +28,6 @@ controller.getTopProduct = (products) => {
     }
     topProduct.push(row);
   }
-
-  // return topProduct;
   return new Promise((resolve) => {
     resolve(topProduct);
   });

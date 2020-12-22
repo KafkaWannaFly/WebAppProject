@@ -6,7 +6,7 @@ function numberWithCommas(x) {
 function setCommaForPrice(price) {
     // let price = document.querySelector(".price");
     // console.log(price);
-    price.innerHTML = numberWithCommas(parseInt(price.innerHTML));
+    price.innerHTML = numberWithCommas(parseInt(price.innerHTML)) + "đ";
 }
 function setIncrementButton(amount, increaseBtn, decreaseBtn) {
     increaseBtn.onclick = () => {
@@ -40,7 +40,7 @@ function getItemFromHTML(div) {
     item.name = div.querySelector(".item-name").innerHTML;
     // We use comma seperation for price like this: 999,999,999
     // Need get rid of them
-    let priceStr = div.querySelector(".price").innerHTML;
+    let priceStr = div.querySelector(".new-price").innerHTML;
     priceStr = priceStr.replace(/[, ]+/g, "").trim();
     item.price = parseInt(priceStr);
     item.description = div.querySelector(".description-text").innerHTML;
@@ -94,9 +94,31 @@ function onAddToCartClicked() {
     sessionStorage.setItem("currentBill", JSON.stringify(bill));
     console.log(bill);
 }
+//function show write Rate
+function clickWriteRateHandler() {
+    let form = document.getElementById("form-write-rate");
+    if (form.style.display == "none")
+        form.style.display = "block";
+    else
+        form.style.display = "none";
+}
+function setPriceSecsion() {
+    let newPrice = document.getElementById("new-price");
+    let oldPrice = document.getElementById("old-price");
+    let salePercent = document.getElementById("sale-percent");
+    if (parseFloat(newPrice.innerHTML) >= parseFloat(oldPrice.innerHTML)) {
+        oldPrice.innerHTML = "";
+        salePercent.innerHTML = "";
+    }
+    else {
+        salePercent.innerHTML = ((parseFloat(newPrice.innerHTML) / parseFloat(oldPrice.innerHTML) - 1) * 100).toFixed(0).toString() + "%";
+    }
+}
 let body = document.querySelector("body");
 body.onload = () => {
-    setCommaForPrice(document.querySelector(".price"));
+    setCommaForPrice(document.querySelector("#new-price"));
+    setCommaForPrice(document.querySelector("#old-price"));
+    setPriceSecsion();
     setIncrementButton(document.querySelector(".amount"), document.querySelector(".increase-one"), document.querySelector(".decrease-one"));
     let options = document.querySelectorAll(".option");
     options.forEach((e) => {
@@ -105,6 +127,8 @@ body.onload = () => {
     });
     let addToCart = document.querySelector(".add-to-cart");
     addToCart.addEventListener("click", () => onAddToCartClicked());
+    let writeRateBtn = document.querySelector(".btn-write-rate");
+    writeRateBtn.addEventListener("click", () => clickWriteRateHandler());
 };
 // Not work on browser!
 export { setCommaForPrice, setIncrementButton, toggleSelectedOption };

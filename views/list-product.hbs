@@ -1,7 +1,7 @@
 <!-- Body -->
 <div class="body-content container">
     <div class="secsion-header-title">
-        <h3>DANH SÁCH TẤT CẢ SẢN PHẨM (TEMPLATE)</h3>
+        <h3>DANH SÁCH TẤT CẢ SẢN PHẨM</h3>
     </div>
 
     <div class="secsion-orderby">
@@ -24,7 +24,7 @@
 
         <div class="row">
 
-            {{#each data}}
+            {{#each ListProduct}}
             <div class="col-6 col-lg-3 item-product">
                 <a href="/list-product/item?item={{this.id}}">
                     <img src="{{this.imageThumbnail}}" alt="5" width="100%;">
@@ -38,7 +38,7 @@
                     <p class="price">{{this.price}}đ</p>
                 </div>
                 <div class="buy">
-                    <a name="" id="" class="btn" href="/list-product/item/buy?id={{this.id}}" role="button">Chọn
+                    <a name="" id="" class="btn" href="/list-product/item?id={{this.id}}" role="button">Chọn
                         mua</a>
                 </div>
             </div>

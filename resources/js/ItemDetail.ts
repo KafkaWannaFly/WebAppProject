@@ -8,7 +8,7 @@ function numberWithCommas(x: number) {
 function setCommaForPrice(price: Element) {
 	// let price = document.querySelector(".price");
 	// console.log(price);
-	price.innerHTML = numberWithCommas(parseInt(price.innerHTML));
+	price.innerHTML = numberWithCommas(parseInt(price.innerHTML)) + "đ";
 }
 
 function setIncrementButton(
@@ -50,7 +50,7 @@ function getItemFromHTML(div: HTMLElement) {
 
 	// We use comma seperation for price like this: 999,999,999
 	// Need get rid of them
-	let priceStr = div.querySelector(".price").innerHTML;
+	let priceStr = div.querySelector(".new-price").innerHTML;
 	priceStr = priceStr.replace(/[, ]+/g, "").trim();
 
 	item.price = parseInt(priceStr);
@@ -116,10 +116,36 @@ function onAddToCartClicked() {
 	console.log(bill);
 }
 
+//function show write Rate
+function clickWriteRateHandler() {
+	let form = document.getElementById("form-write-rate");
+	if (form.style.display == "none") form.style.display = "block";
+	else form.style.display = "none";
+}
+
+function setPriceSecsion() {
+	let newPrice = document.getElementById("new-price");
+	let oldPrice = document.getElementById("old-price");
+	let salePercent = document.getElementById("sale-percent");
+
+	if (parseFloat(newPrice.innerHTML) >= parseFloat(oldPrice.innerHTML)) {
+		oldPrice.innerHTML = "";
+		salePercent.innerHTML = "";
+	}
+	else {
+		salePercent.innerHTML = ((parseFloat(newPrice.innerHTML) / parseFloat(oldPrice.innerHTML) - 1) * 100).toFixed(0).toString() + "%"; 
+	}
+}
+
+
 let body = document.querySelector("body");
 
+
+
 body.onload = () => {
-	setCommaForPrice(document.querySelector(".price"));
+	setCommaForPrice(document.querySelector("#new-price"));
+	setCommaForPrice(document.querySelector("#old-price"));
+	setPriceSecsion();
 	setIncrementButton(
 		document.querySelector(".amount"),
 		document.querySelector(".increase-one"),
@@ -134,6 +160,9 @@ body.onload = () => {
 
 	let addToCart = document.querySelector(".add-to-cart") as HTMLButtonElement;
 	addToCart.addEventListener("click", () => onAddToCartClicked());
+
+	let writeRateBtn = document.querySelector(".btn-write-rate") as HTMLButtonElement;
+	writeRateBtn.addEventListener("click", () => clickWriteRateHandler());
 };
 
 // Not work on browser!

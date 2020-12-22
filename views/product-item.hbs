@@ -1,5 +1,5 @@
 {{#with Item}}
-<div class="body-content container-fluid item-container" id="{{ id }}">
+<div class="body-content container item-container" id="{{ id }}">
 	<div class="row">
 		<!-- 100% width on mobile & 50% width on desktop -->
 		<div class="col-12 col-md-6">
@@ -8,11 +8,7 @@
 					{{#each imagePaths}}
 					{{!-- First item will be active --}}
 					{{#unless @index}}
-					<li
-						data-target="#carouselId"
-						data-slide-to="{{@index}}"
-						class="active"
-					></li>
+					<li data-target="#carouselId" data-slide-to="{{@index}}" class="active"></li>
 					{{else}}
 					<li data-target="#carouselId" data-slide-to="{{@index}}"></li>
 					{{/unless}}
@@ -27,30 +23,31 @@
 					{{#each imagePaths}}
 					{{#unless @index}}
 					<div class="carousel-item active">
-						<img class="w-100 item-image" src="{{ this }}" />
+						<img class="item-image" src="{{ this }}" />
 					</div>
 					{{else}}
 					<div class="carousel-item">
-						<img class="w-100 item-image" src="{{ this }}" />
+						<img class="item-image" src="{{ this }}" alt="img.png">
 					</div>
 					{{/unless}}
 					{{/each}}
+					{{!--
+					<div class="carousel-item active">
+						<img class="w-100" src="https://images6.alphacoders.com/670/thumb-350-670517.png" />
+					</div>
+					<div class="carousel-item">
+						<img class="w-100" src="https://images4.alphacoders.com/994/thumb-350-994514.jpg" />
+					</div>
+					<div class="carousel-item">
+						<img class="w-100" src="https://images7.alphacoders.com/945/thumb-350-945610.png" />
+					</div>
+					--}}
 				</div>
-				<a
-					class="carousel-control-prev"
-					href="#carouselId"
-					role="button"
-					data-slide="prev"
-				>
+				<a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="sr-only">Previous</span>
 				</a>
-				<a
-					class="carousel-control-next"
-					href="#carouselId"
-					role="button"
-					data-slide="next"
-				>
+				<a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="sr-only">Next</span>
 				</a>
@@ -61,95 +58,123 @@
 			{{!-- Saber’s Excalibur that Won 2 Holly Grail Wars --}}
 			<p class="item-name">{{ name }}</p>
 
-			<div class="d-flex justify-content-between">
-				<div class="d-flex">
-					<p class="price">{{ price }}</p>
-					đ
-				</div>
+			<a href="#rate" class="see--rate">Xem đánh giá</a>
 
-				<div class="itemAmount d-flex justify-content-center align-self-start">
-					<div class="decrease-one unselectable">-</div>
-					<div>
-						<input
-							type="number"
-							class="form-control amount"
-							aria-describedby="helpId"
-							value="1"
-						/>
-					</div>
-					<div class="increase-one unselectable">+</div>
-				</div>
-			</div>
+			<dir class="price--secsion">
+				<p class="new-price" id="new-price">{{ price }}đ</p>
+				<p class="old-price" id="old-price">{{oldPrice}}đ</p>
+				<p class="sale-percent" id="sale-percent">-0%</p>
+			</dir>
 
-			<div>
-				<p class="tittle-text">Options:</p>
+			<dir class="choose-size">
+				<p>Chọn kích thước Size:</p>
 
 				<div class="d-flex justify-content-between">
 					{{#each options}}
-					<div class="option w-100 mx-1 py-2 unselectable">
+					<div class="option w-100 mx-1 py-2 unselectable" onclick="toggleSelectedOption(this)">
 						{{ this }}
 					</div>
 					{{/each}}
 				</div>
-			</div>
+			</dir>
 
-			<div class="mt-2">
-				<div class="tittle-text">Description:</div>
-				<div class="form-group mt-1">
-					<textarea class="form-control description-text" disabled rows="10">
-						{{ description }}
-					</textarea
-					>
-				</div>
-			</div>
-
-			<!-- Modal -->
-			<div
-				class="modal fade"
-				id="modelId"
-				tabindex="-1"
-				role="dialog"
-				aria-labelledby="modelTitleId"
-				aria-hidden="true"
-			>
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">Put into your cart</h5>
-							<button
-								type="button"
-								class="close"
-								data-dismiss="modal"
-								aria-label="Close"
-							>
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							{{ name }}
-						</div>
-						<div class="modal-footer">
-							<button
-								type="button"
-								class="btn btn-primary"
-								data-dismiss="modal"
-							>
-								OK
-							</button>
-						</div>
+			<dir class="choose-amount">
+				<p>Chọn số lượng:</p>
+				<div class="itemAmount d-flex">
+					<div class="decrease-one unselectable">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+							class="bi bi-dash" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+						</svg>
+					</div>
+					<div>
+						<input type="number" class="form-control amount" aria-describedby="helpId" value="1" />
+					</div>
+					<div class="increase-one unselectable">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+							class="bi bi-plus" viewBox="0 0 20 20">
+							<path fill-rule="evenodd"
+								d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+						</svg>
 					</div>
 				</div>
-			</div>
+			</dir>
 
-			<button
-				type="button"
-				class="btn btn-lg btn-block add-to-cart"
-				data-toggle="modal"
-				data-target="#modelId"
-			>
-				ADD TO CART
+
+
+			<button type="button"
+				class="btn btn-lg btn-block add-to-cart d-flex justify-content-center align-items-center">
+				Thêm vào giỏ hàng
+				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-cart3"
+					viewBox="0 0 16 16" style="margin-left: 0.5rem">
+					<path fill-rule="evenodd"
+						d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+				</svg>
 			</button>
 		</div>
 	</div>
+
+	<hr>
+
+	<div class="desciption">
+		<div class="des-title">Mô tả chi tiết</div>
+		<div class="description-text">{{ description }}</div>
+	</div>
+
+	<hr>
+
+	<div class="rate-comment" id="rate">
+		<div class="rate-title">Đánh giá</div>
+
+		<div class="form-rate">
+			<button type="button" class="btn btn-write-rate">
+				Viết đáng giá của bạn
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+					class="bi bi-pencil-square ml-1" viewBox="0 0 20 20">
+					<path
+						d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+					<path fill-rule="evenodd"
+						d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+				</svg>
+			</button>
+
+
+			<div class="form-write-rate" id="form-write-rate">
+				<form method="POST" action=" " class="d-flex flex-column my-2">
+					<div class="form-group">
+						<label for="name">Họ & Tên</label>
+						<input type="text" class="form-control rounded-0" value="" id="name"
+							placeholder="Nhập họ và tên" name="name" required />
+					</div>
+
+					<div class="form-group">
+						<label for="email">Địa chỉ Email</label>
+						<input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ Email"
+							name="email" required />
+					</div>
+
+					<div class="form-group">
+						<label for="your-rate">Đánh giá của bạn</label>
+						<textarea name="your-rate" id="your-rate" rows="5" class="form-control"></textarea>
+					</div>
+
+					<button type="submit" class="btn send-rate rounded-0">Gửi đánh giá</button>
+				</form>
+			</div>
+
+
+		</div>
+
+		<div class="rate">
+			<div class="media border p-2">
+				<div class="media-body">
+					<p><b>Phát Dương</b> <small><i>Đăng ngày DD/MM/YYYY</i></small></p>
+					<p>Lorem ipsum...</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
 </div>
 {{/with}}
