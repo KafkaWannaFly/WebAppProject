@@ -63,13 +63,20 @@ function getItemFromHTML(div) {
     item.imageThumbnail = item.imagePaths[0];
     return item;
 }
+function getCurrentBill() {
+    let bill = sessionStorage.getItem("currentBill");
+    return JSON.parse(bill);
+}
+function setCurrentBill(bill) {
+    sessionStorage.setItem("currentBill", JSON.stringify(bill));
+}
 // Add item into a Bill object in sessionStorage "currentBill"
 function onAddToCartClicked() {
     let amountDiv = document.querySelector(".amount");
     if (parseInt(amountDiv.value) <= 0) {
         return;
     }
-    let bill = JSON.parse(sessionStorage.getItem("currentBill"));
+    let bill = getCurrentBill();
     let item = getItemFromHTML(document.querySelector(".item-container"));
     let billItem = {
         item: item,
@@ -95,7 +102,8 @@ function onAddToCartClicked() {
         bill.totalPrice = item.price * billItem.amount;
         bill.billItems = [billItem];
     }
-    sessionStorage.setItem("currentBill", JSON.stringify(bill));
+    // sessionStorage.setItem("currentBill", JSON.stringify(bill));
+    setCurrentBill(bill);
     console.log(bill);
 }
 //function show write Rate
@@ -139,5 +147,5 @@ body.onload = () => {
     writeRateBtn.addEventListener("click", () => clickWriteRateHandler());
 };
 // Not work on browser!
-export { setCommaForPrice, setIncrementButton, toggleSelectedOption, priceToNumber, };
+export { setCommaForPrice, setIncrementButton, toggleSelectedOption, priceToNumber, getCurrentBill, setCurrentBill, };
 // module.exports = { setCommaForPrice, setIncrementButton, toggleSelectedOption };

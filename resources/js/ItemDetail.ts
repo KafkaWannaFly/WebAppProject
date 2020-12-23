@@ -82,6 +82,15 @@ function getItemFromHTML(div: HTMLElement) {
 	return item;
 }
 
+function getCurrentBill() {
+	let bill = sessionStorage.getItem("currentBill");
+	return JSON.parse(bill) as Bill;
+}
+
+function setCurrentBill(bill: Bill) {
+	sessionStorage.setItem("currentBill", JSON.stringify(bill));
+}
+
 // Add item into a Bill object in sessionStorage "currentBill"
 function onAddToCartClicked() {
 	let amountDiv = document.querySelector(".amount") as HTMLInputElement;
@@ -89,7 +98,7 @@ function onAddToCartClicked() {
 		return;
 	}
 
-	let bill = JSON.parse(sessionStorage.getItem("currentBill")) as Bill;
+	let bill = getCurrentBill();
 
 	let item = getItemFromHTML(document.querySelector(".item-container"));
 	let billItem = {
@@ -117,7 +126,8 @@ function onAddToCartClicked() {
 		bill.billItems = [billItem];
 	}
 
-	sessionStorage.setItem("currentBill", JSON.stringify(bill));
+	// sessionStorage.setItem("currentBill", JSON.stringify(bill));
+	setCurrentBill(bill);
 	console.log(bill);
 }
 
@@ -180,5 +190,7 @@ export {
 	setIncrementButton,
 	toggleSelectedOption,
 	priceToNumber,
+	getCurrentBill,
+	setCurrentBill,
 };
 // module.exports = { setCommaForPrice, setIncrementButton, toggleSelectedOption };

@@ -1,6 +1,6 @@
 {
 	"extends": "./tsconfig.json",
-	"exclude": ["./controllers/*.ts", "./routes/*.ts", "./test/*.ts"],
+	"exclude": ["./controllers/*.ts", "./routes/*.ts", "./tests/*.ts"],
 	"compilerOptions": {
 		"target": "esnext",
 		"module": "esnext",
