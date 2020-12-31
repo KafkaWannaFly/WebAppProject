@@ -4,5 +4,9 @@ var UserType;
     UserType[UserType["shopEmployee"] = 1] = "shopEmployee";
 })(UserType || (UserType = {}));
 class User {
+    constructor() {
+        this.height = 0; // Meter
+        this.weight = 0; // Kg
+    }
 }
 export { User };

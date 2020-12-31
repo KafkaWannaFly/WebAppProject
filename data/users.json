@@ -1,28 +1,34 @@
 [
-    {
-        "username": "wander",
-        "password": "123",
-        "email": "wander@usg.com",
-        "name": "Wander Lust",
-        "DoB": "2000-1-1",
-        "gender": false,
-        "address": "227 NVC HCMC",
-        "phone": "177013",
-        "height": 1.65,
-        "weight": 50,
-        "userType": 1
-    },
-    {
-        "username": "lori",
-        "password": "123",
-        "email": "lori@usg.com",
-        "name": "Lori Lint",
-        "DoB": "2000-1-1",
-        "gender": false,
-        "address": "227 NVC HCMC",
-        "phone": "177013",
-        "height": 1.65,
-        "weight": 50,
-        "userType": 0
-    }
+  {
+    "username": "18127084",
+    "password": "$2b$10$0sD4C32ufg6WXNphSiDLHekBKWQrWAiQUzSAmHiniUnQcQzBoLtoy",
+    "phone": "+10352682604",
+    "email": "18127084@student.hcmus.edu.vn",
+    "userType": 0,
+    "name": "Duong Dinh Hoang"
+  },
+  {
+    "username": "student",
+    "password": "$2b$10$nh0Tjr0wxNt7.9riw3ltnOAkqCdvywCpBsqjozkOdXVbkTAQ8cVGm",
+    "phone": "+10352682604",
+    "email": "18127084@student.hcmus.edu.vn",
+    "userType": 0,
+    "name": "Duong Dinh Hoang"
+  },
+  {
+    "username": "KafkaWannaFly",
+    "password": "$2b$10$k6cVurY7WsxpUKOsUpASyem5ILP.ED1OjFM/iGqK14VAOYT4yMHQe",
+    "phone": "+10352682604",
+    "email": "tarzanchemgio@gmail.com",
+    "userType": 0,
+    "name": "Kafka Wanna Fly"
+  },
+  {
+    "username": "student2",
+    "password": "$2b$10$Y.WV.gs7sQ9qjAVonkzUT./WTYmG.BQ4ZgK7sZeW4X/pw35iMPOA2",
+    "phone": "+10352682604",
+    "email": "18127084@student.hcmus.edu.vn",
+    "userType": 0,
+    "name": "Duong Dinh Hoang"
+  }
 ]

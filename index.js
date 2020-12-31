@@ -1,54 +1,71 @@
-// import * as express from "express";
 var path = require("path");
 const express = require("express");
-const fs = require("fs");
 const app = express();
 const hbs = require("express-handlebars");
-const port = process.env.PORT || 3000;
 const morgan = require("morgan");
+const passport = require("passport");
+const flash = require("express-flash");
+const session = require("express-session");
+var cookieParser = require("cookie-parser");
+let passportConfig = require("./controllers/PassportConfig");
 
-// app.use("/", express.static(path.join(__dirname, "../Views")));
-app.use(morgan("dev"));
-app.use("/pages", express.static("./pages"));
-app.use("/resources", express.static("./resources"));
+const port = process.env.PORT || 3000;
+
+app.use(cookieParser());
+app.use(flash());
+app.use(express.urlencoded({ extended: false }));
+app.use(
+	session({
+		secret: "usg",
+		resave: false,
+		saveUninitialized: false,
+	})
+);
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Set up for HandleBars
 app.engine(
-  "hbs",
-  hbs({
-    extname: "hbs",
-    defaultLayout: "default-layout",
-    layoutsDir: "./views/layouts/",
-    partialsDir: "./views/partials/",
-  })
+	"hbs",
+	hbs({
+		extname: "hbs",
+		defaultLayout: "default-layout",
+		layoutsDir: "./views/layouts/",
+		partialsDir: "./views/partials/",
+	})
 );
 
 app.set("view engine", "hbs");
 
-console.log(`dirname: ${__dirname}`);
-console.log(`view dir: ${__dirname + "/views"}`);
+app.use(morgan("dev"));
+app.use("/pages", express.static("./pages"));
+app.use("/resources", express.static("./resources"));
+
+passportConfig.init(passport);
 
 const indexRouter = require("./routes/IndexRoute");
 app.use("/", indexRouter);
 
-app.get("/login", (req, res) => {
-  res.render("login-view", { layout: "login-view-layout" });
-});
+let loginRouter = require("./routes/LoginRoute");
+app.use("/login", loginRouter);
 
-app.get("/sign-up", (req, res) => {
-  res.render("sign-up", { layout: "sign-up-layout" });
-});
+let signUpRouter = require("./routes/SignUpRoute");
+app.use("/sign-up", signUpRouter);
 
 app.get("/forgot-pwd", (req, res) => {
-  res.render("forgot-pwd", { layout: "forgot-pwd-layout" });
+	res.render("forgot-pwd", { layout: "forgot-pwd-layout" });
 });
 
-app.get("/infor", (req, res) => {
-  res.render("information", { layout: "information-layout" });
+let inforRouter = require("./routes/UserInforRoute");
+app.use("/infor", inforRouter);
+
+app.get("/logout", (req, res) => {
+	req.logout();
+	res.redirect("/login");
 });
 
 app.get("/order-list", (req, res) => {
-  res.render("order-list", { layout: "order-list-layout" });
+	res.render("order-list", { layout: "order-list-layout" });
 });
 
 const listProductRouter = require("./routes/ListProductRoute");
@@ -61,5 +78,5 @@ const shoppingCartRouter = require("./routes/ShoppingCartRoute");
 app.use("/shopping-cart", shoppingCartRouter);
 
 app.listen(port, () => {
-  console.log(`App is listening on https://ugs-clothes.herokuapp.com:${port}`);
+	console.log(`App is listening on https://usg-clothes.herokuapp.com:${port}`);
 });

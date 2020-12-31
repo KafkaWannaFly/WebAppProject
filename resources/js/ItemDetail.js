@@ -132,6 +132,9 @@ function setPriceSecsion() {
 }
 let body = document.querySelector("body");
 body.onload = () => {
+    let certImg = document.querySelector(".cert-img");
+    // certImg.src = "." + certImg.src;
+    // console.log(certImg.src);
     setCommaForPrice(document.querySelector("#new-price"));
     setCommaForPrice(document.querySelector("#old-price"));
     setPriceSecsion();
