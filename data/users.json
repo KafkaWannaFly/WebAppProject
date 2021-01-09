@@ -5,7 +5,10 @@
     "phone": "+10352682604",
     "email": "18127084@student.hcmus.edu.vn",
     "userType": 0,
-    "name": "Duong Dinh Hoang"
+    "name": "Duong Dinh Hoang",
+    "purchasedItems": [
+      "0"
+    ]
   },
   {
     "username": "student",

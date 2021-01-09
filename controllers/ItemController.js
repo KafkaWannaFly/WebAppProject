@@ -1,5 +1,11 @@
-import fs from "fs";
-let products = JSON.parse(fs.readFileSync("./data/products.json", {
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getItem = void 0;
+const fs_1 = __importDefault(require("fs"));
+let products = JSON.parse(fs_1.default.readFileSync("./data/products.json", {
     encoding: "utf8",
 }));
 function getItem(id) {
@@ -12,4 +18,4 @@ function getItem(id) {
         }
     }
 }
-export { getItem };
+exports.getItem = getItem;

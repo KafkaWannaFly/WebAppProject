@@ -17,6 +17,9 @@ mongoose.connect(url, {
 	useUnifiedTopology: true,
 });
 
+const collectionList = mongoose.connection.collections;
+
+// ===========================================================================
 //#region User Schema
 const userSchema = new Schema(
 	{
@@ -62,7 +65,33 @@ const userSchema = new Schema(
 
 const UserModel = mongoose.model("User", userSchema);
 
+const usersData: User[] = require("../data/users.json");
+
+function insertUsers(model: any, data: User[]) {
+	model
+		.insertMany(data)
+		.then((val) => {
+			console.log(`Write users: ${val}`);
+		})
+		.catch((err) => {
+			console.log(`Error writing users: ${err}`);
+		});
+}
+
+function dropUsers(model: mongoose.Model<mongoose.Document<any>>) {
+	model.db
+		.dropCollection("users")
+		.then(() => {
+			console.log(`Done drop users`);
+		})
+		.catch((err) => {
+			console.log(`Fail to drop users. Error: ${err}`);
+		});
+}
+
 //#endregion
+
+//#region Bill Schema
 
 const billSchema = new Schema({
 	id: {
@@ -129,6 +158,33 @@ const billSchema = new Schema({
 
 const BillModel = mongoose.model("Bill", billSchema);
 
+const billsData: Bill[] = require("../data/bills.json");
+
+function insertBills(
+	model: mongoose.Model<mongoose.Document<any>>,
+	data: Bill[]
+) {
+	model
+		.insertMany(data)
+		.then((val) => {
+			console.log(`Done insert bills: ${val}`);
+		})
+		.catch((err) => {
+			console.log(`Fail insert bills. Error: ${err}`);
+		});
+}
+
+function dropBills(model: mongoose.Model<mongoose.Document<any>>) {
+	model.db
+		.dropCollection("bills")
+		.then(() => {
+			console.log(`Done drop bills`);
+		})
+		.catch((err) => {
+			console.log(`Fail to drop bill. Error: ${err}`);
+		});
+}
+
 //#endregion
 
 //#region Item Schema
@@ -178,6 +234,41 @@ const itemSchema = new Schema({
 
 const ItemModel = mongoose.model("Item", itemSchema);
 
+const itemsData: Item[] = require("../data/items.json");
+
+function insertItems(
+	model: mongoose.Model<mongoose.Document<any>>,
+	data: Item[]
+) {
+	model
+		.insertMany(data)
+		.then((val) => {
+			console.log(`Done insert items: ${val}`);
+		})
+		.catch((err) => {
+			console.log(`Fail insert items. ${err}`);
+		});
+}
+
+function dropItems(model: mongoose.Model<mongoose.Document<any>>) {
+	model.db
+		.dropCollection("items")
+		.then(() => {
+			console.log(`Done drop items`);
+		})
+		.catch((err) => {
+			console.log(`Fail to drop items. ${err}`);
+		});
+}
+
 //#endregion
+
+// insertUsers(UserModel, usersData);
+// insertBills(BillModel, billsData);
+// insertItems(ItemModel, itemsData);
+
+// dropUsers(UserModel);
+// dropBills(BillModel);
+// dropItems(ItemModel);
 
 export { UserModel, BillModel, ItemModel };

@@ -14,6 +14,8 @@ mongoose_1.default.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
+const collectionList = mongoose_1.default.connection.collections;
+// ===========================================================================
 //#region User Schema
 const userSchema = new Schema({
     username: {
@@ -55,7 +57,29 @@ const userSchema = new Schema({
 });
 const UserModel = mongoose_1.default.model("User", userSchema);
 exports.UserModel = UserModel;
+const usersData = require("../data/users.json");
+function insertUsers(model, data) {
+    model
+        .insertMany(data)
+        .then((val) => {
+        console.log(`Write users: ${val}`);
+    })
+        .catch((err) => {
+        console.log(`Error writing users: ${err}`);
+    });
+}
+function dropUsers(model) {
+    model.db
+        .dropCollection("users")
+        .then(() => {
+        console.log(`Done drop users`);
+    })
+        .catch((err) => {
+        console.log(`Fail to drop users. Error: ${err}`);
+    });
+}
 //#endregion
+//#region Bill Schema
 const billSchema = new Schema({
     id: {
         type: "Date",
@@ -120,6 +144,27 @@ const billSchema = new Schema({
 });
 const BillModel = mongoose_1.default.model("Bill", billSchema);
 exports.BillModel = BillModel;
+const billsData = require("../data/bills.json");
+function insertBills(model, data) {
+    model
+        .insertMany(data)
+        .then((val) => {
+        console.log(`Done insert bills: ${val}`);
+    })
+        .catch((err) => {
+        console.log(`Fail insert bills. Error: ${err}`);
+    });
+}
+function dropBills(model) {
+    model.db
+        .dropCollection("bills")
+        .then(() => {
+        console.log(`Done drop bills`);
+    })
+        .catch((err) => {
+        console.log(`Fail to drop bill. Error: ${err}`);
+    });
+}
 //#endregion
 //#region Item Schema
 const itemSchema = new Schema({
@@ -166,3 +211,24 @@ const itemSchema = new Schema({
 });
 const ItemModel = mongoose_1.default.model("Item", itemSchema);
 exports.ItemModel = ItemModel;
+const itemsData = require("../data/items.json");
+function insertItems(model, data) {
+    model
+        .insertMany(data)
+        .then((val) => {
+        console.log(`Done insert items: ${val}`);
+    })
+        .catch((err) => {
+        console.log(`Fail insert items. ${err}`);
+    });
+}
+function dropItems(model) {
+    model.db
+        .dropCollection("items")
+        .then(() => {
+        console.log(`Done drop items`);
+    })
+        .catch((err) => {
+        console.log(`Fail to drop items. ${err}`);
+    });
+}

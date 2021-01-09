@@ -1,10 +1,15 @@
 {
 	"extends": "./tsconfig.json",
-	"include": ["./routes/*", "./controller/*", "./resources/js/Models/*"],
+	"include": [
+		"./routes/*",
+		"./controllers/*",
+		"./resources/js/Models/*",
+		"./tests/*"
+	],
 	"exclude": [
 		"./resources/js/*.ts",
-		"resources/js/Models/*.ts",
-		"resources/js/Models/*.js"
+		"./resources/js/Models/*.ts",
+		"./resources/js/Models/*.js"
 	],
 	"compilerOptions": {
 		"target": "esnext",

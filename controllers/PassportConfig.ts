@@ -75,7 +75,7 @@ function init(passport: typeof _passport) {
 					return done(
 						null,
 						false,
-						req.flash("signUpMessage", "User has already existed!")
+						req.flash("signUpMessage", "User has already existed")
 					);
 				}
 			}
