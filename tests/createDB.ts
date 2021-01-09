@@ -98,7 +98,7 @@ async function run() {
 			if (i == 0) {
 				for (let j = 0; j < ShirtCategory.length; j++) {
 					let Category = {
-						name: catergoryNames[i],
+						cateName: catergoryNames[i],
 						detailName: ShirtCategory[j],
 					};
 					let Categorydata = JSON.stringify(Category);

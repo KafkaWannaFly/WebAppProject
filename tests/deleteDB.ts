@@ -27,6 +27,7 @@ async function delete_Collections(Colname: string) {
 }
 
 async function delete_Documents(obj) {
+<<<<<<< Updated upstream
 	try {
 		await client.connect();
 		const db = client.db(dbName);
@@ -42,10 +43,43 @@ async function delete_Documents(obj) {
 		db.Items_col.remove(obj_JSON);
 		db.Categories_col.remove(obj_JSON);
 	} finally {
+=======
+    try {
+        await client.connect();
+            const db = client.db(dbName);
+            const Users_col = db.collection("Users");
+            const Items_col = db.collection("Items");
+            const Categories_col = db.collection("Categories");
+
+            let objdata = JSON.stringify(obj);
+            let obj_JSON = JSON.parse(objdata);
+
+            Users_col.deleteMany(obj_JSON);
+            Items_col.deleteMany(obj_JSON);
+
+            let sub_objdata = objdata.slice(0, -1) + ', "detailName": { "$exists": "true" }}';
+            console.log(sub_objdata);
+
+            let sub_objJSON = {category: JSON.parse(sub_objdata)};
+            console.log(sub_objJSON);
+
+            Items_col.deleteMany(sub_objJSON);
+            Categories_col.deleteMany(obj_JSON);
+    }
+    finally {
+>>>>>>> Stashed changes
 		await client.close();
 	}
 }
 
+<<<<<<< Updated upstream
 delete_Database();
 
 export {};
+=======
+let obj = {
+    cateName: "Shirt"
+}
+
+delete_Documents(obj);
+>>>>>>> Stashed changes

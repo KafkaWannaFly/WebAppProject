@@ -27,6 +27,7 @@ async function run() {
                 weight: 50,
                 UserType: "normal",
             };
+<<<<<<< Updated upstream
             if (User.name == "John" || User.name == "James" || User.name == "Jack") {
                 User.gender = "male";
                 let Userdata = JSON.stringify(User);
@@ -116,6 +117,72 @@ async function run() {
                             let Itemdata = JSON.stringify(Item);
                             let Itemobj = JSON.parse(Itemdata);
                             let p = await Items_col.insertOne(Itemobj);
+=======
+            let Admindata = JSON.stringify(Admin);
+            let Adminobj = JSON.parse(Admindata);
+            let p = yield Users_col.insertOne(Adminobj);
+            var catergoryNames = ["Shirt", "Pant", "Sock", "Accessory"];
+            var ShirtCategory = [
+                "Short sleeve T-shirt",
+                "Long sleeve T-shirt",
+                "Tank top",
+                "Shirt",
+            ];
+            var PantCategory = ["Short", "Jean", "Kaki", "Jogger"];
+            var SockCategory = ["Ankle sock", "Crew sock"];
+            var AccessoryCategory = ["Belt", "Wallet", "Face mask", "Hat"];
+            var ShortSleeveTShirts = 10;
+            var LongSleeveTShirts = 10;
+            var TankTops = 10;
+            var Shirts = 10;
+            var Shorts = 10;
+            var Jeans = 10;
+            var Kakis = 10;
+            var Joggers = 10;
+            var AnkleSocks = 10;
+            var CrewSocks = 10;
+            var Belts = 10;
+            var Wallets = 10;
+            var FaceMasks = 10;
+            var Hats = 10;
+            for (let i = 0; i < catergoryNames.length; i++) {
+                if (i == 0) {
+                    for (let j = 0; j < ShirtCategory.length; j++) {
+                        let Category = {
+                            cateName: catergoryNames[i],
+                            detailName: ShirtCategory[j],
+                        };
+                        let Categorydata = JSON.stringify(Category);
+                        let Categoryobj = JSON.parse(Categorydata);
+                        let p = yield Categories_col.insertOne(Categoryobj);
+                        if (j == 0) {
+                            for (let k = 0; k < ShortSleeveTShirts; k++) {
+                                let Item = {
+                                    id: i.toString() + " - " + j.toString() + " - " + k.toString(),
+                                    name: loremIpsum({
+                                        count: Math.floor(Math.random() * (3 - 1 + 1) + 1),
+                                        units: 'words',
+                                        format: 'plain'
+                                    }),
+                                    price: Math.floor(Math.random() * (300000 - 250000 + 1) + 250000),
+                                    description: loremIpsum({
+                                        count: 1,
+                                        units: 'paragraphs',
+                                        sentenceLowerBound: 5,
+                                        sentenceUpperBound: 10,
+                                        paragraphLowerBound: 1,
+                                        paragraphUpperBound: 3,
+                                        format: 'plain'
+                                    }),
+                                    stock: Math.floor(Math.random() * (500 - 0 + 1) + 0),
+                                    postedTime: "01/01/2020",
+                                    category: Category,
+                                };
+                                let Itemdata = JSON.stringify(Item);
+                                let Itemobj = JSON.parse(Itemdata);
+                                let p = yield Items_col.insertOne(Itemobj);
+                            }
+>>>>>>> Stashed changes
                         }
                     }
                     if (j == 1) {
