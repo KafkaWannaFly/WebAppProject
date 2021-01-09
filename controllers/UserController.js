@@ -1,11 +1,5 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.registerUser = exports.getUser = void 0;
-const fs_1 = __importDefault(require("fs"));
-let users = JSON.parse(fs_1.default.readFileSync("./data/users.json", {
+import fs from "fs";
+let users = JSON.parse(fs.readFileSync("./data/users.json", {
     encoding: "utf-8",
 }));
 function getUser(username) {
@@ -17,14 +11,14 @@ function getUser(username) {
     });
     return user;
 }
-exports.getUser = getUser;
 function registerUser(user) {
     if (getUser(user.username) !== undefined) {
-        throw "Existing username";
+        return false;
     }
     users.push(user);
-    fs_1.default.writeFile("./data/users.json", JSON.stringify(users, null, 2), () => {
-        console.log(`Done saving: ${JSON.stringify(users, null, 2)}`);
+    fs.writeFile("./data/users.json", JSON.stringify(users, null, 4), () => {
+        // console.log(`Done saving: ${JSON.stringify(users, null, 4)}`);
+        return true;
     });
 }
-exports.registerUser = registerUser;
+export { getUser, registerUser };

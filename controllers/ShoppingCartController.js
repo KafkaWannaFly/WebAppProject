@@ -1,11 +1,5 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.getBill = void 0;
-const fs_1 = __importDefault(require("fs"));
-let bills = JSON.parse(fs_1.default.readFileSync("./data/bills.json", {
+import fs from "fs";
+let bills = JSON.parse(fs.readFileSync("./data/bills.json", {
     encoding: "utf-8",
 }));
 function getBill(id) {
@@ -16,4 +10,4 @@ function getBill(id) {
     }
     return undefined;
 }
-exports.getBill = getBill;
+export { getBill };

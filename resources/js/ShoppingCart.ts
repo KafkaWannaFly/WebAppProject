@@ -85,6 +85,9 @@ function populateShoppingCart(bill: Bill) {
 		itemDiv.id = billItem.item.id;
 		itemDiv.style.display = "";
 
+		let name = itemDiv.querySelector(".item-name");
+		name.innerHTML = billItem.item.name;
+
 		let img = itemDiv.querySelector(".thumbnail") as HTMLImageElement;
 		img.src = billItem.item.imageThumbnail;
 
