@@ -20,11 +20,12 @@ function getUser(username) {
 exports.getUser = getUser;
 function registerUser(user) {
     if (getUser(user.username) !== undefined) {
-        throw "Existing username";
+        return false;
     }
     users.push(user);
-    fs_1.default.writeFile("./data/users.json", JSON.stringify(users, null, 2), () => {
-        console.log(`Done saving: ${JSON.stringify(users, null, 2)}`);
+    fs_1.default.writeFile("./data/users.json", JSON.stringify(users, null, 4), () => {
+        // console.log(`Done saving: ${JSON.stringify(users, null, 4)}`);
+        return true;
     });
 }
 exports.registerUser = registerUser;

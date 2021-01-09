@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const { MongoClient } = require("mongodb");
 const url = "mongodb+srv://admin:0123456789@cluster0.2diud.mongodb.net/test?authSource=admin&replicaSet=atlas-37amtr-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true";
 const client = new MongoClient(url);
@@ -40,4 +42,3 @@ async function delete_Documents(obj) {
     }
 }
 delete_Database();
-export {};

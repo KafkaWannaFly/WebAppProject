@@ -2,105 +2,140 @@
 <html lang="en">
 
 <head>
-  <title>Shopping Cart</title>
-  <link rel="shortcut icon" href="resources/img/web.ico" type="image/x-icon">
+    <title>Shopping Cart</title>
 
-  {{>head-part }}
+    <link rel="stylesheet" href="../resources/css/shopping-cart.css">
 
-  <!-- Style CSS -->
-  <link rel="stylesheet" href="../resources/css/item-detail.css">
-  <link rel="stylesheet" href="../resources/css/shopping-cart.css">
-
+    {{>head-part }}
 </head>
 
 <body>
     {{> header-part}}
-    
-    <div class="body-content container-fluid">
-        <div class="row">
-            <div class="col-md-7 col-12" id="formWrapper">
-                <div class="form-tittle">
-                    BASIC INFORMATION
-                </div>
 
+    <div class="body-content container">
+        <div class="row p-0 m-0">
+            <div class="col-md-7 col-12 m-0 p-0" id="formWrapper">
                 <div class="form-group">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input type="text" name="" class="form-control" placeholder="Full name" aria-describedby="">
+                    <div class="form-tittle">Thông tin nhận hàng</div>
+
+                    <div class="row p-0 m-0">
+                        <div class="col-md-6 col-12 input-name">
+                            <input type="text" name="" class="form-control" placeholder="Họ tên" aria-describedby="">
                         </div>
 
-                        <div class="col-md-6">
-                            <input type="number" name="" class="form-control" placeholder="Phone number"
+                        <div class="col-md-6 col-12 input-phone">
+                            <input type="number" name="" class="form-control" placeholder="Số điện thoại"
                                 aria-describedby="">
                         </div>
-                        <div class="col-md-12">
-                            <input type="text" name="" class="form-control my-3" placeholder="Address"
-                                aria-describedby="">
-                            <input type="email" name="" id="" class="form-control my-3" placeholder="Email"
-                                aria-describedby="">
-                            <textarea class="form-control my-3" name="" id="" rows="6" placeholder="Notes"></textarea>
+                    </div>
 
-                            <div>
-                                <div class="tittle-text my-2 form-tittle">
-                                    Payment Method: 
-                                </div>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <div class="option w-100 mx-1
-                                    d-flex justify-content-center align-items-center unselectable"
-                                    >ON</br>SITE</div>
-                                    <div class="option w-100 mx-1
-                                    d-flex justify-content-center align-items-center unselectable"
-                                    > CREDIT </br> CARD </div>
-                                    <div class="option w-100 mx-1 
-                                    d-flex justify-content-center align-items-center unselectable"
-                                    >
-                                        VISA
+                    <input type="text" name="" class="form-control my-3" placeholder="Địa chỉ giao hàng"
+                        aria-describedby="">
+
+                    <input type="email" name="" id="" class="form-control my-3" placeholder="Địa chỉ Email"
+                        aria-describedby="">
+
+                    <textarea class="form-control my-3" name="" id="" rows="6"
+                        placeholder="Ghi chú thêm (Ví dụ: Giao giờ hành chính)">
+                    </textarea>
+
+                    <div class="tittle-text my-2 form-tittle">Chọn hình thức thanh toán</div>
+
+                    <div class="payment-method--secsion">
+
+                        <div class="option-method-payment-button">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="cod" name="method-payment"
+                                    value="cod">
+                                <label class="custom-control-label" for="cod">
+                                    <div>
+                                        <i class="fas fa-truck logo-method-payment"
+                                            style="font-size: 1.5rem; color: #F26101"></i>
+                                        Thanh toán khi nhận hàng
                                     </div>
-                                    <div class="option w-100 mx-1
-                                    d-flex justify-content-center align-items-center unselectable"
-                                    > MOMO </div>
-                                    <div class="option w-100 mx-1
-                                    d-flex justify-content-center align-items-center unselectable"
-                                    > KIDNEY </div>
-                                </div>
-                            </div>
-
-                            <div class="my-3">
-                                <button type="button" name="" class="btn btn-lg btn-block confirm-btn">
-                                    CONFIRM
-                                </button>
+                                </label>
                             </div>
                         </div>
+
+                        <div class="option-method-payment-button">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="zalopay" name="method-payment"
+                                    value="zalopay">
+                                <label class="custom-control-label" for="zalopay">
+                                    <div>
+                                        <img src="./resources/img/method-payment/zalopay.png" alt="" height="20rem"
+                                            class="logo-method-payment">
+                                        Ví điện tử ZaloPay
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="option-method-payment-button">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="momo" name="method-payment"
+                                    value="momo">
+                                <label class="custom-control-label" for="momo">
+                                    <div>
+                                        <img src="./resources/img/method-payment/momo.png" alt="" height="30rem"
+                                            class="logo-method-payment">
+                                        Ví MOMO
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="option-method-payment-button">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="vnpay" name="method-payment"
+                                    value="vnpay">
+                                <label class="custom-control-label" for="vnpay">
+                                    <div>
+                                        <img src="./resources/img/method-payment/vnpayqr.png" alt="" height="13rem"
+                                            class="logo-method-payment">
+                                        VNPAY
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+
 
                     </div>
 
-                    <!-- <small id="helpId" class="text-muted"></small> -->
+
+                    <div class="my-3">
+                        <button type="button" name="" class="btn btn-lg btn-block confirm-btn">
+                            ĐẶT HÀNG
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <div class="col-md-5 col-12 d-flex flex-column justify-content-between">
                 <div>
-                    <div class="form-tittle">
-                        YOUR CART
-                    </div>
+                    <div class="form-tittle">Giỏ hàng của bạn</div>
 
                     {{{body}}}
 
-                    <div class="d-flex justify-content-between mt-2">
+                    <div class="d-flex justify-content-between align-items-center mt-2">
                         <div class="form-tittle">TOTAL:</div>
-                        <div class="d-flex">
-                            <div class="total-price">0</div>đ
+                        <div class="d-flex total-price-wrapper">
+                            <div class="total-price">0</div>
+                            đ
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
     {{>footer-part}}
 
     {{>bootstrap-part}}
 
-    <script src="../resources/js/ShoppingCart.js"
-			type="module"></script>
+    <script src="../resources/js/ShoppingCart.js" type="module"></script>
 </body>
+
 </html>

@@ -7,16 +7,14 @@ export class Item {
 	price: number;
 	imageThumbnail: string;
 	imagePaths: string[];
-	options: string[];
-	description: string;
+	options?: string[];
+	description?: string;
 	stock?: number;
 	sales?: number;
 	postedTime?: Date;
 	lastUpdateTime?: Date;
 
 	category?: Category;
-
-	constructor() {}
 }
 
 // export { Item };

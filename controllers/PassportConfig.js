@@ -44,14 +44,15 @@ function init(passport) {
                 done(null, false, req.flash("loginMessage", "No user found."));
             }
             if (await bcrypt_1.default.compare(password, user.password)) {
-                return done(null, user);
+                console.log(`Login success: ${user}`);
+                return done(null, user, req.flash("loginMessage", `Login success: ${user}`));
             }
             else {
                 return done(null, false, req.flash("loginMessage", "Oops! Wrong password."));
             }
         }
         catch (e) {
-            return done(e);
+            return done(null, false, req.flash("loginMessage", e));
         }
     }));
     passport.use("local-signup", new passport_local_1.default.Strategy({
@@ -59,22 +60,20 @@ function init(passport) {
         passwordField: "password",
         passReqToCallback: true,
     }, async (req, username, password, done) => {
-        try {
-            console.log(`Sign-up POST req: ${JSON.stringify(req.body, null, 2)}`);
-            let hash = await bcrypt_1.default.hash(req.body.password, 10);
-            let user = {
-                username: req.body.username,
-                password: hash,
-                phone: req.body.phone,
-                email: req.body.email,
-                userType: 0,
-                name: req.body.name,
-            };
-            UserController.registerUser(user);
+        let hash = await bcrypt_1.default.hash(req.body.password, 10);
+        let user = {
+            username: req.body.username,
+            password: hash,
+            phone: req.body.phone,
+            email: req.body.email,
+            userType: 0,
+            name: req.body.name,
+        };
+        if (UserController.registerUser(user)) {
             return done(null, user);
         }
-        catch (error) {
-            return done(error, false, req.flash("signUpMessage", error));
+        else {
+            return done(null, false, req.flash("signUpMessage", "User has already existed"));
         }
     }));
 }
