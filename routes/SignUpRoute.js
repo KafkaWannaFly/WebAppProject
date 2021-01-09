@@ -6,21 +6,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const passport_1 = __importDefault(require("passport"));
 const router = express_1.default.Router();
-router.get("/", (req, res, next) => {
-    if (req.isAuthenticated()) {
-        res.redirect("/infor");
-        return;
-    }
-    next();
-}, (req, res) => {
-    res.render("login-view", {
-        layout: "login-view-layout",
-        loginMessage: req.flash("loginMessage"),
+router.get("/", (req, res) => {
+    res.render("sign-up", {
+        layout: "sign-up-layout",
     });
 });
-router.post("/", passport_1.default.authenticate("local-login", {
-    successRedirect: "/infor",
-    failureRedirect: "/login",
+router.post("/", passport_1.default.authenticate("local-signup", {
+    successRedirect: "/login",
+    failureRedirect: "/sign-up",
     failureFlash: true,
 }));
 module.exports = router;
