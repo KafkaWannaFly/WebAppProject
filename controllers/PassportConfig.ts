@@ -10,8 +10,9 @@ function init(passport: typeof _passport) {
 		done(null, user.username);
 	});
 
-	passport.deserializeUser((username: string, done) => {
-		done(null, UserController.getUser(username));
+	passport.deserializeUser(async (username: string, done) => {
+		let user = await UserController.getUserAsync(username);
+		done(null, user);
 	});
 
 	passport.use(
@@ -24,13 +25,13 @@ function init(passport: typeof _passport) {
 			},
 			async (req, username, password, done) => {
 				try {
-					let user = UserController.getUser(username);
+					let user = await UserController.getUserAsync(username);
 					if (user === undefined) {
 						done(null, false, req.flash("loginMessage", "No user found."));
 					}
 
 					if (await bcrypt.compare(password, user.password)) {
-						console.log(`Login success: ${user}`);
+						// console.log(`Login success: ${user}`);
 						return done(
 							null,
 							user,
@@ -69,7 +70,7 @@ function init(passport: typeof _passport) {
 					name: req.body.name,
 				};
 
-				if (UserController.registerUser(user)) {
+				if (await UserController.registerUserAsync(user)) {
 					return done(null, user);
 				} else {
 					return done(
