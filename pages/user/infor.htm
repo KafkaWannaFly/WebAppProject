@@ -4,7 +4,7 @@
     <title>USG</title>
     <link
       rel="shortcut icon"
-      href="resources/img/icon/web.ico"
+      href="../resources/img/web.ico"
       type="image/x-icon"
     />
 
@@ -20,16 +20,11 @@
     <script src="https://kit.fontawesome.com/8d195968ab.js"></script>
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="resources/css/styles.css" />
-    <link rel="stylesheet" href="resources/css/index.css" />
+    <link rel="stylesheet" href="../resources/css/styles.css" />
+    <link rel="stylesheet" href="../resources/css/infor.css" />
 
     <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="../resources/vendors/css/bootstrap.min.css" />
   </head>
 
   <body>
@@ -66,9 +61,9 @@
 
       <div class="nav-bar-menu container" id="nav-bar-menu">
         <div class="logo-brand">
-          <a href="index.htm" class="h-100 d-flex align-items-center">
+          <a href="#" class="h-100 d-flex align-items-center">
             <img
-              src="resources/img/logo/fit-logo.png"
+              src="../resources/img/fit-logo.png"
               alt=""
               style="height: 2.5; width: 2.5rem"
             />
@@ -81,10 +76,10 @@
 
           <div class="nav-link-menu">
             <ul>
-              <li class="nav-link" id="sales" style="--i: 0.5s">
+              <li class="nav-link" id="sales" style="--i: 0.6s">
                 <a href="#">SALES</a>
               </li>
-              <li class="nav-link" style="--i: 0.6s">
+              <li class="nav-link" style="--i: 0.85s">
                 <a href="#">
                   ÁO
                   <svg
@@ -119,7 +114,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="nav-link" style="--i: 0.7s">
+              <li class="nav-link" style="--i: 1.1s">
                 <a href="#">
                   QUẦN
                   <svg
@@ -154,7 +149,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="nav-link" style="--i: 0.8s">
+              <li class="nav-link" style="--i: 1.3s">
                 <a href="#">
                   VỚ TẤT
                   <svg
@@ -183,7 +178,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="nav-link" style="--i: 0.9s">
+              <li class="nav-link" style="--i: 1.45s">
                 <a href="#">
                   PHỤ KIỆN
                   <svg
@@ -218,7 +213,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="nav-link" style="--i: 1s">
+              <li class="nav-link" style="--i: 1.45s">
                 <a href="#">THÔNG TIN</a>
               </li>
             </ul>
@@ -254,7 +249,7 @@
               name=""
               id="account-btn"
               class="btn bg-transparent mx-5"
-              href="/login.htm"
+              href="#"
               role="button"
             >
               <!-- <i class="fas fa-user text-dark"></i> -->
@@ -308,333 +303,310 @@
     </div>
 
     <!-- Body -->
-    <a href="#">
-      <img
-        class="img-banner"
-        src="resources/img/banner/bannerBF.jpg"
-        alt="banner"
-      />
-    </a>
-
     <div class="body-content container">
-      <!-- Shortcut Secsion -->
-      <div class="secsion-first--shortcut container">
-        <div class="row">
-          <div class="col-6 col-lg-3 p-0 pr-2">
-            <div class="img-shortcut">
-              <a href="#">
-                <img
-                  class="rounded"
-                  src="resources/img/product/shortcut/best-seller.png"
-                  alt=""
-                  width="100%"
-                />
-                <div class="content-shortcut rounded">
-                  <h1>90%</h1>
-                  <h4>Khách hàng tin dùng</h4>
-                </div>
-              </a>
-            </div>
-            <p class="des-shortcut">Thịnh Hành</p>
-          </div>
+      <div class="row w-100 mx-0">
+        <div class="col-12 col-lg-3 infor-nav-menu">
+          <div class="jumbotron">
+            <div
+              class="container w-100 p-0 d-flex flex-column justify-content-center align-items-center"
+            >
+              <p class="member rounded shadow">USG Member</p>
+              <p class="name">Dương Tấn Phát</p>
 
-          <div class="col-6 col-lg-3 p-0 pl-2 px-lg-1">
-            <div class="img-shortcut">
-              <a href="#">
-                <img
-                  class="rounded"
-                  src="resources/img/product/shortcut/new-brand.png"
-                  alt=""
-                  width="100%"
-                />
-                <div class="content-shortcut rounded">
-                  <h4>New Arrival</h4>
-                  <h2>BST Giáng Sinh</h2>
-                </div>
-              </a>
-            </div>
-            <p class="des-shortcut">Hàng Mới Về</p>
-          </div>
+              <ul class="infor-menu">
+                <li>
+                  <a href="#" class="active">
+                    <i class="fas fa-user"></i>
+                    Thông tin cá nhân
+                  </a>
+                </li>
 
-          <div class="col-6 col-lg-3 p-0 pr-2 px-lg-1">
-            <div class="img-shortcut">
-              <a href="#">
-                <img
-                  class="rounded"
-                  src="resources/img/product/shortcut/sale.png"
-                  alt=""
-                  width="100%"
-                />
-                <div class="content-shortcut rounded">
-                  <h4>Ưu đãi lên đến</h4>
-                  <h1>50%</h1>
-                </div>
-              </a>
-            </div>
-            <p class="des-shortcut">Giảm Giá Sốc</p>
-          </div>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-file-invoice"></i>
+                    Danh sách đơn hàng
+                  </a>
+                </li>
 
-          <div class="col-6 col-lg-3 p-0 pl-2">
-            <div class="img-shortcut">
-              <a href="#">
-                <img
-                  class="rounded"
-                  src="resources/img/product/shortcut/box.png"
-                  alt=""
-                  width="100%"
-                />
-                <div class="content-shortcut rounded">
-                  <h4>Combo được</h4>
-                  <h1>60%</h1>
-                  <h5>Khách hàng tin dùng</h5>
-                </div>
-              </a>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Đăng xuất
+                  </a>
+                </li>
+              </ul>
             </div>
-            <p class="des-shortcut">Combo Ưu Đãi</p>
           </div>
         </div>
-      </div>
-      <hr />
 
-      <div class="secsion-top-product">
-        <h3 class="text-center py-4" style="color: #283657; font-weight: bold">
-          SẢN PHẨM NỔI BẬT
-        </h3>
-
-        <div id="carouselId" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="col-6 col-lg-3 item-product">
-                  <a href="#">
-                    <img
-                      class="mb-2"
-                      src="resources\img\product\templateImg\2L6A5871_375x425.jpg"
-                      alt="1"
-                      width="100%;"
+        <div class="col-12 col-lg-9 infor-form">
+          <div class="form-infor container px-0">
+            <h3 style="color: #283657">THÔNG TIN TÀI KHOẢN</h3>
+            <div class="container px-0">
+              <form action="" class="needs-validation" novalidate>
+                <div class="row form-group">
+                  <div class="col-3 p-0 d-flex align-items-center">
+                    <label for="name">Họ Tên</label>
+                  </div>
+                  <div class="col-9 p-0">
+                    <input
+                      type="text"
+                      class="form-control rounded-0"
+                      id="name"
+                      value="Dương Tấn Phát"
+                      name="name"
                     />
-                  </a>
-
-                  <a href="#" class="name">
-                    Quần Short Kaki nam Vintage màu xám be
-                  </a>
-                  <p class="price">249.000đ</p>
+                  </div>
                 </div>
 
-                <div class="col-6 col-lg-3 item-product">
-                  <a href="#">
-                    <img
-                      class="mb-2"
-                      src="resources\img\product\templateImg\careshare_ao_polo_375x425.jpg"
-                      alt="2"
-                      width="100%;"
+                <div class="row form-group">
+                  <div class="col-3 p-0 d-flex align-items-center">
+                    <label for="email">Email</label>
+                  </div>
+                  <div class="col-9 p-0">
+                    <input
+                      type="email"
+                      class="form-control rounded-0"
+                      id="email"
+                      value="beebapcay@gmail.com"
+                      name="email"
+                      disabled
                     />
-                  </a>
-
-                  <a href="#" class="name">
-                    Áo Polo Coolmate thêu Care&Share màu đen
-                  </a>
-                  <p class="price">299.000đ</p>
+                  </div>
                 </div>
 
-                <div class="col-6 col-lg-3 item-product">
-                  <a href="#">
-                    <img
-                      class="mb-2"
-                      src="resources\img\product\templateImg\careshare_trang_2_375x425.jpg"
-                      alt="3"
-                      width="100%;"
+                <div class="row form-group">
+                  <div class="col-3 p-0 d-flex align-items-center">
+                    <label for="phone">Số Điện Thoại</label>
+                  </div>
+                  <div class="col-9 p-0">
+                    <input
+                      type="phone"
+                      class="form-control rounded-0"
+                      id="phone"
+                      value="0964746011"
+                      name="phone"
                     />
-                  </a>
-
-                  <a href="#" class="name">
-                    Áo thun nam Cotton Compact phiên bản Premium in Care&Share
-                    giữa áo màu trắng
-                  </a>
-                  <p class="price">259.000đ</p>
+                  </div>
                 </div>
 
-                <div class="col-6 col-lg-3 item-product">
-                  <a href="#">
-                    <img
-                      class="mb-2"
-                      src="resources\img\product\templateImg\careshare_ao_trang_1_10_375x425.jpg"
-                      alt="4"
-                      width="100%;"
+                <div class="row form-group">
+                  <div class="col-3 p-0 d-flex align-items-center">
+                    <label for="uname">Tên Đăng Nhập</label>
+                  </div>
+                  <div class="col-9 p-0">
+                    <input
+                      type="text"
+                      class="form-control rounded-0"
+                      id="uname"
+                      value="beebapcay"
+                      name="uname"
+                      disabled
                     />
-                  </a>
-                  <a href="#" class="name">
-                    Áo thun nam Cotton Compact phiên bản Premium in Care&Share
-                    màu trắng
-                  </a>
-                  <p class="price">259.000đ</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-6 col-lg-3 item-product">
-                  <a href="#">
-                    <img
-                      class="mb-2"
-                      src="resources\img\product\templateImg\IMG_3178_375x425.jpg"
-                      alt="5"
-                      width="100%;"
-                    />
-                  </a>
-
-                  <a href="#" class="name">
-                    Áo thun nam Cotton Compact phiên bản Premium in Care&Share
-                    giữa áo màu đen
-                  </a>
-                  <p class="price">259.000đ</p>
+                  </div>
                 </div>
 
-                <div class="col-6 col-lg-3 item-product">
-                  <a href="#">
-                    <img
-                      class="mb-2"
-                      src="resources\img\product\templateImg\careshare_ao_xanh_lam_375x425.jpg"
-                      alt="6"
-                      width="100%;"
+                <div class="row form-group">
+                  <div class="col-3 p-0 d-flex align-items-center">
+                    <label for="address">Địa Chỉ</label>
+                  </div>
+                  <div class="col-9 p-0">
+                    <input
+                      type="text"
+                      class="form-control rounded-0"
+                      id="address"
+                      value="423/34/20 Lạc Long Quân, phường 5, quận 11, HCM"
+                      name="address"
                     />
-                  </a>
-
-                  <a href="#" class="name">
-                    Áo thun nam Cotton Compact phiên bản Premium in Care&Share
-                    màu xanh lam
-                  </a>
-                  <p class="price">259.000đ</p>
+                  </div>
                 </div>
 
-                <div class="col-6 col-lg-3 item-product">
-                  <a href="#">
-                    <img
-                      class="mb-2"
-                      src="resources\img\product\templateImg\careshare_ao_1_375x425.jpg"
-                      alt="7"
-                      width="100%;"
+                <div class="row form-group">
+                  <div class="col-3 p-0 d-flex align-items-center">
+                    <label for="dob">Ngày Sinh</label>
+                  </div>
+                  <div class="col-9 p-0">
+                    <input
+                      type="date"
+                      class="form-control rounded-0"
+                      id="dob"
+                      value="2000-01-11"
+                      name="dob"
                     />
-                  </a>
-
-                  <a href="#" class="name">
-                    Áo thun nam Cotton Compact phiên bản Premium in Care&Share
-                    màu đen
-                  </a>
-                  <p class="price">259.000đ</p>
+                  </div>
                 </div>
 
-                <div class="col-6 col-lg-3 item-product">
-                  <a href="#">
-                    <img
-                      class="mb-2"
-                      src="resources\img\product\templateImg\combo_375x425.jpg"
-                      alt="8"
-                      width="100%;"
-                    />
-                  </a>
-
-                  <a href="#" class="name">
-                    Combo 2 quần lót nam Trunk kẻ Bluemoon Stripe Xám - Xanh
-                  </a>
-                  <p class="price">258.000đ</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-6 col-lg-3 item-product">
-                  <a href="#">
-                    <img
-                      class="mb-2"
-                      src="resources\img\product\templateImg\max_ultra_aqua_375x425.jpg"
-                      alt="9"
-                      width="100%;"
-                    />
-                  </a>
-
-                  <a href="#" class="name">
-                    Quần thể thao nam Max Ultra Short màu xanh Aqua (có thêm túi
-                    khoá sau)
-                  </a>
-                  <p class="price">239.000đ</p>
-                </div>
-
-                <div class="col-6 col-lg-3 item-product">
-                  <a href="#">
-                    <img
-                      class="mb-2"
-                      src="resources\img\product\templateImg\maxcool_den__375x425.jpg"
-                      alt="10"
-                      width="100%;"
-                    />
-                  </a>
-
-                  <a href="#" class="name"> Áo thể thao nam MaxCool màu đen </a>
-                  <p class="price">219.000đ</p>
+                <div class="row form-group">
+                  <div class="col-3 p-0 d-flex align-items-center">
+                    <label>Giới Tính</label>
+                  </div>
+                  <div class="col-9 p-0">
+                    <div
+                      class="custom-control custom-radio custom-control-inline"
+                    >
+                      <input
+                        type="radio"
+                        class="custom-control-input"
+                        id="sex-male"
+                        name="sex"
+                        value="male"
+                        checked
+                      />
+                      <label class="custom-control-label" for="sex-male"
+                        >Nam</label
+                      >
+                    </div>
+                    <div
+                      class="custom-control custom-radio custom-control-inline"
+                    >
+                      <input
+                        type="radio"
+                        class="custom-control-input"
+                        id="sex-female"
+                        name="sex"
+                        value="female"
+                      />
+                      <label class="custom-control-label" for="sex-female"
+                        >Nữ</label
+                      >
+                    </div>
+                  </div>
                 </div>
 
-                <div class="col-6 col-lg-3 item-product">
-                  <a href="#">
-                    <img
-                      class="mb-2"
-                      src="resources\img\product\templateImg\2L6A9776_copy_375x425.jpg"
-                      alt="11"
-                      width="100%;"
+                <div class="row form-group">
+                  <div class="col-3 p-0 d-flex align-items-center">
+                    <label for="height">Chiều Cao</label>
+                  </div>
+                  <div class="col-8 p-0">
+                    <input
+                      type="range"
+                      class="custom-range"
+                      id="height"
+                      name="weight"
+                      min="0"
+                      max="300"
+                      value="172"
+                      onchange="changeValueHeight(this)"
                     />
-                  </a>
-
-                  <a href="#" class="name">
-                    Quần thể thao nam Max Ultra Short màu xanh tím than (có thêm
-                    túi khoá sau)
-                  </a>
-                  <p class="price">239.000đ</p>
+                  </div>
+                  <div
+                    class="col-1 p-0 d-flex align-items-center justify-content-end"
+                  >
+                    <p class="m-0 p-0" id="value-height">172</p>
+                    <span id="unit">cm</span>
+                  </div>
                 </div>
 
-                <div class="col-6 col-lg-3 item-product">
-                  <a href="#">
-                    <img
-                      class="mb-2"
-                      src="resources\img\product\templateImg\2L6A9750_copy_375x425.jpg"
-                      alt="4"
-                      width="100%;"
+                <div class="row form-group">
+                  <div class="col-3 p-0 d-flex align-items-center">
+                    <label for="weight">Cân Nặng</label>
+                  </div>
+                  <div class="col-8 p-0">
+                    <input
+                      type="range"
+                      class="custom-range"
+                      id="weight"
+                      name="weight"
+                      min="0"
+                      max="200"
+                      value="60"
+                      onchange="changeValueWeight(this)"
                     />
-                  </a>
-
-                  <a href="#" class="name">
-                    Quần thể thao nam Max Ultra Short màu đen (có thêm túi khoá
-                    sau)
-                  </a>
-                  <p class="price">239.000đ</p>
+                  </div>
+                  <div
+                    class="col-1 p-0 d-flex align-items-center justify-content-end"
+                  >
+                    <p class="m-0 p-0" id="value-weight">60</p>
+                    <span id="unit">kg</span>
+                  </div>
                 </div>
-              </div>
+
+                <div class="form-group">
+                  <label class="change-pwd-label" for="change_pwd"
+                    >Thay Đổi Mật Khẩu</label
+                  >
+                  <input
+                    type="checkbox"
+                    name="change_pwd"
+                    id="change_pwd"
+                    onclick="clickChangePwdHandler(this)"
+                  />
+                </div>
+
+                <div class="change-pwd-group" id="change-pwd-group">
+                  <div class="row form-group">
+                    <div class="col-3 p-0 d-flex align-items-center">
+                      <label for="old-pwd">Mật Khẩu Cũ</label>
+                    </div>
+                    <div class="col-9 p-0">
+                      <input
+                        type="password"
+                        class="form-control rounded-0"
+                        value=""
+                        id="old-pwd"
+                        name="old-pwd"
+                        required
+                      />
+                      <div class="valid-feedback"></div>
+                      <div class="invalid-feedback">
+                        Vui lòng điền Mật khẩu Cũ
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row form-group">
+                    <div class="col-3 p-0 d-flex align-items-center">
+                      <label for="new-pwd">Mật Khẩu Mới</label>
+                    </div>
+                    <div class="col-9 p-0">
+                      <input
+                        type="password"
+                        class="form-control rounded-0"
+                        id="new-pwd"
+                        value=""
+                        name="new-pwd"
+                        required
+                      />
+                      <div class="valid-feedback"></div>
+                      <div class="invalid-feedback">
+                        Vui lòng điền Mật khẩu Mới
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row form-group">
+                    <div class="col-3 p-0 d-flex align-items-center">
+                      <label for="new-pwd-confirm">Nhập Lại Mật Khẩu Mới</label>
+                    </div>
+                    <div class="col-9 p-0">
+                      <input
+                        type="password"
+                        class="form-control rounded-0"
+                        id="new-pwd-confirm"
+                        value=""
+                        name="new-pwd-confirm"
+                        required
+                      />
+                      <div class="valid-feedback"></div>
+                      <div class="invalid-feedback">
+                        Vui lòng nhập lại Mật Khẩu Mới
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn update-acc rounded-0 d-block">
+                  CẬP NHẬT TÀI KHOẢN
+                </button>
+              </form>
             </div>
           </div>
-          <a
-            class="carousel-control-prev"
-            href="#carouselId"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#carouselId"
-            role="button"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
       </div>
     </div>
 
     <!-- Secsion Footer -->
     <div class="footer" style="overflow-x: hidden">
-      <hr class="separate-infor--small-screen" />
       <div class="container-fuild">
         <div class="footer-contact container">
           <div
@@ -652,7 +624,7 @@
               <p>LIKE USG VÀ NHẬN KHUYẾN MÃI HẤP DẪN MỖI NGÀY</p>
               <div class="icon--contact">
                 <a href="https://www.facebook.com/"
-                  ><i class="fab fa-facebook-square"></i
+                  ><i class="fab fa-facebook-square" style="color: 0776e8"></i
                 ></a>
                 <a href="https://www.youtube.com/"
                   ><i class="fab fa-youtube"></i
@@ -694,7 +666,7 @@
 
             <div class="d-none d-sm-none d-lg-block col-lg-2 footer--certi--lg">
               <img
-                src="resources/img/certificate/certificate.png"
+                src="../resources/img/certificate.png"
                 alt=""
                 width="100%"
                 height="auto"
@@ -718,7 +690,7 @@
               class="d-sm-flex col-sm-3 d-lg-none footer--certi--sm justify-content-center"
             >
               <img
-                src="resources/img/certificate/certificate.png"
+                src="../resources/img/certificate.png"
                 alt=""
                 width="40%"
                 height="auto"
@@ -731,24 +703,11 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-      crossorigin="anonymous"
-    ></script>
+    <script src="../resources/vendors/js/jquery-3.3.1.min.js"></script>
+    <script src="../resources/vendors/js/popper.min.js"></script>
+    <script src="../resources/vendors/js/bootstrap.min.js"></script>
 
-    <!-- Script For Every Thing -->
-    <script src="/resources/js/script_ulti.js"></script>
-    <script src="/resources/js/Navigator.js"></script>
+    <!-- Script for Page -->
+    <script src="../resources/js/script_util.js"></script>
   </body>
 </html>

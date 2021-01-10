@@ -30,8 +30,9 @@ function init(passport) {
     passport.serializeUser((user, done) => {
         done(null, user.username);
     });
-    passport.deserializeUser((username, done) => {
-        done(null, UserController.getUser(username));
+    passport.deserializeUser(async (username, done) => {
+        let user = await UserController.getUserAsync(username);
+        done(null, user);
     });
     passport.use("local-login", new passport_local_1.default.Strategy({
         usernameField: "username",
@@ -39,12 +40,12 @@ function init(passport) {
         passReqToCallback: true,
     }, async (req, username, password, done) => {
         try {
-            let user = UserController.getUser(username);
+            let user = await UserController.getUserAsync(username);
             if (user === undefined) {
                 done(null, false, req.flash("loginMessage", "No user found."));
             }
             if (await bcrypt_1.default.compare(password, user.password)) {
-                console.log(`Login success: ${user}`);
+                // console.log(`Login success: ${user}`);
                 return done(null, user, req.flash("loginMessage", `Login success: ${user}`));
             }
             else {
@@ -69,7 +70,7 @@ function init(passport) {
             userType: 0,
             name: req.body.name,
         };
-        if (UserController.registerUser(user)) {
+        if (await UserController.registerUserAsync(user)) {
             return done(null, user);
         }
         else {

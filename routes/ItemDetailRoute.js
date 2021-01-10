@@ -25,9 +25,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
 const ItemController = __importStar(require("../controllers/ItemController"));
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
     let id = req.query["id"].toString();
-    let item = ItemController.getItem(id);
+    let item = await ItemController.getItemAsync(id);
     // Have no idea why we have to go back 1 level but it do the job
     for (let i = 0; i < item.imagePaths.length; i++) {
         item.imagePaths[i] = "../" + item.imagePaths[i];

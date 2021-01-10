@@ -4,9 +4,9 @@ const router = express.Router();
 
 import * as ItemController from "../controllers/ItemController";
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
 	let id = req.query["id"].toString();
-	let item = ItemController.getItem(id);
+	let item = await ItemController.getItemAsync(id);
 
 	// Have no idea why we have to go back 1 level but it do the job
 	for (let i = 0; i < item.imagePaths.length; i++) {
