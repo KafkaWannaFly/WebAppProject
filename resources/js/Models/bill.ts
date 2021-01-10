@@ -10,7 +10,13 @@ enum PaymentMethod {
 	cod,
 	momo,
 	vnpay,
-	zalopay,
+	zalopay
+}
+
+enum Status {
+	waiting,
+	shipping,
+	complete
 }
 
 class Bill {
@@ -23,6 +29,7 @@ class Bill {
 	shippingAddress: string = "";
 	paymentMethod: PaymentMethod;
 	notes: string = "";
+	status:Status 
 }
 
 export { Bill, BillItem };
