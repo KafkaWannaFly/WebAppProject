@@ -1,19 +1,25 @@
 import { setCommaForPrice, setIncrementButton, priceToNumber, } from "./ItemDetail.js";
-function changeAmountOnCart(itemDiv) {
-    for (let i = 0; i < itemDiv.length; i++) {
-        setIncrementButton(itemDiv[i].querySelector(".amount"), itemDiv[i].querySelector(".increase-one"), itemDiv[i].querySelector(".decrease-one"));
-        let increaseBtn = itemDiv[i].querySelector(".increase-one");
-        let decreaseBtn = itemDiv[i].querySelector(".decrease-one");
-        let oldAmount = parseInt(itemDiv[i].querySelector(".amount").value);
-        let price = priceToNumber(itemDiv[i].querySelector(".price").innerHTML);
+function changeAmountOnCart(itemsDiv) {
+    // Update data to obj
+    // let bill = JSON.parse(sessionStorage.getItem("currentBill")) as Bill;
+    // let billItems: BillItem[] = bill.billItems;
+    for (let i = 0; i < itemsDiv.length; i++) {
+        setIncrementButton(itemsDiv[i].querySelector(".amount"), itemsDiv[i].querySelector(".increase-one"), itemsDiv[i].querySelector(".decrease-one"));
+        let increaseBtn = itemsDiv[i].querySelector(".increase-one");
+        let decreaseBtn = itemsDiv[i].querySelector(".decrease-one");
+        let oldAmount = parseInt(itemsDiv[i].querySelector(".amount").value);
+        let price = priceToNumber(itemsDiv[i].querySelector(".price").innerHTML);
+        // billItems[i].amount = oldAmount;
+        // console.log(JSON.stringify(billItems[i].amount, null, 4));
         increaseBtn.addEventListener("click", () => {
             updateTotalPrice(price);
-            let amountDiv = itemDiv[i].querySelector(".amount");
+            let amountDiv = itemsDiv[i].querySelector(".amount");
             let amount = parseInt(amountDiv.value);
             oldAmount = amount;
+            // billItems[i].amount = amount;
         });
         decreaseBtn.addEventListener("click", () => {
-            let amountDiv = itemDiv[i].querySelector(".amount");
+            let amountDiv = itemsDiv[i].querySelector(".amount");
             let amount = parseInt(amountDiv.value);
             console.log(`item amount: ${amount}`);
             if (amount <= 0) {
@@ -26,9 +32,12 @@ function changeAmountOnCart(itemDiv) {
                 updateTotalPrice(-price);
             }
             oldAmount = amount;
+            // billItems[i].amount = amount;
         });
-        setCommaForPrice(itemDiv[i].querySelector(".price"));
+        setCommaForPrice(itemsDiv[i].querySelector(".price"));
     }
+    // Save changes
+    // sessionStorage.setItem("currentBill", JSON.stringify(bill));
 }
 function updateTotalPrice(delta) {
     // console.log(`delta: ${delta}`);
@@ -37,6 +46,9 @@ function updateTotalPrice(delta) {
     // console.log(`total: ${total}`);
     total += delta;
     totalPriceDiv.innerHTML = total.toString();
+    // let bill = JSON.parse(sessionStorage.getItem("currentBill")) as Bill;
+    // bill.totalPrice = total;
+    // sessionStorage.setItem("currentBill", JSON.stringify(bill));
 }
 function toggleSelectedPayment(optionDiv) {
     let options = document.querySelectorAll(".option");
@@ -72,6 +84,84 @@ function populateShoppingCart(bill) {
     let totalPriceDiv = document.querySelector(".total-price");
     totalPriceDiv.innerHTML = bill.totalPrice.toString();
 }
+function purchaseButtonHandler() {
+    // Collect data
+    let bill = JSON.parse(sessionStorage.getItem("currentBill"));
+    let chosenItemsDiv = document.querySelector(".chosen-item-div");
+    let itemsDiv = chosenItemsDiv.querySelectorAll(".item-div");
+    // There is an invisible item-div in the page. key = 0
+    let total = 0;
+    let zeroCount = 0;
+    itemsDiv.forEach((itemDiv, index) => {
+        if (index === 0) {
+            return;
+        }
+        let amountDiv = itemDiv.querySelector(".amount");
+        let amount = parseInt(amountDiv.value);
+        if (amount <= 0) {
+            zeroCount++;
+        }
+        total += amount * bill.billItems[index - 1].item.price;
+        bill.billItems[index - 1].amount = amount;
+    });
+    bill.totalPrice = total;
+    // Remove item have amount = 0
+    // bill.billItems.sort((a, b) => a.amount - b.amount);
+    bill.billItems = bill.billItems.filter((val, idx) => {
+        if (val.amount > 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    });
+    let shippingInput = document.querySelector(".shipping-address");
+    bill.shippingAddress = shippingInput.value;
+    let noteInput = document.querySelector(".note");
+    bill.notes = noteInput.value;
+    let phoneNum = document.querySelector(".phone-number");
+    bill.phone = phoneNum.value;
+    let payMethodInputs = document.getElementsByName("method-payment");
+    payMethodInputs.forEach((option, idx) => {
+        if (option.checked) {
+            bill.paymentMethod = parseInt(option.value);
+        }
+    });
+    sessionStorage.setItem("currentBill", JSON.stringify(bill));
+    // Validate bill
+    if (bill.billItems.length === 0) {
+        alert("Your cart is empty!");
+    }
+    // Check if user login or not
+    fetch("/infor/json").then(async (res) => {
+        try {
+            let user = (await res.json());
+            console.log(user);
+            bill.id = `${user.username}-${Date.now()}`;
+            // You have already logined. POST this bill to server
+            fetch("/shopping-cart", {
+                method: "POST",
+                body: JSON.stringify(bill),
+                headers: { "Content-type": "application/json; charset=UTF-8" },
+                redirect: "follow",
+            }).then((res) => {
+                // Reset the item for next shopping
+                sessionStorage.removeItem("currentBill");
+                if (res.redirected) {
+                    window.location.href = "/infor";
+                }
+            });
+        }
+        catch (err) {
+            // This mean user not login yet :))
+            console.log(err);
+            let lauchBtn = document.querySelector(".launch-modal-btn");
+            lauchBtn.click();
+        }
+    });
+    // console.log(`bill: ${JSON.stringify(bill, null, 4)}`);
+}
+// REMEMBER: There is an invisible item-div in the page
 let cartBody = document.querySelector("body");
 cartBody.onload = () => {
     let bill = JSON.parse(sessionStorage.getItem("currentBill"));
@@ -85,5 +175,7 @@ cartBody.onload = () => {
             toggleSelectedPayment(op);
         };
     });
+    let confirmBtn = document.querySelector(".confirm-btn");
+    confirmBtn.addEventListener("click", (ev) => purchaseButtonHandler());
 };
 export { toggleSelectedPayment };

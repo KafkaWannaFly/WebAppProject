@@ -14,7 +14,7 @@ export class Item {
 	postedTime?: Date;
 	lastUpdateTime?: Date;
 
-	category?: Category;
+	category?: string;
 }
 
 // export { Item };

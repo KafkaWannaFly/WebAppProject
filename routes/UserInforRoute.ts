@@ -17,4 +17,13 @@ router.get(
 	}
 );
 
+router.get("/json", (req, res) => {
+	// console.log(`user: ${JSON.stringify(req.user, null, 4)}`);
+	if (req.isAuthenticated()) {
+		res.send(JSON.stringify(req.user));
+	} else {
+		res.send(JSON.stringify(undefined));
+	}
+});
+
 module.exports = router;

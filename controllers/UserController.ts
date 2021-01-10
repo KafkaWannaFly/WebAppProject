@@ -2,23 +2,6 @@ import fs from "fs";
 import { User } from "../resources/js/Models/user";
 import { UserModel } from "./Models";
 
-// let users = JSON.parse(
-// 	fs.readFileSync("./data/users.json", {
-// 		encoding: "utf-8",
-// 	})
-// ) as User[];
-
-// function getUser(username: string) {
-// 	let user = users.find((val, idx) => {
-// 		if (val.username === username) {
-// 			return true;
-// 		}
-// 		return false;
-// 	});
-
-// 	return user;
-// }
-
 /**
  * If username is found, return User object.
  *
@@ -35,17 +18,22 @@ async function getUserAsync(username: string): Promise<User> {
 	}
 }
 
-// function registerUser(user: User) {
-// 	if (getUser(user.username) !== undefined) {
-// 		return false;
-// 	}
+/**
+ * Get all users in database
+ * @returns
+ */
+async function getAllUsers() {
+	try {
+		let userDocs = await UserModel.find({}).exec();
+		let users: User[] = userDocs.map((val, idx) => {
+			return (val as unknown) as User;
+		});
 
-// 	users.push(user);
-// 	fs.writeFile("./data/users.json", JSON.stringify(users, null, 4), () => {
-// 		// console.log(`Done saving: ${JSON.stringify(users, null, 4)}`);
-// 		return true;
-// 	});
-// }
+		return users;
+	} catch (err) {
+		console.log(`Fail to getAllUsers. ${err}`);
+	}
+}
 
 /**
  * True if register successfully
@@ -72,4 +60,18 @@ async function registerUserAsync(user: User): Promise<boolean> {
 	}
 }
 
-export { getUserAsync, registerUserAsync };
+async function updateUserAsync(username: string, newValue: User) {
+	try {
+		let updatedUserDoc = await UserModel.findOneAndUpdate(
+			{ username: username },
+			newValue,
+			{ new: true, useFindAndModify: false }
+		);
+
+		return (updatedUserDoc as unknown) as User;
+	} catch (err) {
+		console.log(`Fail to update user. ${err}`);
+	}
+}
+
+export { getUserAsync, registerUserAsync, getAllUsers, updateUserAsync };

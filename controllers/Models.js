@@ -58,7 +58,7 @@ exports.UserModel = UserModel;
 //#endregion
 const billSchema = new Schema({
     id: {
-        type: "Date",
+        type: "String",
     },
     totalPrice: {
         type: "Number",
@@ -68,6 +68,18 @@ const billSchema = new Schema({
     },
     purchasedDate: {
         type: "Date",
+    },
+    paymentMethod: {
+        type: "Number",
+    },
+    phone: {
+        type: "String",
+    },
+    notes: {
+        type: "String",
+    },
+    status: {
+        type: "Number",
     },
     billItems: [
         {
