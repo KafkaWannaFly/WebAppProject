@@ -21,6 +21,7 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="../../resources/css/admin-style.css" />
+    <link rel="stylesheet" href="../../resources/css/admin-dasboard.css" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -96,7 +97,36 @@
 
     <!-- Main Content Secsion-->
     <div class="body-area">
-      <div class="body-content"></div>
+      <div class="body-content">
+        <h3 class="page-title">THỐNG KẾ THÔNG TIN CỬA HÀNG</h3>
+
+        <div class="row">
+          <!-- biểu đồ tròn sản phẩm stock + sales từng loại -->
+          <figure class="col-4">
+            <div id="pie-percent-category"></div>
+          </figure>
+
+          <!-- biểu đồ cột sản phẩm stock + sale từng loại -->
+          <figure class="col-4">
+            <div id="column-number-category"></div>
+          </figure>
+
+          <!-- biểu đồ cột số lượng hoá đơn theo tháng -->
+          <figure class="col-4">
+            <div id="column-number-bill"></div>
+          </figure>
+
+          <!-- biểu đồ cột số lượng sản phẩm stock từng loại-->
+          <figure class="col-4">
+            <div id="column-number-stock-category"></div>
+          </figure>
+
+          <!-- biểu đồ cột số lượng sản phẩm đã sales từng loại-->
+          <figure class="col-4">
+            <div id="column-number-sales-category"></div>
+          </figure>
+        </div>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->
@@ -116,5 +146,13 @@
       integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Import highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script src="../../resources/js/AdminDashboard.js"></script>
   </body>
 </html>
