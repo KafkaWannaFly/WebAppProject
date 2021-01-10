@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@font-face {
+  font-family: "Slaztone";
+  src: url("/resources/fonts/Slaztone.otf") format("opentype");
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.logo-brand h3 {
+  padding: 2rem 0.5rem 1rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Slaztone";
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 3rem;
+  margin: 0;
+}
+
+.fa-2x {
+  font-size: 2.5rem;
+}
+
+.fa,
+.far,
+.fas {
+  color: #fff;
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.5rem;
+}
+
+.side-navbar {
+  background: #283657;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  width: 60px;
+  overflow: hidden;
+  -webkit-transition: width 0.05s linear;
+  transition: width 0.05s linear;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  z-index: 1000;
+}
+
+.side-navbar:hover {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  overflow: visible;
+}
+
+.side-navbar:hover .logo-brand {
+  align-self: center;
+}
+
+.side-navbar > ul {
+  margin: 0.5rem 0;
+}
+
+.side-navbar li {
+  padding: 0.5rem 0;
+  position: relative;
+  display: block;
+  width: 250px;
+}
+
+.side-navbar li > a {
+  position: relative;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #ffffff;
+  font-family: arial;
+  font-size: 14px;
+  text-decoration: none;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.side-navbar .nav-icon {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.side-navbar .nav-text {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 190px;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.side-navbar > ul.logout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+nav ul,
+nav li {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.side-navbar li:hover,
+.side-navbar ul li.active {
+  color: #fff;
+  background-color: #5fa2db;
+}
+
+.body-area {
+  padding-left: 60px;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.body-content {
+  width: 80%;
+  padding: 3rem 0 3rem 0;
+  margin: auto;
+}
+
+@media (max-width: 920px) {
+  .body-content {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.page-title {
+  color: #283657;
+  padding-bottom: 1rem;
+}

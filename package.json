@@ -29,6 +29,7 @@
     "@types/passport": "^1.0.5",
     "@types/passport-local": "^1.0.33",
     "bcrypt": "^5.0.0",
+    "bootstrap-table": "^1.18.1",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "express-flash": "0.0.2",

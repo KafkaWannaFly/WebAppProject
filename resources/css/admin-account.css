@@ -1,0 +1,31 @@
+td {
+  word-wrap: break-word;
+}
+
+.user-name {
+  color: #f26101;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.search-bar {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.add-acc {
+  margin-bottom: 1rem;
+}
+
+.add-acc-btn {
+  background-color: #f26101 !important;
+  color: white !important;
+  font-weight: bold !important;
+  border-radius: 0 !important;
+}
+
+.add-acc-btn:hover {
+  background-color: black !important;
+}

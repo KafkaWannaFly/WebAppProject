@@ -1,0 +1,63 @@
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.form-infor {
+  padding: 0 0 0 1.8rem;
+}
+
+.form-infor form label {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 920px) {
+  .form-infor form label {
+    font-size: 1rem;
+  }
+}
+
+.form-infor form input {
+  padding: 1.5rem !important;
+}
+
+.form-infor form input[disabled] {
+  color: rgb(171, 171, 171);
+  background-color: white !important;
+}
+
+.form-infor .form-group {
+  padding: 0;
+  margin: 1rem 0;
+}
+
+#value-height,
+#value-weight,
+#unit {
+  font-weight: bold !important;
+  color: #f26101 !important;
+}
+
+label.change-pwd-label {
+  text-decoration: none !important;
+  color: #f26101 !important;
+}
+
+.update-acc {
+  color: white !important;
+  background-color: #f26101 !important;
+  margin: 1rem 0;
+  font-weight: bold !important;
+  letter-spacing: 1px;
+  padding: 0.8rem 0.7rem !important;
+}
+
+#change-pwd-group {
+  display: none;
+}
+
+#change_pwd {
+  opacity: 0;
+}
