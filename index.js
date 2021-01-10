@@ -39,7 +39,7 @@ app.engine(
 app.set("view engine", "hbs");
 
 app.use(morgan("dev"));
-app.use("/pages", express.static("./pages"));
+app.use(express.static("./pages/admin"));
 app.use("/resources", express.static("./resources"));
 
 passportConfig.init(passport);

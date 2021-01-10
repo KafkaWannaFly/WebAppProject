@@ -1,5 +1,7 @@
 import express from "express";
+import { readFile } from "fs";
 import passport from "passport";
+import { User } from "../resources/js/Models/user";
 const router = express.Router();
 
 router.get(
@@ -12,6 +14,23 @@ router.get(
 		}
 	},
 	(req, res) => {
+		let user = req.user as User;
+		// If admin login
+		if (user.userType == 1) {
+			readFile(
+				"./pages/admin/admin-dasboard.htm",
+				{ encoding: "utf-8" },
+				(err, data) => {
+					if (err) {
+						res.send(err);
+					} else {
+						res.type("html");
+						res.send(data);
+					}
+				}
+			);
+		}
+
 		// console.log(`User: ${JSON.stringify(req.user, null, 4)}`);
 		res.render("information", { layout: "information-layout", user: req.user });
 	}
