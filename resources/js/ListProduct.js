@@ -102,7 +102,7 @@ function orderBy(criteria) {
 
 let body = document.querySelector("body");
 body.onload = () => {
-  setPriceSecsion();
   setCommaForAllPrice(document.querySelectorAll(".price"));
   setCommaForAllPrice(document.querySelectorAll(".old-price"));
+  setPriceSecsion();
 };
