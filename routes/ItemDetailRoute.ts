@@ -12,7 +12,9 @@ router.get("/", async (req, res) => {
 	let id = req.query["id"].toString();
 	let item = await ItemController.getItemAsync(id);
 
-	let commentDocs = await ItemCommentModel.find({ commentedItem: id }).exec();
+	let commentDocs = await ItemCommentModel.find({ commentedItem: id })
+		.lean()
+		.exec();
 	let comments = commentDocs.map((val, idx) => {
 		return (val as unknown) as ItemComment;
 	});
@@ -26,8 +28,10 @@ router.get("/", async (req, res) => {
 
 	res.render("product-item", {
 		layout: "product-item-layout",
-		Item: item,
-		ItemComments: comments,
+		Data: {
+			Item: item,
+			ItemComments: comments,
+		},
 	});
 });
 

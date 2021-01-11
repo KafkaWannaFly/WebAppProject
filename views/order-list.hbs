@@ -1,79 +1,75 @@
 <!-- Body -->
 <div class="body-content container">
-    <div class="row w-100 mx-0">
+	<div class="row w-100 mx-0">
+		<div class="col-12 col-lg-3 infor-nav-menu">
+			<div class="jumbotron">
+				<div
+					class="container w-100 p-0 d-flex flex-column justify-content-center align-items-center"
+				>
+					<p class="member rounded shadow">USG Member</p>
+					<p class="name">Dương Tấn Phát</p>
 
-        <div class="col-12 col-lg-3 infor-nav-menu">
-            <div class="jumbotron">
-                <div class="container w-100 p-0 d-flex flex-column justify-content-center align-items-center">
-                    <p class="member rounded shadow">USG Member</p>
-                    <p class="name">Dương Tấn Phát</p>
+					<ul class="infor-menu">
+						<li>
+							<a href="/infor">
+								<i class="fas fa-user"></i>
+								Thông tin cá nhân
+							</a>
+						</li>
 
-                    <ul class="infor-menu">
+						<li>
+							<a href="/orders-list" class="active">
+								<i class="fas fa-file-invoice"></i>
+								Danh sách đơn hàng
+							</a>
+						</li>
 
-                        <li>
-                            <a href="/infor">
-                                <i class="fas fa-user"></i>
-                                Thông tin cá nhân
-                            </a>
-                        </li>
+						<li>
+							<a href="/logout">
+								<i class="fas fa-sign-out-alt"></i>
+								Thoát
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 
-                        <li>
-                            <a href="/orders-list" class="active">
-                                <i class="fas fa-file-invoice"></i>
-                                Danh sách đơn hàng
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-sign-out-alt"></i>
-                                Thoát
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-lg-9 order-list">
-            <div class="list-order container px-0">
-                <h3 style="color: #283657;">DANH SÁCH TẤT CẢ ĐƠN HÀNG CỦA BẠN</h3>
-                <div class="container px-0">
-
-                    <table class="table table-hover order-list-table">
-                        <thead class="thead-dark">
-                            <tr class="d-flex">
-                                <th class="col-lg-2">Mã đơn hàng</th>
-                                <th class="col-lg-6">Sản phẩm</th>
-                                <th class="col-lg-2">Tổng tiền</th>
-                                <th class="col-lg-2">Trạng thái</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            {{#each Bills}}
-                            <tr class="d-flex">
-                                <td class="col-lg-2 order--id--date">
-                                    <a href="#" class="id-order">#{{id}}</a>
-                                    <p class="date-order">{{purchasedDate}}</p>
-                                </td>
-                                <td class="col-lg-6">
-                                    <p>
-                                        {{#each billItems}}
-                                        - {{item.name}}<br>
-                                        {{/each}}
-                                    </p>
-                                </td>
-                                <td class="col-lg-2">{{totalPrice}}đ</td>
-                                <td class="col-lg-2 status">{{status}}</td>
-                            </tr>
-                            {{/each}}
-
-                        </tbody>
-
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+		<div class="col-12 col-lg-9 order-list">
+			<div class="list-order container px-0">
+				<h3 style="color: #283657">DANH SÁCH TẤT CẢ ĐƠN HÀNG CỦA BẠN</h3>
+				<div class="container px-0">
+					<table class="table table-hover order-list-table">
+						<thead class="thead-dark">
+							<tr class="d-flex">
+								<th class="col-lg-2">Mã đơn hàng</th>
+								<th class="col-lg-6">Sản phẩm</th>
+								<th class="col-lg-2">Tổng tiền</th>
+								<th class="col-lg-2">Trạng thái</th>
+							</tr>
+						</thead>
+						<tbody>
+							{{#each Bills}}
+							<tr class="d-flex">
+								<td class="col-lg-2 order--id--date">
+									<a href="#" class="id-order">#{{ id }}</a>
+									<p class="date-order">{{ purchasedDate }}</p>
+								</td>
+								<td class="col-lg-6">
+									<p>
+										{{#each billItems}}
+										- {{ item.name }}<br />
+										{{/each}}
+									</p>
+								</td>
+								<td class="col-lg-2">{{ totalPrice }}đ</td>
+								<td class="col-lg-2 status">{{ status }}</td>
+							</tr>
+							{{/each}}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

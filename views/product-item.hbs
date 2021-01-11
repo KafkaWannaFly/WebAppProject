@@ -1,4 +1,4 @@
-{{#with Item}}
+{{#with Data.Item}}
 <div class="body-content container item-container" id="{{ id }}">
 	<div class="row">
 		<!-- 100% width on mobile & 50% width on desktop -->
@@ -297,21 +297,19 @@
 		{{/with}}
 
 		<div class="rate">
-			{{!-- {{#each ItemComments}}
-			{{#with this}}
+			{{#each Data.ItemComments}}
 			<div class="media border p-2">
 				<div class="media-body">
 					<p>
-						<b>{{personName}}</b>
+						<b>{{{personName}}}</b>
 						<small
-							><i>Đăng ngày {{date}}</i></small
+							><i>Đăng ngày {{ date }}</i></small
 						>
 					</p>
-					<p>{{content}}</p>
+					<p>{{ content }}</p>
 				</div>
 			</div>
-			{{/with}}
-			{{/each}} --}}
+			{{/each}}
 		</div>
 	</div>
 </div>

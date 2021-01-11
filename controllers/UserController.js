@@ -25,7 +25,7 @@ exports.getUserAsync = getUserAsync;
  */
 async function getAllUsers() {
     try {
-        let userDocs = await Models_1.UserModel.find({}).exec();
+        let userDocs = await Models_1.UserModel.find({}).lean().exec();
         let users = userDocs.map((val, idx) => {
             return val;
         });

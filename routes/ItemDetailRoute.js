@@ -29,7 +29,9 @@ const ItemController = __importStar(require("../controllers/ItemController"));
 router.get("/", async (req, res) => {
     let id = req.query["id"].toString();
     let item = await ItemController.getItemAsync(id);
-    let commentDocs = await Models_1.ItemCommentModel.find({ commentedItem: id }).exec();
+    let commentDocs = await Models_1.ItemCommentModel.find({ commentedItem: id })
+        .lean()
+        .exec();
     let comments = commentDocs.map((val, idx) => {
         return val;
     });
@@ -40,8 +42,10 @@ router.get("/", async (req, res) => {
     }
     res.render("product-item", {
         layout: "product-item-layout",
-        Item: item,
-        ItemComments: comments,
+        Data: {
+            Item: item,
+            ItemComments: comments,
+        },
     });
 });
 router.post("/", async (req, res) => {
