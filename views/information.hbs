@@ -3,22 +3,20 @@
 	<div class="row w-100 mx-0">
 		<div class="col-12 col-lg-3 infor-nav-menu">
 			<div class="jumbotron">
-				<div
-					class="container w-100 p-0 d-flex flex-column justify-content-center align-items-center"
-				>
+				<div class="container w-100 p-0 d-flex flex-column justify-content-center align-items-center">
 					<p class="member rounded shadow">USG Member</p>
 					<p class="name">Dương Tấn Phát</p>
 
 					<ul class="infor-menu">
 						<li>
-							<a href="#" class="active">
+							<a href="/infor" class="active">
 								<i class="fas fa-user"></i>
 								Thông tin cá nhân
 							</a>
 						</li>
 
 						<li>
-							<a href="#">
+							<a href="/order-list">
 								<i class="fas fa-file-invoice"></i>
 								Danh sách đơn hàng
 							</a>
@@ -45,13 +43,8 @@
 								<label for="name">Họ Tên</label>
 							</div>
 							<div class="col-9 p-0">
-								<input
-									type="text"
-									class="form-control rounded-0"
-									id="name"
-									value="Dương Tấn Phát"
-									name="name"
-								/>
+								<input type="text" class="form-control rounded-0" id="name" value="Dương Tấn Phát"
+									name="name" />
 							</div>
 						</div>
 
@@ -60,14 +53,8 @@
 								<label for="email">Email</label>
 							</div>
 							<div class="col-9 p-0">
-								<input
-									type="email"
-									class="form-control rounded-0"
-									id="email"
-									value="beebapcay@gmail.com"
-									name="email"
-									disabled
-								/>
+								<input type="email" class="form-control rounded-0" id="email"
+									value="beebapcay@gmail.com" name="email" disabled />
 							</div>
 						</div>
 
@@ -76,13 +63,8 @@
 								<label for="phone">Số Điện Thoại</label>
 							</div>
 							<div class="col-9 p-0">
-								<input
-									type="phone"
-									class="form-control rounded-0"
-									id="phone"
-									value="0964746011"
-									name="phone"
-								/>
+								<input type="phone" class="form-control rounded-0" id="phone" value="0964746011"
+									name="phone" />
 							</div>
 						</div>
 
@@ -91,14 +73,8 @@
 								<label for="uname">Tên Đăng Nhập</label>
 							</div>
 							<div class="col-9 p-0">
-								<input
-									type="text"
-									class="form-control rounded-0"
-									id="uname"
-									value="beebapcay"
-									name="uname"
-									disabled
-								/>
+								<input type="text" class="form-control rounded-0" id="uname" value="beebapcay"
+									name="uname" disabled />
 							</div>
 						</div>
 
@@ -107,13 +83,8 @@
 								<label for="address">Địa Chỉ</label>
 							</div>
 							<div class="col-9 p-0">
-								<input
-									type="text"
-									class="form-control rounded-0"
-									id="address"
-									value="423/34/20 Lạc Long Quân, phường 5, quận 11, HCM"
-									name="address"
-								/>
+								<input type="text" class="form-control rounded-0" id="address"
+									value="423/34/20 Lạc Long Quân, phường 5, quận 11, HCM" name="address" />
 							</div>
 						</div>
 
@@ -122,13 +93,8 @@
 								<label for="dob">Ngày Sinh</label>
 							</div>
 							<div class="col-9 p-0">
-								<input
-									type="date"
-									class="form-control rounded-0"
-									id="dob"
-									value="2000-01-11"
-									name="dob"
-								/>
+								<input type="date" class="form-control rounded-0" id="dob" value="2000-01-11"
+									name="dob" />
 							</div>
 						</div>
 
@@ -138,27 +104,14 @@
 							</div>
 							<div class="col-9 p-0">
 								<div class="custom-control custom-radio custom-control-inline">
-									<input
-										type="radio"
-										class="custom-control-input"
-										id="sex-male"
-										name="sex"
-										value="male"
-										checked
-									/>
+									<input type="radio" class="custom-control-input" id="sex-male" name="sex"
+										value="male" checked />
 									<label class="custom-control-label" for="sex-male">Nam</label>
 								</div>
 								<div class="custom-control custom-radio custom-control-inline">
-									<input
-										type="radio"
-										class="custom-control-input"
-										id="sex-female"
-										name="sex"
-										value="female"
-									/>
-									<label class="custom-control-label" for="sex-female"
-										>Nữ</label
-									>
+									<input type="radio" class="custom-control-input" id="sex-female" name="sex"
+										value="female" />
+									<label class="custom-control-label" for="sex-female">Nữ</label>
 								</div>
 							</div>
 						</div>
@@ -168,20 +121,10 @@
 								<label for="height">Chiều Cao</label>
 							</div>
 							<div class="col-8 p-0">
-								<input
-									type="range"
-									class="custom-range"
-									id="height"
-									name="weight"
-									min="0"
-									max="300"
-									value="172"
-									onchange="changeValueHeight(this)"
-								/>
+								<input type="range" class="custom-range" id="height" name="weight" min="0" max="300"
+									value="172" onchange="changeValueHeight(this)" />
 							</div>
-							<div
-								class="col-1 p-0 d-flex align-items-center justify-content-end"
-							>
+							<div class="col-1 p-0 d-flex align-items-center justify-content-end">
 								<p class="m-0 p-0" id="value-height">172</p>
 								<span id="unit">cm</span>
 							</div>
@@ -192,35 +135,19 @@
 								<label for="weight">Cân Nặng</label>
 							</div>
 							<div class="col-8 p-0">
-								<input
-									type="range"
-									class="custom-range"
-									id="weight"
-									name="weight"
-									min="0"
-									max="200"
-									value="60"
-									onchange="changeValueWeight(this)"
-								/>
+								<input type="range" class="custom-range" id="weight" name="weight" min="0" max="200"
+									value="60" onchange="changeValueWeight(this)" />
 							</div>
-							<div
-								class="col-1 p-0 d-flex align-items-center justify-content-end"
-							>
+							<div class="col-1 p-0 d-flex align-items-center justify-content-end">
 								<p class="m-0 p-0" id="value-weight">60</p>
 								<span id="unit">kg</span>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label class="change-pwd-label" for="change_pwd"
-								>Thay Đổi Mật Khẩu</label
-							>
-							<input
-								type="checkbox"
-								name="change_pwd"
-								id="change_pwd"
-								onclick="clickChangePwdHandler(this)"
-							/>
+							<label class="change-pwd-label" for="change_pwd">Thay Đổi Mật Khẩu</label>
+							<input type="checkbox" name="change_pwd" id="change_pwd"
+								onclick="clickChangePwdHandler(this)" />
 						</div>
 
 						<div class="change-pwd-group" id="change-pwd-group">
@@ -229,14 +156,8 @@
 									<label for="old-pwd">Mật Khẩu Cũ</label>
 								</div>
 								<div class="col-9 p-0">
-									<input
-										type="password"
-										class="form-control rounded-0"
-										value=""
-										id="old-pwd"
-										name="old-pwd"
-										required
-									/>
+									<input type="password" class="form-control rounded-0" value="" id="old-pwd"
+										name="old-pwd" required />
 									<div class="valid-feedback"></div>
 									<div class="invalid-feedback">Vui lòng điền Mật khẩu Cũ</div>
 								</div>
@@ -247,14 +168,8 @@
 									<label for="new-pwd">Mật Khẩu Mới</label>
 								</div>
 								<div class="col-9 p-0">
-									<input
-										type="password"
-										class="form-control rounded-0"
-										id="new-pwd"
-										value=""
-										name="new-pwd"
-										required
-									/>
+									<input type="password" class="form-control rounded-0" id="new-pwd" value=""
+										name="new-pwd" required />
 									<div class="valid-feedback"></div>
 									<div class="invalid-feedback">Vui lòng điền Mật khẩu Mới</div>
 								</div>
@@ -265,14 +180,8 @@
 									<label for="new-pwd-confirm">Nhập Lại Mật Khẩu Mới</label>
 								</div>
 								<div class="col-9 p-0">
-									<input
-										type="password"
-										class="form-control rounded-0"
-										id="new-pwd-confirm"
-										value=""
-										name="new-pwd-confirm"
-										required
-									/>
+									<input type="password" class="form-control rounded-0" id="new-pwd-confirm" value=""
+										name="new-pwd-confirm" required />
 									<div class="valid-feedback"></div>
 									<div class="invalid-feedback">
 										Vui lòng nhập lại Mật Khẩu Mới

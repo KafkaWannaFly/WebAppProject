@@ -17,6 +17,22 @@
 	{{>footer-part}}
 
 	{{>bootstrap-part}}
+
+	<script>
+		let arrDate = document.getElementsByClassName("date-order");
+		for (let i = 0; i < arrDate.length; i++) {
+			let date = new Date(arrDate[i].innerHTML);
+			arrDate[i].innerHTML = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+		}
+
+		let arrStatus = document.getElementsByClassName("status");
+		for (let i = 0; i < arrStatus.length; i++) {
+			let status = arrStatus[i].innerHTML;
+			if (status == 0) arrStatus[i].innerHTML = "Đang xử lý";
+			else if (status == 1) arrStatus[i].innerHTML = "Đang giao hàng";
+			else if (status == 2) arrStatus[i].innerHTML = "Hoàn tất";
+		}
+	</script>
 </body>
 
 </html>

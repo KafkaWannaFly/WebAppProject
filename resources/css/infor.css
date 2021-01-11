@@ -106,9 +106,9 @@ label.change-pwd-label {
 }
 
 .update-acc {
-  color: white;
-  background-color: #f26101;
-  margin: 1rem 0;
+  color: white !important;
+  background-color: #f26101 !important;
+  margin: 1rem 0 !important;
   font-weight: bold !important;
   letter-spacing: 1px;
   padding: 0.8rem 0.7rem !important;

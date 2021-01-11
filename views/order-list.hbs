@@ -11,14 +11,14 @@
                     <ul class="infor-menu">
 
                         <li>
-                            <a href="infor.htm">
+                            <a href="/infor">
                                 <i class="fas fa-user"></i>
                                 Thông tin cá nhân
                             </a>
                         </li>
 
                         <li>
-                            <a href="orders-list.htm" class="active">
+                            <a href="/orders-list" class="active">
                                 <i class="fas fa-file-invoice"></i>
                                 Danh sách đơn hàng
                             </a>
@@ -50,54 +50,25 @@
                             </tr>
                         </thead>
                         <tbody>
+
+                            {{#each Bills}}
                             <tr class="d-flex">
                                 <td class="col-lg-2 order--id--date">
-                                    <a href="#" class="id-order">#8610736</a>
-                                    <p>10.11.2020</p>
+                                    <a href="#" class="id-order">#{{id}}</a>
+                                    <p class="date-order">{{purchasedDate}}</p>
                                 </td>
                                 <td class="col-lg-6">
                                     <p>
-                                        - Quần thể thao nam Ultra Short màu xanh tím than <br>
-                                        - Áo thun cổ tròn Cotton Compact Premium in Happy Man <br>
-                                        - 3 Quần lót nam Boxer Brief Modal (gỗ sồi) mềm mại màu đen <br>
-                                        - Áo thun nam Cotton Compact phiên bản Premium chống nhăn <br>
-                                        - Áo thun nam Cotton Compact phiên bản Premium chống nhăn <br>
-                                        - QUÀ TẶNG - Áo thể thao nam MaxCool màu neon
+                                        {{#each billItems}}
+                                        - {{item.name}}<br>
+                                        {{/each}}
                                     </p>
                                 </td>
-                                <td class="col-lg-2">1.290.000đ</td>
-                                <td class="col-lg-2">Đã giao hàng</td>
+                                <td class="col-lg-2">{{totalPrice}}đ</td>
+                                <td class="col-lg-2 status">{{status}}</td>
                             </tr>
-                            <tr class="d-flex">
-                                <td class="col-lg-2 order--id--date">
-                                    <a href="#" class="id-order">#8610736</a>
-                                    <p>10.11.2020</p>
-                                </td>
-                                <td class="col-lg-6">
-                                    <p>
-                                        - Quần thể thao nam Ultra Short màu xanh tím than <br>
-                                        - Áo thun cổ tròn Cotton Compact Premium in Happy Man <br>
-                                        - 3 Quần lót nam Boxer Brief Modal (gỗ sồi) mềm mại màu đen <br>
-                                        - Áo thun nam Cotton Compact phiên bản Premium chống nhăn <br>
-                                        - Áo thun nam Cotton Compact phiên bản Premium chống nhăn <br>
-                                    </p>
-                                </td>
-                                <td class="col-lg-2">1.290.000đ</td>
-                                <td class="col-lg-2">Đã huỷ đơn</td>
-                            </tr>
-                            <tr class="d-flex">
-                                <td class="col-lg-2 order--id--date">
-                                    <a href="#" class="id-order">#861021</a>
-                                    <p>10.11.2020</p>
-                                </td>
-                                <td class="col-lg-6">
-                                    <p>
-                                        - 3 quần lót nam Trunk Cotton Compact co giãn màu đen
-                                    </p>
-                                </td>
-                                <td class="col-lg-2">244.000đ</td>
-                                <td class="col-lg-2">Đã giao hàng</td>
-                            </tr>
+                            {{/each}}
+
                         </tbody>
 
                     </table>
