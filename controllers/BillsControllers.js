@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getBillAsync = exports.saveBillAsync = void 0;
+exports.updateBillStatus = exports.getBillAsync = exports.saveBillAsync = void 0;
 const Models_1 = require("./Models");
 async function saveBillAsync(bill) {
     try {
@@ -41,3 +41,4 @@ async function updateBillStatus(billId, status) {
         console.log(`Fail to update bill status. ${err}`);
     }
 }
+exports.updateBillStatus = updateBillStatus;

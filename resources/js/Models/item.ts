@@ -1,5 +1,3 @@
-import { Category } from "./category";
-
 export class Item {
 	id: string;
 	name: string;
