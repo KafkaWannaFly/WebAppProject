@@ -7,15 +7,14 @@
     <div class="secsion-orderby">
         <span>Sắp xếp theo:</span>
         <div class="btn-group">
-            <button type="button" class="btn bg-white dropdown-toggle" data-toggle="dropdown">
-                Mới nhất
+            <button type="button" class="btn bg-white dropdown-toggle order-by-btn" data-toggle="dropdown">
+                Tiêu chí
             </button>
             <div class="dropdown-menu shadow">
-                <a class="dropdown-item" href="#">Mới nhất</a>
-                <a class="dropdown-item" href="#">Bán chạy nhất</a>
-                <a class="dropdown-item" href="#">Giá từ thấp đến cao</a>
-                <a class="dropdown-item" href="#">Giá từ cao đến thấp</a>
-                <a class="dropdown-item" href="#">Giảm nhiều nhất</a>
+                <a class="dropdown-item" href="#" onclick="return orderBy('sales-number')">Bán chạy nhất</a>
+                <a class="dropdown-item" href="#" onclick="return orderBy('de-price')">Giá từ thấp đến cao</a>
+                <a class="dropdown-item" href="#" onclick="return orderBy('in-price')">Giá từ cao đến thấp</a>
+                <a class="dropdown-item" href="#" onclick="return orderBy('sale-percent')">Giảm nhiều nhất</a>
             </div>
         </div>
     </div>
@@ -35,7 +34,14 @@
                     </a>
                     <br>
                     <a href="/list-product/item/rate?id={{this.id}}" class="rate">(Xem đánh giá)</a>
-                    <p class="price">{{this.price}}đ</p>
+
+                    <p class="sales" style="display: none">{{this.sales}}</p>
+
+                    <div class="price--secsion">
+                        <p class="price">{{this.price}}</p>
+                        <p class="old-price">{{ this.oldPrice }}</p>
+                        <p class="sale-percent">-0%</p>
+                    </div>
                 </div>
                 <div class="buy">
                     <a name="" id="" class="btn" href="/list-product/item?id={{this.id}}" role="button">Chọn

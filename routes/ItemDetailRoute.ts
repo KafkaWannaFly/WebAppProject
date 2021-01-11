@@ -16,5 +16,10 @@ router.get("/", async (req, res) => {
 	res.render("product-item", { layout: "product-item-layout", Item: item });
 });
 
+router.get("/rate", async (req, res) => {
+	let id = req.query["id"].toString();
+	res.redirect("/list-product/item?id=" + id + "#rate");
+});
+
 module.exports = router;
 // export default router;
