@@ -24,7 +24,7 @@ async function getUserAsync(username: string): Promise<User> {
  */
 async function getAllUsers() {
 	try {
-		let userDocs = await UserModel.find({}).exec();
+		let userDocs = await UserModel.find({}).lean().exec();
 		let users: User[] = userDocs.map((val, idx) => {
 			return (val as unknown) as User;
 		});

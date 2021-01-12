@@ -192,4 +192,24 @@ const ItemModel = mongoose.model("Item", itemSchema);
 
 //#endregion
 
-export { UserModel, BillModel, ItemModel };
+const itemCommentSchema = new Schema({
+	personName: {
+		type: "String",
+	},
+	email: {
+		type: "String",
+	},
+	content: {
+		type: "String",
+	},
+	date: {
+		type: "Date",
+	},
+	commentedItem: {
+		type: "String",
+	},
+});
+
+const ItemCommentModel = mongoose.model("ItemComment", itemCommentSchema);
+
+export { UserModel, BillModel, ItemModel, ItemCommentModel };

@@ -94,9 +94,28 @@
   text-decoration: none !important;
 }
 
-.item-product .des-product .price {
+.item-product .des-product .price--secsion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: 0.7rem 0;
   margin: 0;
+}
+
+.item-product .des-product .price {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.item-product .des-product .old-price {
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  text-decoration: line-through;
+  color: rgb(100, 100, 100);
+}
+
+.sale-percent {
+  color: #f26101;
   font-weight: bold;
   font-size: 1.1rem;
 }

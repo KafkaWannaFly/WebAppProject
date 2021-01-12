@@ -44,4 +44,4 @@ async function updateBillStatus(billId: string, status: number) {
 	}
 }
 
-export { saveBillAsync, getBillAsync };
+export { saveBillAsync, getBillAsync, updateBillStatus };

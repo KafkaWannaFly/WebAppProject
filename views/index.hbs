@@ -1,10 +1,6 @@
 <!-- Body -->
 <a href="#">
-	<img
-		class="img-banner"
-		src="resources/img/banner/bannerBF.jpg"
-		alt="banner"
-	/>
+	<img class="img-banner" src="resources/img/banner/bannerBF.jpg" alt="banner" />
 </a>
 
 <div class="body-content container">
@@ -13,13 +9,8 @@
 		<div class="row">
 			<div class="col-6 col-lg-3 p-0 pr-2">
 				<div class="img-shortcut">
-					<a href="/best-seller">
-						<img
-							class="rounded"
-							src="resources/img/product/shortcut/best-seller.png"
-							alt=""
-							width="100%"
-						/>
+					<a href="#">
+						<img class="rounded" src="resources/img/product/shortcut/best-seller.png" alt="" width="100%" />
 						<div class="content-shortcut rounded">
 							<h1>BEST SELLER</h1>
 							<h4>Khách hàng tin dùng</h4>
@@ -31,13 +22,8 @@
 
 			<div class="col-6 col-lg-3 p-0 pl-2 px-lg-1">
 				<div class="img-shortcut">
-					<a href="/new-arrival">
-						<img
-							class="rounded"
-							src="resources/img/product/shortcut/new-brand.png"
-							alt=""
-							width="100%"
-						/>
+					<a href="#">
+						<img class="rounded" src="resources/img/product/shortcut/new-brand.png" alt="" width="100%" />
 						<div class="content-shortcut rounded">
 							<h4>New Arrival</h4>
 							<h2>BST MỚI NHẤT</h2>
@@ -49,13 +35,8 @@
 
 			<div class="col-6 col-lg-3 p-0 pr-2 px-lg-1">
 				<div class="img-shortcut">
-					<a href="big-sale">
-						<img
-							class="rounded"
-							src="resources/img/product/shortcut/sale.png"
-							alt=""
-							width="100%"
-						/>
+					<a href="#">
+						<img class="rounded" src="resources/img/product/shortcut/sale.png" alt="" width="100%" />
 						<div class="content-shortcut rounded">
 							<h4>Ưu đãi lên đến hơn</h4>
 							<h1>30%</h1>
@@ -67,13 +48,8 @@
 
 			<div class="col-6 col-lg-3 p-0 pl-2">
 				<div class="img-shortcut">
-					<a href="combo-box">
-						<img
-							class="rounded"
-							src="resources/img/product/shortcut/box.png"
-							alt=""
-							width="100%"
-						/>
+					<a href="#">
+						<img class="rounded" src="resources/img/product/shortcut/box.png" alt="" width="100%" />
 						<div class="content-shortcut rounded">
 							<h4>Combo Box</h4>
 							<h1>Tiết kiệm</h1>
@@ -92,24 +68,14 @@
 			SẢN PHẨM NỔI BẬT
 		</h3>
 
-		<div
-			id="carouselId"
-			class="carousel slide"
-			data-ride="carousel"
-			data-interval="2000"
-		>
+		<div id="carouselId" class="carousel slide" data-ride="carousel" data-interval="2000">
 			<div class="carousel-inner" role="listbox">
 				<div class="carousel-item active">
 					<div class="row">
 						{{#each TopProduct.[0]}}
 						<div class="col-6 col-lg-3 item-product">
 							<a href="/list-product/item?id={{ this.id }}">
-								<img
-									class="mb-2"
-									src="{{ this.imageThumbnail }}"
-									alt="1"
-									width="100%;"
-								/>
+								<img class="mb-2" src="{{ this.imageThumbnail }}" alt="1" width="100%;" />
 							</a>
 
 							<a href="/list-product/item?id={{ this.id }}" class="name">
@@ -125,12 +91,7 @@
 						{{#each TopProduct.[1]}}
 						<div class="col-6 col-lg-3 item-product">
 							<a href="/list-product/item?id={{ this.id }}">
-								<img
-									class="mb-2"
-									src="{{ this.imageThumbnail }}"
-									alt="1"
-									width="100%;"
-								/>
+								<img class="mb-2" src="{{ this.imageThumbnail }}" alt="1" width="100%;" />
 							</a>
 
 							<a href="/list-product/item?id={{ this.id }}" class="name">
@@ -146,12 +107,7 @@
 						{{#each TopProduct.[2]}}
 						<div class="col-6 col-lg-3 item-product">
 							<a href="/list-product/item?id={{ this.id }}">
-								<img
-									class="mb-2"
-									src="{{ this.imageThumbnail }}"
-									alt="1"
-									width="100%;"
-								/>
+								<img class="mb-2" src="{{ this.imageThumbnail }}" alt="1" width="100%;" />
 							</a>
 
 							<a href="/list-product/item?id={{ this.id }}" class="name">
@@ -163,23 +119,11 @@
 					</div>
 				</div>
 			</div>
-			<a
-				class="carousel-control-prev"
-				href="#carouselId"
-				role="button"
-				data-slide="prev"
-				style="width: 2rem"
-			>
+			<a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev" style="width: 2rem">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="sr-only">Previous</span>
 			</a>
-			<a
-				class="carousel-control-next"
-				href="#carouselId"
-				role="button"
-				data-slide="next"
-				style="width: 2rem"
-			>
+			<a class="carousel-control-next" href="#carouselId" role="button" data-slide="next" style="width: 2rem">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
 			</a>

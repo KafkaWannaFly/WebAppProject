@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ItemModel = exports.BillModel = exports.UserModel = void 0;
+exports.ItemCommentModel = exports.ItemModel = exports.BillModel = exports.UserModel = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const Schema = mongoose_1.default.Schema;
 const url = "mongodb+srv://admin:0123456789@cluster0.2diud.mongodb.net/usg-clothes?authSource=admin&replicaSet=atlas-37amtr-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true";
@@ -178,3 +178,23 @@ const itemSchema = new Schema({
 });
 const ItemModel = mongoose_1.default.model("Item", itemSchema);
 exports.ItemModel = ItemModel;
+//#endregion
+const itemCommentSchema = new Schema({
+    personName: {
+        type: "String",
+    },
+    email: {
+        type: "String",
+    },
+    content: {
+        type: "String",
+    },
+    date: {
+        type: "Date",
+    },
+    commentedItem: {
+        type: "String",
+    },
+});
+const ItemCommentModel = mongoose_1.default.model("ItemComment", itemCommentSchema);
+exports.ItemCommentModel = ItemCommentModel;

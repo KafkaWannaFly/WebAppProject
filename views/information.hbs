@@ -1,5 +1,6 @@
 <!-- Body -->
 <div class="body-content container">
+	{{#with Data.User}}
 	<div class="row w-100 mx-0">
 		<div class="col-12 col-lg-3 infor-nav-menu">
 			<div class="jumbotron">
@@ -7,18 +8,18 @@
 					class="container w-100 p-0 d-flex flex-column justify-content-center align-items-center"
 				>
 					<p class="member rounded shadow">USG Member</p>
-					<p class="name">Dương Tấn Phát</p>
+					<p class="name">{{ name }}</p>
 
 					<ul class="infor-menu">
 						<li>
-							<a href="#" class="active">
+							<a href="/infor" class="active">
 								<i class="fas fa-user"></i>
 								Thông tin cá nhân
 							</a>
 						</li>
 
 						<li>
-							<a href="#">
+							<a href="/order-list">
 								<i class="fas fa-file-invoice"></i>
 								Danh sách đơn hàng
 							</a>
@@ -39,7 +40,12 @@
 			<div class="form-infor container px-0">
 				<h3 style="color: #283657">THÔNG TIN TÀI KHOẢN</h3>
 				<div class="container px-0">
-					<form action="" class="needs-validation" novalidate>
+					<form
+						method="POST"
+						action="/infor"
+						class="needs-validation"
+						novalidate
+					>
 						<div class="row form-group">
 							<div class="col-3 p-0 d-flex align-items-center">
 								<label for="name">Họ Tên</label>
@@ -49,7 +55,7 @@
 									type="text"
 									class="form-control rounded-0"
 									id="name"
-									value="Dương Tấn Phát"
+									value="{{ name }}"
 									name="name"
 								/>
 							</div>
@@ -64,9 +70,8 @@
 									type="email"
 									class="form-control rounded-0"
 									id="email"
-									value="beebapcay@gmail.com"
+									value="{{ email }}"
 									name="email"
-									disabled
 								/>
 							</div>
 						</div>
@@ -80,7 +85,7 @@
 									type="phone"
 									class="form-control rounded-0"
 									id="phone"
-									value="0964746011"
+									value="{{ phone }}"
 									name="phone"
 								/>
 							</div>
@@ -95,7 +100,7 @@
 									type="text"
 									class="form-control rounded-0"
 									id="uname"
-									value="beebapcay"
+									value="{{ username }}"
 									name="uname"
 									disabled
 								/>
@@ -111,7 +116,7 @@
 									type="text"
 									class="form-control rounded-0"
 									id="address"
-									value="423/34/20 Lạc Long Quân, phường 5, quận 11, HCM"
+									value="{{ address }}"
 									name="address"
 								/>
 							</div>
@@ -126,7 +131,7 @@
 									type="date"
 									class="form-control rounded-0"
 									id="dob"
-									value="2000-01-11"
+									value="{{ DoB }}"
 									name="dob"
 								/>
 							</div>
@@ -138,24 +143,14 @@
 							</div>
 							<div class="col-9 p-0">
 								<div class="custom-control custom-radio custom-control-inline">
-									<input
-										type="radio"
-										class="custom-control-input"
-										id="sex-male"
-										name="sex"
-										value="male"
-										checked
-									/>
+									<input type="radio" class="custom-control-input" id="sex-male"
+									name="sex" value="male" {{#if gender}}checked{{/if}}/>
 									<label class="custom-control-label" for="sex-male">Nam</label>
 								</div>
 								<div class="custom-control custom-radio custom-control-inline">
-									<input
-										type="radio"
-										class="custom-control-input"
-										id="sex-female"
-										name="sex"
-										value="female"
-									/>
+									<input type="radio" class="custom-control-input"
+									id="sex-female" name="sex" value="female"
+									{{#unless gender}}checked{{/unless}}/>
 									<label class="custom-control-label" for="sex-female"
 										>Nữ</label
 									>
@@ -172,7 +167,7 @@
 									type="range"
 									class="custom-range"
 									id="height"
-									name="weight"
+									name="height"
 									min="0"
 									max="300"
 									value="172"
@@ -182,7 +177,7 @@
 							<div
 								class="col-1 p-0 d-flex align-items-center justify-content-end"
 							>
-								<p class="m-0 p-0" id="value-height">172</p>
+								<p class="m-0 p-0" id="value-height">{{ height }}</p>
 								<span id="unit">cm</span>
 							</div>
 						</div>
@@ -206,11 +201,11 @@
 							<div
 								class="col-1 p-0 d-flex align-items-center justify-content-end"
 							>
-								<p class="m-0 p-0" id="value-weight">60</p>
+								<p class="m-0 p-0" id="value-weight">{{ weight }}</p>
 								<span id="unit">kg</span>
 							</div>
 						</div>
-
+						{{/with}}
 						<div class="form-group">
 							<label class="change-pwd-label" for="change_pwd"
 								>Thay Đổi Mật Khẩu</label
@@ -232,7 +227,7 @@
 									<input
 										type="password"
 										class="form-control rounded-0"
-										value=""
+										value=" "
 										id="old-pwd"
 										name="old-pwd"
 										required
@@ -251,7 +246,7 @@
 										type="password"
 										class="form-control rounded-0"
 										id="new-pwd"
-										value=""
+										value=" "
 										name="new-pwd"
 										required
 									/>
@@ -269,7 +264,7 @@
 										type="password"
 										class="form-control rounded-0"
 										id="new-pwd-confirm"
-										value=""
+										value=" "
 										name="new-pwd-confirm"
 										required
 									/>
@@ -284,6 +279,10 @@
 						<button type="submit" class="btn update-acc rounded-0 d-block">
 							CẬP NHẬT TÀI KHOẢN
 						</button>
+
+						<p class="text-danger">
+							{{ Data.Warning }}
+						</p>
 					</form>
 				</div>
 			</div>

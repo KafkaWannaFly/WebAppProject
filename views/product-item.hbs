@@ -1,4 +1,4 @@
-{{#with Item}}
+{{#with Data.Item}}
 <div class="body-content container item-container" id="{{ id }}">
 	<div class="row">
 		<!-- 100% width on mobile & 50% width on desktop -->
@@ -220,7 +220,6 @@
 		<div class="des-title">Mô tả chi tiết</div>
 		<div class="description-text">{{{description}}}</div>
 	</div>
-
 	<hr />
 
 	<div class="rate-comment" id="rate">
@@ -248,7 +247,11 @@
 			</button>
 
 			<div class="form-write-rate" id="form-write-rate">
-				<form method="POST" action=" " class="d-flex flex-column my-2">
+				<form
+					method="POST"
+					action="/list-product/item?id={{ id }}"
+					class="d-flex flex-column my-2"
+				>
 					<div class="form-group">
 						<label for="name">Họ & Tên</label>
 						<input
@@ -257,7 +260,7 @@
 							value=""
 							id="name"
 							placeholder="Nhập họ và tên"
-							name="name"
+							name="comment-name"
 							required
 						/>
 					</div>
@@ -269,7 +272,7 @@
 							class="form-control"
 							id="email"
 							placeholder="Nhập địa chỉ Email"
-							name="email"
+							name="comment-email"
 							required
 						/>
 					</div>
@@ -277,10 +280,11 @@
 					<div class="form-group">
 						<label for="your-rate">Đánh giá của bạn</label>
 						<textarea
-							name="your-rate"
+							name="comment-content"
 							id="your-rate"
 							rows="5"
 							class="form-control"
+							required
 						></textarea>
 					</div>
 
@@ -291,15 +295,21 @@
 			</div>
 		</div>
 		{{/with}}
+
 		<div class="rate">
+			{{#each Data.ItemComments}}
 			<div class="media border p-2">
 				<div class="media-body">
 					<p>
-						<b>Phát Dương</b> <small><i>Đăng ngày DD/MM/YYYY</i></small>
+						<b>{{{personName}}}</b>
+						<small
+							><i>Đăng ngày {{ date }}</i></small
+						>
 					</p>
-					<p>Lorem ipsum...</p>
+					<p>{{ content }}</p>
 				</div>
 			</div>
+			{{/each}}
 		</div>
 	</div>
 </div>

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getItemsByCategoryAsync = exports.getTopSaleItemsAsync = exports.getAllItemsAsync = exports.getItemAsync = void 0;
+exports.searchItemsAsync = exports.getItemsSalesAsync = exports.getItemsByCategoryAsync = exports.getTopSaleItemsAsync = exports.getAllItemsAsync = exports.getItemAsync = void 0;
 const Models_1 = require("./Models");
 /**
  * Find item by id
@@ -68,3 +68,29 @@ async function getItemsByCategoryAsync(category) {
     }
 }
 exports.getItemsByCategoryAsync = getItemsByCategoryAsync;
+async function getItemsSalesAsync() {
+    try {
+        let items = await getAllItemsAsync();
+        let result = items.filter((value) => {
+            return value.price < value.oldPrice;
+        });
+        return result;
+    }
+    catch (err) {
+        console.log(`Fail to getItemsSales. ${err}`);
+    }
+}
+exports.getItemsSalesAsync = getItemsSalesAsync;
+async function searchItemsAsync(key) {
+    try {
+        let items = await getAllItemsAsync();
+        let result = items.filter((value) => {
+            return (value.name.toLowerCase().search(key.toLowerCase()) != -1);
+        });
+        return result;
+    }
+    catch (err) {
+        console.log(`Fail to getItemsByName. ${err}`);
+    }
+}
+exports.searchItemsAsync = searchItemsAsync;

@@ -68,9 +68,41 @@ async function getItemsByCategoryAsync(category: string) {
 	}
 }
 
+async function getItemsSalesAsync() {
+	try {
+		let items = await getAllItemsAsync();
+
+		let result = items.filter((value) => {
+			return value.price < value.oldPrice
+		});
+
+
+		return result;
+	} catch (err) {
+		console.log(`Fail to getItemsSales. ${err}`);
+	}
+}
+
+async function searchItemsAsync(key) {
+	try {
+		let items = await getAllItemsAsync();
+
+		let result = items.filter((value) => {
+			return (value.name.toLowerCase().search(key.toLowerCase()) != -1);
+		})
+
+		return result;
+	} catch (err) {
+		console.log(`Fail to getItemsByName. ${err}`);
+	}
+}
+
+
 export {
 	getItemAsync,
 	getAllItemsAsync,
 	getTopSaleItemsAsync,
 	getItemsByCategoryAsync,
+	getItemsSalesAsync,
+	searchItemsAsync,
 };
