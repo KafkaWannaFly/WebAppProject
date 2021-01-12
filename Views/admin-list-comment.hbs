@@ -11,7 +11,7 @@
             <table class="table table-hover list-product-table">
                 <thead class="thead-dark">
                     <tr class="d-flex">
-                        <th class="col-lg-2">Tên sản phẩm</th>
+                        <th class="col-lg-2">ID sản phẩm</th>
                         <th class="col-lg-2">Tên khách hàng</th>
                         <th class="col-lg-2">Ngày</th>
                         <th class="col-lg-4">Nội dung</th>
@@ -20,11 +20,12 @@
 
                 <tbody>
 
+                    {{#each Data.Comments}}
                     <tr class="d-flex">
-                        <td class="col-lg-2 product-name">HCMUSID001</td>
-                        <td class="col-lg-2 name-user">Tên khách hàng 1</td>
-                        <td class="col-lg-2 comment-date">10/1/2020</td>
-                        <td class="col-lg-4 comment-content">Nội dung</td>
+                        <td class="col-lg-2 product-name">{{commentedItem}}</td>
+                        <td class="col-lg-2 name-user">{{personName}}</td>
+                        <td class="col-lg-2 comment-date">{{date}}</td>
+                        <td class="col-lg-4 comment-content">{{content}}</td>
                         <td class="col-lg-2 comment-act">
                             <button type="button" class="btn btn-primary btn-detail" data-toggle='modal'
                                 data-target='#form-model'>Xem</button>
@@ -32,32 +33,26 @@
                         </td>
                     </tr>
 
-                    <tr class="d-flex">
-                        <td class="col-lg-2 product-name">HCMUSID002</td>
-                        <td class="col-lg-2 name-user">Tên khách hàng 2</td>
-                        <td class="col-lg-2 comment-date">10/1/2020</td>
-                        <td class="col-lg-4 comment-content">Nội dung</td>
-                        <td class="col-lg-2 comment-act">
-                            <button type="button" class="btn btn-primary btn-detail" data-toggle='modal'
-                                data-target='#form-model'>Xem</button>
-                            <button type="button" class="btn btn-danger btn-delete">Delete</button>
-                        </td>
-                    </tr>
-
-                    <tr class="d-flex">
-                        <td class="col-lg-2 product-name">HCMUSID003</td>
-                        <td class="col-lg-2 name-user">Tên khách hàng 3</td>
-                        <td class="col-lg-2 comment-date">10/1/2020</td>
-                        <td class="col-lg-4 comment-content">Nội dung</td>
-                        <td class="col-lg-2 comment-act">
-                            <button type="button" class="btn btn-primary btn-detail" data-toggle='modal'
-                                data-target='#form-model'>Xem</button>
-                            <button type="button" class="btn btn-danger btn-delete">Delete</button>
-                        </td>
-                    </tr>
+                    {{/each}}
                 </tbody>
                 </thead>
             </table>
         </div>
     </div>
 </div>
+
+<script>
+    let arrDate = document.getElementsByClassName("comment-date");
+    for (let i = 0; i < arrDate.length; i++) {
+        let date = new Date(arrDate[i].innerHTML);
+        arrDate[i].innerHTML = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+    }
+
+    let arrStatus = document.getElementsByClassName("status");
+    for (let i = 0; i < arrStatus.length; i++) {
+        let status = arrStatus[i].innerHTML;
+        if (status == 0) arrStatus[i].innerHTML = "Đang xử lý";
+        else if (status == 1) arrStatus[i].innerHTML = "Đang giao hàng";
+        else if (status == 2) arrStatus[i].innerHTML = "Hoàn tất";
+    }
+</script>

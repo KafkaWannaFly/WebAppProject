@@ -26,20 +26,55 @@
 
                 <tbody>
 
+                    {{#each Data.Items}}
                     <tr class="d-flex">
-                        <td class="col-lg-2 product-id">HCMUSID001</td>
-                        <td class="col-lg-4 product-name">Tên sản phẩm</td>
-                        <td class="col-lg-2 product-price">Giá</td>
-                        <td class="col-lg-2 product-category">Loại sản phẩm</td>
+                        <td class="col-lg-2 product-id">{{id}}</td>
+                        <td class="col-lg-4 product-name">{{name}}</td>
+                        <td class="col-lg-2 product-price">{{price}}đ</td>
+                        <td class="col-lg-2 product-category">{{category}}</td>
                         <td class="col-lg-2 product-act">
                             <button type="button" class="btn btn-primary btn-update" data-toggle='modal'
                                 data-target='#form-model'>Update</button>
                             <button type="button" class="btn btn-danger btn-delete">Delete</button>
                         </td>
                     </tr>
+                    {{/each}}
+
                 </tbody>
                 </thead>
             </table>
         </div>
     </div>
 </div>
+
+<script>
+    let arrCategory = document.querySelectorAll(".product-category");
+    for (let i = 0; i < arrCategory.length; i++) {
+        if (arrCategory[i].innerHTML == "ao-thun-ngan-tay")
+            arrCategory[i].innerHTML = "Áo thun ngắn tay";
+        else if (arrCategory[i].innerHTML == "ao-thun-dai-tay")
+            arrCategory[i].innerHTML = "Áo thun dài tay";
+        else if (arrCategory[i].innerHTML == "ao-thun-tank-top")
+            arrCategory[i].innerHTML = "Áo thun tank top";
+        else if (arrCategory[i].innerHTML == "ao-aomi")
+            arrCategory[i].innerHTML = "Áo sơ mi";
+        else if (arrCategory[i].innerHTML == "quan-short")
+            arrCategory[i].innerHTML = "Quần short";
+        else if (arrCategory[i].innerHTML == "quan-jean-dai")
+            arrCategory[i].innerHTML = "Quần jean dài";
+        else if (arrCategory[i].innerHTML == "quan-jogger")
+            arrCategory[i].innerHTML = "Quần jogger";
+        else if (arrCategory[i].innerHTML == "vo-ngan")
+            arrCategory[i].innerHTML = "Vớ ngắn";
+        else if (arrCategory[i].innerHTML == "vo-dai")
+            arrCategory[i].innerHTML = "Vớ dài";
+        else if (arrCategory[i].innerHTML == "non")
+            arrCategory[i].innerHTML = "Nón";
+        else if (arrCategory[i].innerHTML == "khau-trang")
+            arrCategory[i].innerHTML = "Khẩu trang";
+        else if (arrCategory[i].innerHTML == "that-lung")
+            arrCategory[i].innerHTML = "Thắt lưng";
+        else
+            arrCategory[i].innerHTML = "Bóp ví";
+    }
+</script>
