@@ -23,18 +23,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const Models_1 = require("../controllers/Models");
+// import { ItemCommentModel } from "../controllers/Models";
+const ItemCommentsController_1 = require("../controllers/ItemCommentsController");
 const router = express_1.default.Router();
 const ItemController = __importStar(require("../controllers/ItemController"));
 router.get("/", async (req, res) => {
     let id = req.query["id"].toString();
     let item = await ItemController.getItemAsync(id);
-    let commentDocs = await Models_1.ItemCommentModel.find({ commentedItem: id })
-        .lean()
-        .exec();
-    let comments = commentDocs.map((val, idx) => {
-        return val;
-    });
+    // let commentDocs = await ItemCommentModel.find({ commentedItem: id })
+    // 	.lean()
+    // 	.exec();
+    // let comments = commentDocs.map((val, idx) => {
+    // 	return (val as unknown) as ItemComment;
+    // });
+    let comments = await ItemCommentsController_1.ItemCommentsController.getCommentsAysnc(id);
     // console.log(`Comments: ${JSON.stringify(comments, null, 4)}`);
     // Have no idea why we have to go back 1 level but it do the job
     for (let i = 0; i < item.imagePaths.length; i++) {
@@ -61,7 +63,8 @@ router.post("/", async (req, res) => {
         date: new Date(Date.now()),
         content: content,
     };
-    let commentDoc = await new Models_1.ItemCommentModel(comment).save();
+    // let commentDoc = await new ItemCommentModel(comment).save();
+    await ItemCommentsController_1.ItemCommentsController.makeComment(comment);
     // console.log(`Post comment: ${JSON.stringify(commentDoc, null, 4)}`);
     res.redirect("back");
     // res.redirect(`/list-product/item?id=${id}`);

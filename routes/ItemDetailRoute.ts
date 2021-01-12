@@ -2,7 +2,8 @@ import express from "express";
 import fs from "fs";
 
 import { ItemComment } from "../resources/js/Models/comment";
-import { ItemCommentModel } from "../controllers/Models";
+// import { ItemCommentModel } from "../controllers/Models";
+import { ItemCommentsController } from "../controllers/ItemCommentsController";
 
 const router = express.Router();
 
@@ -12,12 +13,15 @@ router.get("/", async (req, res) => {
 	let id = req.query["id"].toString();
 	let item = await ItemController.getItemAsync(id);
 
-	let commentDocs = await ItemCommentModel.find({ commentedItem: id })
-		.lean()
-		.exec();
-	let comments = commentDocs.map((val, idx) => {
-		return (val as unknown) as ItemComment;
-	});
+	// let commentDocs = await ItemCommentModel.find({ commentedItem: id })
+	// 	.lean()
+	// 	.exec();
+
+	// let comments = commentDocs.map((val, idx) => {
+	// 	return (val as unknown) as ItemComment;
+	// });
+
+	let comments = await ItemCommentsController.getCommentsAysnc(id);
 
 	// console.log(`Comments: ${JSON.stringify(comments, null, 4)}`);
 
@@ -51,7 +55,8 @@ router.post("/", async (req, res) => {
 		content: content,
 	};
 
-	let commentDoc = await new ItemCommentModel(comment).save();
+	// let commentDoc = await new ItemCommentModel(comment).save();
+	await ItemCommentsController.makeComment(comment);
 
 	// console.log(`Post comment: ${JSON.stringify(commentDoc, null, 4)}`);
 

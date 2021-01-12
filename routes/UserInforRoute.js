@@ -5,7 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const bcrypt_1 = __importDefault(require("bcrypt"));
-const fs_1 = require("fs");
 const UserController_1 = require("../controllers/UserController");
 const router = express_1.default.Router();
 router.get("/", (req, res, next) => {
@@ -17,17 +16,12 @@ router.get("/", (req, res, next) => {
     }
 }, (req, res) => {
     let user = req.user;
+    // console.log(`user: ${JSON.stringify(req.user, null, 4)}`);
     // If admin login
     if (user.userType == 1) {
-        fs_1.readFile("./pages/admin/admin-dasboard.htm", { encoding: "utf-8" }, (err, data) => {
-            if (err) {
-                res.send(err);
-            }
-            else {
-                res.type("html");
-                res.send(data);
-            }
-        });
+        console.log(`Redirect to admin`);
+        res.redirect(`/admin/dashboard?user=${encodeURIComponent(JSON.stringify(user))}`);
+        return;
     }
     let failMsg = req.query.failMsg;
     let warnMsg = "";

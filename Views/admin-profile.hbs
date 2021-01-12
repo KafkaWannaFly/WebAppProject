@@ -1,0 +1,252 @@
+<!-- Main Content Secsion-->
+<div class="body-area">
+	<div class="body-content">
+		<div class="form-infor px-0">
+			{{#with Data.User}}
+			<h3 class="page-title">THÔNG TIN TÀI KHOẢN</h3>
+			<div class="container px-0">
+				<form action="">
+					<div class="row form-group">
+						<div class="col-3 p-0 d-flex align-items-center">
+							<label for="name">Họ Tên</label>
+						</div>
+						<div class="col-9 p-0">
+							<input
+								type="text"
+								class="form-control rounded-0"
+								id="name"
+								value="{{ name }}"
+								name="name"
+								required
+							/>
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-3 p-0 d-flex align-items-center">
+							<label for="email">Email</label>
+						</div>
+						<div class="col-9 p-0">
+							<input
+								type="email"
+								class="form-control rounded-0"
+								id="email"
+								value="{{ email }}"
+								name="email"
+								disabled
+							/>
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-3 p-0 d-flex align-items-center">
+							<label for="phone">Số Điện Thoại</label>
+						</div>
+						<div class="col-9 p-0">
+							<input
+								type="phone"
+								class="form-control rounded-0"
+								id="phone"
+								value="{{ phone }}"
+								name="phone"
+								required
+							/>
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-3 p-0 d-flex align-items-center">
+							<label for="uname">Tên Đăng Nhập</label>
+						</div>
+						<div class="col-9 p-0">
+							<input
+								type="text"
+								class="form-control rounded-0"
+								id="uname"
+								value="{{ username }}"
+								name="uname"
+								disabled
+							/>
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-3 p-0 d-flex align-items-center">
+							<label for="address">Địa Chỉ</label>
+						</div>
+						<div class="col-9 p-0">
+							<input
+								type="text"
+								class="form-control rounded-0"
+								id="address"
+								value="{{ address }}"
+								name="address"
+								required
+							/>
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-3 p-0 d-flex align-items-center">
+							<label for="dob">Ngày Sinh</label>
+						</div>
+						<div class="col-9 p-0">
+							<input
+								type="date"
+								class="form-control rounded-0"
+								id="dob"
+								value="{{ DoB }}"
+								name="dob"
+							/>
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-3 p-0 d-flex align-items-center">
+							<label>Giới Tính</label>
+						</div>
+						<div class="col-9 p-0">
+							<div class="custom-control custom-radio custom-control-inline">
+								<input type="radio" class="custom-control-input" id="sex-male"
+								name="sex" value="male"
+								{{#if gender}}checked{{/if}}
+								/>
+								<label class="custom-control-label" for="sex-male">Nam</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input type="radio" class="custom-control-input" id="sex-female"
+								name="sex" value="female"
+								{{#unless gender}}checked{{/unless}}
+								/>
+								<label class="custom-control-label" for="sex-female">Nữ</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-3 p-0 d-flex align-items-center">
+							<label for="height">Chiều Cao</label>
+						</div>
+						<div class="col-8 p-0">
+							<input
+								type="range"
+								class="custom-range"
+								id="height"
+								name="weight"
+								min="0"
+								max="300"
+								value="{{ height }}"
+								onchange="changeValueHeight(this)"
+							/>
+						</div>
+						<div
+							class="col-1 p-0 d-flex align-items-center justify-content-end"
+						>
+							<p class="m-0 p-0" id="value-height">172</p>
+							<span id="unit">cm</span>
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-3 p-0 d-flex align-items-center">
+							<label for="weight">Cân Nặng</label>
+						</div>
+						<div class="col-8 p-0">
+							<input
+								type="range"
+								class="custom-range"
+								id="weight"
+								name="weight"
+								min="0"
+								max="200"
+								value="{{ weight }}"
+								onchange="changeValueWeight(this)"
+							/>
+						</div>
+						<div
+							class="col-1 p-0 d-flex align-items-center justify-content-end"
+						>
+							<p class="m-0 p-0" id="value-weight">60</p>
+							<span id="unit">kg</span>
+						</div>
+					</div>
+					{{/with}}
+
+					<div class="form-group">
+						<label class="change-pwd-label" for="change_pwd"
+							>Thay Đổi Mật Khẩu</label
+						>
+						<input
+							type="checkbox"
+							name="change_pwd"
+							id="change_pwd"
+							onclick="clickChangePwdHandler(this)"
+						/>
+					</div>
+
+					<div class="change-pwd-group" id="change-pwd-group">
+						<div class="row form-group">
+							<div class="col-3 p-0 d-flex align-items-center">
+								<label for="old-pwd">Mật Khẩu Cũ</label>
+							</div>
+							<div class="col-9 p-0">
+								<input
+									type="password"
+									class="form-control rounded-0"
+									value=""
+									id="old-pwd"
+									name="old-pwd"
+									required
+								/>
+								<div class="valid-feedback"></div>
+								<div class="invalid-feedback">Vui lòng điền Mật khẩu Cũ</div>
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-3 p-0 d-flex align-items-center">
+								<label for="new-pwd">Mật Khẩu Mới</label>
+							</div>
+							<div class="col-9 p-0">
+								<input
+									type="password"
+									class="form-control rounded-0"
+									id="new-pwd"
+									value=""
+									name="new-pwd"
+									required
+								/>
+								<div class="valid-feedback"></div>
+								<div class="invalid-feedback">Vui lòng điền Mật khẩu Mới</div>
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-3 p-0 d-flex align-items-center">
+								<label for="new-pwd-confirm">Nhập Lại Mật Khẩu Mới</label>
+							</div>
+							<div class="col-9 p-0">
+								<input
+									type="password"
+									class="form-control rounded-0"
+									id="new-pwd-confirm"
+									value=""
+									name="new-pwd-confirm"
+									required
+								/>
+								<div class="valid-feedback"></div>
+								<div class="invalid-feedback">
+									Vui lòng nhập lại Mật Khẩu Mới
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<button type="submit" class="btn update-acc rounded-0 d-block">
+						CẬP NHẬT TÀI KHOẢN
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

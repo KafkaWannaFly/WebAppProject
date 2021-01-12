@@ -1,0 +1,43 @@
+<!-- Main Content Secsion-->
+<div class="body-area">
+    <div class="body-content">
+        <h3 class="page-title">QUẢN LÝ DANH SÁCH ĐƠN HÀNG</h3>
+
+        <div class="search-bar">
+            <input class="form-control" type="text" placeholder="Search..." aria-label="Search">
+        </div>
+
+        <div class="table-list-product--wrapper">
+            <table class="table table-hover list-product-table">
+                <thead class="thead-dark">
+                    <tr class="d-flex">
+                        <th class="col-lg-2">ID Đơn hàng</th>
+                        <th class="col-lg-3">Phương thức thanh toán</th>
+                        <th class="col-lg-2">Giá</th>
+                        <th class="col-lg-1">Tình trạng</th>
+                        <th class="col-lg-4">Thao tác</th>
+                    </tr>
+
+                <tbody>
+{{#each Data.Bills}}
+                    <tr class="d-flex">
+                        <td class="col-lg-2 bill-id">{{id}}</td>
+                        <td class="col-lg-3 bill-user">{{paymentMethodToString}}</td>
+                        <td class="col-lg-2 bill-price">{{totalPrice}}đ</td>
+                        <td class="col-lg-1 bill-status">{{shipStatus}}</td>
+                        <td class="col-lg-4 bill-act">
+                            <button type="button" class="btn btn-primary btn-update" data-toggle='modal'
+                                data-target='#form-model'>Update</button>
+                            <button type="button" class="btn btn-primary btn-update" disabled>Đang giao</button>
+                            <button type="button" class="btn btn-success btn-complete">Hoàn tất</button>
+                            <button type="button" class="btn btn-danger btn-delete" disabled>Delete</button>
+                        </td>
+                    </tr>
+
+{{/each}}
+                </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>

@@ -74,6 +74,7 @@ function populatePieChart(items) {
 			amount++;
 
 			if (i === items.length - 1) {
+				amount++;
 				let percentage = (amount / items.length) * 100;
 				pieData.push({
 					name: currentCate,
@@ -81,6 +82,10 @@ function populatePieChart(items) {
 				});
 			}
 		} else {
+			if (amount === 0) {
+				amount++;
+			}
+
 			let percentage = (amount / items.length) * 100;
 
 			pieData.push({
@@ -131,6 +136,10 @@ function populateColumnNumberCategoryChart(items) {
 				barData.push(amount);
 			}
 		} else {
+			if (amount === 0) {
+				amount++;
+			}
+
 			categories.push(currentCate);
 			barData.push(amount);
 
@@ -225,6 +234,10 @@ function populateColumnNumberStockCategoryChart(items) {
 				stocks.push(stock);
 			}
 		} else {
+			if (stock === 0) {
+				stock += items[i].stock;
+			}
+
 			categories.push(currentCate);
 			stocks.push(stock);
 
@@ -271,6 +284,10 @@ function populateColumnNumberSalesCategoryChart(items) {
 				sales.push(sale);
 			}
 		} else {
+			if (sale === 0) {
+				sale += items[i].sales;
+			}
+
 			categories.push(currentCate);
 			sales.push(sale);
 
@@ -285,7 +302,7 @@ function populateColumnNumberSalesCategoryChart(items) {
 let body = document.querySelector("body");
 body.onload = () => {
 	// Get all items
-	fetch("/list-product/json")
+	fetch("/admin/json/items")
 		.then(async (res) => {
 			let items = await res.json();
 			// console.log(
@@ -296,6 +313,8 @@ body.onload = () => {
 			items.sort((a, b) => {
 				return a.category.localeCompare(b.category);
 			});
+
+			console.log(`Items: ${JSON.stringify(items, null, 4)}`);
 
 			populatePieChart(items);
 			populateColumnNumberCategoryChart(items);

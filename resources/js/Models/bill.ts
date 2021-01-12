@@ -6,13 +6,13 @@ interface BillItem {
 }
 
 enum PaymentMethod {
-	cod,
-	momo,
-	vnpay,
-	zalopay,
+	COD,
+	MOMO,
+	VNPay,
+	ZaloPay,
 }
 
-enum Status {
+enum ShipStatus {
 	waiting,
 	shipping,
 	complete,
@@ -28,7 +28,7 @@ class Bill {
 	shippingAddress: string = "";
 	paymentMethod: PaymentMethod;
 	notes?: string = "";
-	status: Status;
+	status: ShipStatus;
 }
 
 export { Bill, BillItem };

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>USG</title>
+    <link rel="shortcut icon" href="../resources/img/icon/logo.svg" type="image/x-icon" />
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Universal Simplistic Grocery" />
+
+    <!-- Icons-->
+    <script src="https://kit.fontawesome.com/8d195968ab.js"></script>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../resources/css/admin-style.css" />
+    <link rel="stylesheet" href="../resources/css/admin-list-product.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- Navigation Secsion-->
+    <div class="navbar-side-seccsion">
+        <nav class="side-navbar">
+            <div class="logo-brand">
+                <h3>USG</h3>
+            </div>
+
+            <ul class="main-menu">
+                <li>
+                    <a href="/admin/dashboard">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text"> Dashboard </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/admin/profile">
+                        <i class="far fa-user-circle"></i>
+                        <span class="nav-text"> Profile </span>
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="/admin/list-product">
+                        <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text"> Danh sách sản phẩm </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/admin/list-bill">
+                        <i class="fas fa-file-invoice fa-2x"></i>
+                        <span class="nav-text"> Đơn hàng </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/admin/list-comment">
+                        <i class="far fa-comment-dots"></i>
+                        <span class="nav-text"> Quản lý Comment </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/admin/list-account">
+                        <i class="fas fa-users-cog"></i>
+                        <span class="nav-text"> Quản lý tài khoản </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                    <a href="/logout">
+                        <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text"> Đăng xuất </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    {{{body}}}
+
+    <!-- Modal -->
+    <div class="modal fade" id="form-model" tabindex="-1" role="dialog" aria-labelledby="form-model" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Thông tin Sản phẩm</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="id">ID sản phẩm</label>
+                        <input type="text" name="id" id="id" class="form-control" placeholder="ID sản phẩm">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Tên sản phẩm</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Tên sản phẩm">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Loại sản phẩm</label>
+                        <input type="text" name="category" id="category" class="form-control"
+                            placeholder="Loại sản phẩm">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="old-price">Giá cũ</label>
+                        <input type="number" name="old-price" id="old-price" class="form-control" placeholder="Giá cũ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Giá hiện tại</label>
+                        <input type="number" name="price" id="price" class="form-control" placeholder="Giá hiện tại">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="option">Option</label>
+                        <input type="text" name="option" id="option" class="form-control" placeholder="Option">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Mô tả sản phẩm</label>
+                        <textarea class="form-control" rows="5" id="category"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stock">Số lượng hàng trong kho</label>
+                        <input type="number" min="0" step="1" name="stock" id="stock" class="form-control"
+                            placeholder="Số lượng hàng trong kho">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sales">Số lượng hàng đã bán</label>
+                        <input type="number" min="0" step="1" name="sales" id="sales" class="form-control"
+                            placeholder="Số lượng hàng đã bán">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="posted-time">Ngày đăng</label>
+                        <input type="date" name="posted-time" id="posted-time" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last-update-time">Cập nhật lần cuối</label>
+                        <input type="date" name="last-update-time" id="last-update-time" class="form-control">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="saveBtn">Save</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeBtn">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
