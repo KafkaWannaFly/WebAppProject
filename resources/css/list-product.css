@@ -121,6 +121,7 @@
 }
 
 .item-product .buy a {
+  font-weight: bold;
   color: black;
   border: 1px solid black;
 }
