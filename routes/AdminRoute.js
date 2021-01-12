@@ -45,7 +45,7 @@ router.get("/profile", (req, res) => {
 	// console.log(`user: ${JSON.stringify(req.user, null, 4)}`);
 
 	res.render("admin-profile", {
-		layout: "admin-profile-layout",
+		layout: "profile-layout",
 		Data: {
 			User: user,
 		},
@@ -55,7 +55,7 @@ router.get("/profile", (req, res) => {
 router.get("/list-product", async (req, res) => {
 	let items = await getAllItemsAsync();
 
-	res.render("admin-list-product", { layout: "admin-list-product-layout" });
+	res.render("admin-list-product", { layout: "list-products-layout" });
 });
 
 router.get("/list-bill", async (req, res) => {
@@ -88,17 +88,17 @@ router.get("/list-bill", async (req, res) => {
 	}
 
 	res.render("admin-list-bill", {
-		layout: "admin-list-bill-layout",
+		layout: "list-bill-layout",
 		Data: { Bills: bills },
 	});
 });
 
 router.get("/list-comment", (req, res) => {
-	res.render("admin-list-comment", { layout: "admin-list-comment-layout" });
+	res.render("admin-list-comment", { layout: "list-comment-layout" });
 });
 
 router.get("/list-account", (req, res) => {
-	res.render("admin-list-account", { layout: "admin-list-account-layout" });
+	res.render("admin-list-account", { layout: "list-account-layout" });
 });
 
 router.get("/json/items", async (req, res) => {
