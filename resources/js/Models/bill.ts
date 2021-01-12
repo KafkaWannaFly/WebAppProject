@@ -31,4 +31,4 @@ class Bill {
 	status: ShipStatus;
 }
 
-export { Bill, BillItem, PaymentMethod, ShipStatus };
+export { Bill, BillItem };

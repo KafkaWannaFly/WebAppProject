@@ -18,4 +18,4 @@ class Bill {
         this.notes = "";
     }
 }
-export { Bill, PaymentMethod, ShipStatus };
+export { Bill };

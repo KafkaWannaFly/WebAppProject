@@ -3,8 +3,6 @@ const express = require("express");
 
 const { getAllItemsAsync } = require("../controllers/ItemController");
 const { getAllBills } = require("../controllers/BillsControllers");
-const { PaymentMethod, ShipStatus } = require("../resources/js/Models/bill");
-
 const router = express.Router();
 
 router.get(
@@ -64,11 +62,11 @@ router.get("/list-bill", async (req, res) => {
 
 	for (let i = 0; i < bills.length; i++) {
 		let paymentMethodToString = "";
-		if (bills[i].paymentMethod === PaymentMethod.COD) {
+		if (bills[i].paymentMethod === 0) {
 			paymentMethodToString = "COD";
-		} else if (bills[i].paymentMethod === PaymentMethod.MOMO) {
+		} else if (bills[i].paymentMethod === 1) {
 			paymentMethodToString = "MoMo";
-		} else if (bills[i].paymentMethod === PaymentMethod.VNPay) {
+		} else if (bills[i].paymentMethod === 2) {
 			paymentMethodToString = "VNPay";
 		} else {
 			paymentMethodToString = "ZaloPay";
