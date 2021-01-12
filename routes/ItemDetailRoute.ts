@@ -64,5 +64,12 @@ router.post("/", async (req, res) => {
 	// res.redirect(`/list-product/item?id=${id}`);
 });
 
+
+router.get("/rate", (req, res) => {
+	let id = req.query["id"].toString();
+	res.redirect(`/list-product/item?id=${id}#rate`);
+});
+
+
 module.exports = router;
 // export default router;
