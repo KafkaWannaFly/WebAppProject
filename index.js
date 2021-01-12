@@ -47,6 +47,11 @@ passportConfig.init(passport);
 const indexRouter = require("./routes/IndexRoute");
 app.use("/", indexRouter);
 
+
+const adminRouter = require("./routes/AdminRoute");
+app.use("/admin", adminRouter);
+
+
 let loginRouter = require("./routes/LoginRoute");
 app.use("/login", loginRouter);
 

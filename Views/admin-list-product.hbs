@@ -1,0 +1,45 @@
+<!-- Main Content Secsion-->
+<div class="body-area">
+    <div class="body-content">
+        <h3 class="page-title">QUẢN LÝ DANH SÁCH SẢN PHẨM</h3>
+
+        <div class="search-bar">
+            <input class="form-control" type="text" placeholder="Search..." aria-label="Search">
+        </div>
+
+        <div class="add-product">
+            <button type="button" class="btn btn add-product-btn" data-toggle='modal' data-target='#form-model'>Thêm sản
+                phẩm</button>
+        </div>
+
+
+        <div class="table-list-product--wrapper">
+            <table class="table table-hover list-product-table">
+                <thead class="thead-dark">
+                    <tr class="d-flex">
+                        <th class="col-lg-2">ID</th>
+                        <th class="col-lg-4">Tên sản phẩm</th>
+                        <th class="col-lg-2">Giá</th>
+                        <th class="col-lg-2">Loại</th>
+                        <th class="col-lg-2">Thao tác</th>
+                    </tr>
+
+                <tbody>
+
+                    <tr class="d-flex">
+                        <td class="col-lg-2 product-id">HCMUSID001</td>
+                        <td class="col-lg-4 product-name">Tên sản phẩm</td>
+                        <td class="col-lg-2 product-price">Giá</td>
+                        <td class="col-lg-2 product-category">Loại sản phẩm</td>
+                        <td class="col-lg-2 product-act">
+                            <button type="button" class="btn btn-primary btn-update" data-toggle='modal'
+                                data-target='#form-model'>Update</button>
+                            <button type="button" class="btn btn-danger btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
