@@ -3,6 +3,7 @@ const express = require("express");
 
 const { getAllItemsAsync } = require("../controllers/ItemController");
 const { getAllBills } = require("../controllers/BillsControllers");
+
 const router = express.Router();
 
 router.get(
@@ -75,9 +76,9 @@ router.get("/list-bill", async (req, res) => {
 		bills[i].paymentMethodToString = paymentMethodToString;
 
 		let shipStatus = "";
-		if (bills[i].status === ShipStatus.waiting) {
+		if (bills[i].status === 0) {
 			shipStatus = "Đang xử lý";
-		} else if (bills[i].status === ShipStatus.shipping) {
+		} else if (bills[i].status === 1) {
 			shipStatus = "Đang giao";
 		} else {
 			shipStatus = "Hoàn tất";
