@@ -16,24 +16,25 @@ app.use(flash());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
-  session({
-    secret: "usg",
-    resave: false,
-    saveUninitialized: false,
-  })
+	session({
+		secret: "usg",
+		resave: false,
+		saveUninitialized: false,
+	})
 );
+// app.use(session({ secret: "anything" }));
 app.use(passport.initialize());
 app.use(passport.session());
 
 // Set up for HandleBars
 app.engine(
-  "hbs",
-  hbs({
-    extname: "hbs",
-    defaultLayout: "default-layout",
-    layoutsDir: "./views/layouts/",
-    partialsDir: "./views/partials/",
-  })
+	"hbs",
+	hbs({
+		extname: "hbs",
+		defaultLayout: "default-layout",
+		layoutsDir: "./views/layouts/",
+		partialsDir: "./views/partials/",
+	})
 );
 
 app.set("view engine", "hbs");
@@ -47,10 +48,8 @@ passportConfig.init(passport);
 const indexRouter = require("./routes/IndexRoute");
 app.use("/", indexRouter);
 
-
 const adminRouter = require("./routes/AdminRoute");
 app.use("/admin", adminRouter);
-
 
 let loginRouter = require("./routes/LoginRoute");
 app.use("/login", loginRouter);
@@ -59,15 +58,15 @@ let signUpRouter = require("./routes/SignUpRoute");
 app.use("/sign-up", signUpRouter);
 
 app.get("/forgot-pwd", (req, res) => {
-  res.render("forgot-pwd", { layout: "forgot-pwd-layout" });
+	res.render("forgot-pwd", { layout: "forgot-pwd-layout" });
 });
 
 let inforRouter = require("./routes/UserInforRoute");
 app.use("/infor", inforRouter);
 
 app.get("/logout", (req, res) => {
-  req.logout();
-  res.redirect("/login");
+	req.logout();
+	res.redirect("/login");
 });
 
 const orderListRouter = require("./routes/OrderListRoute");
@@ -83,5 +82,5 @@ const shoppingCartRouter = require("./routes/ShoppingCartRoute");
 app.use("/shopping-cart", shoppingCartRouter);
 
 app.listen(port, () => {
-  console.log(`App is listening on https://usg-clothes.herokuapp.com:${port}`);
+	console.log(`App is listening on https://usg-clothes.herokuapp.com:${port}`);
 });

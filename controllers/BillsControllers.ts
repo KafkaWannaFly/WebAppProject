@@ -44,4 +44,17 @@ async function updateBillStatus(billId: string, status: number) {
 	}
 }
 
-export { saveBillAsync, getBillAsync, updateBillStatus };
+async function getAllBills() {
+	try {
+		let billDocs = await BillModel.find({}).lean().exec();
+		let bills = billDocs.map((val, idx) => {
+			return val as Bill;
+		});
+
+		return bills;
+	} catch (err) {
+		console.error(`Fail to get bills. ${err}`);
+	}
+}
+
+export { saveBillAsync, getBillAsync, updateBillStatus, getAllBills };

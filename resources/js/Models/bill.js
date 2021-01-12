@@ -1,16 +1,16 @@
 var PaymentMethod;
 (function (PaymentMethod) {
-    PaymentMethod[PaymentMethod["cod"] = 0] = "cod";
-    PaymentMethod[PaymentMethod["momo"] = 1] = "momo";
-    PaymentMethod[PaymentMethod["vnpay"] = 2] = "vnpay";
-    PaymentMethod[PaymentMethod["zalopay"] = 3] = "zalopay";
+    PaymentMethod[PaymentMethod["COD"] = 0] = "COD";
+    PaymentMethod[PaymentMethod["MOMO"] = 1] = "MOMO";
+    PaymentMethod[PaymentMethod["VNPay"] = 2] = "VNPay";
+    PaymentMethod[PaymentMethod["ZaloPay"] = 3] = "ZaloPay";
 })(PaymentMethod || (PaymentMethod = {}));
-var Status;
-(function (Status) {
-    Status[Status["waiting"] = 0] = "waiting";
-    Status[Status["shipping"] = 1] = "shipping";
-    Status[Status["complete"] = 2] = "complete";
-})(Status || (Status = {}));
+var ShipStatus;
+(function (ShipStatus) {
+    ShipStatus[ShipStatus["waiting"] = 0] = "waiting";
+    ShipStatus[ShipStatus["shipping"] = 1] = "shipping";
+    ShipStatus[ShipStatus["complete"] = 2] = "complete";
+})(ShipStatus || (ShipStatus = {}));
 class Bill {
     constructor() {
         this.purchasedDate = new Date();
@@ -18,4 +18,4 @@ class Bill {
         this.notes = "";
     }
 }
-export { Bill };
+export { Bill, PaymentMethod, ShipStatus };

@@ -1,6 +1,5 @@
 import express from "express";
 import bcrypt from "bcrypt";
-import { readFile } from "fs";
 import { UserModel } from "../controllers/Models";
 import { updateUserAsync } from "../controllers/UserController";
 import { User } from "../resources/js/Models/user";
@@ -17,20 +16,15 @@ router.get(
 	},
 	(req, res) => {
 		let user = req.user as User;
+		// console.log(`user: ${JSON.stringify(req.user, null, 4)}`);
+
 		// If admin login
 		if (user.userType == 1) {
-			readFile(
-				"./pages/admin/admin-dasboard.htm",
-				{ encoding: "utf-8" },
-				(err, data) => {
-					if (err) {
-						res.send(err);
-					} else {
-						res.type("html");
-						res.send(data);
-					}
-				}
+			console.log(`Redirect to admin`);
+			res.redirect(
+				`/admin/dashboard?user=${encodeURIComponent(JSON.stringify(user))}`
 			);
+			return;
 		}
 
 		let failMsg = req.query.failMsg;

@@ -12,19 +12,19 @@
                 <thead class="thead-dark">
                     <tr class="d-flex">
                         <th class="col-lg-2">ID Đơn hàng</th>
-                        <th class="col-lg-3">Tên khách hàng</th>
+                        <th class="col-lg-3">Phương thức thanh toán</th>
                         <th class="col-lg-2">Giá</th>
                         <th class="col-lg-1">Tình trạng</th>
                         <th class="col-lg-4">Thao tác</th>
                     </tr>
 
                 <tbody>
-
+{{#each Data.Bills}}
                     <tr class="d-flex">
-                        <td class="col-lg-2 bill-id">HCMUSID001</td>
-                        <td class="col-lg-3 bill-user">Tên khách hàng 1</td>
-                        <td class="col-lg-2 bill-price">1000000đ</td>
-                        <td class="col-lg-1 bill-status">Đang giao</td>
+                        <td class="col-lg-2 bill-id">{{id}}</td>
+                        <td class="col-lg-3 bill-user">{{paymentMethodToString}}</td>
+                        <td class="col-lg-2 bill-price">{{totalPrice}}đ</td>
+                        <td class="col-lg-1 bill-status">{{shipStatus}}</td>
                         <td class="col-lg-4 bill-act">
                             <button type="button" class="btn btn-primary btn-update" data-toggle='modal'
                                 data-target='#form-model'>Update</button>
@@ -34,33 +34,7 @@
                         </td>
                     </tr>
 
-                    <tr class="d-flex">
-                        <td class="col-lg-2 bill-id">HCMUSID002</td>
-                        <td class="col-lg-3 bill-user">Tên khách hàng 2</td>
-                        <td class="col-lg-2 bill-price">2000000đ</td>
-                        <td class="col-lg-1 bill-status">Đang chờ</td>
-                        <td class="col-lg-4 bill-act">
-                            <button type="button" class="btn btn-primary btn-update" data-toggle='modal'
-                                data-target='#form-model'>Update</button>
-                            <button type="button" class="btn btn-primary btn-update">Đang giao</button>
-                            <button type="button" class="btn btn-success btn-complete">Hoàn tất</button>
-                            <button type="button" class="btn btn-danger btn-delete">Delete</button>
-                        </td>
-                    </tr>
-
-                    <tr class="d-flex">
-                        <td class="col-lg-2 bill-id">HCMUSID003</td>
-                        <td class="col-lg-3 bill-user">Tên khách hàng 3</td>
-                        <td class="col-lg-2 bill-price">3000000đ</td>
-                        <td class="col-lg-1 bill-status">Hoàn tất</td>
-                        <td class="col-lg-4 bill-act">
-                            <button type="button" class="btn btn-primary btn-update" data-toggle='modal'
-                                data-target='#form-model'>Update</button>
-                            <button type="button" class="btn btn-primary btn-update" disabled>Đang giao</button>
-                            <button type="button" class="btn btn-success btn-complete" disabled>Hoàn tất</button>
-                            <button type="button" class="btn btn-danger btn-delete" disabled>Delete</button>
-                        </td>
-                    </tr>
+{{/each}}
                 </tbody>
                 </thead>
             </table>

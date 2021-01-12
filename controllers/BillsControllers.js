@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.updateBillStatus = exports.getBillAsync = exports.saveBillAsync = void 0;
+exports.getAllBills = exports.updateBillStatus = exports.getBillAsync = exports.saveBillAsync = void 0;
 const Models_1 = require("./Models");
 async function saveBillAsync(bill) {
     try {
@@ -42,3 +42,16 @@ async function updateBillStatus(billId, status) {
     }
 }
 exports.updateBillStatus = updateBillStatus;
+async function getAllBills() {
+    try {
+        let billDocs = await Models_1.BillModel.find({}).lean().exec();
+        let bills = billDocs.map((val, idx) => {
+            return val;
+        });
+        return bills;
+    }
+    catch (err) {
+        console.error(`Fail to get bills. ${err}`);
+    }
+}
+exports.getAllBills = getAllBills;
