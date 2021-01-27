@@ -1,4 +1,5 @@
 <!-- Body -->
+{{#with Data.User}}
 <div class="body-content container">
 	<div class="row w-100 mx-0">
 		<div class="col-12 col-lg-3 infor-nav-menu">
@@ -7,8 +8,8 @@
 					class="container w-100 p-0 d-flex flex-column justify-content-center align-items-center"
 				>
 					<p class="member rounded shadow">USG Member</p>
-					<p class="name">Dương Tấn Phát</p>
-
+					<p class="name">{{ name }}</p>
+					{{/with}}
 					<ul class="infor-menu">
 						<li>
 							<a href="/infor">
@@ -49,7 +50,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							{{#each Bills}}
+							{{#each Data.Bills}}
 							<tr class="d-flex">
 								<td class="col-lg-2 order--id--date">
 									<a href="#" class="id-order">#{{ id }}</a>

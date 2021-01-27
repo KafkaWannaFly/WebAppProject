@@ -32,7 +32,11 @@ router.get(
 		// }
 
 		controller.getOrderList(user).then((data) => {
-			res.render("order-list", { layout: "order-list-layout", Bills: data });
+			let user = req.user;
+			res.render("order-list", {
+				layout: "order-list-layout",
+				Data: { Bills: data, User: user },
+			});
 		});
 	}
 );

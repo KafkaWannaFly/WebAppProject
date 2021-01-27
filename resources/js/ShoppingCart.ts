@@ -204,7 +204,7 @@ function purchaseButtonHandler() {
 				// Reset the item for next shopping
 				sessionStorage.removeItem("currentBill");
 				if (res.redirected) {
-					window.location.href = "/infor";
+					window.location.href = "/order-list";
 				}
 			});
 		} catch (err) {
